@@ -1,0 +1,14 @@
+Commit maken:
+- git status (Files die geupdate moeten worden)
+- git add <filename> (Files die je gecommit wil hebben, dit is dus je stage) 
+- git commit -m "Commit message here" (Commit)
+
+Branch maken:
+-git branch <branchname>
+
+Naar branch/eerdere commit 
+- git log --oneline (lijst met commits kijk naar de codes vooraan voor een specifieke commit)
+- git checkout <branchname/ commit code>
+- git checkout master (om weer terug te gaan naar de master branch)
+
+Als je in een branch zit worden alle commits in die branch gedaan.  
