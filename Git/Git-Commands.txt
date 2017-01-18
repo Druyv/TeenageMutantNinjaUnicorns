@@ -1,6 +1,6 @@
 Commit maken:
 - git status (Files die geupdate moeten worden)
-- git add <filename> (Files die je gecommit wil hebben, dit is dus je stage) 
+- git add <filename>  (Files die je gecommit wil hebben, dit is dus je stage) 
 - git commit -m "Commit message here" (Commit)
 
 Branch maken:
