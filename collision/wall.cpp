@@ -2,8 +2,7 @@
 #include "wall.hpp"
 
 wall::wall(sf::Vector2f position, sf::Vector2f size):
-	position{ position },
-	size{ size }
+	super(position,size)
 {}
 
 void wall::draw(sf::RenderWindow & window)  {
@@ -15,12 +14,4 @@ void wall::draw(sf::RenderWindow & window)  {
 
 }
 
-
-sf::Vector2f wall::getposition() {
-	return position;
-}
-
-sf::Vector2f wall::getsize() {
-	return size;
-}
 

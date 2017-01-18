@@ -10,12 +10,10 @@ public:
 	wall(sf::Vector2f position,sf::Vector2f size);
 
 	void draw(sf::RenderWindow & window)override ;
-	sf::Vector2f getposition()override ;
-	sf::Vector2f getsize() override;
+
 
 private:
-	sf::Vector2f position;
-	sf::Vector2f size;
+	
 
 
 
