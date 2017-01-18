@@ -7,8 +7,7 @@ public:
 		return (x >= a) && (x <= b);
 	}
  
-    sf::Vector2f position;
-    sf::Vector2f size;
+  
     
  void jump(sf::Vector2f target){
         position+=target;
@@ -43,6 +42,7 @@ public:
 
 protected:
 	 virtual void draw(sf::RenderWindow & window) = 0;
-		
+		  sf::Vector2f position;
+    sf::Vector2f size;
 };
 

@@ -80,6 +80,6 @@ public:
 	* \note [any note about the function you might have]
 	* \warning [any warning if necessary]
 	*/
-	virtual char collision(drawable & other);
+	char collision(drawable & object);
 };
 #endif // DRAWABLE_HPP

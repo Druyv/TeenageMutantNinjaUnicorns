@@ -59,13 +59,13 @@ int main( int argc, char *argv[] ){
 	wall wall3{ sf::Vector2f{ 0.0 , 0.0 },sf::Vector2f{ 1000.0,10.0 } };
 	wall wall4{ sf::Vector2f{ 990.0 , 0.0 },sf::Vector2f{ 10.0,500.0 } };
 	action actions[] = {
-		action( sf::Keyboard::Left,  [&](){ blokje.jump( sf::Vector2f( -5.0,  0.0 )); }),
-		action( sf::Keyboard::Right, [&](){ blokje.jump( sf::Vector2f( +5.0,  0.0 )); }),
-		action( sf::Keyboard::Up,    [&](){ blokje.jump( sf::Vector2f(  0.0, -5.0 )); }),
-		action( sf::Keyboard::Down,  [&](){ blokje.jump( sf::Vector2f(  0.0, +5.0 )); }),
+		action( sf::Keyboard::Left,  [&](){ blokje.jump( sf::Vector2f( -1.0,  0.0 )); }),
+		action( sf::Keyboard::Right, [&](){ blokje.jump( sf::Vector2f( +1.0,  0.0 )); }),
+		action( sf::Keyboard::Up,    [&](){ blokje.jump( sf::Vector2f(  0.0, -1.0 )); }),
+		action( sf::Keyboard::Down,  [&](){ blokje.jump( sf::Vector2f(  0.0, +1.0 )); }),
         action([&](){return (blokje.collaps(wall4)=='R');},[&](){std::cerr<<"het is right";}),
         action([&](){return (blokje.collaps(wall3)=='D');},[&](){std::cerr<<"het is up";}),
-        action([&](){return (blokje.collaps(wall2)=='U');},[&](){std::cerr<<"het is down";}),
+        action([&](){return (blokje.collaps(wall2)=='U');},[&](){blokje.jump( sf::Vector2f(  0.0, -10.0 ));}),
         action([&](){return (blokje.collaps(wall1)=='L');},[&](){std::cerr<<"het is left";}),
 
         
@@ -89,7 +89,7 @@ int main( int argc, char *argv[] ){
 		wall3.draw(window);
 		wall4.draw(window);
 		window.display();
-		sf::sleep( sf::milliseconds( 20 ));
+		sf::sleep( sf::milliseconds( 5 ));
         sf::Event event;
 	    while( window.pollEvent(event) ){
 			if( event.type == sf::Event::Closed ){
