@@ -4,99 +4,48 @@
 #include "ball.hpp"
 #include "wall.hpp"
 #include "super.hpp"
-class action {
-private:
-	std::function< bool() > condition;
-	std::function< void() > work;
-public:
-
-  
-	action(
-		char c,super & object, super &object_2,
-		std::function< void() > work
-	) :
-		condition(
-			[ &]()->bool { return object.collaps(object_2) == c; }
-		),
-		work(work)
-	{}
-
-	action(
-	   std::function< bool() > condition,
-	   std::function< void() > work
-	) : condition( condition ),
-		work( work )
-	{}
-
-	action(
-		sf::Keyboard::Key key,
-		std::function< void() > work
-	) :
-		condition(
-			[ key ]()->bool { return sf::Keyboard::isKeyPressed( key ); }
-		),
-		work(work)
-	{}
-
-	action(
-		sf::Mouse::Button button,
-		std::function< void() > work
-	) :
-		condition(
-			[ button ]()->bool { return sf::Mouse::isButtonPressed( button ); }
-		),
-		work(work)
-	{}
-
-
-	void operator()(){
-		if( condition() ){
-			work();
-		}
-	}
-};
-
+#include "action.hpp"
+#include <vector>
 int main( int argc, char *argv[] ){
 	std::cout << "Starting application 01-05 array of actions\n";
-
+char check = ' ';
 	sf::RenderWindow window{ sf::VideoMode{ 1000, 500 }, "SFML window" };
-	ball blokje{ sf::Vector2f{ 100.0, 100.0 },sf::Vector2f{10,10}};
+	ball blokje;
+    char gft = 'U';
+    blokje  = ball{ sf::Vector2f{ 100.0, 100.0 },sf::Vector2f{10,10},
+ {action(check,gft,[&](){blokje.jump( sf::Vector2f( 0.0, -10.0 ));})}};
+    // check = ' ';
     
+    std::vector<super *> muren={
+        	new wall { sf::Vector2f{0.0 , 0.0},sf::Vector2f{10.0,500.0} },
+            new wall { sf::Vector2f{ 0.0 , 490.0 },sf::Vector2f{ 1000.0,10.0 } },
+            new wall { sf::Vector2f{ 500.0 , 100.0 },sf::Vector2f{ 500.0,10.0 } },
+            new wall { sf::Vector2f{ 990.0 , 0.0 },sf::Vector2f{ 10.0,500.0 } }
+            };
     
-	wall wall1{ sf::Vector2f{0.0 , 0.0},sf::Vector2f{10.0,500.0} };
-	wall wall2{ sf::Vector2f{ 0.0 , 490.0 },sf::Vector2f{ 1000.0,10.0 } };
-	wall wall3{ sf::Vector2f{ 500.0 , 100.0 },sf::Vector2f{ 500.0,10.0 } };
-	wall wall4{ sf::Vector2f{ 990.0 , 0.0 },sf::Vector2f{ 10.0,500.0 } };
-	action actions[] = {
+ 
+	std::vector<action> actions= {
 		action( sf::Keyboard::Left,  [&](){ blokje.jump( sf::Vector2f( -1.0,  0.0 )); }),
 		action( sf::Keyboard::Right, [&](){ blokje.jump( sf::Vector2f( +1.0,  0.0 )); }),
-		action( sf::Keyboard::Up,    [&](){ blokje.jump( sf::Vector2f(  0.0, -1.0 )); }),
+		action( sf::Keyboard::Up,    [&](){ blokje.jump( sf::Vector2f(  0.0, -1.0 )); }),  
 		action( sf::Keyboard::Down,  [&](){ blokje.jump( sf::Vector2f(  0.0, +1.0 )); }),
-        action([&](){return (blokje.collaps(wall4)=='R');},[&](){std::cerr<<"het is right";}),
-        action([&](){return (blokje.collaps(wall3)=='D');},[&](){std::cerr<<"het is up";}),
-        action([&](){return (blokje.collaps(wall2)=='U');},[&](){blokje.jump( sf::Vector2f(  0.0, -10.0 ));}),
-        action([&](){return (blokje.collaps(wall1)=='L');},[&](){std::cerr<<"het is left";}),
-
-        
-        
-
-
-
-
-
-
-	};
+    
+        };
 
 	while (window.isOpen()) {
-		for( auto & action : actions ){
+        for( auto & action : actions ){
 			action();
+    }
+		for( auto  act: muren ){
+        check  = blokje.collaps(*act) ;
+        blokje.run_actions();
+		
 		}
 		window.clear();
 		blokje.draw( window );
-		wall1.draw(window);
-		wall2.draw(window);
-		wall3.draw(window);
-		wall4.draw(window);
+    for(auto & mu:muren){
+        mu->draw(window);
+    }
 		window.display();
 		sf::sleep( sf::milliseconds( 2 ));
         sf::Event event;

@@ -1,9 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include "ball.hpp"
 #include <iostream>
-ball::ball(sf::Vector2f position, sf::Vector2f size) :
+ball::ball(sf::Vector2f position, sf::Vector2f size,std::vector<action> actionlist) :
     
-	super(position,size)
+	super(position,size,actionlist)
 	
 	
 {}
