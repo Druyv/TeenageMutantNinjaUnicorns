@@ -1,7 +1,16 @@
+///@file
+
 #ifndef DRAWABLE_HPP
 #define DRAWABLE_HPP
 
 #include <SFML/Graphics.hpp>
+#include <exception>
+#include <string>
+#include <iostream>
+#include <vector>
+#include "action.hpp"
+
+typedef std::vector<action> actions;
 
 /*!
  * \class drawable
@@ -11,15 +20,14 @@
  * class with a position, size and name, that is inherited by all 
  * object that can be drawn on the screen. 
  *
- * \author Jip Galema
  * \date 18/01/17
  */
 class drawable {
-protected:
+    protected:
 	sf::Vector2f position;
 	sf::Vector2f size;
 	std::string name;
-public:
+    public:
 	/*! drawable(const sf::Vector2f & position, const sf::Vector2f & size, std::string name)
 	* \brief constructor for a drawable
 	*
@@ -81,5 +89,15 @@ public:
 	* \warning [any warning if necessary]
 	*/
 	virtual char collision(drawable & other);
+        
+        /*!
+	* \brief check and execute actions
+	*
+	* This function is used to call the operator() on all the actions
+        * The run_actions function in this superclass is empty. This is for
+        * the fact that some subclasses do not have actions.
+	*
+	*/
+        virtual void run_actions(){};
 };
 #endif // DRAWABLE_HPP

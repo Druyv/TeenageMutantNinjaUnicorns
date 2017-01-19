@@ -1,7 +1,10 @@
-#pragma once
+///@file
+
+#ifndef UNICORN_HPP
+#define UNICORN_HPP
+
 #include "drawable.hpp"
 #include "image.hpp"
-#include "action.hpp"
 
 
 /*!
@@ -14,22 +17,19 @@
 * inherents the drawable class and has an object of the image_from_file
 * class.
 *
-* \author Jip Galema
 * \date 19-01-2017
 */
-class unicorn : public drawable
-{
-private:
+class unicorn : public drawable {
+    private:
 	bool going_left = false;
-	bool going_right = false;
 	bool correctly_scaled = false;
-protected:
+    protected:
 	image_from_file unicorn_animation;
 	action actions_array[2] = {
-		action(sf::Keyboard::Left, [&] {move(sf::Vector2f(-20.0,0.0)); going_left = true; going_right = false; }),
-		action(sf::Keyboard::Right, [&] {move(sf::Vector2f(20.0,0.0)); going_right = true; going_left = false; })
+		action(sf::Keyboard::Left, [&] () {move(sf::Vector2f(-20.0,0.0)); going_left = true; }),// going_left = true; 
+		action(sf::Keyboard::Right, [&]() {move(sf::Vector2f(20.0,0.0)); going_left = false; })// going_left = false; 
 	};
-public:
+    public:
 	/*!
 	* \brief constructor to initialize the unicorn
 	*
@@ -41,7 +41,6 @@ public:
 	* 
 	*/
 	unicorn(sf::Vector2f position, std::string filename);
-	~unicorn();
 
 	/*!
 	* \brief function that draws the image
@@ -85,6 +84,6 @@ public:
 	* unicorn
 	*
 	*/
-	void run_actions();
+	void run_actions() override;
 };
-
+#endif //UNICORN_HPP

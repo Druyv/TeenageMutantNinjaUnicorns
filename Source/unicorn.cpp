@@ -3,29 +3,22 @@
 
 
 unicorn::unicorn(sf::Vector2f position, std::string filename):
-	unicorn_animation(image_from_file(position, filename)),
-	drawable(position, /*get size functie toevoegen*/ sf::Vector2f(1.0,1.0), std::string("Unicorn"))
-{
-	//unicorn_animation_left.move(position);
-}
-
-//Even een vraag over stellen 
-unicorn::~unicorn()
-{
-}
+        drawable{position, sf::Vector2f{1.0,1.0}, std::string{"Unicorn"}},
+	unicorn_animation{image_from_file{position, filename}}
+{}
 
 void unicorn::draw(sf::RenderWindow & window) {
 	if (going_left) {
 		if (!correctly_scaled) {
 			unicorn_animation.scale(sf::Vector2f(-1.0f, 1.0f));
-			unicorn_animation.SetPosition( sf::Vector2f{unicorn_animation.GetPosition().x + unicorn_animation.GetSize().x, unicorn_animation.GetPosition().y} );
+			unicorn_animation.set_position( sf::Vector2f{unicorn_animation.get_position().x + unicorn_animation.get_size().x, unicorn_animation.get_position().y} );
 			correctly_scaled = true;
 		}
 	}
-	else if (going_right) {
+	else if (!going_left) {
 		if (correctly_scaled) {
 			unicorn_animation.scale(sf::Vector2f(-1.0f, 1.0f));
-			unicorn_animation.SetPosition(sf::Vector2f{ unicorn_animation.GetPosition().x - unicorn_animation.GetSize().x, unicorn_animation.GetPosition().y });
+			unicorn_animation.set_position(sf::Vector2f{ unicorn_animation.get_position().x - unicorn_animation.get_size().x, unicorn_animation.get_position().y });
 			correctly_scaled = false;
 		}
 	}
