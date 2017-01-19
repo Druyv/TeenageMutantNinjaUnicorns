@@ -3,7 +3,7 @@
 
 int main(int argc, const char **argv){
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window", sf::Style::Fullscreen);
+    sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "SFML window", sf::Style::Fullscreen);
 
     // Start the game loop
     while (window.isOpen()){
