@@ -10,7 +10,16 @@ private:
 	std::function< void() > work;
 public:
 
-
+  
+	action(
+		char c,super & object, super &object_2,
+		std::function< void() > work
+	) :
+		condition(
+			[ &]()->bool { return object.collaps(object_2) == c; }
+		),
+		work(work)
+	{}
 
 	action(
 	   std::function< bool() > condition,
@@ -56,7 +65,7 @@ int main( int argc, char *argv[] ){
     
 	wall wall1{ sf::Vector2f{0.0 , 0.0},sf::Vector2f{10.0,500.0} };
 	wall wall2{ sf::Vector2f{ 0.0 , 490.0 },sf::Vector2f{ 1000.0,10.0 } };
-	wall wall3{ sf::Vector2f{ 0.0 , 0.0 },sf::Vector2f{ 1000.0,10.0 } };
+	wall wall3{ sf::Vector2f{ 500.0 , 100.0 },sf::Vector2f{ 500.0,10.0 } };
 	wall wall4{ sf::Vector2f{ 990.0 , 0.0 },sf::Vector2f{ 10.0,500.0 } };
 	action actions[] = {
 		action( sf::Keyboard::Left,  [&](){ blokje.jump( sf::Vector2f( -1.0,  0.0 )); }),
@@ -89,7 +98,7 @@ int main( int argc, char *argv[] ){
 		wall3.draw(window);
 		wall4.draw(window);
 		window.display();
-		sf::sleep( sf::milliseconds( 5 ));
+		sf::sleep( sf::milliseconds( 2 ));
         sf::Event event;
 	    while( window.pollEvent(event) ){
 			if( event.type == sf::Event::Closed ){

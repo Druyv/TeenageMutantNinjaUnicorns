@@ -13,6 +13,7 @@ void ball::draw( sf::RenderWindow & window )  {
 	circle.setPosition(position);
 	circle.setFillColor(sf::Color::Blue);
 	window.draw(circle);
+    //std::cerr<< position .x<<","<<position.y<<"\n";
 }
 
 
