@@ -9,7 +9,6 @@ class camera{
 public:
 	camera(blok & Unicorn);
 	void follow(sf::RenderWindow &window);
-	void setup();
 
 private:
 	blok & Unicorn;
