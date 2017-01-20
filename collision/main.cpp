@@ -32,7 +32,7 @@ int main( int argc, char *argv[] ){
     std::vector<wall> muren={
         	wall { sf::Vector2f{0.0 , 0.0},sf::Vector2f{10.0,500.0} },
             wall { sf::Vector2f{ 0.0 , 490.0 },sf::Vector2f{ 1000.0,10.0 } },
-             wall { sf::Vector2f{ 500.0 , 100.0 },sf::Vector2f{ 10.0,500.0 } },
+             wall { sf::Vector2f{ 500.0 , 100.0 },sf::Vector2f{ 10.0,300.0 } },
             wall { sf::Vector2f{ 990.0 , 0.0 },sf::Vector2f{ 10.0,500.0 } }
             };
     
@@ -50,7 +50,7 @@ int main( int argc, char *argv[] ){
 			action(blokje);
     }
 		for( auto  act: muren ){
-        check  = blokje.collapse(act) ;
+        check  = blokje.collision(act) ;
         blokje.run_actions(blokje);
 		
 		}
@@ -60,7 +60,7 @@ int main( int argc, char *argv[] ){
         mu.draw(window);
     }
 		window.display();
-		sf::sleep( sf::milliseconds( 20 ));
+		sf::sleep( sf::milliseconds(10 ));
         sf::Event event;
 	    while( window.pollEvent(event) ){
 			if( event.type == sf::Event::Closed ){

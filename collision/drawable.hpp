@@ -127,17 +127,17 @@ public:
 
 
   void run_actions(drawable & object);
-      	/*! char collapse(drawable & object )
-	* \brief   collapse function that checks if this drawable collapse with  object 
+      	/*! char collision(drawable & object )
+	* \brief   collision function that checks if this drawable collision with  object 
 
-	* function that  checks if this drawable  collapse with   object drawable
+	* function that  checks if this drawable  collision with   object drawable
 	* and  gives back a char that  has to propose  the side of colllapse 
-	* \param[in] object         drawable where collapse  with  will be checked  
+	* \param[in] object         drawable where collision  with  will be checked  
 
 	*/
   
 
-    char collapse(drawable & object);
+    char collision(drawable & object);
     /*! virtual void draw(sf::RenderWindow & window)
 	* \brief virtual draw function for a drawable
 	*
