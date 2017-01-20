@@ -85,5 +85,17 @@ class unicorn : public drawable {
 	*
 	*/
 	void run_actions() override;
+
+	/*!
+ 	* \brief function that shoots bullet from certian position
+ 	*
+ 	* This function creates a bullet-object and moves it from a given position 
+ 	* to a position where this bullet hits an object. 
+ 	* 
+ 	*
+ 	* \param[in] fire_position position from where the bullet gets fired
+ 	*
+ 	*/
+	void shoot(sf::Vector2f fire_position);
 };
 #endif //UNICORN_HPP

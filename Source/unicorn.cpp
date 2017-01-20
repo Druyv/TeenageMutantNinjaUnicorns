@@ -38,3 +38,12 @@ void unicorn::run_actions() {
 sf::FloatRect unicorn::getGlobalBounds() {
 	return unicorn_animation.getGlobalBounds();
 }
+
+void unicorn::shoot(sf::Vector2f fire_position) {
+	if (shoot_timeout == 100) {
+		// Hier bullet object aanmaken en .fire doen met unicorn positie
+	}
+	if (shoot_timeout) {
+		// Hier draw doen
+	}
+}
