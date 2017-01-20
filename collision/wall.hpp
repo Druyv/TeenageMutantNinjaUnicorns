@@ -4,7 +4,7 @@
 #include "super.hpp"
 #include <SFML/Graphics.hpp>
 #include <vector>
-#include "action.hpp"
+
 class wall : public super  {
 public:
 

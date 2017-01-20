@@ -8,11 +8,11 @@
 class action {
 private:
 	std::function< bool() > condition;
-	std::function< void() > work;
+	std::function< void(super) > work;
 public:
 
   
-	action( char & check, char c, std::function< void() > work ) :
+	action( char & check, char c, std::function< void(super ) > work ) :
 		condition( [& ] () -> bool {
             return  check == c;}
 		),
@@ -21,14 +21,14 @@ public:
 
 	action(
 	   std::function< bool() > condition,
-	   std::function< void() > work
+	   std::function< void(super) > work
 	) : condition( condition ),
 		work( work )
 	{}
 
 	action(
 		sf::Keyboard::Key key,
-		std::function< void() > work
+		std::function< void(super) > work
 	) :
 		condition(
 			[ key ]()->bool { return sf::Keyboard::isKeyPressed( key ); }
@@ -38,7 +38,7 @@ public:
 
 	action(
 		sf::Mouse::Button button,
-		std::function< void() > work
+		std::function< void(super) > work
 	) :
 		condition(
 			[ button ]()->bool { return sf::Mouse::isButtonPressed( button ); }
@@ -50,6 +50,11 @@ public:
 	void operator()(){
 		if( condition() ){
 			work();
+		}
+	}
+    	void operator()(super & object){
+		if( condition() ){
+			work(object);
 		}
 	}
 };
