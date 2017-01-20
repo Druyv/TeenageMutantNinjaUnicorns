@@ -3,7 +3,7 @@
 #include <iostream>
 ball::ball(sf::Vector2f position, sf::Vector2f size,std::vector<action> actionlist) :
     
-	super(position,size,actionlist)
+	drawable(position,size,actionlist)
 	
 	
 {}

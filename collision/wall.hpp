@@ -1,11 +1,11 @@
 
 #ifndef _WALL_HPP
 #define _WALL_HPP
-#include "super.hpp"
+#include "drawable.hpp"
 #include <SFML/Graphics.hpp>
 #include <vector>
 
-class wall : public super  {
+class wall : public drawable  {
 public:
 
 	wall(sf::Vector2f position,sf::Vector2f size,std::vector<action> actionlist ={});

@@ -3,14 +3,12 @@
 #include <SFML/Graphics.hpp>
 #include "ball.hpp"
 #include "wall.hpp"
-#include "super.hpp"
+#include "drawable.hpp"
 //#include "action.hpp"
 #include <vector>
 
 
-#include <thread>
-#include <chrono>
-#include <mutex>
+
 int main( int argc, char *argv[] ){
 	std::cout << "Starting application 01-05 array of actions\n";
     char check = ' ';
@@ -24,26 +22,26 @@ int main( int argc, char *argv[] ){
     char R ='R';
     
     
-     ball blokje =ball{ sf::Vector2f{ 100.0, 100.0 },sf::Vector2f{10,10},
-    {action(check,R,[](super & object){  object.jump( sf::Vector2f( -1.0, 0.0 ));}),
-    action(check,L,[](super & object){  object.jump( sf::Vector2f( 1.0, 0.0 ));}),
-    action(check,U,[](super & object){  object.jump( sf::Vector2f( 0.0, -1.0 ));}),
-    action(check,D,[](super & object){ object.jump( sf::Vector2f( 0.0, 1.0 ));})}};
+     ball blokje =ball{ sf::Vector2f{ 100.0, 100.0 },sf::Vector2f{20,20},
+    {action(check,R,[](drawable & object){  object.move( sf::Vector2f( -1.0, 0.0 ));}),
+    action(check,L,[](drawable & object){  object.move( sf::Vector2f( 1.0, 0.0 ));}),
+    action(check,U,[](drawable & object){  object.move( sf::Vector2f( 0.0, -1.0 ));}),
+    action(check,D,[](drawable & object){ object.move( sf::Vector2f( 0.0, 1.0 ));})}};
     // check = ' ';
 
     std::vector<wall> muren={
         	wall { sf::Vector2f{0.0 , 0.0},sf::Vector2f{10.0,500.0} },
             wall { sf::Vector2f{ 0.0 , 490.0 },sf::Vector2f{ 1000.0,10.0 } },
-             wall { sf::Vector2f{ 500.0 , 100.0 },sf::Vector2f{ 500.0,10.0 } },
+             wall { sf::Vector2f{ 500.0 , 100.0 },sf::Vector2f{ 10.0,500.0 } },
             wall { sf::Vector2f{ 990.0 , 0.0 },sf::Vector2f{ 10.0,500.0 } }
             };
     
  
 	std::vector<action> actions= {
-		action( sf::Keyboard::Left,  [](super & object){ object.jump( sf::Vector2f( -1.0,  0.0 )); }),
-		action( sf::Keyboard::Right, [](super & object){ object.jump( sf::Vector2f( +1.0,  0.0 )); }),
-		action( sf::Keyboard::Up,    [](super & object){ object.jump( sf::Vector2f(  0.0, -1.0 )); }),  
-		action( sf::Keyboard::Down,  [](super & object){ object.jump( sf::Vector2f(  0.0, +1.0 )); }),
+		action( sf::Keyboard::Left,  [](drawable & object){ object.move( sf::Vector2f( -1.0,  0.0 )); }),
+		action( sf::Keyboard::Right, [](drawable & object){ object.move( sf::Vector2f( +1.0,  0.0 )); }),
+		action( sf::Keyboard::Up,    [](drawable & object){ object.move( sf::Vector2f(  0.0, -1.0 )); }),  
+		action( sf::Keyboard::Down,  [](drawable & object){ object.move( sf::Vector2f(  0.0, +1.0 )); }),
     
         };
 
@@ -52,7 +50,7 @@ int main( int argc, char *argv[] ){
 			action(blokje);
     }
 		for( auto  act: muren ){
-        check  = blokje.collaps(act) ;
+        check  = blokje.collapse(act) ;
         blokje.run_actions(blokje);
 		
 		}
