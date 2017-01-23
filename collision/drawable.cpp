@@ -18,7 +18,7 @@ bool drawable::within_range(float x, float y,float a, float b){
     }
     
     
-void drawable::move(sf::Vector2f target){
+void drawable::move(sf::Vector2f target){tel
         position+=target;
  }
  

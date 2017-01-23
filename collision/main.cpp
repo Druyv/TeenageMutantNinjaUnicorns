@@ -52,8 +52,8 @@ int main( int argc, char *argv[] ){
 		for( auto  act: muren ){
         check  = blokje.collision(act) ;
         blokje.run_actions(blokje);
-		
 		}
+        
 		window.clear();
 		blokje.draw( window );
     for(auto & mu:muren){
