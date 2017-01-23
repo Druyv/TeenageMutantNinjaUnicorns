@@ -32,7 +32,7 @@ int main( int argc, char *argv[] ){
     std::vector<wall> muren={
         	wall { sf::Vector2f{0.0 , 0.0},sf::Vector2f{10.0,500.0} },
             wall { sf::Vector2f{ 0.0 , 490.0 },sf::Vector2f{ 1000.0,10.0 } },
-             wall { sf::Vector2f{ 500.0 , 100.0 },sf::Vector2f{ 10.0,300.0 } },
+             wall { sf::Vector2f{ 500.0 , 100.0 },sf::Vector2f{ 104.0,300.0 } },
             wall { sf::Vector2f{ 990.0 , 0.0 },sf::Vector2f{ 10.0,500.0 } }
             };
     
