@@ -24,3 +24,7 @@ void bullet::draw(sf::RenderWindow & window) {
 	projectile();
 	image_bullet.draw(window);
 }
+
+sf::FloatRect bullet::getGlobalBounds() {
+	image_bullet.getGlobalBounds();
+}
