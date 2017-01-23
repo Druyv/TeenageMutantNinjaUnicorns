@@ -93,12 +93,31 @@ class image_from_file : public drawable {
         /// \sa sf::Sprite::getGlobalBounds()
         sf::FloatRect getGlobalBounds() override;
         
-        sf::Vector2f get_position();
-        sf::Vector2f get_size();
+        /// \brief set position
+        ///
+        /// This function sets the position of the object to a new value.
+        ///
+        /// \param[in] new_position sf::Vector2f The position we want to move the object to
+        /// \sa sf::Vector2f
         void set_position(sf::Vector2f new_position);
+        
+        /// \brief set size
+        ///
+        /// This function sets the size of the object.
+        ///
+        /// \param[in] new_size sf::Vector2f The size we want to set the object to
+        /// \sa sf::Vector2f
         void set_size(sf::Vector2f new_size);
         
-        void scale(sf::Vector2f scale_val);
+        /// \brief set the texture rectangle
+        ///
+        /// This function can be used to turn the object around
+        /// while keeping the same upper left corner as the position
+        /// of the object.
+        ///
+        /// \param[in] rectangle const sf::IntRect& The rectangle box to turn around
+        /// \sa sf::Sprite::setTextureRect sf::IntRect
+        void setTextureRect(const sf::IntRect & rectangle);
         
 };
 

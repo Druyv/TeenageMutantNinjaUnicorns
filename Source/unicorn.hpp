@@ -21,15 +21,18 @@
 */
 class unicorn : public drawable {
     private:
-	bool going_left = false;
+        bool going_left = false;
 	bool correctly_scaled = false;
-    protected:
+        int jump_counter = 0;
+        actions & actions_array;
 	image_from_file unicorn_animation;
-	action actions_array[2] = {
-		action(sf::Keyboard::Left, [&] () {move(sf::Vector2f(-20.0,0.0)); going_left = true; }),// going_left = true; 
-		action(sf::Keyboard::Right, [&]() {move(sf::Vector2f(20.0,0.0)); going_left = false; })// going_left = false; 
-	};
+        physics physics_object;
+        collisions & the_collisions;
     public:
+        /*
+         get special variables
+         */
+        
 	/*!
 	* \brief constructor to initialize the unicorn
 	*
@@ -40,7 +43,7 @@ class unicorn : public drawable {
 	* \param[in] filename	std::string that is the filename of the image used
 	* 
 	*/
-	unicorn(sf::Vector2f position, std::string filename);
+	unicorn(sf::Vector2f position, std::string filename, actions & actions_array, collisions & the_collisions);
 
 	/*!
 	* \brief function that draws the image
@@ -65,6 +68,15 @@ class unicorn : public drawable {
 	*
 	*/
 	void move(sf::Vector2f delta) override;
+        
+        
+        /// \brief let the unicorn jump
+        ///
+        /// This function allows the unicorn to jump if it is not already jumping
+        /// and if the unicorn is standing on the ground.
+        ///
+        /// \sa sf::Sprite::getGlobalBounds()
+        void jump() override;
 
 	/*!
 	* \brief function that gets the boundingbox of the image
@@ -84,18 +96,26 @@ class unicorn : public drawable {
 	* unicorn
 	*
 	*/
-	void run_actions() override;
-
-	/*!
- 	* \brief function that shoots bullet from certian position
- 	*
- 	* This function creates a bullet-object and moves it from a given position 
- 	* to a position where this bullet hits an object. 
- 	* 
- 	*
- 	* \param[in] fire_position position from where the bullet gets fired
- 	*
- 	*/
-	void shoot(sf::Vector2f fire_position);
+	void run_actions(object_ptr object) override;
+        
+        /*!
+	* \brief check the collisions vector
+	*
+	* This function checks the collisions vector for a collision
+        * where the c is the direction. When c is 'U' it checks the U
+        * value of the collisions struct.
+	*
+	* \param[in] position	sf::Vector2f position where the image is placed 
+	* \param[in] filename	std::string that is the filename of the image used
+	* 
+	*/
+        collision check_for_collisions(char c) override;
+       
+        //----------------------------------------------
+        //
+        //experimental
+        //
+        //----------------------------------------------
+        void shoot(sf::Vector2f fire_position);
 };
 #endif //UNICORN_HPP

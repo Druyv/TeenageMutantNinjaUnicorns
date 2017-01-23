@@ -21,22 +21,15 @@ sf::FloatRect image_from_file::getGlobalBounds() {
         return image.getGlobalBounds();
 }
 
-sf::Vector2f image_from_file::get_position(){
-    return position;
-}
-
-sf::Vector2f image_from_file::get_size(){
-    return size;
-}
-
 void image_from_file::set_position(sf::Vector2f new_position){
     position = new_position;
 }
+
 
 void image_from_file::set_size(sf::Vector2f new_size){
     size = new_size;
 }
 
-void image_from_file::scale(sf::Vector2f scale_val){
-    image.scale(scale_val);
+void image_from_file::setTextureRect(const sf::IntRect & rectangle){
+    image.setTextureRect(rectangle);
 }
