@@ -3,13 +3,13 @@
 
 class physics {
 public:
-        void set_gravity (int value);
-        int get_gravity();
-        
-        float falling();
-        float jumping(int counter);
+	void set_gravity(int value);
+	int get_gravity();
+
+	float falling();
+	float jumping(int counter);
 private:
-        int gravity_counter = 3;
+	int gravity_counter = 3;
 };
 
 #endif // PHYSICS_HPP
