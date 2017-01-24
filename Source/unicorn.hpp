@@ -22,10 +22,10 @@
 class unicorn : public drawable {
     private:
         bool going_left = false;
-	bool correctly_scaled = false;
+		bool correctly_scaled = false;
         int jump_counter = 0;
         actions & actions_array;
-	image_from_file unicorn_animation;
+		image_from_file unicorn_animation;
         physics physics_object;
         collisions & the_collisions;
     public:
@@ -70,13 +70,13 @@ class unicorn : public drawable {
 	void move(sf::Vector2f delta) override;
         
         
-        /// \brief let the unicorn jump
-        ///
-        /// This function allows the unicorn to jump if it is not already jumping
-        /// and if the unicorn is standing on the ground.
-        ///
-        /// \sa sf::Sprite::getGlobalBounds()
-        void jump() override;
+    /// \brief let the unicorn jump
+    ///
+    /// This function allows the unicorn to jump if it is not already jumping
+    /// and if the unicorn is standing on the ground.
+    ///
+    /// \sa sf::Sprite::getGlobalBounds()
+    void jump() override;
 
 	/*!
 	* \brief function that gets the boundingbox of the image

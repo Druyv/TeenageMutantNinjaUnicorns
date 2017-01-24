@@ -10,6 +10,7 @@
 #include <vector>
 #include <functional>
 #include "physics.hpp"
+#include <memory>
 
 class drawable;
 class action;

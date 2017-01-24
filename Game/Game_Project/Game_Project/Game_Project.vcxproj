@@ -152,7 +152,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Source\drawable.cpp" />
+    <ClCompile Include="..\..\..\Source\factory.cpp" />
+    <ClCompile Include="..\..\..\Source\image.cpp" />
+    <ClCompile Include="..\..\..\Source\physics.cpp" />
+    <ClCompile Include="..\..\..\Source\unicorn.cpp" />
+    <ClCompile Include="..\..\..\Source\wall.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Source\drawable.hpp" />
+    <ClInclude Include="..\..\..\Source\factory.hpp" />
+    <ClInclude Include="..\..\..\Source\image.hpp" />
+    <ClInclude Include="..\..\..\Source\physics.hpp" />
+    <ClInclude Include="..\..\..\Source\unicorn.hpp" />
+    <ClInclude Include="..\..\..\Source\wall.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

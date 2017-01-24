@@ -1,4 +1,5 @@
 #include "drawable.hpp"
+#include "math.h"
 
 drawable::drawable(const sf::Vector2f & position, const sf::Vector2f & size, std::string type):
 	position{position},
@@ -15,7 +16,7 @@ bool drawable::within(float x, float a, float b) {
 }
     
 bool drawable::within_range(float x, float y,float a, float b){
-        for (float i  = x+1; i<y; i++){
+        for (float i  = x+1; i<(y-1); i+=4){
             if (within(i,a,b)){
                 return true;
             }
@@ -25,19 +26,21 @@ bool drawable::within_range(float x, float y,float a, float b){
 
 void drawable::collapse(object_ptr object, collisions & the_collisions){
         collision tmp(object);
+        
         sf::Vector2f ob_position = object->position;
         sf::Vector2f ob_size = object->size;
         
         bool within_x = within_range( position.x, position.x+size.x, ob_position.x, (ob_position.x+ob_size.x) );
         bool within_y = within_range( position.y, position.y+size.y, ob_position.y, (ob_position.y+ob_size.y) );
         
-        tmp.R = (within_y) and within( position.x+size.x, ob_position.x, ob_position.x + ob_size.x);
-        tmp.L = (within_y) and within( position.x, ob_position.x, ob_position.x + ob_size.x);
-        tmp.U = (within_x) and within( ob_position.y, position.y, position.y+size.y);
-        tmp.D = (within_x) and within( ob_position.y+ob_size.y, position.y, position.y+size.y);
+        tmp.R = (within_y) && within( position.x+size.x, ob_position.x, ob_position.x + ob_size.x);
+        tmp.L = (within_y) && within( position.x, ob_position.x, ob_position.x + ob_size.x);
+        tmp.U = (within_x) && within( ob_position.y, position.y, position.y+size.y);
+        tmp.D = (within_x) && within( ob_position.y+ob_size.y, position.y, position.y+size.y);
         
-        //if (tmp.R || tmp.u || tmp.L || tmp.D){ push back }
-        the_collisions.push_back(tmp);
+        if (tmp.R || tmp.U || tmp.L || tmp.D){
+            the_collisions.push_back(tmp);
+        }
 }
 
 sf::Vector2f drawable::get_position(){

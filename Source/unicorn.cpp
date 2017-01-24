@@ -42,17 +42,17 @@ void unicorn::draw(sf::RenderWindow & window) {
         if (collision_d.D){
             jump_counter = 0;
         }
-        if( jump_counter > 1){
+        if( jump_counter > 3){
             position.y -= physics_object.jumping(jump_counter);
             jump_counter--;
-            physics_object.set_gravity(0);
+            physics_object.set_gravity(3);
         }
         else if(collision_u.U){// && !(collision_u.L || collision_u.R || collision_u.D)
             float pos_y = (collision_u.the_object->get_position().y)-size.y;
             if(position.y != pos_y){
                 position.y = pos_y;
             }
-            physics_object.set_gravity(0);
+            physics_object.set_gravity(3);
         }
         else if(!collision_u.U){
             jump_counter = 0;
@@ -123,10 +123,10 @@ collision unicorn::check_for_collisions(char c){
 //----------------------------------------------
 
 void unicorn::shoot(sf::Vector2f fire_position) {
-    if (shoot_timeout == 100) {//>=100 veiliger of <= 100
+    /*if (shoot_timeout == 100) {//>=100 veiliger of <= 100
 	// Hier bullet object aanmaken en .fire doen met unicorn positie
     }
     if (shoot_timeout) {
 	// Hier draw doen
-    }
+    }*/
 }
