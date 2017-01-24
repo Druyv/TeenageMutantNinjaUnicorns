@@ -63,7 +63,7 @@ int main(int argc, const char **argv) {
 	Background background_1("background.png");
 	camera playercam(the_unicorn);
 	soundTrack soundplayer;
-	soundplayer.PlayMusic("ISeeFire.wav");
+	soundplayer.PlayMusic("Soundtrack.wav");
 	//playercam.follow(window); IN DE LOOP!
 
 	// Start the game loop
