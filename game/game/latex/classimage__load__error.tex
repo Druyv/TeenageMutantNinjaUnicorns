@@ -1,0 +1,93 @@
+\hypertarget{classimage__load__error}{}\section{image\+\_\+load\+\_\+error Class Reference}
+\label{classimage__load__error}\index{image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}}
+
+
+image load error  
+
+
+
+
+{\ttfamily \#include $<$image.\+hpp$>$}
+
+
+
+Inheritance diagram for image\+\_\+load\+\_\+error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classimage__load__error__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+load\+\_\+error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classimage__load__error__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__load__error_a39665f8755ddd18f61bd837300805cd1}{image\+\_\+load\+\_\+error} (const std\+::string \&image\+\_\+name)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classimage__load__error_a67526c87a0e96b3bb4a25cddaa4eac20}{what} () const noexceptoverride
+\begin{DoxyCompactList}\small\item\em return message \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+image load error 
+
+This class is used to generate a image load error exception. It inherrits the std\+::exception class so it can be easily caught with an try catch block.
+
+\begin{DoxyDate}{Date}
+19-\/1-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}!image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}}
+\index{image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}!image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}}
+\subsubsection[{\texorpdfstring{image\+\_\+load\+\_\+error(const std\+::string \&image\+\_\+name)}{image_load_error(const std::string &image_name)}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+load\+\_\+error\+::image\+\_\+load\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{image\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimage__load__error_a39665f8755ddd18f61bd837300805cd1}{}\label{classimage__load__error_a39665f8755ddd18f61bd837300805cd1}
+
+
+constructor 
+
+This constructor puts a message into a string and saves that as a private variable. The image name is also added to the string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em image\+\_\+name} & The name of the image \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}!what@{what}}
+\index{what@{what}!image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}}
+\subsubsection[{\texorpdfstring{what() const noexceptoverride}{what() const noexceptoverride}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ image\+\_\+load\+\_\+error\+::what (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}\hypertarget{classimage__load__error_a67526c87a0e96b3bb4a25cddaa4eac20}{}\label{classimage__load__error_a67526c87a0e96b3bb4a25cddaa4eac20}
+
+
+return message 
+
+This function returns the message so it can be printed. It overrides the what function from the std\+::exception superclass, making it easy to capture.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em const} & char $\ast$ \{The error message as a const char $\ast$\} \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{image_8hpp}{image.\+hpp}\end{DoxyCompactItemize}

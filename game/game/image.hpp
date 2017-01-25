@@ -49,10 +49,10 @@ private:
 ///This class creates an sprite with an image as texture. The class inherrits the
 /// superclass drawable. 
 ///
-/// \sa drawable::
-/// \sa sf::Sprite
-/// \sa sf::Texture
-/// \date 18-1-2017
+/// \sa drawable
+/// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Sprite.php ">sf::Sprite</a>
+/// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Texture.php">sf::Texture</a>
+
 class image_from_file : public drawable {
 private:
 	sf::Sprite image;
@@ -67,7 +67,7 @@ public:
 	///
 	/// \param[in] position The objects initial position
 	/// \param[in] image_name The name of the image that has to be loaded
-	/// \sa image_load_error::
+	/// \sa image_load_error
 	/// \warning Make sure you use a Try catch block to capture the exception generated if the image cannot be loaded
 	image_from_file(sf::Vector2f position, std::string image_name);
 
@@ -78,7 +78,7 @@ public:
 	/// the object. This way if the position changes, it also changes on screen.
 	///
 	/// \param[in,out] window The render window to draw the object on
-	/// \sa sf::Sprite::draw()
+
 	void draw(sf::RenderWindow & window) override;
 
 	/// \brief get objects floatrect
@@ -90,7 +90,7 @@ public:
 	/// \param[in] position The objects initial position
 	/// \param[in] image_name The name of the image that has to be loaded
 	/// \retval sf::FloatRect {The bounding box of the sprite object created in this class}
-	/// \sa sf::Sprite::getGlobalBounds()
+
 	sf::FloatRect getGlobalBounds() override;
 
 	/// \brief set position
@@ -98,7 +98,7 @@ public:
 	/// This function sets the position of the object to a new value.
 	///
 	/// \param[in] new_position sf::Vector2f The position we want to move the object to
-	/// \sa sf::Vector2f
+	/// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Vector2.php ">sf::Vector2f</a>
 	void set_position(sf::Vector2f new_position);
 
 	/// \brief set size
@@ -106,7 +106,7 @@ public:
 	/// This function sets the size of the object.
 	///
 	/// \param[in] new_size sf::Vector2f The size we want to set the object to
-	/// \sa sf::Vector2f
+	/// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Vector2.php ">sf::Vector2f</a>
 	void set_size(sf::Vector2f new_size);
 
 	/// \brief set the texture rectangle
@@ -116,7 +116,7 @@ public:
 	/// of the object.
 	///
 	/// \param[in] rectangle const sf::IntRect& The rectangle box to turn around
-	/// \sa sf::Sprite::setTextureRect sf::IntRect
+	/// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Sprite.php#a3fefec419a4e6a90c0fd54c793d82ec2 ">sf::Sprite::setTextureRect sf::IntRect</a>
 	void setTextureRect(const sf::IntRect & rectangle);
 
 };

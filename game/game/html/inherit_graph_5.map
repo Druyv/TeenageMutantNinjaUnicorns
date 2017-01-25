@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="5,56,80,83"/>
+<area shape="rect" id="node2" href="$classimage__from__file.html" title="create sprite on screen " alt="" coords="128,5,243,32"/>
+<area shape="rect" id="node3" href="$classunicorn.html" title="class that is used to display and control the unicorn " alt="" coords="153,56,217,83"/>
+<area shape="rect" id="node4" href="$classwall.html" title="wall" alt="" coords="163,107,208,133"/>
+</map>

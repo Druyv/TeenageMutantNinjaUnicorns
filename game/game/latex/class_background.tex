@@ -1,0 +1,79 @@
+\hypertarget{class_background}{}\section{Background Class Reference}
+\label{class_background}\index{Background@{Background}}
+
+
+Class that draws a background.  
+
+
+
+
+{\ttfamily \#include $<$background.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_background_a1aed3d561f2c5fb4bc174bc72d148129}{Background} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em constructor for background class \end{DoxyCompactList}\item 
+void \hyperlink{class_background_ae3d10fe0882df48b0e1e861a7e69f37f}{draw} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Draw function for background class. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect {\bfseries get\+Global\+Bounds} ()\hypertarget{class_background_a3e97f0860839c1c06df2070250203bb5}{}\label{class_background_a3e97f0860839c1c06df2070250203bb5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that draws a background. 
+
+class with a position, size and name, that is inherited by all object that can be drawn on the screen.
+
+\begin{DoxyDate}{Date}
+23/01/17 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Background@{Background}!Background@{Background}}
+\index{Background@{Background}!Background@{Background}}
+\subsubsection[{\texorpdfstring{Background(std\+::string filename)}{Background(std::string filename)}}]{\setlength{\rightskip}{0pt plus 5cm}Background\+::\+Background (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{class_background_a1aed3d561f2c5fb4bc174bc72d148129}{}\label{class_background_a1aed3d561f2c5fb4bc174bc72d148129}
+
+
+constructor for background class 
+
+constructor that initializes the file that the background class will use. Default is \char`\"{}x\char`\"{}, if default a default picture will be loaded.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em std\+::string} & name of the .png file that will be loaded as a background \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Background@{Background}!draw@{draw}}
+\index{draw@{draw}!Background@{Background}}
+\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Window \&window)}{draw(sf::RenderWindow &window)}}]{\setlength{\rightskip}{0pt plus 5cm}void Background\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)}\hypertarget{class_background_ae3d10fe0882df48b0e1e861a7e69f37f}{}\label{class_background_ae3d10fe0882df48b0e1e861a7e69f37f}
+
+
+Draw function for background class. 
+
+void \hyperlink{class_background_ae3d10fe0882df48b0e1e861a7e69f37f}{draw(sf\+::\+Render\+Window \& window)} override defines draw function in super class. Draws the background.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window} & S\+F\+ML window that is used to display the drawable \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{background_8hpp}{background.\+hpp}\item 
+background.\+cpp\end{DoxyCompactItemize}

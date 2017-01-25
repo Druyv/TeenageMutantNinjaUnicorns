@@ -1,4 +1,4 @@
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include <memory>
 #include <vector>
 
@@ -62,8 +62,8 @@ int main(int argc, const char **argv) {
 	//Sound, camera, background
 	Background background_1("background.png");
 	camera playercam(the_unicorn);
-	soundTrack soundplayer;
-	soundplayer.PlayMusic("Soundtrack.wav");
+	soundtrack soundplayer("Soundtrack.wav");
+	soundplayer.PlayMusic();
 	//playercam.follow(window); IN DE LOOP!
 
 	// Start the game loop

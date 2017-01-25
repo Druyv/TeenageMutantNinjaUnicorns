@@ -1,0 +1,212 @@
+\hypertarget{classimage__from__file}{}\section{image\+\_\+from\+\_\+file Class Reference}
+\label{classimage__from__file}\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+
+
+create sprite on screen  
+
+
+
+
+{\ttfamily \#include $<$image.\+hpp$>$}
+
+
+
+Inheritance diagram for image\+\_\+from\+\_\+file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classimage__from__file__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+from\+\_\+file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classimage__from__file__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__from__file_a08fd7ad55a2eb520242e31ff3cdf2663}{image\+\_\+from\+\_\+file} (sf\+::\+Vector2f position, std\+::string image\+\_\+name)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+void \hyperlink{classimage__from__file_a26eae6c872ca9033cacc3f6eb2762983}{draw} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em draw object \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{classimage__from__file_a971a591f906fa5c6e85b4e32cfc3d6a0}{get\+Global\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em get objects floatrect \end{DoxyCompactList}\item 
+void \hyperlink{classimage__from__file_a868911f8d541af91290fb8dc56435cd2}{set\+\_\+position} (sf\+::\+Vector2f new\+\_\+position)
+\begin{DoxyCompactList}\small\item\em set position \end{DoxyCompactList}\item 
+void \hyperlink{classimage__from__file_a43b0d6b11bf46827308e4e6cb7aa8579}{set\+\_\+size} (sf\+::\+Vector2f new\+\_\+size)
+\begin{DoxyCompactList}\small\item\em set size \end{DoxyCompactList}\item 
+void \hyperlink{classimage__from__file_a6561a7e8833e4ca84ba5a31e98802757}{set\+Texture\+Rect} (const sf\+::\+Int\+Rect \&rectangle)
+\begin{DoxyCompactList}\small\item\em set the texture rectangle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+create sprite on screen 
+
+This class creates an sprite with an image as texture. The class inherrits the superclass drawable.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classdrawable}{drawable} 
+
+\href{https://www.sfml-dev.org/documentation/2.0/classsf_1_1Sprite.php }{\tt sf\+::\+Sprite} 
+
+\href{https://www.sfml-dev.org/documentation/2.0/classsf_1_1Texture.php}{\tt sf\+::\+Texture} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+\subsubsection[{\texorpdfstring{image\+\_\+from\+\_\+file(sf\+::\+Vector2f position, std\+::string image\+\_\+name)}{image_from_file(sf::Vector2f position, std::string image_name)}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+from\+\_\+file\+::image\+\_\+from\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2f}]{position, }
+\item[{std\+::string}]{image\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__from__file_a08fd7ad55a2eb520242e31ff3cdf2663}{}\label{classimage__from__file_a08fd7ad55a2eb520242e31ff3cdf2663}
+
+
+constructor 
+
+The constructor tries to load an image with the image name specified. If it can not load the image it generates an exception that can be caught with an try, catch block.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The objects initial position \\
+\hline
+\mbox{\tt in}  & {\em image\+\_\+name} & The name of the image that has to be loaded \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classimage__load__error}{image\+\_\+load\+\_\+error} 
+\end{DoxySeeAlso}
+\begin{DoxyWarning}{Warning}
+Make sure you use a Try catch block to capture the exception generated if the image cannot be loaded 
+\end{DoxyWarning}
+
+
+\subsection{Member Function Documentation}
+\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!draw@{draw}}
+\index{draw@{draw}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Window \&window) override}{draw(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+from\+\_\+file\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classimage__from__file_a26eae6c872ca9033cacc3f6eb2762983}{}\label{classimage__from__file_a26eae6c872ca9033cacc3f6eb2762983}
+
+
+draw object 
+
+This function is used for calling the draw function on the sfml object created within this class. It also sets the position for before it draws the object. This way if the position changes, it also changes on screen.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em window} & The render window to draw the object on \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{drawable}.
+
+\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+\subsubsection[{\texorpdfstring{get\+Global\+Bounds() override}{getGlobalBounds() override}}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect image\+\_\+from\+\_\+file\+::get\+Global\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classimage__from__file_a971a591f906fa5c6e85b4e32cfc3d6a0}{}\label{classimage__from__file_a971a591f906fa5c6e85b4e32cfc3d6a0}
+
+
+get objects floatrect 
+
+This function uses the get\+Global\+Bounds function from te object to get the bounding box of the object. It returns this as a floatrect. This return value can be used to check if the object touches another object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The objects initial position \\
+\hline
+\mbox{\tt in}  & {\em image\+\_\+name} & The name of the image that has to be loaded \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em sf\+::\+Float\+Rect} & \{The bounding box of the sprite object created in this class\} \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}.
+
+\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!set\+\_\+position@{set\+\_\+position}}
+\index{set\+\_\+position@{set\+\_\+position}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+\subsubsection[{\texorpdfstring{set\+\_\+position(sf\+::\+Vector2f new\+\_\+position)}{set_position(sf::Vector2f new_position)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+from\+\_\+file\+::set\+\_\+position (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2f}]{new\+\_\+position}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__from__file_a868911f8d541af91290fb8dc56435cd2}{}\label{classimage__from__file_a868911f8d541af91290fb8dc56435cd2}
+
+
+set position 
+
+This function sets the position of the object to a new value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+position} & sf\+::\+Vector2f The position we want to move the object to \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.0/classsf_1_1Vector2.php }{\tt sf\+::\+Vector2f} 
+\end{DoxySeeAlso}
+\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!set\+\_\+size@{set\+\_\+size}}
+\index{set\+\_\+size@{set\+\_\+size}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+\subsubsection[{\texorpdfstring{set\+\_\+size(sf\+::\+Vector2f new\+\_\+size)}{set_size(sf::Vector2f new_size)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+from\+\_\+file\+::set\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2f}]{new\+\_\+size}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__from__file_a43b0d6b11bf46827308e4e6cb7aa8579}{}\label{classimage__from__file_a43b0d6b11bf46827308e4e6cb7aa8579}
+
+
+set size 
+
+This function sets the size of the object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+size} & sf\+::\+Vector2f The size we want to set the object to \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.0/classsf_1_1Vector2.php }{\tt sf\+::\+Vector2f} 
+\end{DoxySeeAlso}
+\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!set\+Texture\+Rect@{set\+Texture\+Rect}}
+\index{set\+Texture\+Rect@{set\+Texture\+Rect}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+\subsubsection[{\texorpdfstring{set\+Texture\+Rect(const sf\+::\+Int\+Rect \&rectangle)}{setTextureRect(const sf::IntRect &rectangle)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+from\+\_\+file\+::set\+Texture\+Rect (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Int\+Rect \&}]{rectangle}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__from__file_a6561a7e8833e4ca84ba5a31e98802757}{}\label{classimage__from__file_a6561a7e8833e4ca84ba5a31e98802757}
+
+
+set the texture rectangle 
+
+This function can be used to turn the object around while keeping the same upper left corner as the position of the object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em rectangle} & const sf\+::\+Int\+Rect\& The rectangle box to turn around \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.0/classsf_1_1Sprite.php#a3fefec419a4e6a90c0fd54c793d82ec2 }{\tt sf\+::\+Sprite\+::set\+Texture\+Rect sf\+::\+Int\+Rect} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{image_8hpp}{image.\+hpp}\item 
+image.\+cpp\end{DoxyCompactItemize}

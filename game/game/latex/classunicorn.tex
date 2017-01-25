@@ -1,0 +1,221 @@
+\hypertarget{classunicorn}{}\section{unicorn Class Reference}
+\label{classunicorn}\index{unicorn@{unicorn}}
+
+
+class that is used to display and control the unicorn  
+
+
+
+
+{\ttfamily \#include $<$unicorn.\+hpp$>$}
+
+
+
+Inheritance diagram for unicorn\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classunicorn__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for unicorn\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classunicorn__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classunicorn_a78330523ca0b21ed472dd66498086199}{unicorn} (sf\+::\+Vector2f position, std\+::string filename, actions \&actions\+\_\+array, collisions \&the\+\_\+collisions)
+\begin{DoxyCompactList}\small\item\em constructor to initialize the unicorn \end{DoxyCompactList}\item 
+void \hyperlink{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}{draw} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em function that draws the image \end{DoxyCompactList}\item 
+void \hyperlink{classunicorn_a162f200a68342f7bc0baaf17c8cf3f9f}{move} (sf\+::\+Vector2f delta) override
+\begin{DoxyCompactList}\small\item\em function that moves image object with a certian delta \end{DoxyCompactList}\item 
+void \hyperlink{classunicorn_a07d5ca4e66632c0e871221a27146805a}{jump} () override
+\begin{DoxyCompactList}\small\item\em let the unicorn jump \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}{get\+Global\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em function that gets the boundingbox of the image \end{DoxyCompactList}\item 
+void \hyperlink{classunicorn_aadb47a9981c46d6add8704074df117df}{run\+\_\+actions} (object\+\_\+ptr object) override
+\begin{DoxyCompactList}\small\item\em functions that runs through all actions related to the unicorn \end{DoxyCompactList}\item 
+\hyperlink{structcollision}{collision} \hyperlink{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}{check\+\_\+for\+\_\+collisions} (char c) override
+\begin{DoxyCompactList}\small\item\em check the collisions vector \end{DoxyCompactList}\item 
+void {\bfseries shoot} (sf\+::\+Vector2f fire\+\_\+position)\hypertarget{classunicorn_a95c4a4123e38e413c01323a1966f9ed1}{}\label{classunicorn_a95c4a4123e38e413c01323a1966f9ed1}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class that is used to display and control the unicorn 
+
+This class is used to control the unicorn and can be used to control it aswell (moving around and jumping. This class inherents the drawable class and has an object of the \hyperlink{classimage__from__file}{image\+\_\+from\+\_\+file} class.
+
+\begin{DoxyDate}{Date}
+19-\/01-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{unicorn@{unicorn}!unicorn@{unicorn}}
+\index{unicorn@{unicorn}!unicorn@{unicorn}}
+\subsubsection[{\texorpdfstring{unicorn(sf\+::\+Vector2f position, std\+::string filename, actions \&actions\+\_\+array, collisions \&the\+\_\+collisions)}{unicorn(sf::Vector2f position, std::string filename, actions &actions_array, collisions &the_collisions)}}]{\setlength{\rightskip}{0pt plus 5cm}unicorn\+::unicorn (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2f}]{position, }
+\item[{std\+::string}]{filename, }
+\item[{actions \&}]{actions\+\_\+array, }
+\item[{collisions \&}]{the\+\_\+collisions}
+\end{DoxyParamCaption}
+)}\hypertarget{classunicorn_a78330523ca0b21ed472dd66498086199}{}\label{classunicorn_a78330523ca0b21ed472dd66498086199}
+
+
+constructor to initialize the unicorn 
+
+This construcor initializes the position of the unicorn as well a the filename of the image used
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & sf\+::\+Vector2f position where the image is placed \\
+\hline
+\mbox{\tt in}  & {\em filename} & std\+::string that is the filename of the image used \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{unicorn@{unicorn}!check\+\_\+for\+\_\+collisions@{check\+\_\+for\+\_\+collisions}}
+\index{check\+\_\+for\+\_\+collisions@{check\+\_\+for\+\_\+collisions}!unicorn@{unicorn}}
+\subsubsection[{\texorpdfstring{check\+\_\+for\+\_\+collisions(char c) override}{check_for_collisions(char c) override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf collision} unicorn\+::check\+\_\+for\+\_\+collisions (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}{}\label{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}
+
+
+check the collisions vector 
+
+This function checks the collisions vector for a collision where the c is the direction. When c is \textquotesingle{}U\textquotesingle{} it checks the U value of the collisions struct.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & sf\+::\+Vector2f position where the image is placed \\
+\hline
+\mbox{\tt in}  & {\em filename} & std\+::string that is the filename of the image used \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classdrawable_abbc6e0089d502ba48c3fcb9c96e3966e}{drawable}.
+
+\index{unicorn@{unicorn}!draw@{draw}}
+\index{draw@{draw}!unicorn@{unicorn}}
+\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Window \&window) override}{draw(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void unicorn\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}{}\label{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}
+
+
+function that draws the image 
+
+this function draws the unicorn, depending on the unicorn going left or rigth scales the image (if it isn\textquotesingle{}t already correctly scaled)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window} & S\+F\+ML window that is used to display the image \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{drawable}.
+
+\index{unicorn@{unicorn}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!unicorn@{unicorn}}
+\subsubsection[{\texorpdfstring{get\+Global\+Bounds() override}{getGlobalBounds() override}}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect unicorn\+::get\+Global\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}{}\label{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}
+
+
+function that gets the boundingbox of the image 
+
+This function gets the boundingbox of the image and returns this.
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Float\+Rect wich are the boundaries of the image 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}.
+
+\index{unicorn@{unicorn}!jump@{jump}}
+\index{jump@{jump}!unicorn@{unicorn}}
+\subsubsection[{\texorpdfstring{jump() override}{jump() override}}]{\setlength{\rightskip}{0pt plus 5cm}void unicorn\+::jump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_a07d5ca4e66632c0e871221a27146805a}{}\label{classunicorn_a07d5ca4e66632c0e871221a27146805a}
+
+
+let the unicorn jump 
+
+This function allows the unicorn to jump if it is not already jumping and if the unicorn is standing on the ground.
+
+\begin{DoxySeeAlso}{See also}
+sf\+::\+Sprite\+::get\+Global\+Bounds() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classdrawable_ac39691470b7874f5dec59efe649d3981}{drawable}.
+
+\index{unicorn@{unicorn}!move@{move}}
+\index{move@{move}!unicorn@{unicorn}}
+\subsubsection[{\texorpdfstring{move(sf\+::\+Vector2f delta) override}{move(sf::Vector2f delta) override}}]{\setlength{\rightskip}{0pt plus 5cm}void unicorn\+::move (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2f}]{delta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_a162f200a68342f7bc0baaf17c8cf3f9f}{}\label{classunicorn_a162f200a68342f7bc0baaf17c8cf3f9f}
+
+
+function that moves image object with a certian delta 
+
+This function moves the image with a certian vector. This vector is the parameter delta
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em delta} & sf\+::\+Vector2f that determines movement\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.sfml-dev.org/documentation/2.0/classsf_1_1Transformable.php#ab9ca691522f6ddc1a40406849b87c469}{\tt https\+://www.\+sfml-\/dev.\+org/documentation/2.\+0/classsf\+\_\+1\+\_\+1\+Transformable.\+php\#ab9ca691522f6ddc1a40406849b87c469} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classdrawable_ad0d3930c045cc6776aa2c3965be32491}{drawable}.
+
+\index{unicorn@{unicorn}!run\+\_\+actions@{run\+\_\+actions}}
+\index{run\+\_\+actions@{run\+\_\+actions}!unicorn@{unicorn}}
+\subsubsection[{\texorpdfstring{run\+\_\+actions(object\+\_\+ptr object) override}{run_actions(object_ptr object) override}}]{\setlength{\rightskip}{0pt plus 5cm}void unicorn\+::run\+\_\+actions (
+\begin{DoxyParamCaption}
+\item[{object\+\_\+ptr}]{object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_aadb47a9981c46d6add8704074df117df}{}\label{classunicorn_aadb47a9981c46d6add8704074df117df}
+
+
+functions that runs through all actions related to the unicorn 
+
+This function contains for-\/loop that runs through actions for this unicorn 
+
+Reimplemented from \hyperlink{classdrawable_a715df01a318331e5611a2b0ad30109ff}{drawable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{unicorn_8hpp}{unicorn.\+hpp}\item 
+unicorn.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,74 @@
+\hypertarget{classaudio__load__error}{}\section{audio\+\_\+load\+\_\+error Class Reference}
+\label{classaudio__load__error}\index{audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}}
+
+
+Inheritance diagram for audio\+\_\+load\+\_\+error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classaudio__load__error__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for audio\+\_\+load\+\_\+error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classaudio__load__error__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classaudio__load__error_a6eea512cfea7b3d438afc5c1af8c63aa}{audio\+\_\+load\+\_\+error} (const std\+::string \&audio\+\_\+name)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classaudio__load__error_aa0559f9224f08e4a762f4284a2d76a47}{what} () const noexceptoverride
+\begin{DoxyCompactList}\small\item\em return message \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}!audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}}
+\index{audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}!audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}}
+\subsubsection[{\texorpdfstring{audio\+\_\+load\+\_\+error(const std\+::string \&audio\+\_\+name)}{audio_load_error(const std::string &audio_name)}}]{\setlength{\rightskip}{0pt plus 5cm}audio\+\_\+load\+\_\+error\+::audio\+\_\+load\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{audio\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classaudio__load__error_a6eea512cfea7b3d438afc5c1af8c63aa}{}\label{classaudio__load__error_a6eea512cfea7b3d438afc5c1af8c63aa}
+
+
+constructor 
+
+This constructor puts a message into a string and saves that as a private variable. The audio name is also added to the string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em load\+\_\+name} & The name of the image \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}!what@{what}}
+\index{what@{what}!audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}}
+\subsubsection[{\texorpdfstring{what() const noexceptoverride}{what() const noexceptoverride}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ audio\+\_\+load\+\_\+error\+::what (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}\hypertarget{classaudio__load__error_aa0559f9224f08e4a762f4284a2d76a47}{}\label{classaudio__load__error_aa0559f9224f08e4a762f4284a2d76a47}
+
+
+return message 
+
+This function returns the message so it can be printed. It overrides the what function from the std\+::exception superclass, making it easy to capture.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em const} & char $\ast$ \{The error message as a const char $\ast$\} \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{soundtrack_8hpp}{soundtrack.\+hpp}\end{DoxyCompactItemize}

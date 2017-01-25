@@ -1,27 +1,24 @@
-#include "soundTrack.hpp"
+#include "soundtrack.hpp"
 #include <iostream>
 #include <string>
-#include <SFML\audio.hpp>
-
-
-soundTrack::soundTrack()
-{}
+#include <SFML/Audio.hpp>
 
 
 
-void soundTrack::PlayMusic(std::string filename) {
-	
-	if (SFMLmusic.openFromFile(filename)) {
-		SFMLmusic.setLoop(1);
-		SFMLmusic.play();
-
+soundtrack::soundtrack(std::string filename){
+	if (!SFMLmusic.openFromFile(filename)) {
+		throw audio_load_error{ filename };
 	}
-	std::cout << "File not found";
+
 }
 
-void soundTrack::PlaySound(std::string filename) {
-	if (buffer.loadFromFile(filename) ){
+
+
+void soundtrack::PlayMusic() {
+		SFMLmusic.setLoop(1);
 		SFMLmusic.play();
-	}
-	std::cout << "File not found // Can't open file ";
+}
+
+void soundtrack::PlaySound() {
+	SFMLmusic.play();
 };

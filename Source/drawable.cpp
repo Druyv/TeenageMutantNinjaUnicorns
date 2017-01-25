@@ -1,5 +1,5 @@
 #include "drawable.hpp"
-#include "math.h"
+
 
 drawable::drawable(const sf::Vector2f & position, const sf::Vector2f & size, std::string type) :
 	position{ position },
