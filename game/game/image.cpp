@@ -33,3 +33,15 @@ void image_from_file::set_size(sf::Vector2f new_size) {
 void image_from_file::setTextureRect(const sf::IntRect & rectangle) {
 	image.setTextureRect(rectangle);
 }
+
+void image_from_file::set_smooth(bool smooth){
+    texture.setSmooth(smooth);
+}
+
+void image_from_file::set_repeated(bool repeated){
+    texture.setRepeated(repeated);
+}
+
+void image_from_file::set_scale(float x, float y){
+    image.setScale(x, y);
+}

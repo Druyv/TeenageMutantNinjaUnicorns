@@ -1,26 +1,16 @@
 #include "unicorn.hpp"
-#include <iostream>
-#include <SFML/Graphics/Rect.hpp>
 
 
 unicorn::unicorn(sf::Vector2f position, std::string filename, actions & actions_array, collisions & the_collisions) :
-	drawable{ position, sf::Vector2f{ 1.0,1.0 }, std::string{ "Unicorn" } },
+	drawable{ position, sf::Vector2f{ 1.0,1.0 }, std::string{ "UNICORN" } },
 	actions_array{ actions_array },
 	unicorn_animation{ image_from_file{ position, filename } },
-	the_collisions{ the_collisions }
+	the_collisions{ the_collisions },
+        spawn_location{position}
 {
-	position = unicorn_animation.get_position();
 	size = unicorn_animation.get_size();
 	unicorn_animation.setTextureRect(sf::IntRect(int(size.x), 0, -int(size.x), int(size.y)));
 }
-
-/*
-* 		//unicorn_animation.scale(sf::Vector2f(-1.0f, 1.0f));
-//position = unicorn_animation.get_position();
-//std::cout << "going left " << position.x << ',' << position.y << '\n';
-//position.x+=size.x;//fout met draaien
-//size.x = -size.x;//toegevoegd
-*/
 
 void unicorn::draw(sf::RenderWindow & window) {
 	if (going_left) {
@@ -38,29 +28,34 @@ void unicorn::draw(sf::RenderWindow & window) {
 
 	auto collision_u = check_for_collisions('U');
 	auto collision_d = check_for_collisions('D');
-
-	if (collision_d.D) {
-		jump_counter = 0;
-	}
-	if (jump_counter > 3) {
-		position.y -= physics_object.jumping(jump_counter);
-		jump_counter--;
-		physics_object.set_gravity(3);
-	}
-	else if (collision_u.U) {// && !(collision_u.L || collision_u.R || collision_u.D)
-		float pos_y = (collision_u.the_object->get_position().y) - size.y;
-		if (position.y != pos_y) {
-			position.y = pos_y;
-		}
-		physics_object.set_gravity(3);
-	}
-	else if (!collision_u.U) {
-		jump_counter = 0;
-		position.y += physics_object.falling();
-	}
+        if(collision_u.U && collision_u.the_object->get_type() == "LOWER_BORDER"){
+            std::cout << "You died\n";
+            position = spawn_location;
+            physics_object.set_gravity(3);
+        }
+        else{
+            if (collision_d.D) {
+                    jump_counter = 0;
+            }
+            if (jump_counter > 3) {
+                    position.y -= physics_object.jumping(jump_counter);
+                    jump_counter--;
+                    physics_object.set_gravity(3);
+            }
+            else if (collision_u.U) {// && !(collision_u.L || collision_u.R || collision_u.D)
+                    float pos_y = (collision_u.the_object->get_position().y) - size.y;
+                    if (position.y != pos_y) {
+                        position.y = pos_y;
+                    }
+                    physics_object.set_gravity(3);
+            }
+            else {// if (!collision_u.U)
+                    jump_counter = 0;
+                    position.y += physics_object.falling();
+            }
+        }
 
 	unicorn_animation.set_position(position);
-	//unicorn_animation.set_size(size);//toegevoegd
 	unicorn_animation.draw(window);
 }
 
@@ -129,4 +124,8 @@ void unicorn::shoot(sf::Vector2f fire_position) {
 	if (shoot_timeout) {
 	// Hier draw doen
 	}*/
+}
+
+void unicorn::set_spawn_location(sf::Vector2f new_location){
+   spawn_location = new_location; 
 }
