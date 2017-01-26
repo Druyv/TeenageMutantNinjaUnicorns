@@ -33,7 +33,7 @@ int main(int argc, const char **argv) {
             base_level base( object_creation.get_level_size() );
             base.push_back_borders(objects);
             
-            the_unicorn = std::make_shared<unicorn>(object_creation.get_spawn(), "minicorn_v2.png", unicorn_actions, the_collisions);
+            the_unicorn = std::make_shared<unicorn>(object_creation.get_spawn(), "spreadsheet.png", unicorn_actions, the_collisions);
 		
 	}
 	catch (const std::exception & e) {

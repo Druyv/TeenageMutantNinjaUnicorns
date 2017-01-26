@@ -4,7 +4,7 @@
 #define UNICORN_HPP
 
 #include "drawable.hpp"
-#include "image.hpp"
+#include "animation.hpp"
 #include <iostream>
 
 
@@ -26,7 +26,7 @@ private:
 	bool correctly_scaled = false;
 	int jump_counter = 0;
 	actions & actions_array;
-	image_from_file unicorn_animation;
+	animation  unicorn_animation;
 	physics physics_object;
 	collisions & the_collisions;
         sf::Vector2f spawn_location;
