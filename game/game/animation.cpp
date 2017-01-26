@@ -34,7 +34,7 @@ void animation::set_position(sf::Vector2f new_position) {
         	sheet.setPosition(position);
 }
 
-bool animation::movement(int row_a){
+bool animation::movement(float row_a){
 
 
         if(row_a ==9){
@@ -45,7 +45,7 @@ bool animation::movement(int row_a){
         return is_jumping;
         }
         else if(row_a==2){
-                sheet.setOrigin(size.x/2.5,size.y/2.5);
+                sheet.setOrigin((float)(size.x/2.5),(float)(size.y/2.5));
                 sheet.setRotation(rot+=(float(360)/float(21.6)));
                 is_jumping = true;
         }
@@ -58,7 +58,7 @@ bool animation::movement(int row_a){
         }
 
 
-        sheet.setTextureRect(sf::IntRect(count * (size.x) , row*(size.y+1), (size.x),(size.y )));
+        sheet.setTextureRect(sf::IntRect(int(count * (size.x)) , int(row*(size.y+1)), int((size.x)),int(size.y )));
 return 0;
 }
 

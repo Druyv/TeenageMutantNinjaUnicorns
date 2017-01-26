@@ -1,15 +1,20 @@
 #include "unicorn.hpp"
 
 
-unicorn::unicorn(sf::Vector2f position, std::string filename, actions & actions_array, collisions & the_collisions) :
+unicorn::unicorn(sf::Vector2f position, std::string filename, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects) :
 	drawable{ position, sf::Vector2f{ 1.0,1.0 }, std::string{ "UNICORN" } },
 	actions_array{ actions_array },
 	unicorn_animation{animation{ position, filename }  },
 	the_collisions{ the_collisions },
-        spawn_location{position}
+    spawn_location{position},
+	all_mobs{all_mobs},
+	objects{objects},
+	weapon(position, "Nyan-Cat.png", all_mobs, objects)
 {
+	position = unicorn_animation.get_position();
 	size = unicorn_animation.get_size();
 	unicorn_animation.setTextureRect(sf::IntRect(int(size.x), 0, -int(size.x), int(size.y)));
+	actions_array.push_back(action(sf::Keyboard::LControl, [&](object_ptr object) {if (!shoot_timeout) { shoot_timeout = 100; } }));
 }
 
 void unicorn::draw(sf::RenderWindow & window) {
@@ -64,7 +69,12 @@ void unicorn::draw(sf::RenderWindow & window) {
                     position.y += physics_object.falling();
             }
         }
-
+		if (going_left) {
+			shoot(unicorn_animation.get_position(), window, sf::Vector2f(-5.0, 0.0));
+		}
+		else {
+			shoot(unicorn_animation.get_position(), window, sf::Vector2f(5.0, 0.0));
+		}
 	unicorn_animation.set_position(position);
 	unicorn_animation.draw(window);
 }
@@ -123,21 +133,27 @@ collision unicorn::check_for_collisions(char c) {
 	return tmp;
 }
 
+void unicorn::shoot(sf::Vector2f fire_position, sf::RenderWindow & window, sf::Vector2f offset) {
+	if (shoot_timeout >= 100) {//>=100 veiliger of <= 100
+		weapon.shoot(window, shoot_timeout, offset, fire_position);
+	}
+	if (shoot_timeout) {
+		shoot_timeout--;
+		weapon.shoot(window, shoot_timeout);
+	}
+}
+
+void unicorn::set_spawn_location(sf::Vector2f new_location){
+   spawn_location = new_location; 
+}
+
+
 //----------------------------------------------
 //
 //experimental
 //
 //----------------------------------------------
-
-void unicorn::shoot(sf::Vector2f fire_position) {
-	/*if (shoot_timeout == 100) {//>=100 veiliger of <= 100
-	// Hier bullet object aanmaken en .fire doen met unicorn positie
-	}
-	if (shoot_timeout) {
-	// Hier draw doen
-	}*/
-}
-
-void unicorn::set_spawn_location(sf::Vector2f new_location){
-   spawn_location = new_location; 
+void unicorn::damage() {
+	lives--;
+	std::cout << "Lives: " << lives << std::endl;
 }

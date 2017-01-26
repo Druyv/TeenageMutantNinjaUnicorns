@@ -176,23 +176,31 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="animation.hpp" />
     <ClInclude Include="background.hpp" />
+    <ClInclude Include="base_level.hpp" />
+    <ClInclude Include="bullet.hpp" />
     <ClInclude Include="camera.hpp" />
     <ClInclude Include="drawable.hpp" />
     <ClInclude Include="factory.hpp" />
     <ClInclude Include="image.hpp" />
+    <ClInclude Include="npc.hpp" />
     <ClInclude Include="physics.hpp" />
     <ClInclude Include="soundtrack.hpp" />
     <ClInclude Include="unicorn.hpp" />
     <ClInclude Include="wall.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="animation.cpp" />
     <ClCompile Include="background.cpp" />
+    <ClCompile Include="base_level.cpp" />
+    <ClCompile Include="bullet.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="drawable.cpp" />
     <ClCompile Include="factory.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="npc.cpp" />
     <ClCompile Include="physics.cpp" />
     <ClCompile Include="soundtrack.cpp" />
     <ClCompile Include="unicorn.cpp" />

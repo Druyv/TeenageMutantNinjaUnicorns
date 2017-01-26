@@ -6,6 +6,7 @@
 #include "drawable.hpp"
 #include "animation.hpp"
 #include <iostream>
+#include "bullet.hpp"
 
 
 ///
@@ -25,11 +26,16 @@ private:
 	bool going_left = false;
 	bool correctly_scaled = false;
 	int jump_counter = 0;
+	int shoot_timeout = 0;
+	int lives = 10;
 	actions & actions_array;
 	animation  unicorn_animation;
 	physics physics_object;
 	collisions & the_collisions;
-        sf::Vector2f spawn_location;
+    sf::Vector2f spawn_location;
+	std::vector<mob_ptr> all_mobs;
+	objects_vector objects;
+	bullet weapon;
 public:
 	/// \brief Constructor to initialize the unicorn
 	///
@@ -38,10 +44,12 @@ public:
 	///
 	/// \param[in] position	Position where the image is placed
 	/// \param[in] filename	The filename of the image
-        /// \param[in] actions_array The actions of the unicorn
-        /// \param[in] the_collisions The collisions the unicorn has
+    /// \param[in] actions_array The actions of the unicorn
+    /// \param[in] the_collisions The collisions the unicorn has
+	/// \param[in] all_mobs All mobs in level
+	/// \parma[in] objects all walls/obstacles that unicorn and bullet can react to
 	///
-	unicorn(sf::Vector2f position, std::string filename, actions & actions_array, collisions & the_collisions);
+	unicorn(sf::Vector2f position, std::string filename, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects);
 
 	/// \brief function that draws the image
 	///
@@ -70,7 +78,7 @@ public:
 	/// and if the unicorn is standing on the ground.
 	///
 	/// \sa sf::Sprite::getGlobalBounds()
-        ///
+    ///
 	void jump() override;
 
 	///
@@ -101,20 +109,33 @@ public:
 	///
 	collision check_for_collisions(char c) override;
 
+	/// 
+	/// \brief function that shoots bullet
+	///
+	/// This function is used to fire a bullet object. Given the start position
+	/// , a window to draw on and the offset it should be fired with. When user presses 
+	/// the LControl button the shoot_timeout is set to 100. If not hit by something the 
+	/// bullet will disappear. 
+	///
+	/// \param[in]	fire_position	position that the bullet is fired from 
+	/// \param[in]	window			sf::RenderWindow to display bullet on
+	/// \parma[in]	offset			sf::Vector2f that decides wich way the bullet goes.
+	void shoot(sf::Vector2f fire_position, sf::RenderWindow & window, sf::Vector2f offset);
+
+    /// \brief set the spawn location
+	///
+	/// This function sets the spawn location of the unicorn to a new
+	/// location. The unicorn will spawn in the new location if he dies.
+	///
+	/// \param[in] new_location The new spawn location for the unicorn
+    ///
+	void set_spawn_location(sf::Vector2f new_location);
+
 	//----------------------------------------------
 	//
 	//experimental
 	//
 	//----------------------------------------------
-	void shoot(sf::Vector2f fire_position);
-
-        /// \brief set the spawn location
-	///
-	/// This function sets the spawn location of the unicorn to a new
-        /// location. The unicorn will spawn in the new location if he dies.
-	///
-	/// \param[in] new_location The new spawn location for the unicorn
-        ///
-	void set_spawn_location(sf::Vector2f new_location);
+	void damage();
 };
 #endif //UNICORN_HPP

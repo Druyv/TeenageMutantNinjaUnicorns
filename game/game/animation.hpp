@@ -56,9 +56,9 @@ private:
 	sf::Sprite sheet;
 	std::string sheet_name;
 	sf::Texture texture;
-        int count=0;
-        int row;
-        int  rot=0;
+        float count=0;
+        float row;
+        float  rot=0;
         bool is_jumping = 0;
 
 public:
@@ -120,7 +120,7 @@ public:
 	/// \param[in] row_a  int indicator for which  animation is needed
 	/// 
 
-        bool movement(int row_a);
+        bool movement(float row_a);
     
         
 

@@ -1,13 +1,3 @@
-﻿  wall.cpp
-  unicorn.cpp
-  soundtrack.cpp
-  physics.cpp
-  main.cpp
-  image.cpp
-  factory.cpp
-  drawable.cpp
-  camera.cpp
-  background.cpp
-  Generating Code...
+﻿  main.cpp
   game.vcxproj -> C:\Users\Jip\Desktop\TeenageMutantNinjaUnicorns\game\Debug\game.exe
   game.vcxproj -> C:\Users\Jip\Desktop\TeenageMutantNinjaUnicorns\game\Debug\game.pdb (Full PDB)

@@ -9,6 +9,7 @@
 #include "camera.hpp"
 #include "background.hpp"
 #include "soundtrack.hpp"
+#include "npc.hpp"
 
 int main(int argc, const char **argv) {
 	collisions the_collisions;
@@ -23,9 +24,15 @@ int main(int argc, const char **argv) {
 		action(sf::Keyboard::Space, [](object_ptr object) {object->jump(); })
 	};
 
-	object_ptr the_unicorn;
+	std::shared_ptr<unicorn> the_unicorn;
 	objects_vector objects;
 	factory object_creation("level1");
+
+	//Making mobs (should be in factory with next level
+	std::vector<mob_ptr> all_mobs;
+	all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(2541.799316f, 1800.484375f), "minicorn_v1.png"));
+	all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(1000.0, 900.0), "minicorn_v1.png"));
+
 
 	try {
             objects = object_creation.objects_from_file();
@@ -33,13 +40,14 @@ int main(int argc, const char **argv) {
             base_level base( object_creation.get_level_size() );
             base.push_back_borders(objects);
             
-            the_unicorn = std::make_shared<unicorn>(object_creation.get_spawn(), "spreadsheet.png", unicorn_actions, the_collisions);
+            the_unicorn = std::make_shared<unicorn>(object_creation.get_spawn(), "spreadsheet.png", unicorn_actions, the_collisions, all_mobs, objects);
 		
 	}
 	catch (const std::exception & e) {
             std::cout << e.what();
             exit(0);
 	}
+
 
 	//Sound, camera, background
 	background background_1("background2.png", object_creation.get_level_size());
@@ -57,6 +65,13 @@ int main(int argc, const char **argv) {
 		for (const auto & object : objects) {
 			the_unicorn->collapse(object, the_collisions);
 			object->draw(window);
+		}
+		for (auto objects : all_mobs) {
+			//std::cout << "Drawing mobs" << std::endl;
+			objects->draw(window);
+			if (the_unicorn->getGlobalBounds().intersects(objects->getGlobalBounds())) {
+				the_unicorn->damage();
+			}
 		}
 
 		the_unicorn->run_actions(the_unicorn);
