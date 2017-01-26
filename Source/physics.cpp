@@ -10,6 +10,9 @@ int physics::get_gravity() {
 
 float physics::falling() {
 	gravity_counter++;
+        if (gravity_counter >= 40){
+            return 40;
+        }
 	return float(gravity_counter*gravity_counter / (36.8 + 1 / 3 / 10));
 }
 

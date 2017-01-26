@@ -5,15 +5,11 @@
 #include "unicorn.hpp"
 #include "wall.hpp"
 #include "factory.hpp"
+#include "base_level.hpp"
 #include "camera.hpp"
 #include "background.hpp"
 #include "soundtrack.hpp"
-/*
-* check char action waarvoor gebruikt
-* mid air jumps checken
-* Bij op het up ding zetten de left en right van het zelfde object niet moeten zijn
-* die going left uit de superclass rucken
-*/
+#include "npc.hpp"
 
 int main(int argc, const char **argv) {
 	collisions the_collisions;
@@ -23,48 +19,41 @@ int main(int argc, const char **argv) {
 	sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "The unicorn game", sf::Style::Fullscreen);
 
 	actions unicorn_actions = {
-		action(sf::Keyboard::Left, [](object_ptr object) {object->move(sf::Vector2f(-10.0,0.0)); }),//check met < 0 of left -20
-		action(sf::Keyboard::Right, [](object_ptr object) {object->move(sf::Vector2f(10.0,0.0)); }),//object->going_left = false; 20
+		action(sf::Keyboard::Left, [](object_ptr object) {object->move(sf::Vector2f(-10.0,0.0)); }),
+		action(sf::Keyboard::Right, [](object_ptr object) {object->move(sf::Vector2f(10.0,0.0)); }),
 		action(sf::Keyboard::Space, [](object_ptr object) {object->jump(); })
 	};
 
-	bool draw_menu = false;
-	sf::Vector2f mouse_position;
-
-	actions creator_actions = {
-		action(sf::Mouse::Button::Right, [&](object_ptr object) { draw_menu = true; mouse_position = (sf::Vector2f)(sf::Mouse::getPosition(window)); }),
-		action(sf::Mouse::Button::Left, [&](object_ptr object) { draw_menu = false; })
-	};
-
-	object_ptr the_unicorn;
+	std::shared_ptr<unicorn> the_unicorn;
 	objects_vector objects;
 	factory object_creation("level1");
 
-	sf::Font the_font;
-	the_font.loadFromFile("Amarillo.ttf");
+	//Making mobs (should be in factory with next level
+	std::vector<mob_ptr> all_mobs;
+	all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(2541.799316f, 1800.484375f), "minicorn_v1.png"));
+	all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(1000.0, 900.0), "minicorn_v1.png"));
 
-	//sf::Text wall_text("Wall", the_font);
-	sf::Text the_menu[] = { sf::Text("Wall", the_font, 20), sf::Text("Other Thing", the_font, 20) };
-
-	/*for(const auto & menu_object : the_menu){
-	menu_object.setPosition()
-	}*/
 
 	try {
-		the_unicorn = std::make_shared<unicorn>(sf::Vector2f(100, 100), "minicorn_v2.png", unicorn_actions, the_collisions);
-		objects = object_creation.objects_from_file();
+            objects = object_creation.objects_from_file();
+            
+            base_level base( object_creation.get_level_size() );
+            base.push_back_borders(objects);
+            
+            the_unicorn = std::make_shared<unicorn>(object_creation.get_spawn(), "spreadsheet.png", unicorn_actions, the_collisions, all_mobs, objects);
+		
 	}
 	catch (const std::exception & e) {
-		std::cout << e.what();
-		exit(0);
+            std::cout << e.what();
+            exit(0);
 	}
 
+
 	//Sound, camera, background
-	Background background_1("background.png");
+	background background_1("background2.png", object_creation.get_level_size());
 	camera playercam(the_unicorn);
 	soundtrack soundplayer("Soundtrack.wav");
 	soundplayer.PlayMusic();
-	//playercam.follow(window); IN DE LOOP!
 
 	// Start the game loop
 	while (window.isOpen()) {
@@ -73,22 +62,16 @@ int main(int argc, const char **argv) {
 		window.clear();
 		background_1.draw(window);
 
-
-		creator_actions[0](dummy);
-		creator_actions[1](dummy);
-
-		if (draw_menu) {
-			for (auto & menu_object : the_menu) {
-				menu_object.setPosition(mouse_position);
-				window.draw(menu_object);
-				mouse_position.y += 40;//+counter en counter steeds op 0
-			}
-
-		}
-
 		for (const auto & object : objects) {
 			the_unicorn->collapse(object, the_collisions);
 			object->draw(window);
+		}
+		for (auto objects : all_mobs) {
+			//std::cout << "Drawing mobs" << std::endl;
+			objects->draw(window);
+			if (the_unicorn->getGlobalBounds().intersects(objects->getGlobalBounds())) {
+				the_unicorn->damage();
+			}
 		}
 
 		the_unicorn->run_actions(the_unicorn);
@@ -110,14 +93,6 @@ int main(int argc, const char **argv) {
 		}
 		sf::sleep(sf::milliseconds(20));
 	}
-
-	object_creation.write_information_to_file(objects, "level1");
-	/*
-	* WALL (0,700) (1380,70) red
-	* WALL (300,600) (400,70) red
-	* WALL (300,400) (300,20) red
-	*/
-
 	return 0;
 }
 

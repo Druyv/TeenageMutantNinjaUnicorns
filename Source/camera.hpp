@@ -8,31 +8,31 @@
 
 ///\class camera
 ///
-/// \brief Class that creates a camera that follows the player around
-///
-/// class with a unicorn tracking function.
+/// \brief object folowing camera
+/// 
+/// This class can be used to follow a specific drawable object with the camera.
+/// If the object moves the camera moves with it.
 ///
 class camera{
 public:
-	
-	/// \brief constructor for camera player
+	/// \brief constructor object
 	///
-	/// constructor to make a camera. 
+	/// Constructor to make a camera that follows the player. 
 	///
-	/// \param[in] player		object that the camera will follow
+	/// \param[in] object The object to follow
 	///
-	camera(object_ptr Unicorn);
+	camera(object_ptr object);
 
-	/// \brief playercam 
+	/// \brief folow in render window
 	///
-	/// Follow the player
+	/// Follow the player in a specified render window.
 	///
-	/// \param[in] window			SFML window that is used to display the camera.
+	/// \param[in] window SFML window that is used to display the camera.
 	///
 	void follow(sf::RenderWindow &window);
 
 private:
-	object_ptr Unicorn;
+	object_ptr object;
 	sf::View playerCam;
 };
 #endif

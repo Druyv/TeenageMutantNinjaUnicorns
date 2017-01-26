@@ -57,15 +57,17 @@ std::string drawable::object_information() {
 
 std::string drawable::string_from_color(sf::Color & col) {
 	const struct { sf::Color color; std::string name; } colors[]{
-		{ sf::Color::Yellow, "yellow" },
-		{ sf::Color::Red, "red" },
-		{ sf::Color::Blue, "blue" },
-		{ sf::Color::Black, "black" },
-		{ sf::Color::Cyan, "cyan" },
-		{ sf::Color::Green, "green" },
-		{ sf::Color::Magenta, "magenta" },
-		{ sf::Color::Transparent, "transparant" }
-	};
+        	{sf::Color::Yellow, "yellow" },
+		{sf::Color::Red, "red" },
+		{sf::Color::Blue, "blue" },
+		{sf::Color::Black, "black" },
+		{sf::Color::Cyan, "cyan" },
+		{sf::Color::Green, "green" },
+		{sf::Color::Magenta, "magenta" },
+		{sf::Color::Transparent, "transparent" },
+                {sf::Color::White, "white" },
+                {sf::Color{165, 42, 42}, "brown" }
+        };
 
 	for (auto const & color : colors) {
 		if (color.color == col) {
@@ -74,4 +76,16 @@ std::string drawable::string_from_color(sf::Color & col) {
 	}
 
 	return "";
+}
+
+std::string drawable::get_type(){
+    return type;
+}
+
+void drawable::set_type(std::string s){
+    type = s;
+}
+
+void drawable::set_size(sf::Vector2f new_size){
+    size = new_size;
 }
