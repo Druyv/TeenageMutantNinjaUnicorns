@@ -56,7 +56,7 @@ private:
 	sf::Sprite sheet;
 	std::string sheet_name;
 	sf::Texture texture;
-        float count=0;
+        float count=1;
         float row;
         float  rot=0;
         bool is_jumping = false;

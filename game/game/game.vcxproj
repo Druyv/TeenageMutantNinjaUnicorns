@@ -85,7 +85,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level2</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
@@ -180,10 +180,12 @@
     <ClInclude Include="background.hpp" />
     <ClInclude Include="base_level.hpp" />
     <ClInclude Include="bullet.hpp" />
+    <ClInclude Include="button.hpp" />
     <ClInclude Include="camera.hpp" />
     <ClInclude Include="drawable.hpp" />
     <ClInclude Include="factory.hpp" />
     <ClInclude Include="image.hpp" />
+    <ClInclude Include="menu.hpp" />
     <ClInclude Include="npc.hpp" />
     <ClInclude Include="physics.hpp" />
     <ClInclude Include="soundtrack.hpp" />
@@ -195,11 +197,13 @@
     <ClCompile Include="background.cpp" />
     <ClCompile Include="base_level.cpp" />
     <ClCompile Include="bullet.cpp" />
+    <ClCompile Include="button.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="drawable.cpp" />
     <ClCompile Include="factory.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="npc.cpp" />
     <ClCompile Include="physics.cpp" />
     <ClCompile Include="soundtrack.cpp" />

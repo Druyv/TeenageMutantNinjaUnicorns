@@ -33,7 +33,7 @@ void unicorn::draw(sf::RenderWindow & window) {
 
 	auto collision_u = check_for_collisions('U');
 	auto collision_d = check_for_collisions('D');
-        auto collision_r= check_for_collisions('R');
+    auto collision_r= check_for_collisions('R');
 	auto collision_l = check_for_collisions('L');
         
         if (collision_r.R || collision_l.L ||collision_u.U ||collision_d.D ){

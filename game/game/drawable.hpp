@@ -172,7 +172,7 @@ public:
 		}
 	}
         
-        /// \brief operator()
+    /// \brief operator()
 	///
 	/// This operator executes the function in condition and then
 	/// checks the return value. If the condition returns true the
