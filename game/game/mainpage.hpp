@@ -1,7 +1,5 @@
 /// @file
-
 /// \mainpage Technical documentation
-///
 /// \section typedefs The self new types
 /// 
 /// We have 4 typedefs. Two of them are for the objectes and the other 2 are for
