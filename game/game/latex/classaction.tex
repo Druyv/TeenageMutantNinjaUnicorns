@@ -27,17 +27,18 @@ actions that a charater can do
 
 This class can be used to create actions for ingame characters. It uses 2 \href{http://en.cppreference.com/w/cpp/utility/functional/function }{\tt std\+::function} variables. One holds the condition and the other the work. The condition has to return a bool and should not have any paramters. The same goes for the work, except for that the work function should not return anything.
 
-Note that this was created by Wouter van Ooijen. 
+\begin{DoxyNote}{Note}
+that this was created by Wouter van Ooijen. 
+\end{DoxyNote}
+
 
 \subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaction_a481b1b2e3892600143fd7b2db4ac5729}\label{classaction_a481b1b2e3892600143fd7b2db4ac5729}} 
 \index{action@{action}!action@{action}}
 \index{action@{action}!action@{action}}
-\subsubsection[{\texorpdfstring{action(std\+::function$<$ bool() $>$ condition, std\+::function$<$ void(object\+\_\+ptr) $>$ work)}{action(std::function< bool() > condition, std::function< void(object_ptr) > work)}}]{\setlength{\rightskip}{0pt plus 5cm}action\+::action (
-\begin{DoxyParamCaption}
-\item[{std\+::function$<$ bool() $>$}]{condition, }
-\item[{std\+::function$<$ void(object\+\_\+ptr) $>$}]{work}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classaction_a481b1b2e3892600143fd7b2db4ac5729}{}\label{classaction_a481b1b2e3892600143fd7b2db4ac5729}
+\subsubsection{\texorpdfstring{action()}{action()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily action\+::action (\begin{DoxyParamCaption}\item[{std\+::function$<$ bool() $>$}]{condition,  }\item[{std\+::function$<$ void(object\+\_\+ptr) $>$}]{work }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 constructor 2 functions 
@@ -51,14 +52,12 @@ This constructor receives 2 std\+::functions and saves them as condition and wor
 \mbox{\tt in}  & {\em work} & The work to be done \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classaction_a504531cbc56e9c4a60b4e5d40bc018a6}\label{classaction_a504531cbc56e9c4a60b4e5d40bc018a6}} 
 \index{action@{action}!action@{action}}
 \index{action@{action}!action@{action}}
-\subsubsection[{\texorpdfstring{action(sf\+::\+Keyboard\+::\+Key key, std\+::function$<$ void(object\+\_\+ptr) $>$ work)}{action(sf::Keyboard::Key key, std::function< void(object_ptr) > work)}}]{\setlength{\rightskip}{0pt plus 5cm}action\+::action (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Keyboard\+::\+Key}]{key, }
-\item[{std\+::function$<$ void(object\+\_\+ptr) $>$}]{work}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classaction_a504531cbc56e9c4a60b4e5d40bc018a6}{}\label{classaction_a504531cbc56e9c4a60b4e5d40bc018a6}
+\subsubsection{\texorpdfstring{action()}{action()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily action\+::action (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key,  }\item[{std\+::function$<$ void(object\+\_\+ptr) $>$}]{work }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 constructor key and function 
@@ -75,14 +74,12 @@ This constructor receives a sfml key and creates a lambda. That lambda returns t
 \begin{DoxySeeAlso}{See also}
 \href{https://www.sfml-dev.org/documentation/2.0/classsf_1_1Keyboard.php}{\tt key} 
 \end{DoxySeeAlso}
+\mbox{\Hypertarget{classaction_abf43e8dfaeca2df9d356fbfd4d1790ba}\label{classaction_abf43e8dfaeca2df9d356fbfd4d1790ba}} 
 \index{action@{action}!action@{action}}
 \index{action@{action}!action@{action}}
-\subsubsection[{\texorpdfstring{action(sf\+::\+Mouse\+::\+Button button, std\+::function$<$ void(object\+\_\+ptr) $>$ work)}{action(sf::Mouse::Button button, std::function< void(object_ptr) > work)}}]{\setlength{\rightskip}{0pt plus 5cm}action\+::action (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Mouse\+::\+Button}]{button, }
-\item[{std\+::function$<$ void(object\+\_\+ptr) $>$}]{work}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classaction_abf43e8dfaeca2df9d356fbfd4d1790ba}{}\label{classaction_abf43e8dfaeca2df9d356fbfd4d1790ba}
+\subsubsection{\texorpdfstring{action()}{action()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily action\+::action (\begin{DoxyParamCaption}\item[{sf\+::\+Mouse\+::\+Button}]{button,  }\item[{std\+::function$<$ void(object\+\_\+ptr) $>$}]{work }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 constructor moust button and function 
@@ -102,13 +99,12 @@ This constructor receives a sfml mouse button and creates a lambda. That lambda 
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaction_ab4f8d0f7552450455977d09a889c18c7}\label{classaction_ab4f8d0f7552450455977d09a889c18c7}} 
 \index{action@{action}!operator()@{operator()}}
 \index{operator()@{operator()}!action@{action}}
-\subsubsection[{\texorpdfstring{operator()(object\+\_\+ptr object)}{operator()(object_ptr object)}}]{\setlength{\rightskip}{0pt plus 5cm}void action\+::operator() (
-\begin{DoxyParamCaption}
-\item[{object\+\_\+ptr}]{object}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classaction_ab4f8d0f7552450455977d09a889c18c7}{}\label{classaction_ab4f8d0f7552450455977d09a889c18c7}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void action\+::operator() (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 constructor char \&, char and function 

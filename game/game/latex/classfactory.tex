@@ -1,23 +1,151 @@
 \hypertarget{classfactory}{}\section{factory Class Reference}
 \label{classfactory}\index{factory@{factory}}
+
+
+Factory for reading in levels.  
+
+
+
+
+{\ttfamily \#include $<$factory.\+hpp$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries factory} (std\+::string filename)\hypertarget{classfactory_af422815046ef8b9e95a4d8cb747fc43f}{}\label{classfactory_af422815046ef8b9e95a4d8cb747fc43f}
+\hyperlink{classfactory_af422815046ef8b9e95a4d8cb747fc43f}{factory} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em constructor input file \end{DoxyCompactList}\item 
+void \hyperlink{classfactory_a9e164a8fbb65188de99c39d55d7cc384}{change\+\_\+input\+\_\+to} (std\+::string new\+\_\+filename)
+\begin{DoxyCompactList}\small\item\em Change the input. \end{DoxyCompactList}\item 
+object\+\_\+ptr \hyperlink{classfactory_a82385866bc910c1b3a3e82d56487dd24}{read\+\_\+line} ()
+\begin{DoxyCompactList}\small\item\em Read one line from the filestream. \end{DoxyCompactList}\item 
+objects\+\_\+vector \hyperlink{classfactory_afb2fad4ac9b0f39b1bfc3f3fc8d218b6}{objects\+\_\+from\+\_\+file} ()
+\begin{DoxyCompactList}\small\item\em Read multiple objects. \end{DoxyCompactList}\item 
+void \hyperlink{classfactory_af17f2a44d75cf8ccf712384341c2fcde}{write\+\_\+information\+\_\+to\+\_\+file} (objects\+\_\+vector \&objects, std\+::string new\+\_\+filename)
+\begin{DoxyCompactList}\small\item\em Write information to file. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \hyperlink{classfactory_a3c3a039b8f76a947267dbe659166550b}{get\+\_\+spawn} ()
+\begin{DoxyCompactList}\small\item\em Get spawn location. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \hyperlink{classfactory_af9bb026273b34fc032ca5ac73d457611}{get\+\_\+level\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Get the level size. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-void {\bfseries change\+\_\+input\+\_\+to} (std\+::string new\+\_\+filename)\hypertarget{classfactory_a9e164a8fbb65188de99c39d55d7cc384}{}\label{classfactory_a9e164a8fbb65188de99c39d55d7cc384}
 
-\item 
-object\+\_\+ptr {\bfseries read\+\_\+line} ()\hypertarget{classfactory_a82385866bc910c1b3a3e82d56487dd24}{}\label{classfactory_a82385866bc910c1b3a3e82d56487dd24}
+\subsection{Detailed Description}
+Factory for reading in levels. 
 
-\item 
-objects\+\_\+vector {\bfseries objects\+\_\+from\+\_\+file} ()\hypertarget{classfactory_afb2fad4ac9b0f39b1bfc3f3fc8d218b6}{}\label{classfactory_afb2fad4ac9b0f39b1bfc3f3fc8d218b6}
+This class is for reading in levels using a factory pattern. It uses smart pointers for making sure that destruction of the created heap objects is done correctly. \begin{DoxyDate}{Date}
+26-\/1-\/17 
+\end{DoxyDate}
 
-\item 
-void {\bfseries write\+\_\+information\+\_\+to\+\_\+file} (objects\+\_\+vector \&objects, std\+::string new\+\_\+filename)\hypertarget{classfactory_af17f2a44d75cf8ccf712384341c2fcde}{}\label{classfactory_af17f2a44d75cf8ccf712384341c2fcde}
 
-\end{DoxyCompactItemize}
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfactory_af422815046ef8b9e95a4d8cb747fc43f}\label{classfactory_af422815046ef8b9e95a4d8cb747fc43f}} 
+\index{factory@{factory}!factory@{factory}}
+\index{factory@{factory}!factory@{factory}}
+\subsubsection{\texorpdfstring{factory()}{factory()}}
+{\footnotesize\ttfamily factory\+::factory (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+constructor input file 
+
+This constructor receives an input file to read the level out of. That level can be changed later to read in new levels using the \hyperlink{classfactory_a9e164a8fbb65188de99c39d55d7cc384}{factory\+::change\+\_\+input\+\_\+to()} function. The received file name gets the .properties extension and a filestream object is created. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em filename} & The file to open as a filestream object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The filename automatically gets the extension .properties 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfactory_a9e164a8fbb65188de99c39d55d7cc384}\label{classfactory_a9e164a8fbb65188de99c39d55d7cc384}} 
+\index{factory@{factory}!change\+\_\+input\+\_\+to@{change\+\_\+input\+\_\+to}}
+\index{change\+\_\+input\+\_\+to@{change\+\_\+input\+\_\+to}!factory@{factory}}
+\subsubsection{\texorpdfstring{change\+\_\+input\+\_\+to()}{change\_input\_to()}}
+{\footnotesize\ttfamily void factory\+::change\+\_\+input\+\_\+to (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+\_\+filename }\end{DoxyParamCaption})}
+
+
+
+Change the input. 
+
+This function changes the input to a new specified file. It also closes the old file if it is open. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+filename} & The name of the new file to open \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfactory_af9bb026273b34fc032ca5ac73d457611}\label{classfactory_af9bb026273b34fc032ca5ac73d457611}} 
+\index{factory@{factory}!get\+\_\+level\+\_\+size@{get\+\_\+level\+\_\+size}}
+\index{get\+\_\+level\+\_\+size@{get\+\_\+level\+\_\+size}!factory@{factory}}
+\subsubsection{\texorpdfstring{get\+\_\+level\+\_\+size()}{get\_level\_size()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f factory\+::get\+\_\+level\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the level size. 
+
+This function returns the level size.
+
+\begin{DoxyReturn}{Returns}
+The level size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfactory_a3c3a039b8f76a947267dbe659166550b}\label{classfactory_a3c3a039b8f76a947267dbe659166550b}} 
+\index{factory@{factory}!get\+\_\+spawn@{get\+\_\+spawn}}
+\index{get\+\_\+spawn@{get\+\_\+spawn}!factory@{factory}}
+\subsubsection{\texorpdfstring{get\+\_\+spawn()}{get\_spawn()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f factory\+::get\+\_\+spawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get spawn location. 
+
+This function returns the spawn location for the level
+
+\begin{DoxyReturn}{Returns}
+The spawn location 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfactory_afb2fad4ac9b0f39b1bfc3f3fc8d218b6}\label{classfactory_afb2fad4ac9b0f39b1bfc3f3fc8d218b6}} 
+\index{factory@{factory}!objects\+\_\+from\+\_\+file@{objects\+\_\+from\+\_\+file}}
+\index{objects\+\_\+from\+\_\+file@{objects\+\_\+from\+\_\+file}!factory@{factory}}
+\subsubsection{\texorpdfstring{objects\+\_\+from\+\_\+file()}{objects\_from\_file()}}
+{\footnotesize\ttfamily objects\+\_\+vector factory\+::objects\+\_\+from\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read multiple objects. 
+
+This function continuesly calls the \hyperlink{classfactory_a82385866bc910c1b3a3e82d56487dd24}{factory\+::read\+\_\+line()} function and fills an \#objects\+\_\+vector with \hyperlink{classdrawable}{drawable} objects. This filled vector is returned. The errors returned by the \hyperlink{classfactory_a82385866bc910c1b3a3e82d56487dd24}{read\+\_\+line()} function are also handled in this function. \begin{DoxyReturn}{Returns}
+The vector with the created objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfactory_a82385866bc910c1b3a3e82d56487dd24}\label{classfactory_a82385866bc910c1b3a3e82d56487dd24}} 
+\index{factory@{factory}!read\+\_\+line@{read\+\_\+line}}
+\index{read\+\_\+line@{read\+\_\+line}!factory@{factory}}
+\subsubsection{\texorpdfstring{read\+\_\+line()}{read\_line()}}
+{\footnotesize\ttfamily object\+\_\+ptr factory\+::read\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read one line from the filestream. 
+
+This function reads one line from the filestream opened in the constructor. It returns a smart pointer to the object it received or a number of different kind of errors. The errors that can be thrown back are\+: \hyperlink{classunknown__type}{unknown\+\_\+type}, \char`\"{}\+L\+E\+V\+E\+L\+\_\+\+S\+I\+Z\+E\char`\"{} and \char`\"{}\+S\+P\+A\+W\+N\char`\"{}. The level\+\_\+size and spawn errors are for when the code receives the spawn and level size from the file it is reading. \begin{DoxyReturn}{Returns}
+The shared pointer to the drawable object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfactory_af17f2a44d75cf8ccf712384341c2fcde}\label{classfactory_af17f2a44d75cf8ccf712384341c2fcde}} 
+\index{factory@{factory}!write\+\_\+information\+\_\+to\+\_\+file@{write\+\_\+information\+\_\+to\+\_\+file}}
+\index{write\+\_\+information\+\_\+to\+\_\+file@{write\+\_\+information\+\_\+to\+\_\+file}!factory@{factory}}
+\subsubsection{\texorpdfstring{write\+\_\+information\+\_\+to\+\_\+file()}{write\_information\_to\_file()}}
+{\footnotesize\ttfamily void factory\+::write\+\_\+information\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{objects\+\_\+vector \&}]{objects,  }\item[{std\+::string}]{new\+\_\+filename }\end{DoxyParamCaption})}
+
+
+
+Write information to file. 
+
+This function writes all the information on the objects to an output file that is specified in the parameters. It first closes any input files and then opens the output file. After this it outputs the spawn location and level size calls the \hyperlink{classdrawable_a2ed0f8bb53f33477f7722efa7bb24583}{drawable\+::object\+\_\+information()} function on every item in the vector. You end up with an output like this\+: S\+P\+A\+WN (1030,1500) L\+E\+V\+E\+L\+\_\+\+S\+I\+ZE (4000,3350) W\+A\+LL (1020.\+000000,2000.\+000000) (100.\+000000,20.\+000000) green grass.\+png 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em objects} & The \#objects\+\_\+vector that contains all the objects we want to write to the file \\
+\hline
+\mbox{\tt in}  & {\em new\+\_\+filename} & The file to write the information to \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

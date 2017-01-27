@@ -2,6 +2,15 @@
 \label{classend__of__file}\index{end\+\_\+of\+\_\+file@{end\+\_\+of\+\_\+file}}
 
 
+End of file error.  
+
+
+
+
+{\ttfamily \#include $<$exceptions.\+hpp$>$}
+
+
+
 Inheritance diagram for end\+\_\+of\+\_\+file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -21,11 +30,55 @@ Collaboration diagram for end\+\_\+of\+\_\+file\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-const char $\ast$ {\bfseries what} () const noexceptoverride\hypertarget{classend__of__file_a33a76b608ff039611e9f43253b9b462a}{}\label{classend__of__file_a33a76b608ff039611e9f43253b9b462a}
+\hyperlink{classend__of__file_a4e87a15d753f94fad00deee27aa4dc02}{end\+\_\+of\+\_\+file} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classend__of__file_a32e8c4c2f39a8484c2f39f9a98d5dfb8}{what} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Return message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\end{DoxyCompactItemize}
+
+\subsection{Detailed Description}
+End of file error. 
+
+This class is used to generate a end of file exception. It inherrits the std\+::exception class so it can be easily caught with an try catch block.
+
+\begin{DoxyDate}{Date}
+26-\/1-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classend__of__file_a4e87a15d753f94fad00deee27aa4dc02}\label{classend__of__file_a4e87a15d753f94fad00deee27aa4dc02}} 
+\index{end\+\_\+of\+\_\+file@{end\+\_\+of\+\_\+file}!end\+\_\+of\+\_\+file@{end\+\_\+of\+\_\+file}}
+\index{end\+\_\+of\+\_\+file@{end\+\_\+of\+\_\+file}!end\+\_\+of\+\_\+file@{end\+\_\+of\+\_\+file}}
+\subsubsection{\texorpdfstring{end\+\_\+of\+\_\+file()}{end\_of\_file()}}
+{\footnotesize\ttfamily end\+\_\+of\+\_\+file\+::end\+\_\+of\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+This constructor puts a message into a string and saves that as a private variable. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classend__of__file_a32e8c4c2f39a8484c2f39f9a98d5dfb8}\label{classend__of__file_a32e8c4c2f39a8484c2f39f9a98d5dfb8}} 
+\index{end\+\_\+of\+\_\+file@{end\+\_\+of\+\_\+file}!what@{what}}
+\index{what@{what}!end\+\_\+of\+\_\+file@{end\+\_\+of\+\_\+file}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ end\+\_\+of\+\_\+file\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Return message. 
+
+This function returns the message so it can be printed. It overrides the what function from the std\+::exception superclass, making it easy to capture.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em const} & char $\ast$ \{The error message as a const char $\ast$\} \\
+\hline
+\end{DoxyRetVals}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{factory_8hpp}{factory.\+hpp}\end{DoxyCompactItemize}
+exceptions.\+hpp\end{DoxyCompactItemize}

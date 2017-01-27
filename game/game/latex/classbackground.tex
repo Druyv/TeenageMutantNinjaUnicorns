@@ -1,0 +1,97 @@
+\hypertarget{classbackground}{}\section{background Class Reference}
+\label{classbackground}\index{background@{background}}
+
+
+Inheritance diagram for background\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classbackground__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for background\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classbackground__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbackground_ad199eead2ef4a4d867f2542d3a152471}{background} (std\+::string filename, sf\+::\+Vector2f level\+\_\+size)
+\begin{DoxyCompactList}\small\item\em constructor for background class \end{DoxyCompactList}\item 
+void \hyperlink{classbackground_a41736f9a00defad1e84b3a8099c887e2}{draw} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em Draw function for background class. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{classbackground_ab5f2b627cd58e0d07678f0af01c6bd2d}{get\+Global\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em Get the global bounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbackground_ad199eead2ef4a4d867f2542d3a152471}\label{classbackground_ad199eead2ef4a4d867f2542d3a152471}} 
+\index{background@{background}!background@{background}}
+\index{background@{background}!background@{background}}
+\subsubsection{\texorpdfstring{background()}{background()}}
+{\footnotesize\ttfamily background\+::background (\begin{DoxyParamCaption}\item[{std\+::string}]{filename,  }\item[{sf\+::\+Vector2f}]{level\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+constructor for background class 
+
+constructor that initializes the file that the background class will use. Default is \char`\"{}x\char`\"{}, if default a default picture will be loaded.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em std\+::string} & name of the .png file that will be loaded as a background \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbackground_a41736f9a00defad1e84b3a8099c887e2}\label{classbackground_a41736f9a00defad1e84b3a8099c887e2}} 
+\index{background@{background}!draw@{draw}}
+\index{draw@{draw}!background@{background}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void background\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draw function for background class. 
+
+defines draw function in super class. Draws the background.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window} & S\+F\+ML window that is used to display the drawable \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{drawable}.
+
+\mbox{\Hypertarget{classbackground_ab5f2b627cd58e0d07678f0af01c6bd2d}\label{classbackground_ab5f2b627cd58e0d07678f0af01c6bd2d}} 
+\index{background@{background}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!background@{background}}
+\subsubsection{\texorpdfstring{get\+Global\+Bounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect background\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the global bounds. 
+
+This function returns the global bounds of the \#background\+\_\+image. Those global bounds can be used for things like checking collisions. \begin{DoxyReturn}{Returns}
+The global bounds of the \#background\+\_\+image 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{background_8hpp}{background.\+hpp}\item 
+background.\+cpp\end{DoxyCompactItemize}

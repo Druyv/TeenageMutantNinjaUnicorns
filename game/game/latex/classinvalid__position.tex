@@ -2,12 +2,12 @@
 \label{classinvalid__position}\index{invalid\+\_\+position@{invalid\+\_\+position}}
 
 
-invalid position exception  
+Invalid position exception.  
 
 
 
 
-{\ttfamily \#include $<$factory.\+hpp$>$}
+{\ttfamily \#include $<$exceptions.\+hpp$>$}
 
 
 
@@ -30,24 +30,74 @@ Collaboration diagram for invalid\+\_\+position\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries invalid\+\_\+position} (const char c)\hypertarget{classinvalid__position_a3d39f52e55d28fe6e9b4af02b7c6f278}{}\label{classinvalid__position_a3d39f52e55d28fe6e9b4af02b7c6f278}
-
-\item 
-const char $\ast$ {\bfseries what} () const noexceptoverride\hypertarget{classinvalid__position_a213d841079962a15c139c440167c40df}{}\label{classinvalid__position_a213d841079962a15c139c440167c40df}
-
-\end{DoxyCompactItemize}
+\hyperlink{classinvalid__position_a3d39f52e55d28fe6e9b4af02b7c6f278}{invalid\+\_\+position} (const char c)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classinvalid__position_aabeae0fae84fada6af68ff83a68c6542}{invalid\+\_\+position} ()
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classinvalid__position_a7de16130368fed8546deef6713025cfa}{what} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Return message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-invalid position exception 
+Invalid position exception. 
 
-This class can be used to generate a exception when a incorrect position has been received using input from a file
+This class can be used to generate a exception when a incorrect position has been received using input from a file.
 
 \begin{DoxyDate}{Date}
 23-\/1-\/2017 
 \end{DoxyDate}
 
 
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classinvalid__position_a3d39f52e55d28fe6e9b4af02b7c6f278}\label{classinvalid__position_a3d39f52e55d28fe6e9b4af02b7c6f278}} 
+\index{invalid\+\_\+position@{invalid\+\_\+position}!invalid\+\_\+position@{invalid\+\_\+position}}
+\index{invalid\+\_\+position@{invalid\+\_\+position}!invalid\+\_\+position@{invalid\+\_\+position}}
+\subsubsection{\texorpdfstring{invalid\+\_\+position()}{invalid\_position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily invalid\+\_\+position\+::invalid\+\_\+position (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+This constructor puts a message into a string and saves that as a private variable. The character the invalid position was on can also be specified.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c} & The character the error occured on \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classinvalid__position_aabeae0fae84fada6af68ff83a68c6542}\label{classinvalid__position_aabeae0fae84fada6af68ff83a68c6542}} 
+\index{invalid\+\_\+position@{invalid\+\_\+position}!invalid\+\_\+position@{invalid\+\_\+position}}
+\index{invalid\+\_\+position@{invalid\+\_\+position}!invalid\+\_\+position@{invalid\+\_\+position}}
+\subsubsection{\texorpdfstring{invalid\+\_\+position()}{invalid\_position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily invalid\+\_\+position\+::invalid\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor 
+
+This constructor puts a message into a string and saves that as a private variable. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classinvalid__position_a7de16130368fed8546deef6713025cfa}\label{classinvalid__position_a7de16130368fed8546deef6713025cfa}} 
+\index{invalid\+\_\+position@{invalid\+\_\+position}!what@{what}}
+\index{what@{what}!invalid\+\_\+position@{invalid\+\_\+position}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ invalid\+\_\+position\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Return message. 
+
+This function returns the message so it can be printed. It overrides the what function from the std\+::exception superclass, making it easy to capture.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em const} & char $\ast$ \{The error message as a const char $\ast$\} \\
+\hline
+\end{DoxyRetVals}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{factory_8hpp}{factory.\+hpp}\end{DoxyCompactItemize}
+exceptions.\+hpp\end{DoxyCompactItemize}

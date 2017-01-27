@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['move',['move',['../classdrawable.html#ad0d3930c045cc6776aa2c3965be32491',1,'drawable::move()'],['../classunicorn.html#a162f200a68342f7bc0baaf17c8cf3f9f',1,'unicorn::move()']]]
+  ['jump',['jump',['../classdrawable.html#ac39691470b7874f5dec59efe649d3981',1,'drawable::jump()'],['../classunicorn.html#a07d5ca4e66632c0e871221a27146805a',1,'unicorn::jump()']]],
+  ['jumping',['jumping',['../classphysics.html#aaf1c57aa6e35b9c83ccbfdfa8c18468c',1,'physics']]]
 ];

@@ -1,0 +1,86 @@
+\hypertarget{classsheet__load__error}{}\section{sheet\+\_\+load\+\_\+error Class Reference}
+\label{classsheet__load__error}\index{sheet\+\_\+load\+\_\+error@{sheet\+\_\+load\+\_\+error}}
+
+
+sheet load error  
+
+
+
+
+{\ttfamily \#include $<$animation.\+hpp$>$}
+
+
+
+Inheritance diagram for sheet\+\_\+load\+\_\+error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classsheet__load__error__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sheet\+\_\+load\+\_\+error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classsheet__load__error__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsheet__load__error_a80642b59420e3b58c1c5e980cf702c41}{sheet\+\_\+load\+\_\+error} (const std\+::string \&image\+\_\+name)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classsheet__load__error_a57dd1a273a0720e58ec0eb667d0c85aa}{what} () const noexcept override
+\begin{DoxyCompactList}\small\item\em return message \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+sheet load error 
+
+This class is used to generate a sheet load error exception. It inherrits the std\+::exception class so it can be easily caught with an try catch block. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsheet__load__error_a80642b59420e3b58c1c5e980cf702c41}\label{classsheet__load__error_a80642b59420e3b58c1c5e980cf702c41}} 
+\index{sheet\+\_\+load\+\_\+error@{sheet\+\_\+load\+\_\+error}!sheet\+\_\+load\+\_\+error@{sheet\+\_\+load\+\_\+error}}
+\index{sheet\+\_\+load\+\_\+error@{sheet\+\_\+load\+\_\+error}!sheet\+\_\+load\+\_\+error@{sheet\+\_\+load\+\_\+error}}
+\subsubsection{\texorpdfstring{sheet\+\_\+load\+\_\+error()}{sheet\_load\_error()}}
+{\footnotesize\ttfamily sheet\+\_\+load\+\_\+error\+::sheet\+\_\+load\+\_\+error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{image\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor 
+
+This constructor puts a message into a string and saves that as a private variable. The image name is also added to the string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em image\+\_\+name} & The name of the image \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsheet__load__error_a57dd1a273a0720e58ec0eb667d0c85aa}\label{classsheet__load__error_a57dd1a273a0720e58ec0eb667d0c85aa}} 
+\index{sheet\+\_\+load\+\_\+error@{sheet\+\_\+load\+\_\+error}!what@{what}}
+\index{what@{what}!sheet\+\_\+load\+\_\+error@{sheet\+\_\+load\+\_\+error}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ sheet\+\_\+load\+\_\+error\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+return message 
+
+This function returns the message so it can be printed. It overrides the what function from the std\+::exception superclass, making it easy to capture.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em const} & char $\ast$ \{The error message as a const char $\ast$\} \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{animation_8hpp}{animation.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,169 @@
+\hypertarget{classbullet}{}\section{bullet Class Reference}
+\label{classbullet}\index{bullet@{bullet}}
+
+
+class calculates projectile to kill mobs  
+
+
+
+
+{\ttfamily \#include $<$bullet.\+hpp$>$}
+
+
+
+Inheritance diagram for bullet\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classbullet__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bullet\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classbullet__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbullet_a2c8b1e868ab8fe8edf43fc289f8d80b8}{bullet} (sf\+::\+Vector2f position, std\+::string filename, std\+::vector$<$ mob\+\_\+ptr $>$ \&all\+\_\+mobs, objects\+\_\+vector \&objects)
+\begin{DoxyCompactList}\small\item\em constructor to initialize the bullet \end{DoxyCompactList}\item 
+void \hyperlink{classbullet_ae999b952538687d45ca2ae54164a5cd8}{draw} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em funtion that draws image \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{classbullet_a87bda5887249e8e37c5579180449bd93}{get\+Global\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em function that gets the globalbounds of the bullet\+\_\+animation \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename P $>$ }\\void \hyperlink{classbullet_ab7e5c677bbd642df24a2251bb58249b7}{collision} (P unique\+\_\+object)
+\begin{DoxyCompactList}\small\item\em function that checks collision with pointer \end{DoxyCompactList}\item 
+void \hyperlink{classbullet_a52d736cad2a486a65c8a25781cff1f70}{shoot} (sf\+::\+Render\+Window \&window, int \&shoot\+\_\+timeout, sf\+::\+Vector2f offset=sf\+::\+Vector2f(0, 0), sf\+::\+Vector2f fire\+\_\+position=sf\+::\+Vector2f(0.\+0, 0.\+0))
+\begin{DoxyCompactList}\small\item\em function that manages moving the bullet and checking for collision \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class calculates projectile to kill mobs 
+
+This class is used to calculate a projectile that can kill mobs (if there hit by the object)
+
+\begin{DoxyDate}{Date}
+26-\/01-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbullet_a2c8b1e868ab8fe8edf43fc289f8d80b8}\label{classbullet_a2c8b1e868ab8fe8edf43fc289f8d80b8}} 
+\index{bullet@{bullet}!bullet@{bullet}}
+\index{bullet@{bullet}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{bullet()}{bullet()}}
+{\footnotesize\ttfamily bullet\+::bullet (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{std\+::vector$<$ mob\+\_\+ptr $>$ \&}]{all\+\_\+mobs,  }\item[{objects\+\_\+vector \&}]{objects }\end{DoxyParamCaption})}
+
+
+
+constructor to initialize the bullet 
+
+This constructor intializes the position and picture used for the bullet. It also receives two std\+::vectors, one vector for all mobs in the level, the other for all walls in the level
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & sf\+::\+Vector2f position where the bullet is placed \\
+\hline
+\mbox{\tt in}  & {\em filename} & std\+::string that is the filename of the image used \\
+\hline
+\mbox{\tt in}  & {\em all\+\_\+mobs} & std\+::vector with mob shared\+\_\+pointers to all mobs in the level \\
+\hline
+\mbox{\tt in}  & {\em objects} & std\+::vector with drawable shared\+\_\+pointers to all walls/obstacles in the level \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbullet_ab7e5c677bbd642df24a2251bb58249b7}\label{classbullet_ab7e5c677bbd642df24a2251bb58249b7}} 
+\index{bullet@{bullet}!collision@{collision}}
+\index{collision@{collision}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{collision()}{collision()}}
+{\footnotesize\ttfamily template$<$typename P $>$ \\
+void bullet\+::collision (\begin{DoxyParamCaption}\item[{P}]{unique\+\_\+object }\end{DoxyParamCaption})}
+
+
+
+function that checks collision with pointer 
+
+This function checks if there is collision with either a mob or a wall and sets the boolean hit on true when collision with given object is found otherwide hit is set to false
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em unique\+\_\+object} & shared\+\_\+pointer or pointer that gives location of object that contains a get\+Global\+Bounds function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbullet_ae999b952538687d45ca2ae54164a5cd8}\label{classbullet_ae999b952538687d45ca2ae54164a5cd8}} 
+\index{bullet@{bullet}!draw@{draw}}
+\index{draw@{draw}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void bullet\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+funtion that draws image 
+
+This function draws the bullet. This function checkes if the bullet is correctly scaled depending on the direction it is fired. It only draws the bullet when boolean hit is false this happens when a bullet hasn\textquotesingle{}t hit a object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window} & sf\+::\+Renderwindow that is used to display the window on \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{drawable}.
+
+\mbox{\Hypertarget{classbullet_a87bda5887249e8e37c5579180449bd93}\label{classbullet_a87bda5887249e8e37c5579180449bd93}} 
+\index{bullet@{bullet}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{get\+Global\+Bounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect bullet\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+function that gets the globalbounds of the bullet\+\_\+animation 
+
+This function gets the globalbounds of the bullet\+\_\+animation. The globalbounds is the rectangle around the image.
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Float\+Rect around the image 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}.
+
+\mbox{\Hypertarget{classbullet_a52d736cad2a486a65c8a25781cff1f70}\label{classbullet_a52d736cad2a486a65c8a25781cff1f70}} 
+\index{bullet@{bullet}!shoot@{shoot}}
+\index{shoot@{shoot}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{shoot()}{shoot()}}
+{\footnotesize\ttfamily void bullet\+::shoot (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int \&}]{shoot\+\_\+timeout,  }\item[{sf\+::\+Vector2f}]{offset = {\ttfamily sf\+:\+:Vector2f(0,~0)},  }\item[{sf\+::\+Vector2f}]{fire\+\_\+position = {\ttfamily sf\+:\+:Vector2f(0.0,~0.0)} }\end{DoxyParamCaption})}
+
+
+
+function that manages moving the bullet and checking for collision 
+
+This function moves bullet with \#bullet\+::projectile() function and then checks for collisions with mobs and walls. If fire\+\_\+position is not entered the bullet moves from its last position. When offset is not entered it usually means the bullet is fired and still on the move in that case the current offset is used to make sure the bullet doesn\textquotesingle{}t follow the unicorn
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window} & sf\+::\+Render\+Window that is used to display the bullet \\
+\hline
+\mbox{\tt in}  & {\em shoot\+\_\+timeout} & int given by reference that is used to reset the shot, when something hits the bullet \\
+\hline
+\mbox{\tt in}  & {\em offset} & sf\+::\+Vector2f for movement, has negative x-\/coordinate when fired to left side \\
+\hline
+\mbox{\tt in}  & {\em fire\+\_\+position} & sf\+::\+Vector2f for position for bullet to start projectile. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+bullet.\+hpp\item 
+bullet.\+cpp\end{DoxyCompactItemize}

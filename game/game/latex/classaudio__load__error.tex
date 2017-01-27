@@ -2,6 +2,15 @@
 \label{classaudio__load__error}\index{audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}}
 
 
+\hyperlink{classaudio__load__error}{audio\+\_\+load\+\_\+error}  
+
+
+
+
+{\ttfamily \#include $<$exceptions.\+hpp$>$}
+
+
+
 Inheritance diagram for audio\+\_\+load\+\_\+error\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -23,18 +32,27 @@ Collaboration diagram for audio\+\_\+load\+\_\+error\+:\nopagebreak
 \item 
 \hyperlink{classaudio__load__error_a6eea512cfea7b3d438afc5c1af8c63aa}{audio\+\_\+load\+\_\+error} (const std\+::string \&audio\+\_\+name)
 \begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
-const char $\ast$ \hyperlink{classaudio__load__error_aa0559f9224f08e4a762f4284a2d76a47}{what} () const noexceptoverride
+const char $\ast$ \hyperlink{classaudio__load__error_a364ad9c1cb7de37f0cb3e33dbebbaa47}{what} () const noexcept override
 \begin{DoxyCompactList}\small\item\em return message \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+\hyperlink{classaudio__load__error}{audio\+\_\+load\+\_\+error} 
+
+This class is used to generate a audio load error exception. It inherrits the std\+::exception class so it can be easily caught with an try catch block.
+
+\begin{DoxyDate}{Date}
+24-\/1-\/2017 
+\end{DoxyDate}
+
+
 \subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaudio__load__error_a6eea512cfea7b3d438afc5c1af8c63aa}\label{classaudio__load__error_a6eea512cfea7b3d438afc5c1af8c63aa}} 
 \index{audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}!audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}}
 \index{audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}!audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}}
-\subsubsection[{\texorpdfstring{audio\+\_\+load\+\_\+error(const std\+::string \&audio\+\_\+name)}{audio_load_error(const std::string &audio_name)}}]{\setlength{\rightskip}{0pt plus 5cm}audio\+\_\+load\+\_\+error\+::audio\+\_\+load\+\_\+error (
-\begin{DoxyParamCaption}
-\item[{const std\+::string \&}]{audio\+\_\+name}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classaudio__load__error_a6eea512cfea7b3d438afc5c1af8c63aa}{}\label{classaudio__load__error_a6eea512cfea7b3d438afc5c1af8c63aa}
+\subsubsection{\texorpdfstring{audio\+\_\+load\+\_\+error()}{audio\_load\_error()}}
+{\footnotesize\ttfamily audio\+\_\+load\+\_\+error\+::audio\+\_\+load\+\_\+error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{audio\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 constructor 
@@ -49,13 +67,12 @@ This constructor puts a message into a string and saves that as a private variab
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaudio__load__error_a364ad9c1cb7de37f0cb3e33dbebbaa47}\label{classaudio__load__error_a364ad9c1cb7de37f0cb3e33dbebbaa47}} 
 \index{audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}!what@{what}}
 \index{what@{what}!audio\+\_\+load\+\_\+error@{audio\+\_\+load\+\_\+error}}
-\subsubsection[{\texorpdfstring{what() const noexceptoverride}{what() const noexceptoverride}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ audio\+\_\+load\+\_\+error\+::what (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}\hypertarget{classaudio__load__error_aa0559f9224f08e4a762f4284a2d76a47}{}\label{classaudio__load__error_aa0559f9224f08e4a762f4284a2d76a47}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ audio\+\_\+load\+\_\+error\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
 
 
 return message 
@@ -71,4 +88,4 @@ This function returns the message so it can be printed. It overrides the what fu
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{soundtrack_8hpp}{soundtrack.\+hpp}\end{DoxyCompactItemize}
+exceptions.\+hpp\end{DoxyCompactItemize}

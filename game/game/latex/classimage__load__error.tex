@@ -7,7 +7,7 @@ image load error
 
 
 
-{\ttfamily \#include $<$image.\+hpp$>$}
+{\ttfamily \#include $<$exceptions.\+hpp$>$}
 
 
 
@@ -31,9 +31,9 @@ Collaboration diagram for image\+\_\+load\+\_\+error\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classimage__load__error_a39665f8755ddd18f61bd837300805cd1}{image\+\_\+load\+\_\+error} (const std\+::string \&image\+\_\+name)
-\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
-const char $\ast$ \hyperlink{classimage__load__error_a67526c87a0e96b3bb4a25cddaa4eac20}{what} () const noexceptoverride
-\begin{DoxyCompactList}\small\item\em return message \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classimage__load__error_ab73fa8f110ff313005a7bb0ed66fd880}{what} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Return message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -47,16 +47,15 @@ This class is used to generate a image load error exception. It inherrits the st
 
 
 \subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage__load__error_a39665f8755ddd18f61bd837300805cd1}\label{classimage__load__error_a39665f8755ddd18f61bd837300805cd1}} 
 \index{image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}!image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}}
 \index{image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}!image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}}
-\subsubsection[{\texorpdfstring{image\+\_\+load\+\_\+error(const std\+::string \&image\+\_\+name)}{image_load_error(const std::string &image_name)}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+load\+\_\+error\+::image\+\_\+load\+\_\+error (
-\begin{DoxyParamCaption}
-\item[{const std\+::string \&}]{image\+\_\+name}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimage__load__error_a39665f8755ddd18f61bd837300805cd1}{}\label{classimage__load__error_a39665f8755ddd18f61bd837300805cd1}
+\subsubsection{\texorpdfstring{image\+\_\+load\+\_\+error()}{image\_load\_error()}}
+{\footnotesize\ttfamily image\+\_\+load\+\_\+error\+::image\+\_\+load\+\_\+error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{image\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-constructor 
+
+Constructor. 
 
 This constructor puts a message into a string and saves that as a private variable. The image name is also added to the string.
 
@@ -68,16 +67,15 @@ This constructor puts a message into a string and saves that as a private variab
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__load__error_ab73fa8f110ff313005a7bb0ed66fd880}\label{classimage__load__error_ab73fa8f110ff313005a7bb0ed66fd880}} 
 \index{image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}!what@{what}}
 \index{what@{what}!image\+\_\+load\+\_\+error@{image\+\_\+load\+\_\+error}}
-\subsubsection[{\texorpdfstring{what() const noexceptoverride}{what() const noexceptoverride}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ image\+\_\+load\+\_\+error\+::what (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}\hypertarget{classimage__load__error_a67526c87a0e96b3bb4a25cddaa4eac20}{}\label{classimage__load__error_a67526c87a0e96b3bb4a25cddaa4eac20}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ image\+\_\+load\+\_\+error\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
 
 
-return message 
+
+Return message. 
 
 This function returns the message so it can be printed. It overrides the what function from the std\+::exception superclass, making it easy to capture.
 
@@ -90,4 +88,4 @@ This function returns the message so it can be printed. It overrides the what fu
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{image_8hpp}{image.\+hpp}\end{DoxyCompactItemize}
+exceptions.\+hpp\end{DoxyCompactItemize}

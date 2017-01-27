@@ -15,7 +15,7 @@ Inheritance diagram for drawable\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=284pt]{classdrawable__inherit__graph}
+\includegraphics[width=350pt]{classdrawable__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -26,7 +26,7 @@ Inheritance diagram for drawable\+:\nopagebreak
 virtual void \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{draw} (sf\+::\+Render\+Window \&window)=0
 \begin{DoxyCompactList}\small\item\em virtual draw function for a drawable \end{DoxyCompactList}\item 
 virtual void \hyperlink{classdrawable_ad0d3930c045cc6776aa2c3965be32491}{move} (sf\+::\+Vector2f delta)
-\begin{DoxyCompactList}\small\item\em move function for a drawable \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Move function for a drawable. \end{DoxyCompactList}\item 
 virtual void \hyperlink{classdrawable_ac39691470b7874f5dec59efe649d3981}{jump} ()
 \begin{DoxyCompactList}\small\item\em virtual draw function for a drawable \end{DoxyCompactList}\item 
 virtual sf\+::\+Float\+Rect \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{get\+Global\+Bounds} ()=0
@@ -48,36 +48,41 @@ virtual \hyperlink{structcollision}{collision} \hyperlink{classdrawable_abbc6e00
 virtual std\+::string \hyperlink{classdrawable_a2ed0f8bb53f33477f7722efa7bb24583}{object\+\_\+information} ()
 \begin{DoxyCompactList}\small\item\em object information as string \end{DoxyCompactList}\item 
 virtual std\+::string \hyperlink{classdrawable_add3d8569fe2616ae0ed503b19c92c08e}{string\+\_\+from\+\_\+color} (sf\+::\+Color \&col)
-\begin{DoxyCompactList}\small\item\em object information as string \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em object information as string \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classdrawable_a329e564296d591dc8bd2f6dc5a205213}{get\+\_\+type} ()
+\begin{DoxyCompactList}\small\item\em Get the type. \end{DoxyCompactList}\item 
+void \hyperlink{classdrawable_aa019787b726542ca470fb817251e7b09}{set\+\_\+type} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em Set the type. \end{DoxyCompactList}\item 
+void \hyperlink{classdrawable_a34b6b50f342c41f550f09e0465f95f61}{set\+\_\+size} (sf\+::\+Vector2f new\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Set the size. \end{DoxyCompactList}\item 
+void \hyperlink{classdrawable_a5e40f2621daaca4ac32ef26b8c01b9a6}{set\+\_\+position} (sf\+::\+Vector2f new\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Set the position. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-sf\+::\+Vector2f {\bfseries position}\hypertarget{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}{}\label{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}
-
+\mbox{\Hypertarget{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}\label{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}} 
+sf\+::\+Vector2f {\bfseries position}
 \item 
-sf\+::\+Vector2f {\bfseries size}\hypertarget{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}{}\label{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}
-
+\mbox{\Hypertarget{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}\label{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}} 
+sf\+::\+Vector2f {\bfseries size}
 \item 
-std\+::string {\bfseries type}\hypertarget{classdrawable_ad5a982912d20a94b0e69de86cc9b53cb}{}\label{classdrawable_ad5a982912d20a94b0e69de86cc9b53cb}
-
+\mbox{\Hypertarget{classdrawable_ad5a982912d20a94b0e69de86cc9b53cb}\label{classdrawable_ad5a982912d20a94b0e69de86cc9b53cb}} 
+std\+::string {\bfseries type}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 class that is inherited by all objects that are drawable 
 
-class with a position, size and name, that is inherited by all object that can be drawn on the screen. 
+class with a position, size and type, that is inherited by all object that can be drawn on the screen. 
 
 \subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdrawable_a4e7881285581530d21b5c9fd59879b30}\label{classdrawable_a4e7881285581530d21b5c9fd59879b30}} 
 \index{drawable@{drawable}!drawable@{drawable}}
 \index{drawable@{drawable}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{drawable(const sf\+::\+Vector2f \&position, const sf\+::\+Vector2f \&size, std\+::string name)}{drawable(const sf::Vector2f &position, const sf::Vector2f &size, std::string name)}}]{\setlength{\rightskip}{0pt plus 5cm}drawable\+::drawable (
-\begin{DoxyParamCaption}
-\item[{const sf\+::\+Vector2f \&}]{position, }
-\item[{const sf\+::\+Vector2f \&}]{size, }
-\item[{std\+::string}]{name}
-\end{DoxyParamCaption}
-)}\hypertarget{classdrawable_a4e7881285581530d21b5c9fd59879b30}{}\label{classdrawable_a4e7881285581530d21b5c9fd59879b30}
+\subsubsection{\texorpdfstring{drawable()}{drawable()}}
+{\footnotesize\ttfamily drawable\+::drawable (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{position,  }\item[{const sf\+::\+Vector2f \&}]{size,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
 
 
 constructor for a drawable 
@@ -86,46 +91,43 @@ constructor that initializes position, size and name of drawable
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em position} & position of drawable, this is a sf\+::\+Vector2f and const \\
+\mbox{\tt in}  & {\em position} & Position of drawable, this is a sf\+::\+Vector2f and const \\
 \hline
-\mbox{\tt in}  & {\em size} & size of drawable, this is a sf\+::\+Vector2f and const \\
+\mbox{\tt in}  & {\em size} & Tize of drawable, this is a sf\+::\+Vector2f and const \\
 \hline
-\mbox{\tt in}  & {\em name} & this is the name of the drawable and is an std\+::string \\
+\mbox{\tt in}  & {\em name} & This is the name of the drawable and is an std\+::string \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdrawable_abbc6e0089d502ba48c3fcb9c96e3966e}\label{classdrawable_abbc6e0089d502ba48c3fcb9c96e3966e}} 
 \index{drawable@{drawable}!check\+\_\+for\+\_\+collisions@{check\+\_\+for\+\_\+collisions}}
 \index{check\+\_\+for\+\_\+collisions@{check\+\_\+for\+\_\+collisions}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{check\+\_\+for\+\_\+collisions(char c)}{check_for_collisions(char c)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf collision} drawable\+::check\+\_\+for\+\_\+collisions (
-\begin{DoxyParamCaption}
-\item[{char}]{c}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classdrawable_abbc6e0089d502ba48c3fcb9c96e3966e}{}\label{classdrawable_abbc6e0089d502ba48c3fcb9c96e3966e}
+\subsubsection{\texorpdfstring{check\+\_\+for\+\_\+collisions()}{check\_for\_collisions()}}
+{\footnotesize\ttfamily virtual \hyperlink{structcollision}{collision} drawable\+::check\+\_\+for\+\_\+collisions (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 check for collisions 
 
-e This function returns a collision struct type that is empty. The function needs to be fully implemented in subclasses if they need it.
+This function returns a collision struct type that is empty. The function needs to be fully implemented in subclasses if they need it.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em c} & char The collision side that needs to be checked \\
+\mbox{\tt in}  & {\em c} & The collision side that needs to be checked \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented in \hyperlink{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}{unicorn}.
 
+\mbox{\Hypertarget{classdrawable_af0ddd3660d258629598dc76b31d1cc49}\label{classdrawable_af0ddd3660d258629598dc76b31d1cc49}} 
 \index{drawable@{drawable}!collapse@{collapse}}
 \index{collapse@{collapse}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{collapse(object\+\_\+ptr object, collisions \&the\+\_\+collisions)}{collapse(object_ptr object, collisions &the_collisions)}}]{\setlength{\rightskip}{0pt plus 5cm}void drawable\+::collapse (
-\begin{DoxyParamCaption}
-\item[{object\+\_\+ptr}]{object, }
-\item[{collisions \&}]{the\+\_\+collisions}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classdrawable_af0ddd3660d258629598dc76b31d1cc49}{}\label{classdrawable_af0ddd3660d258629598dc76b31d1cc49}
+\subsubsection{\texorpdfstring{collapse()}{collapse()}}
+{\footnotesize\ttfamily void drawable\+::collapse (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object,  }\item[{collisions \&}]{the\+\_\+collisions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 check for collision with object 
@@ -134,18 +136,17 @@ This function checks if this object is colliding with another object. The output
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em object} & object\+\_\+ptr The other object for the collision check \\
+\mbox{\tt in}  & {\em object} & The other object for the collision check \\
 \hline
-\mbox{\tt out}  & {\em the\+\_\+collisions} & collisions The vector to put the collision in \\
+\mbox{\tt out}  & {\em the\+\_\+collisions} & The vector to put the collision in \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}\label{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}} 
 \index{drawable@{drawable}!draw@{draw}}
 \index{draw@{draw}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Window \&window)=0}{draw(sf::RenderWindow &window)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void drawable\+::draw (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Render\+Window \&}]{window}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{}\label{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void drawable\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 virtual draw function for a drawable 
@@ -159,26 +160,24 @@ virtual function that is defined in the subclasses of drawable
 \end{DoxyParams}
 
 
-Implemented in \hyperlink{classimage__from__file_a26eae6c872ca9033cacc3f6eb2762983}{image\+\_\+from\+\_\+file}, \hyperlink{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}{unicorn}, and \hyperlink{classwall_aa25b8377e1d9a209fabd2271294f05d0}{wall}.
+Implemented in \hyperlink{classanimation_a20959b66d1c25007890bb40f0e876570}{animation}, \hyperlink{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}{unicorn}, \hyperlink{classbullet_ae999b952538687d45ca2ae54164a5cd8}{bullet}, \hyperlink{classimage__from__file_a26eae6c872ca9033cacc3f6eb2762983}{image\+\_\+from\+\_\+file}, \hyperlink{classmob_a52f5e29b2ac2d87c8c1be7e0ff5ec96b}{mob}, \hyperlink{classbackground_a41736f9a00defad1e84b3a8099c887e2}{background}, and \hyperlink{classwall_aa25b8377e1d9a209fabd2271294f05d0}{wall}.
 
+\mbox{\Hypertarget{classdrawable_a6a31ea381be2964d0115b782a66d3414}\label{classdrawable_a6a31ea381be2964d0115b782a66d3414}} 
 \index{drawable@{drawable}!get\+\_\+position@{get\+\_\+position}}
 \index{get\+\_\+position@{get\+\_\+position}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{get\+\_\+position()}{get_position()}}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f drawable\+::get\+\_\+position (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classdrawable_a6a31ea381be2964d0115b782a66d3414}{}\label{classdrawable_a6a31ea381be2964d0115b782a66d3414}
+\subsubsection{\texorpdfstring{get\+\_\+position()}{get\_position()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f drawable\+::get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Get the position. 
 
-This function returns the position of the object. \index{drawable@{drawable}!get\+\_\+size@{get\+\_\+size}}
+This function returns the position of the object. \mbox{\Hypertarget{classdrawable_a58cb3ab0406d40e9cea3aefac1e4bf05}\label{classdrawable_a58cb3ab0406d40e9cea3aefac1e4bf05}} 
+\index{drawable@{drawable}!get\+\_\+size@{get\+\_\+size}}
 \index{get\+\_\+size@{get\+\_\+size}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{get\+\_\+size()}{get_size()}}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f drawable\+::get\+\_\+size (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classdrawable_a58cb3ab0406d40e9cea3aefac1e4bf05}{}\label{classdrawable_a58cb3ab0406d40e9cea3aefac1e4bf05}
+\subsubsection{\texorpdfstring{get\+\_\+size()}{get\_size()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f drawable\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 get size 
@@ -186,112 +185,170 @@ get size
 This function returns the size of the object.
 
 \begin{DoxyReturn}{Returns}
-sf\+::\+Vector2f The size of the object 
+The size of the object 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classdrawable_a329e564296d591dc8bd2f6dc5a205213}\label{classdrawable_a329e564296d591dc8bd2f6dc5a205213}} 
+\index{drawable@{drawable}!get\+\_\+type@{get\+\_\+type}}
+\index{get\+\_\+type@{get\+\_\+type}!drawable@{drawable}}
+\subsubsection{\texorpdfstring{get\+\_\+type()}{get\_type()}}
+{\footnotesize\ttfamily std\+::string drawable\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the type. 
+
+This function returns the type of the object.
+
+\begin{DoxyReturn}{Returns}
+The type of the object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdrawable_ae013ac0be47538be9ce885d6642daf73}\label{classdrawable_ae013ac0be47538be9ce885d6642daf73}} 
 \index{drawable@{drawable}!get\+Global\+Bounds@{get\+Global\+Bounds}}
 \index{get\+Global\+Bounds@{get\+Global\+Bounds}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{get\+Global\+Bounds()=0}{getGlobalBounds()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual sf\+::\+Float\+Rect drawable\+::get\+Global\+Bounds (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classdrawable_ae013ac0be47538be9ce885d6642daf73}{}\label{classdrawable_ae013ac0be47538be9ce885d6642daf73}
+\subsubsection{\texorpdfstring{get\+Global\+Bounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily virtual sf\+::\+Float\+Rect drawable\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 
 
 virtual get\+Global\+Bounds function 
 
-virtual sf\+::\+Float\+Rect \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{get\+Global\+Bounds()}; virtual function that gives sf\+::\+Floatrect of perimeter from the drawable 
+virtual function that gives \#sf\+::\+Floatrect of perimeter from the drawable 
 
-Implemented in \hyperlink{classimage__from__file_a971a591f906fa5c6e85b4e32cfc3d6a0}{image\+\_\+from\+\_\+file}, \hyperlink{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}{unicorn}, and \hyperlink{classwall_a317a464c879cfdf9464bd6f1b62d9101}{wall}.
+Implemented in \hyperlink{classanimation_aae3322323bf3dea83723969f364e18e0}{animation}, \hyperlink{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}{unicorn}, \hyperlink{classbullet_a87bda5887249e8e37c5579180449bd93}{bullet}, \hyperlink{classimage__from__file_a971a591f906fa5c6e85b4e32cfc3d6a0}{image\+\_\+from\+\_\+file}, \hyperlink{classmob_af3859378fad2a5f93a1c4d833ff74d5d}{mob}, \hyperlink{classbackground_ab5f2b627cd58e0d07678f0af01c6bd2d}{background}, and \hyperlink{classwall_a317a464c879cfdf9464bd6f1b62d9101}{wall}.
 
+\mbox{\Hypertarget{classdrawable_ac39691470b7874f5dec59efe649d3981}\label{classdrawable_ac39691470b7874f5dec59efe649d3981}} 
 \index{drawable@{drawable}!jump@{jump}}
 \index{jump@{jump}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{jump()}{jump()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void drawable\+::jump (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classdrawable_ac39691470b7874f5dec59efe649d3981}{}\label{classdrawable_ac39691470b7874f5dec59efe649d3981}
+\subsubsection{\texorpdfstring{jump()}{jump()}}
+{\footnotesize\ttfamily virtual void drawable\+::jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 virtual draw function for a drawable 
 
-virtual void jump(sf\+::\+Vector2f new\+\_\+location); virtual function that changes position of drawable to new location given
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em new\+\_\+location} & sf\+::\+Vector2f that is used as new position of drawable \\
-\hline
-\end{DoxyParams}
-
+Virtual function that changes position of drawable to new location given 
 
 Reimplemented in \hyperlink{classunicorn_a07d5ca4e66632c0e871221a27146805a}{unicorn}.
 
+\mbox{\Hypertarget{classdrawable_ad0d3930c045cc6776aa2c3965be32491}\label{classdrawable_ad0d3930c045cc6776aa2c3965be32491}} 
 \index{drawable@{drawable}!move@{move}}
 \index{move@{move}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{move(sf\+::\+Vector2f delta)}{move(sf::Vector2f delta)}}]{\setlength{\rightskip}{0pt plus 5cm}void drawable\+::move (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Vector2f}]{delta}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classdrawable_ad0d3930c045cc6776aa2c3965be32491}{}\label{classdrawable_ad0d3930c045cc6776aa2c3965be32491}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void drawable\+::move (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
-move function for a drawable 
 
-function that moves the drawable with a certian delta
+Move function for a drawable. 
+
+Function that moves the drawable with a certian delta
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em delta} & sf\+::\+Vector2f that determines with what verctor the drawable is moves \\
+\mbox{\tt in}  & {\em delta} & The delta with wich to move the object. \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented in \hyperlink{classunicorn_a162f200a68342f7bc0baaf17c8cf3f9f}{unicorn}.
 
+\mbox{\Hypertarget{classdrawable_a2ed0f8bb53f33477f7722efa7bb24583}\label{classdrawable_a2ed0f8bb53f33477f7722efa7bb24583}} 
 \index{drawable@{drawable}!object\+\_\+information@{object\+\_\+information}}
 \index{object\+\_\+information@{object\+\_\+information}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{object\+\_\+information()}{object_information()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string drawable\+::object\+\_\+information (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classdrawable_a2ed0f8bb53f33477f7722efa7bb24583}{}\label{classdrawable_a2ed0f8bb53f33477f7722efa7bb24583}
+\subsubsection{\texorpdfstring{object\+\_\+information()}{object\_information()}}
+{\footnotesize\ttfamily std\+::string drawable\+::object\+\_\+information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 object information as string 
 
 This function returns al the object information. The information is returned as a string an contains the type and the position.
 
-example\+: W\+A\+LL (0.\+000000,700.\+000000) \begin{DoxyReturn}{Returns}
-std\+::string The object information 
+output example\+: W\+A\+LL (0.\+000000,700.\+000000) \begin{DoxyReturn}{Returns}
+The object information 
 \end{DoxyReturn}
 
 
 Reimplemented in \hyperlink{classwall_aab1de4f144f176b134a967ba08747932}{wall}.
 
+\mbox{\Hypertarget{classdrawable_a715df01a318331e5611a2b0ad30109ff}\label{classdrawable_a715df01a318331e5611a2b0ad30109ff}} 
 \index{drawable@{drawable}!run\+\_\+actions@{run\+\_\+actions}}
 \index{run\+\_\+actions@{run\+\_\+actions}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{run\+\_\+actions(object\+\_\+ptr object)}{run_actions(object_ptr object)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void drawable\+::run\+\_\+actions (
-\begin{DoxyParamCaption}
-\item[{object\+\_\+ptr}]{object}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classdrawable_a715df01a318331e5611a2b0ad30109ff}{}\label{classdrawable_a715df01a318331e5611a2b0ad30109ff}
+\subsubsection{\texorpdfstring{run\+\_\+actions()}{run\_actions()}}
+{\footnotesize\ttfamily virtual void drawable\+::run\+\_\+actions (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 check and execute actions 
 
-This function is used to call the operator() on all the actions The run\+\_\+actions function in this superclass is empty. This is for the fact that some subclasses do not have actions. \begin{DoxyReturn}{Returns}
+This function is used to call the operator() on all the actions The run\+\_\+actions function in this superclass is empty. This is for the fact that some subclasses do not have actions. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em object} & The object to use in certain actions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 sf\+::\+Float\+Rect with the globalbounds 
 \end{DoxyReturn}
 
 
 Reimplemented in \hyperlink{classunicorn_aadb47a9981c46d6add8704074df117df}{unicorn}.
 
+\mbox{\Hypertarget{classdrawable_a5e40f2621daaca4ac32ef26b8c01b9a6}\label{classdrawable_a5e40f2621daaca4ac32ef26b8c01b9a6}} 
+\index{drawable@{drawable}!set\+\_\+position@{set\+\_\+position}}
+\index{set\+\_\+position@{set\+\_\+position}!drawable@{drawable}}
+\subsubsection{\texorpdfstring{set\+\_\+position()}{set\_position()}}
+{\footnotesize\ttfamily void drawable\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Set the position. 
+
+This function sets the position of an object to a new position.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+position} & The new position for the object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdrawable_a34b6b50f342c41f550f09e0465f95f61}\label{classdrawable_a34b6b50f342c41f550f09e0465f95f61}} 
+\index{drawable@{drawable}!set\+\_\+size@{set\+\_\+size}}
+\index{set\+\_\+size@{set\+\_\+size}!drawable@{drawable}}
+\subsubsection{\texorpdfstring{set\+\_\+size()}{set\_size()}}
+{\footnotesize\ttfamily void drawable\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Set the size. 
+
+This function sets the size of an object to a new size.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+size} & The new size for the object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdrawable_aa019787b726542ca470fb817251e7b09}\label{classdrawable_aa019787b726542ca470fb817251e7b09}} 
+\index{drawable@{drawable}!set\+\_\+type@{set\+\_\+type}}
+\index{set\+\_\+type@{set\+\_\+type}!drawable@{drawable}}
+\subsubsection{\texorpdfstring{set\+\_\+type()}{set\_type()}}
+{\footnotesize\ttfamily void drawable\+::set\+\_\+type (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+
+
+Set the type. 
+
+This function sets the type of the object to a new type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & The new type for the object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdrawable_add3d8569fe2616ae0ed503b19c92c08e}\label{classdrawable_add3d8569fe2616ae0ed503b19c92c08e}} 
 \index{drawable@{drawable}!string\+\_\+from\+\_\+color@{string\+\_\+from\+\_\+color}}
 \index{string\+\_\+from\+\_\+color@{string\+\_\+from\+\_\+color}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{string\+\_\+from\+\_\+color(sf\+::\+Color \&col)}{string_from_color(sf::Color &col)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string drawable\+::string\+\_\+from\+\_\+color (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Color \&}]{col}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classdrawable_add3d8569fe2616ae0ed503b19c92c08e}{}\label{classdrawable_add3d8569fe2616ae0ed503b19c92c08e}
+\subsubsection{\texorpdfstring{string\+\_\+from\+\_\+color()}{string\_from\_color()}}
+{\footnotesize\ttfamily std\+::string drawable\+::string\+\_\+from\+\_\+color (\begin{DoxyParamCaption}\item[{sf\+::\+Color \&}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 object information as string 
@@ -300,21 +357,18 @@ This function returns the color of an object. It requires a color as parameter a
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em col} & sf\+::\+Color\& The color that needs to be converted \\
+\mbox{\tt in}  & {\em col} & The color that needs to be converted \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::string The color as a string 
+The color as a string 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classdrawable_a0d3278e4e888fc8289468e8893dd8329}\label{classdrawable_a0d3278e4e888fc8289468e8893dd8329}} 
 \index{drawable@{drawable}!within@{within}}
 \index{within@{within}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{within(float x, float a, float b)}{within(float x, float a, float b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool drawable\+::within (
-\begin{DoxyParamCaption}
-\item[{float}]{x, }
-\item[{float}]{a, }
-\item[{float}]{b}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classdrawable_a0d3278e4e888fc8289468e8893dd8329}{}\label{classdrawable_a0d3278e4e888fc8289468e8893dd8329}
+\subsubsection{\texorpdfstring{within()}{within()}}
+{\footnotesize\ttfamily bool drawable\+::within (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{a,  }\item[{float}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 check x between a and b 
@@ -331,18 +385,14 @@ This function checks if the x parameter is between the a and b parameters.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool Returns if x is between a and b 
+Returns if x is between a and b 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classdrawable_ab5c0e1af885f214bc9ef0da47cdb5ac9}\label{classdrawable_ab5c0e1af885f214bc9ef0da47cdb5ac9}} 
 \index{drawable@{drawable}!within\+\_\+range@{within\+\_\+range}}
 \index{within\+\_\+range@{within\+\_\+range}!drawable@{drawable}}
-\subsubsection[{\texorpdfstring{within\+\_\+range(float x, float y, float a, float b)}{within_range(float x, float y, float a, float b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool drawable\+::within\+\_\+range (
-\begin{DoxyParamCaption}
-\item[{float}]{x, }
-\item[{float}]{y, }
-\item[{float}]{a, }
-\item[{float}]{b}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classdrawable_ab5c0e1af885f214bc9ef0da47cdb5ac9}{}\label{classdrawable_ab5c0e1af885f214bc9ef0da47cdb5ac9}
+\subsubsection{\texorpdfstring{within\+\_\+range()}{within\_range()}}
+{\footnotesize\ttfamily bool drawable\+::within\+\_\+range (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{a,  }\item[{float}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 check all pixels between x and y 
@@ -361,7 +411,7 @@ This function checks if any pixel between x and y is between a and b.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool Returns if all pixels between x and y are between a and b 
+Returns if all pixels between x and y are between a and b 
 \end{DoxyReturn}
 
 

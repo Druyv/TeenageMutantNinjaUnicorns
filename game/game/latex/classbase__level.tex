@@ -1,0 +1,51 @@
+\hypertarget{classbase__level}{}\section{base\+\_\+level Class Reference}
+\label{classbase__level}\index{base\+\_\+level@{base\+\_\+level}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbase__level_addf165fdc5f4e953be3b6a2dcd00459b}{base\+\_\+level} (sf\+::\+Vector2f screen\+\_\+size)
+\begin{DoxyCompactList}\small\item\em constructor screen size \end{DoxyCompactList}\item 
+void \hyperlink{classbase__level_a3b2da28cf45cad434103e81ee6c4538d}{push\+\_\+back\+\_\+borders} (objects\+\_\+vector \&objects)
+\begin{DoxyCompactList}\small\item\em Put walls in the walls vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbase__level_addf165fdc5f4e953be3b6a2dcd00459b}\label{classbase__level_addf165fdc5f4e953be3b6a2dcd00459b}} 
+\index{base\+\_\+level@{base\+\_\+level}!base\+\_\+level@{base\+\_\+level}}
+\index{base\+\_\+level@{base\+\_\+level}!base\+\_\+level@{base\+\_\+level}}
+\subsubsection{\texorpdfstring{base\+\_\+level()}{base\_level()}}
+{\footnotesize\ttfamily base\+\_\+level\+::base\+\_\+level (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{screen\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+constructor screen size 
+
+This constructor receives the screen size and creates all the walls with the right sizes. It makes them transparent to make sure you can not see the screen borders. It also changes the type of the wall objects to make sure other objects can know that they are not regular wall objects but of a special type. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em screen\+\_\+size} & The size of the screen \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbase__level_a3b2da28cf45cad434103e81ee6c4538d}\label{classbase__level_a3b2da28cf45cad434103e81ee6c4538d}} 
+\index{base\+\_\+level@{base\+\_\+level}!push\+\_\+back\+\_\+borders@{push\+\_\+back\+\_\+borders}}
+\index{push\+\_\+back\+\_\+borders@{push\+\_\+back\+\_\+borders}!base\+\_\+level@{base\+\_\+level}}
+\subsubsection{\texorpdfstring{push\+\_\+back\+\_\+borders()}{push\_back\_borders()}}
+{\footnotesize\ttfamily void base\+\_\+level\+::push\+\_\+back\+\_\+borders (\begin{DoxyParamCaption}\item[{objects\+\_\+vector \&}]{objects }\end{DoxyParamCaption})}
+
+
+
+Put walls in the walls vector. 
+
+This function puts the level borders in the vector with all the wall objects. This makes sure they are drawn. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em objects} & The vector with al the other wall objects \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{base__level_8hpp}{base\+\_\+level.\+hpp}\item 
+base\+\_\+level.\+cpp\end{DoxyCompactItemize}

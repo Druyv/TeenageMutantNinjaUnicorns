@@ -1,0 +1,161 @@
+\hypertarget{classmob}{}\section{mob Class Reference}
+\label{classmob}\index{mob@{mob}}
+
+
+class that makes an enemy to play agianst  
+
+
+
+
+{\ttfamily \#include $<$npc.\+hpp$>$}
+
+
+
+Inheritance diagram for mob\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classmob__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for mob\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classmob__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmob_ac524dd40986df00721239b66c552437e}{mob} (sf\+::\+Vector2f position, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em constructor to initialize mob \end{DoxyCompactList}\item 
+void \hyperlink{classmob_a52f5e29b2ac2d87c8c1be7e0ff5ec96b}{draw} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em draw function for mob \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{classmob_af3859378fad2a5f93a1c4d833ff74d5d}{get\+Global\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em get function for global bounds \end{DoxyCompactList}\item 
+void \hyperlink{classmob_ae892b3ce84f4aa16411b385abb5410c8}{die} ()
+\begin{DoxyCompactList}\small\item\em function that sets boolean \end{DoxyCompactList}\item 
+void \hyperlink{classmob_a3bce6c06653881f8be86fbc60a2b67cb}{revive} ()
+\begin{DoxyCompactList}\small\item\em function that sets boolean \end{DoxyCompactList}\item 
+bool \hyperlink{classmob_ab327a1798c02be3f9db7c1d01b17ba02}{get\+\_\+live} ()
+\begin{DoxyCompactList}\small\item\em function that returns alive variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class that makes an enemy to play agianst 
+
+This class creates an enemy that the player can shoot this version doesn\textquotesingle{}t include physics for the mob. It also can\textquotesingle{}t fire back.
+
+\begin{DoxyDate}{Date}
+26-\/01-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmob_ac524dd40986df00721239b66c552437e}\label{classmob_ac524dd40986df00721239b66c552437e}} 
+\index{mob@{mob}!mob@{mob}}
+\index{mob@{mob}!mob@{mob}}
+\subsubsection{\texorpdfstring{mob()}{mob()}}
+{\footnotesize\ttfamily mob\+::mob (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+constructor to initialize mob 
+
+This constructor is used to give a position and a name of the file used a image
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & sf\+::\+Vector2f position where image is placed \\
+\hline
+\mbox{\tt in}  & {\em filename} & std\+::string that is the filename of the image used \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmob_ae892b3ce84f4aa16411b385abb5410c8}\label{classmob_ae892b3ce84f4aa16411b385abb5410c8}} 
+\index{mob@{mob}!die@{die}}
+\index{die@{die}!mob@{mob}}
+\subsubsection{\texorpdfstring{die()}{die()}}
+{\footnotesize\ttfamily void mob\+::die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that sets boolean 
+
+This function sets variable alive to false \mbox{\Hypertarget{classmob_a52f5e29b2ac2d87c8c1be7e0ff5ec96b}\label{classmob_a52f5e29b2ac2d87c8c1be7e0ff5ec96b}} 
+\index{mob@{mob}!draw@{draw}}
+\index{draw@{draw}!mob@{mob}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void mob\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+draw function for mob 
+
+This function draws the mob\+\_\+animation. It only draws the mob when it is alive. This can be seen with the \hyperlink{classmob_ab327a1798c02be3f9db7c1d01b17ba02}{mob\+::get\+\_\+live()} function
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window} & sf\+::\+Render\+Window that is used to draw picture on \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{drawable}.
+
+\mbox{\Hypertarget{classmob_ab327a1798c02be3f9db7c1d01b17ba02}\label{classmob_ab327a1798c02be3f9db7c1d01b17ba02}} 
+\index{mob@{mob}!get\+\_\+live@{get\+\_\+live}}
+\index{get\+\_\+live@{get\+\_\+live}!mob@{mob}}
+\subsubsection{\texorpdfstring{get\+\_\+live()}{get\_live()}}
+{\footnotesize\ttfamily bool mob\+::get\+\_\+live (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that returns alive variable 
+
+This function is used to return the current state of the boolean alive
+
+\begin{DoxyReturn}{Returns}
+boolean that gives information on if a mob is alive. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmob_af3859378fad2a5f93a1c4d833ff74d5d}\label{classmob_af3859378fad2a5f93a1c4d833ff74d5d}} 
+\index{mob@{mob}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!mob@{mob}}
+\subsubsection{\texorpdfstring{get\+Global\+Bounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect mob\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get function for global bounds 
+
+This function gets the global bounds of the image in mob. When the mob is not alive gives a empty sf\+::\+Float\+Rect so bullet can\textquotesingle{}t \char`\"{}accidentally\char`\"{} collide with the mob
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Float\+Rect that is empty when mob is not alive 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}.
+
+\mbox{\Hypertarget{classmob_a3bce6c06653881f8be86fbc60a2b67cb}\label{classmob_a3bce6c06653881f8be86fbc60a2b67cb}} 
+\index{mob@{mob}!revive@{revive}}
+\index{revive@{revive}!mob@{mob}}
+\subsubsection{\texorpdfstring{revive()}{revive()}}
+{\footnotesize\ttfamily void mob\+::revive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that sets boolean 
+
+This function sets variable alive to true 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+npc.\+hpp\item 
+npc.\+cpp\end{DoxyCompactItemize}

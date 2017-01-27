@@ -1,8 +1,9 @@
 \hypertarget{factory_8hpp}{}\section{factory.\+hpp File Reference}
 \label{factory_8hpp}\index{factory.\+hpp@{factory.\+hpp}}
-{\ttfamily \#include \char`\"{}wall.\+hpp\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}unicorn.\+hpp\char`\"{}}\\*
-{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include \char`\"{}wall.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}unicorn.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}exceptions.\+hpp\char`\"{}}\newline
 Include dependency graph for factory.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -13,22 +14,14 @@ Include dependency graph for factory.\+hpp\+:\nopagebreak
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{classinvalid__position}{invalid\+\_\+position}
-\begin{DoxyCompactList}\small\item\em invalid position exception \end{DoxyCompactList}\item 
-class \hyperlink{classend__of__file}{end\+\_\+of\+\_\+file}
-\item 
-class \hyperlink{classunknown__color}{unknown\+\_\+color}
-\item 
-class \hyperlink{classunknown__type}{unknown\+\_\+type}
-\item 
 class \hyperlink{classfactory}{factory}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Factory for reading in levels. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::ifstream \& {\bfseries operator$>$$>$} (std\+::ifstream \&input, sf\+::\+Vector2f \&rhs)\hypertarget{factory_8hpp_af8646b44c0d9bcf25ca4064ab22601f8}{}\label{factory_8hpp_af8646b44c0d9bcf25ca4064ab22601f8}
-
+\mbox{\Hypertarget{factory_8hpp_af8646b44c0d9bcf25ca4064ab22601f8}\label{factory_8hpp_af8646b44c0d9bcf25ca4064ab22601f8}} 
+std\+::ifstream \& {\bfseries operator$>$$>$} (std\+::ifstream \&input, sf\+::\+Vector2f \&rhs)
 \item 
-std\+::ifstream \& {\bfseries operator$>$$>$} (std\+::ifstream \&input, sf\+::\+Color \&rhs)\hypertarget{factory_8hpp_aedc8da7651164363a07b8c75b061b0d8}{}\label{factory_8hpp_aedc8da7651164363a07b8c75b061b0d8}
-
+\mbox{\Hypertarget{factory_8hpp_aedc8da7651164363a07b8c75b061b0d8}\label{factory_8hpp_aedc8da7651164363a07b8c75b061b0d8}} 
+std\+::ifstream \& {\bfseries operator$>$$>$} (std\+::ifstream \&input, sf\+::\+Color \&rhs)
 \end{DoxyCompactItemize}

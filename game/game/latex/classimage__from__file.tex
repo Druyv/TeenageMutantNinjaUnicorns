@@ -41,7 +41,13 @@ void \hyperlink{classimage__from__file_a868911f8d541af91290fb8dc56435cd2}{set\+\
 void \hyperlink{classimage__from__file_a43b0d6b11bf46827308e4e6cb7aa8579}{set\+\_\+size} (sf\+::\+Vector2f new\+\_\+size)
 \begin{DoxyCompactList}\small\item\em set size \end{DoxyCompactList}\item 
 void \hyperlink{classimage__from__file_a6561a7e8833e4ca84ba5a31e98802757}{set\+Texture\+Rect} (const sf\+::\+Int\+Rect \&rectangle)
-\begin{DoxyCompactList}\small\item\em set the texture rectangle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em set the texture rectangle \end{DoxyCompactList}\item 
+void \hyperlink{classimage__from__file_a2d808924e71e3eaf18532d9b32e40f07}{set\+\_\+smooth} (bool smooth)
+\begin{DoxyCompactList}\small\item\em Set smooth. \end{DoxyCompactList}\item 
+void \hyperlink{classimage__from__file_abaf0ebde2771171fdf91b55f4f6c5aa6}{set\+\_\+repeated} (bool repeated)
+\begin{DoxyCompactList}\small\item\em Set repeated. \end{DoxyCompactList}\item 
+void \hyperlink{classimage__from__file_a698cd91783bb6c2211ea5a3702ca60a8}{set\+\_\+scale} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Set scale. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -60,14 +66,12 @@ This class creates an sprite with an image as texture. The class inherrits the s
 
 
 \subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage__from__file_a08fd7ad55a2eb520242e31ff3cdf2663}\label{classimage__from__file_a08fd7ad55a2eb520242e31ff3cdf2663}} 
 \index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
 \index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
-\subsubsection[{\texorpdfstring{image\+\_\+from\+\_\+file(sf\+::\+Vector2f position, std\+::string image\+\_\+name)}{image_from_file(sf::Vector2f position, std::string image_name)}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+from\+\_\+file\+::image\+\_\+from\+\_\+file (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Vector2f}]{position, }
-\item[{std\+::string}]{image\+\_\+name}
-\end{DoxyParamCaption}
-)}\hypertarget{classimage__from__file_a08fd7ad55a2eb520242e31ff3cdf2663}{}\label{classimage__from__file_a08fd7ad55a2eb520242e31ff3cdf2663}
+\subsubsection{\texorpdfstring{image\+\_\+from\+\_\+file()}{image\_from\_file()}}
+{\footnotesize\ttfamily image\+\_\+from\+\_\+file\+::image\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{image\+\_\+name }\end{DoxyParamCaption})}
+
 
 
 constructor 
@@ -90,13 +94,12 @@ Make sure you use a Try catch block to capture the exception generated if the im
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__from__file_a26eae6c872ca9033cacc3f6eb2762983}\label{classimage__from__file_a26eae6c872ca9033cacc3f6eb2762983}} 
 \index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!draw@{draw}}
 \index{draw@{draw}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
-\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Window \&window) override}{draw(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+from\+\_\+file\+::draw (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Render\+Window \&}]{window}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classimage__from__file_a26eae6c872ca9033cacc3f6eb2762983}{}\label{classimage__from__file_a26eae6c872ca9033cacc3f6eb2762983}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void image\+\_\+from\+\_\+file\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
 
 
 draw object 
@@ -112,13 +115,12 @@ This function is used for calling the draw function on the sfml object created w
 
 Implements \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{drawable}.
 
+\mbox{\Hypertarget{classimage__from__file_a971a591f906fa5c6e85b4e32cfc3d6a0}\label{classimage__from__file_a971a591f906fa5c6e85b4e32cfc3d6a0}} 
 \index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!get\+Global\+Bounds@{get\+Global\+Bounds}}
 \index{get\+Global\+Bounds@{get\+Global\+Bounds}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
-\subsubsection[{\texorpdfstring{get\+Global\+Bounds() override}{getGlobalBounds() override}}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect image\+\_\+from\+\_\+file\+::get\+Global\+Bounds (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classimage__from__file_a971a591f906fa5c6e85b4e32cfc3d6a0}{}\label{classimage__from__file_a971a591f906fa5c6e85b4e32cfc3d6a0}
+\subsubsection{\texorpdfstring{get\+Global\+Bounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect image\+\_\+from\+\_\+file\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
 
 
 get objects floatrect 
@@ -141,13 +143,12 @@ This function uses the get\+Global\+Bounds function from te object to get the bo
 
 Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}.
 
+\mbox{\Hypertarget{classimage__from__file_a868911f8d541af91290fb8dc56435cd2}\label{classimage__from__file_a868911f8d541af91290fb8dc56435cd2}} 
 \index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!set\+\_\+position@{set\+\_\+position}}
 \index{set\+\_\+position@{set\+\_\+position}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
-\subsubsection[{\texorpdfstring{set\+\_\+position(sf\+::\+Vector2f new\+\_\+position)}{set_position(sf::Vector2f new_position)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+from\+\_\+file\+::set\+\_\+position (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Vector2f}]{new\+\_\+position}
-\end{DoxyParamCaption}
-)}\hypertarget{classimage__from__file_a868911f8d541af91290fb8dc56435cd2}{}\label{classimage__from__file_a868911f8d541af91290fb8dc56435cd2}
+\subsubsection{\texorpdfstring{set\+\_\+position()}{set\_position()}}
+{\footnotesize\ttfamily void image\+\_\+from\+\_\+file\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+\_\+position }\end{DoxyParamCaption})}
+
 
 
 set position 
@@ -162,13 +163,46 @@ This function sets the position of the object to a new value.
 \begin{DoxySeeAlso}{See also}
 \href{https://www.sfml-dev.org/documentation/2.0/classsf_1_1Vector2.php }{\tt sf\+::\+Vector2f} 
 \end{DoxySeeAlso}
+\mbox{\Hypertarget{classimage__from__file_abaf0ebde2771171fdf91b55f4f6c5aa6}\label{classimage__from__file_abaf0ebde2771171fdf91b55f4f6c5aa6}} 
+\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!set\+\_\+repeated@{set\+\_\+repeated}}
+\index{set\+\_\+repeated@{set\+\_\+repeated}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+\subsubsection{\texorpdfstring{set\+\_\+repeated()}{set\_repeated()}}
+{\footnotesize\ttfamily void image\+\_\+from\+\_\+file\+::set\+\_\+repeated (\begin{DoxyParamCaption}\item[{bool}]{repeated }\end{DoxyParamCaption})}
+
+
+
+Set repeated. 
+
+This function can be used to make the image repeat itself if the size of the image is smaller then the object. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em repeated} & Boolean for either making the image repeat itself or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage__from__file_a698cd91783bb6c2211ea5a3702ca60a8}\label{classimage__from__file_a698cd91783bb6c2211ea5a3702ca60a8}} 
+\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!set\+\_\+scale@{set\+\_\+scale}}
+\index{set\+\_\+scale@{set\+\_\+scale}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+\subsubsection{\texorpdfstring{set\+\_\+scale()}{set\_scale()}}
+{\footnotesize\ttfamily void image\+\_\+from\+\_\+file\+::set\+\_\+scale (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Set scale. 
+
+This function can be used to scale the image
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & The scale factor for the x of the image \\
+\hline
+\mbox{\tt in}  & {\em y} & The scale factor for the y of the image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage__from__file_a43b0d6b11bf46827308e4e6cb7aa8579}\label{classimage__from__file_a43b0d6b11bf46827308e4e6cb7aa8579}} 
 \index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!set\+\_\+size@{set\+\_\+size}}
 \index{set\+\_\+size@{set\+\_\+size}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
-\subsubsection[{\texorpdfstring{set\+\_\+size(sf\+::\+Vector2f new\+\_\+size)}{set_size(sf::Vector2f new_size)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+from\+\_\+file\+::set\+\_\+size (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Vector2f}]{new\+\_\+size}
-\end{DoxyParamCaption}
-)}\hypertarget{classimage__from__file_a43b0d6b11bf46827308e4e6cb7aa8579}{}\label{classimage__from__file_a43b0d6b11bf46827308e4e6cb7aa8579}
+\subsubsection{\texorpdfstring{set\+\_\+size()}{set\_size()}}
+{\footnotesize\ttfamily void image\+\_\+from\+\_\+file\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+\_\+size }\end{DoxyParamCaption})}
+
 
 
 set size 
@@ -183,13 +217,29 @@ This function sets the size of the object.
 \begin{DoxySeeAlso}{See also}
 \href{https://www.sfml-dev.org/documentation/2.0/classsf_1_1Vector2.php }{\tt sf\+::\+Vector2f} 
 \end{DoxySeeAlso}
+\mbox{\Hypertarget{classimage__from__file_a2d808924e71e3eaf18532d9b32e40f07}\label{classimage__from__file_a2d808924e71e3eaf18532d9b32e40f07}} 
+\index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!set\+\_\+smooth@{set\+\_\+smooth}}
+\index{set\+\_\+smooth@{set\+\_\+smooth}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
+\subsubsection{\texorpdfstring{set\+\_\+smooth()}{set\_smooth()}}
+{\footnotesize\ttfamily void image\+\_\+from\+\_\+file\+::set\+\_\+smooth (\begin{DoxyParamCaption}\item[{bool}]{smooth }\end{DoxyParamCaption})}
+
+
+
+Set smooth. 
+
+This function can be used to make the image lines more smooth.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em smooth} & Boolean for either making the lines smooth or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classimage__from__file_a6561a7e8833e4ca84ba5a31e98802757}\label{classimage__from__file_a6561a7e8833e4ca84ba5a31e98802757}} 
 \index{image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}!set\+Texture\+Rect@{set\+Texture\+Rect}}
 \index{set\+Texture\+Rect@{set\+Texture\+Rect}!image\+\_\+from\+\_\+file@{image\+\_\+from\+\_\+file}}
-\subsubsection[{\texorpdfstring{set\+Texture\+Rect(const sf\+::\+Int\+Rect \&rectangle)}{setTextureRect(const sf::IntRect &rectangle)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+from\+\_\+file\+::set\+Texture\+Rect (
-\begin{DoxyParamCaption}
-\item[{const sf\+::\+Int\+Rect \&}]{rectangle}
-\end{DoxyParamCaption}
-)}\hypertarget{classimage__from__file_a6561a7e8833e4ca84ba5a31e98802757}{}\label{classimage__from__file_a6561a7e8833e4ca84ba5a31e98802757}
+\subsubsection{\texorpdfstring{set\+Texture\+Rect()}{setTextureRect()}}
+{\footnotesize\ttfamily void image\+\_\+from\+\_\+file\+::set\+Texture\+Rect (\begin{DoxyParamCaption}\item[{const sf\+::\+Int\+Rect \&}]{rectangle }\end{DoxyParamCaption})}
+
 
 
 set the texture rectangle 

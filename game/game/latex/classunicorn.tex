@@ -30,8 +30,8 @@ Collaboration diagram for unicorn\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classunicorn_a78330523ca0b21ed472dd66498086199}{unicorn} (sf\+::\+Vector2f position, std\+::string filename, actions \&actions\+\_\+array, collisions \&the\+\_\+collisions)
-\begin{DoxyCompactList}\small\item\em constructor to initialize the unicorn \end{DoxyCompactList}\item 
+\hyperlink{classunicorn_a5106a69c85e9426caf0bc79f48c21ed4}{unicorn} (sf\+::\+Vector2f position, std\+::string filename, actions \&actions\+\_\+array, collisions \&the\+\_\+collisions, std\+::vector$<$ mob\+\_\+ptr $>$ \&all\+\_\+mobs, objects\+\_\+vector \&objects)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the unicorn. \end{DoxyCompactList}\item 
 void \hyperlink{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}{draw} (sf\+::\+Render\+Window \&window) override
 \begin{DoxyCompactList}\small\item\em function that draws the image \end{DoxyCompactList}\item 
 void \hyperlink{classunicorn_a162f200a68342f7bc0baaf17c8cf3f9f}{move} (sf\+::\+Vector2f delta) override
@@ -43,9 +43,13 @@ sf\+::\+Float\+Rect \hyperlink{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}{g
 void \hyperlink{classunicorn_aadb47a9981c46d6add8704074df117df}{run\+\_\+actions} (object\+\_\+ptr object) override
 \begin{DoxyCompactList}\small\item\em functions that runs through all actions related to the unicorn \end{DoxyCompactList}\item 
 \hyperlink{structcollision}{collision} \hyperlink{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}{check\+\_\+for\+\_\+collisions} (char c) override
-\begin{DoxyCompactList}\small\item\em check the collisions vector \end{DoxyCompactList}\item 
-void {\bfseries shoot} (sf\+::\+Vector2f fire\+\_\+position)\hypertarget{classunicorn_a95c4a4123e38e413c01323a1966f9ed1}{}\label{classunicorn_a95c4a4123e38e413c01323a1966f9ed1}
-
+\begin{DoxyCompactList}\small\item\em Check the collisions vector. \end{DoxyCompactList}\item 
+void \hyperlink{classunicorn_af448a3fa5fc5f09254b50afa151ce42b}{shoot} (sf\+::\+Vector2f fire\+\_\+position, sf\+::\+Render\+Window \&window, sf\+::\+Vector2f offset)
+\begin{DoxyCompactList}\small\item\em function that shoots bullet \end{DoxyCompactList}\item 
+void \hyperlink{classunicorn_af0e2581c426b4b1e32f8a7b484b4e242}{set\+\_\+spawn\+\_\+location} (sf\+::\+Vector2f new\+\_\+location)
+\begin{DoxyCompactList}\small\item\em set the spawn location \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classunicorn_a5be2c0f1caeeb479fee748ee9ddfe864}\label{classunicorn_a5be2c0f1caeeb479fee748ee9ddfe864}} 
+void {\bfseries damage} ()
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -61,63 +65,61 @@ This class is used to control the unicorn and can be used to control it aswell (
 
 
 \subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classunicorn_a5106a69c85e9426caf0bc79f48c21ed4}\label{classunicorn_a5106a69c85e9426caf0bc79f48c21ed4}} 
 \index{unicorn@{unicorn}!unicorn@{unicorn}}
 \index{unicorn@{unicorn}!unicorn@{unicorn}}
-\subsubsection[{\texorpdfstring{unicorn(sf\+::\+Vector2f position, std\+::string filename, actions \&actions\+\_\+array, collisions \&the\+\_\+collisions)}{unicorn(sf::Vector2f position, std::string filename, actions &actions_array, collisions &the_collisions)}}]{\setlength{\rightskip}{0pt plus 5cm}unicorn\+::unicorn (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Vector2f}]{position, }
-\item[{std\+::string}]{filename, }
-\item[{actions \&}]{actions\+\_\+array, }
-\item[{collisions \&}]{the\+\_\+collisions}
-\end{DoxyParamCaption}
-)}\hypertarget{classunicorn_a78330523ca0b21ed472dd66498086199}{}\label{classunicorn_a78330523ca0b21ed472dd66498086199}
+\subsubsection{\texorpdfstring{unicorn()}{unicorn()}}
+{\footnotesize\ttfamily unicorn\+::unicorn (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{actions \&}]{actions\+\_\+array,  }\item[{collisions \&}]{the\+\_\+collisions,  }\item[{std\+::vector$<$ mob\+\_\+ptr $>$ \&}]{all\+\_\+mobs,  }\item[{objects\+\_\+vector \&}]{objects }\end{DoxyParamCaption})}
 
 
-constructor to initialize the unicorn 
+
+Constructor to initialize the unicorn. 
 
 This construcor initializes the position of the unicorn as well a the filename of the image used
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em position} & sf\+::\+Vector2f position where the image is placed \\
+\mbox{\tt in}  & {\em position} & Position where the image is placed \\
 \hline
-\mbox{\tt in}  & {\em filename} & std\+::string that is the filename of the image used \\
+\mbox{\tt in}  & {\em filename} & The filename of the image \\
+\hline
+\mbox{\tt in}  & {\em actions\+\_\+array} & The actions of the unicorn \\
+\hline
+\mbox{\tt in}  & {\em the\+\_\+collisions} & The collisions the unicorn has \\
+\hline
+\mbox{\tt in}  & {\em all\+\_\+mobs} & All mobs in level \mbox{[}in\mbox{]} objects all walls/obstacles that unicorn and bullet can react to \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}\label{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}} 
 \index{unicorn@{unicorn}!check\+\_\+for\+\_\+collisions@{check\+\_\+for\+\_\+collisions}}
 \index{check\+\_\+for\+\_\+collisions@{check\+\_\+for\+\_\+collisions}!unicorn@{unicorn}}
-\subsubsection[{\texorpdfstring{check\+\_\+for\+\_\+collisions(char c) override}{check_for_collisions(char c) override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf collision} unicorn\+::check\+\_\+for\+\_\+collisions (
-\begin{DoxyParamCaption}
-\item[{char}]{c}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}{}\label{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}
+\subsubsection{\texorpdfstring{check\+\_\+for\+\_\+collisions()}{check\_for\_collisions()}}
+{\footnotesize\ttfamily \hyperlink{structcollision}{collision} unicorn\+::check\+\_\+for\+\_\+collisions (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-check the collisions vector 
+
+Check the collisions vector. 
 
 This function checks the collisions vector for a collision where the c is the direction. When c is \textquotesingle{}U\textquotesingle{} it checks the U value of the collisions struct.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em position} & sf\+::\+Vector2f position where the image is placed \\
-\hline
-\mbox{\tt in}  & {\em filename} & std\+::string that is the filename of the image used \\
+\mbox{\tt in}  & {\em c} & The character to check for \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \hyperlink{classdrawable_abbc6e0089d502ba48c3fcb9c96e3966e}{drawable}.
 
+\mbox{\Hypertarget{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}\label{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}} 
 \index{unicorn@{unicorn}!draw@{draw}}
 \index{draw@{draw}!unicorn@{unicorn}}
-\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Window \&window) override}{draw(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void unicorn\+::draw (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Render\+Window \&}]{window}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}{}\label{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void unicorn\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
 
 
 function that draws the image 
@@ -133,13 +135,12 @@ this function draws the unicorn, depending on the unicorn going left or rigth sc
 
 Implements \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{drawable}.
 
+\mbox{\Hypertarget{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}\label{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}} 
 \index{unicorn@{unicorn}!get\+Global\+Bounds@{get\+Global\+Bounds}}
 \index{get\+Global\+Bounds@{get\+Global\+Bounds}!unicorn@{unicorn}}
-\subsubsection[{\texorpdfstring{get\+Global\+Bounds() override}{getGlobalBounds() override}}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect unicorn\+::get\+Global\+Bounds (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}{}\label{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}
+\subsubsection{\texorpdfstring{get\+Global\+Bounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect unicorn\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
 
 
 function that gets the boundingbox of the image 
@@ -147,19 +148,18 @@ function that gets the boundingbox of the image
 This function gets the boundingbox of the image and returns this.
 
 \begin{DoxyReturn}{Returns}
-sf\+::\+Float\+Rect wich are the boundaries of the image 
+wich are the boundaries of the image 
 \end{DoxyReturn}
 
 
 Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}.
 
+\mbox{\Hypertarget{classunicorn_a07d5ca4e66632c0e871221a27146805a}\label{classunicorn_a07d5ca4e66632c0e871221a27146805a}} 
 \index{unicorn@{unicorn}!jump@{jump}}
 \index{jump@{jump}!unicorn@{unicorn}}
-\subsubsection[{\texorpdfstring{jump() override}{jump() override}}]{\setlength{\rightskip}{0pt plus 5cm}void unicorn\+::jump (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_a07d5ca4e66632c0e871221a27146805a}{}\label{classunicorn_a07d5ca4e66632c0e871221a27146805a}
+\subsubsection{\texorpdfstring{jump()}{jump()}}
+{\footnotesize\ttfamily void unicorn\+::jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
 
 
 let the unicorn jump 
@@ -173,13 +173,12 @@ sf\+::\+Sprite\+::get\+Global\+Bounds()
 
 Reimplemented from \hyperlink{classdrawable_ac39691470b7874f5dec59efe649d3981}{drawable}.
 
+\mbox{\Hypertarget{classunicorn_a162f200a68342f7bc0baaf17c8cf3f9f}\label{classunicorn_a162f200a68342f7bc0baaf17c8cf3f9f}} 
 \index{unicorn@{unicorn}!move@{move}}
 \index{move@{move}!unicorn@{unicorn}}
-\subsubsection[{\texorpdfstring{move(sf\+::\+Vector2f delta) override}{move(sf::Vector2f delta) override}}]{\setlength{\rightskip}{0pt plus 5cm}void unicorn\+::move (
-\begin{DoxyParamCaption}
-\item[{sf\+::\+Vector2f}]{delta}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_a162f200a68342f7bc0baaf17c8cf3f9f}{}\label{classunicorn_a162f200a68342f7bc0baaf17c8cf3f9f}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void unicorn\+::move (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
 
 
 function that moves image object with a certian delta 
@@ -198,13 +197,12 @@ This function moves the image with a certian vector. This vector is the paramete
 
 Reimplemented from \hyperlink{classdrawable_ad0d3930c045cc6776aa2c3965be32491}{drawable}.
 
+\mbox{\Hypertarget{classunicorn_aadb47a9981c46d6add8704074df117df}\label{classunicorn_aadb47a9981c46d6add8704074df117df}} 
 \index{unicorn@{unicorn}!run\+\_\+actions@{run\+\_\+actions}}
 \index{run\+\_\+actions@{run\+\_\+actions}!unicorn@{unicorn}}
-\subsubsection[{\texorpdfstring{run\+\_\+actions(object\+\_\+ptr object) override}{run_actions(object_ptr object) override}}]{\setlength{\rightskip}{0pt plus 5cm}void unicorn\+::run\+\_\+actions (
-\begin{DoxyParamCaption}
-\item[{object\+\_\+ptr}]{object}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classunicorn_aadb47a9981c46d6add8704074df117df}{}\label{classunicorn_aadb47a9981c46d6add8704074df117df}
+\subsubsection{\texorpdfstring{run\+\_\+actions()}{run\_actions()}}
+{\footnotesize\ttfamily void unicorn\+::run\+\_\+actions (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
 
 
 functions that runs through all actions related to the unicorn 
@@ -213,6 +211,42 @@ This function contains for-\/loop that runs through actions for this unicorn
 
 Reimplemented from \hyperlink{classdrawable_a715df01a318331e5611a2b0ad30109ff}{drawable}.
 
+\mbox{\Hypertarget{classunicorn_af0e2581c426b4b1e32f8a7b484b4e242}\label{classunicorn_af0e2581c426b4b1e32f8a7b484b4e242}} 
+\index{unicorn@{unicorn}!set\+\_\+spawn\+\_\+location@{set\+\_\+spawn\+\_\+location}}
+\index{set\+\_\+spawn\+\_\+location@{set\+\_\+spawn\+\_\+location}!unicorn@{unicorn}}
+\subsubsection{\texorpdfstring{set\+\_\+spawn\+\_\+location()}{set\_spawn\_location()}}
+{\footnotesize\ttfamily void unicorn\+::set\+\_\+spawn\+\_\+location (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+\_\+location }\end{DoxyParamCaption})}
+
+
+
+set the spawn location 
+
+This function sets the spawn location of the unicorn to a new location. The unicorn will spawn in the new location if he dies.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+location} & The new spawn location for the unicorn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classunicorn_af448a3fa5fc5f09254b50afa151ce42b}\label{classunicorn_af448a3fa5fc5f09254b50afa151ce42b}} 
+\index{unicorn@{unicorn}!shoot@{shoot}}
+\index{shoot@{shoot}!unicorn@{unicorn}}
+\subsubsection{\texorpdfstring{shoot()}{shoot()}}
+{\footnotesize\ttfamily void unicorn\+::shoot (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{fire\+\_\+position,  }\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{sf\+::\+Vector2f}]{offset }\end{DoxyParamCaption})}
+
+
+
+function that shoots bullet 
+
+This function is used to fire a bullet object. Given the start position , a window to draw on and the offset it should be fired with. When user presses the L\+Control button the shoot\+\_\+timeout is set to 100. If not hit by something the bullet will disappear.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fire\+\_\+position} & position that the bullet is fired from \\
+\hline
+\mbox{\tt in}  & {\em window} & sf\+::\+Render\+Window to display bullet on \mbox{[}in\mbox{]} offset sf\+::\+Vector2f that decides wich way the bullet goes. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
