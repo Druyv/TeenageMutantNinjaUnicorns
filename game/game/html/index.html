@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TEENAGE MUTANT NINJA TURTLE: Technical documentation</title>
+<title>TEENAGE MUTANT NINJA UNICORN: Technical documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="unicorn supreme2_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">TEENAGE MUTANT NINJA TURTLE
+   <div id="projectname">TEENAGE MUTANT NINJA UNICORN
    </div>
   </td>
  </tr>
@@ -65,7 +65,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="typedefs"></a>
 The self new types</h1>
-<p>We have 4 typedefs. Two of them are for the objectes and the other 2 are for sactions and collisions. These typedefs make sure we dont have to repeat the same complicated types over and over again. Also the chance of making a mistake is far less with the more easy names we gave our typedefs. The first typedef is called #object_ptr. This is a std::shared_ptr type to make sure multiple pointers to the same object can exist without any chance of not destructings the actual item propperly. This shared pointer is of type drawable so we can use it with the objects we want on screen. The second typedef is a std::vector with those object_ptrs as type. It is called #objects_vector::B. This is the vector type we put all the objects in so we can loop through them and do what we need to do. We also have a typedef with #collisions. In this typedef we put <a class="el" href="structcollision.html" title="a collision ">collision</a> structs with all the collisions any objects has. The last one is for saving a number of actions for the objects you make. It is called #actions.</p>
+<p>We have 4 typedefs. Two of them are for the objectes and the other 2 are for sactions and collisions. These typedefs make sure we dont have to repeat the same complicated types over and over again. Also the chance of making a mistake is far less with the more easy names we gave our typedefs. The first typedef is called #object_ptr . This is a std::shared_ptr type to make sure multiple pointers to the same object can exist without any chance of not destructings the actual item propperly. This shared pointer is of type drawable so we can use it with the objects we want on screen. The second typedef is a std::vector with those object_ptrs as type. It is called #object_ptr. This is the vector type we put all the objects in so we can loop through them and do what we need to do. We also have a typedef with #collisions. In this typedef we put <a class="el" href="structcollision.html" title="a collision ">collision</a> structs with all the collisions any objects has. The last one is for saving a number of actions for the objects you make. It is called #actions.</p>
 <h1><a class="anchor" id="drawable"></a>
 The drawable superclass</h1>
 <p>The superclass drawable is the main class for all objects that will be shown on the window. it contains therefor only virtual functions. the <a class="el" href="classdrawable.html#a4e49e2c1121704c83ce24c5f48dd910f" title="virtual draw function for a drawable ">drawable::draw()</a> function is de virtual function for drawing a object on a window, further it contains a <a class="el" href="classdrawable.html#ad0d3930c045cc6776aa2c3965be32491" title="Move function for a drawable. ">drawable::move(sf::Vector2f delta)</a> function that in default moves the position with delta. For finding out if a drawable object is in collsion with a other drawable object there is a collapse function this function calculates if one of the outherlines are crossing with a outherline of the other drawable if so there is collision found and the side of collsion will be put in a struct called <a class="el" href="structcollision.html" title="a collision ">collision</a>. For calculating if a outherline is crossing the other outherline the class contains the <a class="el" href="classdrawable.html#a0d3278e4e888fc8289468e8893dd8329" title="check x between a and b ">drawable::within()</a> and the <a class="el" href="classdrawable.html#ab5c0e1af885f214bc9ef0da47cdb5ac9" title="check all pixels between x and y ">drawable::within_range()</a> function these fucntion looks if a certain point is in a given range. furthermore the class contains two functions : <a class="el" href="classdrawable.html#a2ed0f8bb53f33477f7722efa7bb24583" title="object information as string ">drawable::object_information()</a> and <a class="el" href="classdrawable.html#add3d8569fe2616ae0ed503b19c92c08e" title="object information as string ">drawable::string_from_color()</a>, these functions are for returning the information of the object in a <a href="http://www.cplusplus.com/reference/string/string/string/">std::string</a>.</p>

@@ -1,3 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structcollision.html" title="a collision " alt="" coords="5,5,75,32"/>
+<area shape="rect" id="node1" href="$classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="5,157,80,184"/>
+<area shape="rect" id="node2" href="$classanimation.html" title="create sprite on screen with animations " alt="" coords="146,5,225,32"/>
+<area shape="rect" id="node3" href="$classbackground.html" title="Class that draws a background. " alt="" coords="141,56,230,83"/>
+<area shape="rect" id="node4" href="$classbullet.html" title="class calculates projectile to kill mobs " alt="" coords="159,107,212,133"/>
+<area shape="rect" id="node5" href="$classimage__from__file.html" title="create sprite on screen " alt="" coords="128,157,243,184"/>
+<area shape="rect" id="node6" href="$classmob.html" title="class that makes an enemy to play agianst " alt="" coords="162,208,209,235"/>
+<area shape="rect" id="node7" href="$classunicorn.html" title="class that is used to display and control the unicorn " alt="" coords="153,259,217,285"/>
+<area shape="rect" id="node8" href="$classwall.html" title="Class for walls and platforms. " alt="" coords="163,309,208,336"/>
 </map>

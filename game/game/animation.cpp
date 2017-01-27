@@ -41,7 +41,7 @@ bool animation::movement(float row_a){
 
 
         if(row_a ==9){
-        count = 0;
+      //  count = 0;
         rot =0;
         sheet.setRotation(0);
         sheet.setOrigin(0,0);

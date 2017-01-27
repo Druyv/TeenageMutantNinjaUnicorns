@@ -1,3 +1,7 @@
 <map id="unicorn" name="unicorn">
-<area shape="rect" id="node2" href="$classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node2" href="$classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="19,5,93,32"/>
+<area shape="rect" id="node3" href="$classbullet.html" title="class calculates projectile to kill mobs " alt="" coords="25,183,79,209"/>
+<area shape="rect" id="node4" href="$classimage__from__file.html" title="create sprite on screen " alt="" coords="61,81,176,108"/>
+<area shape="rect" id="node6" href="$classanimation.html" title="create sprite on screen with animations " alt="" coords="174,132,253,159"/>
+<area shape="rect" id="node5" href="$classphysics.html" title="Class with physics function. " alt="" coords="260,183,327,209"/>
 </map>

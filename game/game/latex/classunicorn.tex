@@ -7,7 +7,7 @@ class that is used to display and control the unicorn
 
 
 
-{\ttfamily \#include $<$unicorn.\+hpp$>$}
+{\ttfamily \#include \char`\"{}unicorn.\+hpp\char`\"{}}
 
 
 
@@ -24,7 +24,7 @@ Collaboration diagram for unicorn\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=136pt]{classunicorn__coll__graph}
+\includegraphics[width=321pt]{classunicorn__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -50,6 +50,48 @@ void \hyperlink{classunicorn_af0e2581c426b4b1e32f8a7b484b4e242}{set\+\_\+spawn\+
 \begin{DoxyCompactList}\small\item\em set the spawn location \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classunicorn_a5be2c0f1caeeb479fee748ee9ddfe864}\label{classunicorn_a5be2c0f1caeeb479fee748ee9ddfe864}} 
 void {\bfseries damage} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classunicorn_a4a032891da1aa855b0b46c6e0b969a35}\label{classunicorn_a4a032891da1aa855b0b46c6e0b969a35}} 
+bool {\bfseries going\+\_\+left} = false
+\item 
+\mbox{\Hypertarget{classunicorn_ac427ce120e919fe962664585903328af}\label{classunicorn_ac427ce120e919fe962664585903328af}} 
+bool {\bfseries correctly\+\_\+scaled} = false
+\item 
+\mbox{\Hypertarget{classunicorn_a7f4c9e68841d896da696132113602019}\label{classunicorn_a7f4c9e68841d896da696132113602019}} 
+int {\bfseries jump\+\_\+counter} = 0
+\item 
+\mbox{\Hypertarget{classunicorn_a7673cbdfe14f719f710df4b324f74484}\label{classunicorn_a7673cbdfe14f719f710df4b324f74484}} 
+int {\bfseries shoot\+\_\+timeout} = 0
+\item 
+\mbox{\Hypertarget{classunicorn_ab0462e46c2393f0bc0f5b2faa0b7b091}\label{classunicorn_ab0462e46c2393f0bc0f5b2faa0b7b091}} 
+int {\bfseries lives} = 10
+\item 
+\mbox{\Hypertarget{classunicorn_a1cc767e234ec6d55ca0b576747f8d7d7}\label{classunicorn_a1cc767e234ec6d55ca0b576747f8d7d7}} 
+actions \& {\bfseries actions\+\_\+array}
+\item 
+\mbox{\Hypertarget{classunicorn_a0d6df4ae413adcf9307c2f36e9c1d51b}\label{classunicorn_a0d6df4ae413adcf9307c2f36e9c1d51b}} 
+\hyperlink{classanimation}{animation} {\bfseries unicorn\+\_\+animation}
+\item 
+\mbox{\Hypertarget{classunicorn_accaf554299ce27905fa8c47f602b0e98}\label{classunicorn_accaf554299ce27905fa8c47f602b0e98}} 
+\hyperlink{classphysics}{physics} {\bfseries physics\+\_\+object}
+\item 
+\mbox{\Hypertarget{classunicorn_a77b6bd58d4bd308c55a530c50fdcce41}\label{classunicorn_a77b6bd58d4bd308c55a530c50fdcce41}} 
+collisions \& {\bfseries the\+\_\+collisions}
+\item 
+\mbox{\Hypertarget{classunicorn_ab16638b1ce0d1a7a0da9ecffc6370e8c}\label{classunicorn_ab16638b1ce0d1a7a0da9ecffc6370e8c}} 
+sf\+::\+Vector2f {\bfseries spawn\+\_\+location}
+\item 
+\mbox{\Hypertarget{classunicorn_a63615aa4b273f506eee7b9f91fec28ab}\label{classunicorn_a63615aa4b273f506eee7b9f91fec28ab}} 
+std\+::vector$<$ mob\+\_\+ptr $>$ {\bfseries all\+\_\+mobs}
+\item 
+\mbox{\Hypertarget{classunicorn_a674ef0598aba065ad1c3c746a2c2296e}\label{classunicorn_a674ef0598aba065ad1c3c746a2c2296e}} 
+objects\+\_\+vector {\bfseries objects}
+\item 
+\mbox{\Hypertarget{classunicorn_a3e51a9e196533b27304f21eb26d8f4ba}\label{classunicorn_a3e51a9e196533b27304f21eb26d8f4ba}} 
+\hyperlink{classbullet}{bullet} {\bfseries weapon}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
