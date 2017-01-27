@@ -30,7 +30,7 @@ int main(int argc, const char **argv) {
 
 	//Making mobs (should be in factory with next level
 	std::vector<mob_ptr> all_mobs;
-	all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(2541.799316f, 1900.484375f), "mini_bunny.png"));
+	all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(2541.799316f, 1890.0f), "mini_bunny.png"));
 
 
 	try {

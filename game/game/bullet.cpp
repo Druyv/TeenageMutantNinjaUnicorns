@@ -10,7 +10,7 @@ bullet::bullet(sf::Vector2f position, std::string filename, std::vector<mob_ptr>
 }
 
 void bullet::draw(sf::RenderWindow & window) {
-	std::cout << current_offset.x << std::endl;
+	//std::cout << current_offset.x << std::endl;
 	if (current_offset.x == 5) {
 		if (!correctly_scaled) {
 
@@ -19,7 +19,7 @@ void bullet::draw(sf::RenderWindow & window) {
 		}
 	}
 	else if (current_offset.x == -5) {
-		std::cout << "Otherside scale" << std::endl;
+		//std::cout << "Otherside scale" << std::endl;
 		if (correctly_scaled) {
 			bullet_animation.setTextureRect(sf::IntRect(int(size.x), 0, -int(size.x), int(size.y)));
 			correctly_scaled = false;
@@ -40,28 +40,39 @@ void bullet::projectile() {
 
 template<typename P>
 void bullet::collision(P unique_object) {
-	hit = getGlobalBounds().intersects(unique_object->getGlobalBounds());
+	hit = bool(getGlobalBounds().intersects(unique_object->getGlobalBounds()));
 }
 
 
 void bullet::shoot(sf::RenderWindow & window, int & shoot_timeout, sf::Vector2f offset, sf::Vector2f fire_position) {
+	//std::cout << "Print hit:" << hit << std::endl;
 	if (fire_position != sf::Vector2f(0, 0)) {
 		bullet_animation.set_position(fire_position);
+		position = fire_position;
+		std::cout << "Position: " << fire_position.x << " " << fire_position.y << std::endl;
+		hit = false;
+		std::cout << "Hit after position change: " << hit << std::endl;
+		
 	}
 	if (offset != sf::Vector2f(0, 0)) {
 		current_offset = offset;
-		std::cout << "Offset value: " << offset.x << offset.y << std::endl;
-		std::cout << "Offset value: " << current_offset.x << current_offset.y << std::endl;
 	}
+	//hit = 0;
 
-	for (auto mob : all_mobs) {
+	for (auto & mob : all_mobs) {
+		//std::cout << "Hit before collision" << hit << std::endl;
+		std::cout << "Position bullet " << position.x << " " << position.y << std::endl;
 		collision(mob);
+		//std::cout << "Hit while checking mobs: " << hit << std::endl;
 		if (hit) {
+			std::cout << "Print hit while checking mobs:" << hit << std::endl;
 			mob->die();
 			hit = false;
 			shoot_timeout = 0;
 		}
 	}
+	//hit = false;
+
 	for (const auto & object : objects) {
 		collision(object);
 		if (hit) {
