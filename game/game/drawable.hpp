@@ -79,6 +79,7 @@ class action {
 private:
 	std::function< bool() > condition;
 	std::function< void(object_ptr) > work;
+        std::function< void() > work_no_ptr;
 public:
 	/// \brief constructor 2 functions
 	///
@@ -141,6 +142,23 @@ public:
 	///condition([&]()->bool{ return (check == c); }),
 	///work(work)
 	///{}
+        
+                
+        /// \brief constructor button and function
+	///
+	/// This constructor receives 2 parameters. The first
+	/// is a variable that has to be checked. The second
+	/// is a function as work. The constructor creates a lambda
+	/// of the first parameter, capturing it by
+	/// reference. That lambda returns a boolean if the button is
+        /// pressed
+	///
+	/// \param[in] condition The condition under wich to do the work
+	/// \param[in] work The work to be done
+        action(sf::Mouse::Button button, std::function< void() > work) :
+		condition([button]()->bool { return sf::Mouse::isButtonPressed(button); }),
+		work_no_ptr(work)
+	{}
 
 	/// \brief operator()
 	///
@@ -153,6 +171,18 @@ public:
 			work(object);
 		}
 	}
+        
+        /// \brief operator()
+	///
+	/// This operator executes the function in condition and then
+	/// checks the return value. If the condition returns true the
+	/// work gets executed.
+        ///
+        void operator()(){
+            if(condition()){
+                work_no_ptr();
+            }
+        }
 };
 
 /// \class drawable
