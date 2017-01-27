@@ -22,6 +22,9 @@ void animation::draw(sf::RenderWindow & window) {
                 rot=0;
         }
       //  sheet.setRotation(rot+=(360/7));
+	 if ((rotate) &&( is_jumping )){
+     	sheet.setPosition(position.x + size.x/2,position.y +size.y/2);
+     }
         window.draw(sheet);
 }
         
@@ -42,19 +45,23 @@ bool animation::movement(float row_a){
         rot =0;
         sheet.setRotation(0);
         sheet.setOrigin(0,0);
-        return is_jumping;
+        is_jumping =false;
         }
         else if(row_a==2){
-                sheet.setOrigin((float)(size.x/2.5),(float)(size.y/2.5));
+                sheet.setOrigin((float)(size.x/2),(float)(size.y/2));
                 sheet.setRotation(rot+=(float(360)/float(21.6)));
                 is_jumping = true;
+				rotate = true;
         }
         else if  (count==6 || row_a !=row){
                        row = row_a;
                         count = 0;
+						rotate = false;
+			
         }
         else {
                         count+=1;
+			rotate = false;
         }
 
 

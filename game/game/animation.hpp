@@ -59,7 +59,8 @@ private:
         float count=0;
         float row;
         float  rot=0;
-        bool is_jumping = 0;
+        bool is_jumping = false;
+		bool rotate = false;
 
 public:
 	/// \brief constructor
