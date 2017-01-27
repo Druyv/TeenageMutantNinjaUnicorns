@@ -150,3 +150,17 @@
 /// after the spawn and level size ar already put into the file. The last two functions are
 /// for getting the level size and the spawn location from the factory. The names for these
 /// functions are #factory::get_spawn() and #factory::get_level_size().
+/// 
+/// \section bullet Shooting feature
+///
+/// The bullet class is used to move a #image_from_file object (in this game Nyan-Cat.png) a amount of spots.
+/// When the bullet animation collides (this is checked with #bullet::collision()) with either 
+/// a wall or a mob the bullet is reset and not drawn until it is fired agian. With #unicorn::shoot()
+/// the bullet is activated. 
+///
+/// \section mob Enemy creatures 
+/// 
+/// The mob class is used to display an enemy. When #mob::mob() is called the mob is always alive. When #mob::die() is 
+/// called the mob dies and the variable alive is set to false , this means it isn't drawn anymore and has a empty global bounds
+/// . The global bounds is empty to make sure the bullet goes through the mob when it has died. #mob::revive() can be used to set the 
+/// variable alive to true 
