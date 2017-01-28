@@ -16,13 +16,10 @@
 int main(int argc, const char **argv) {
 	collisions the_collisions;
 	object_ptr dummy = nullptr;
-
 	// Create the main window
 	sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "The unicorn game", sf::Style::Fullscreen);
-	std::cout << "Window made" << std::endl;
 	int menu_item_pressed = -1;
 	menu start_menu(window, "forest.png", true, "CONTINUE", true, "NEW GAME", true, "QUIT");
-	std::cout << "Menu made" << std::endl;
 
 	actions menu_actions = { action(sf::Mouse::Button::Left, [&]() {menu_item_pressed = start_menu.select(sf::Mouse::getPosition(window)); }) };
 

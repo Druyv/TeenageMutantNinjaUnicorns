@@ -15,7 +15,7 @@ menu::menu(sf::RenderWindow & window, std::string backgroud_picture, bool button
 	button1(float(window.getSize().y), float(window.getSize().x), 1, button_one_text),
 	button2(float(window.getSize().y), float(window.getSize().x), 2, button_two_text),
 	button3(float(window.getSize().y), float(window.getSize().x), 3, button_three_text)
-	//bg(background_picture, sf::Vector2f( window.getSize()))
+	//bg(background(background_picture, sf::Vector2f( 1900, 800)))
 {
 }
 
