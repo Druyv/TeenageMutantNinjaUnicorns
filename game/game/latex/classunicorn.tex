@@ -7,7 +7,7 @@ class that is used to display and control the unicorn
 
 
 
-{\ttfamily \#include \char`\"{}unicorn.\+hpp\char`\"{}}
+{\ttfamily \#include $<$unicorn.\+hpp$>$}
 
 
 
@@ -30,7 +30,7 @@ Collaboration diagram for unicorn\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classunicorn_a5106a69c85e9426caf0bc79f48c21ed4}{unicorn} (sf\+::\+Vector2f position, std\+::string filename, actions \&actions\+\_\+array, collisions \&the\+\_\+collisions, std\+::vector$<$ mob\+\_\+ptr $>$ \&all\+\_\+mobs, objects\+\_\+vector \&objects)
+\hyperlink{classunicorn_a5106a69c85e9426caf0bc79f48c21ed4}{unicorn} (sf\+::\+Vector2f position, std\+::string filename, \hyperlink{drawable_8hpp_a38f93e4749e0d65d51360c429766d212}{actions} \&actions\+\_\+array, \hyperlink{drawable_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions} \&the\+\_\+collisions, std\+::vector$<$ mob\+\_\+ptr $>$ \&all\+\_\+mobs, \hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&objects)
 \begin{DoxyCompactList}\small\item\em Constructor to initialize the unicorn. \end{DoxyCompactList}\item 
 void \hyperlink{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}{draw} (sf\+::\+Render\+Window \&window) override
 \begin{DoxyCompactList}\small\item\em function that draws the image \end{DoxyCompactList}\item 
@@ -40,7 +40,7 @@ void \hyperlink{classunicorn_a07d5ca4e66632c0e871221a27146805a}{jump} () overrid
 \begin{DoxyCompactList}\small\item\em let the unicorn jump \end{DoxyCompactList}\item 
 sf\+::\+Float\+Rect \hyperlink{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}{get\+Global\+Bounds} () override
 \begin{DoxyCompactList}\small\item\em function that gets the boundingbox of the image \end{DoxyCompactList}\item 
-void \hyperlink{classunicorn_aadb47a9981c46d6add8704074df117df}{run\+\_\+actions} (object\+\_\+ptr object) override
+void \hyperlink{classunicorn_aadb47a9981c46d6add8704074df117df}{run\+\_\+actions} (\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} object) override
 \begin{DoxyCompactList}\small\item\em functions that runs through all actions related to the unicorn \end{DoxyCompactList}\item 
 \hyperlink{structcollision}{collision} \hyperlink{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}{check\+\_\+for\+\_\+collisions} (char c) override
 \begin{DoxyCompactList}\small\item\em Check the collisions vector. \end{DoxyCompactList}\item 
@@ -70,7 +70,7 @@ int {\bfseries shoot\+\_\+timeout} = 0
 int {\bfseries lives} = 10
 \item 
 \mbox{\Hypertarget{classunicorn_a1cc767e234ec6d55ca0b576747f8d7d7}\label{classunicorn_a1cc767e234ec6d55ca0b576747f8d7d7}} 
-actions \& {\bfseries actions\+\_\+array}
+\hyperlink{drawable_8hpp_a38f93e4749e0d65d51360c429766d212}{actions} \& {\bfseries actions\+\_\+array}
 \item 
 \mbox{\Hypertarget{classunicorn_a0d6df4ae413adcf9307c2f36e9c1d51b}\label{classunicorn_a0d6df4ae413adcf9307c2f36e9c1d51b}} 
 \hyperlink{classanimation}{animation} {\bfseries unicorn\+\_\+animation}
@@ -79,7 +79,7 @@ actions \& {\bfseries actions\+\_\+array}
 \hyperlink{classphysics}{physics} {\bfseries physics\+\_\+object}
 \item 
 \mbox{\Hypertarget{classunicorn_a77b6bd58d4bd308c55a530c50fdcce41}\label{classunicorn_a77b6bd58d4bd308c55a530c50fdcce41}} 
-collisions \& {\bfseries the\+\_\+collisions}
+\hyperlink{drawable_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions} \& {\bfseries the\+\_\+collisions}
 \item 
 \mbox{\Hypertarget{classunicorn_ab16638b1ce0d1a7a0da9ecffc6370e8c}\label{classunicorn_ab16638b1ce0d1a7a0da9ecffc6370e8c}} 
 sf\+::\+Vector2f {\bfseries spawn\+\_\+location}
@@ -88,7 +88,7 @@ sf\+::\+Vector2f {\bfseries spawn\+\_\+location}
 std\+::vector$<$ mob\+\_\+ptr $>$ {\bfseries all\+\_\+mobs}
 \item 
 \mbox{\Hypertarget{classunicorn_a674ef0598aba065ad1c3c746a2c2296e}\label{classunicorn_a674ef0598aba065ad1c3c746a2c2296e}} 
-objects\+\_\+vector {\bfseries objects}
+\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} {\bfseries objects}
 \item 
 \mbox{\Hypertarget{classunicorn_a3e51a9e196533b27304f21eb26d8f4ba}\label{classunicorn_a3e51a9e196533b27304f21eb26d8f4ba}} 
 \hyperlink{classbullet}{bullet} {\bfseries weapon}
@@ -111,7 +111,7 @@ This class is used to control the unicorn and can be used to control it aswell (
 \index{unicorn@{unicorn}!unicorn@{unicorn}}
 \index{unicorn@{unicorn}!unicorn@{unicorn}}
 \subsubsection{\texorpdfstring{unicorn()}{unicorn()}}
-{\footnotesize\ttfamily unicorn\+::unicorn (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{actions \&}]{actions\+\_\+array,  }\item[{collisions \&}]{the\+\_\+collisions,  }\item[{std\+::vector$<$ mob\+\_\+ptr $>$ \&}]{all\+\_\+mobs,  }\item[{objects\+\_\+vector \&}]{objects }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily unicorn\+::unicorn (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{\hyperlink{drawable_8hpp_a38f93e4749e0d65d51360c429766d212}{actions} \&}]{actions\+\_\+array,  }\item[{\hyperlink{drawable_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions} \&}]{the\+\_\+collisions,  }\item[{std\+::vector$<$ mob\+\_\+ptr $>$ \&}]{all\+\_\+mobs,  }\item[{\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&}]{objects }\end{DoxyParamCaption})}
 
 
 
@@ -243,7 +243,7 @@ Reimplemented from \hyperlink{classdrawable_ad0d3930c045cc6776aa2c3965be32491}{d
 \index{unicorn@{unicorn}!run\+\_\+actions@{run\+\_\+actions}}
 \index{run\+\_\+actions@{run\+\_\+actions}!unicorn@{unicorn}}
 \subsubsection{\texorpdfstring{run\+\_\+actions()}{run\_actions()}}
-{\footnotesize\ttfamily void unicorn\+::run\+\_\+actions (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void unicorn\+::run\+\_\+actions (\begin{DoxyParamCaption}\item[{\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 

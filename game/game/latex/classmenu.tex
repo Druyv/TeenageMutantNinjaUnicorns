@@ -1,0 +1,147 @@
+\hypertarget{classmenu}{}\section{menu Class Reference}
+\label{classmenu}\index{menu@{menu}}
+
+
+Creates a menu with up to 3 buttons.  
+
+
+
+
+{\ttfamily \#include $<$menu.\+hpp$>$}
+
+
+
+Collaboration diagram for menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classmenu__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmenu_a1c6f1319ba2123f9654df695725e83b4}{menu} (sf\+::\+Render\+Window \&window, std\+::string background\+\_\+picture, bool button\+\_\+bool1, std\+::string button\+\_\+one\+\_\+text, bool button\+\_\+bool2=0, std\+::string button\+\_\+two\+\_\+text=\char`\"{}Empty\char`\"{}, bool button\+\_\+bool3=0, std\+::string button\+\_\+three\+\_\+text=\char`\"{}Empty\char`\"{})
+\begin{DoxyCompactList}\small\item\em constructor to make a menu \end{DoxyCompactList}\item 
+void \hyperlink{classmenu_a8d194b462b1b180086e5b06a2dbfbdff}{build\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em Function to build and draw the menu. \end{DoxyCompactList}\item 
+int \hyperlink{classmenu_a06744d58a2aad693d3637d0485aa7984}{select} (sf\+::\+Vector2i position)
+\begin{DoxyCompactList}\small\item\em Function that handles the pushable part of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmenu_a27f2df7cf63febffe1c3c5a5e13ffb8d}\label{classmenu_a27f2df7cf63febffe1c3c5a5e13ffb8d}} 
+sf\+::\+Render\+Window \& {\bfseries window}
+\item 
+\mbox{\Hypertarget{classmenu_af403beeeb7beef5621f0ea806c9f3e6e}\label{classmenu_af403beeeb7beef5621f0ea806c9f3e6e}} 
+std\+::string {\bfseries background\+\_\+picture}
+\item 
+\mbox{\Hypertarget{classmenu_a044c86b2b6cd959a53f4e92caf34f7a0}\label{classmenu_a044c86b2b6cd959a53f4e92caf34f7a0}} 
+bool {\bfseries button\+\_\+bool1}
+\item 
+\mbox{\Hypertarget{classmenu_a043c728ce292a4d87e5e59c9c3db13b9}\label{classmenu_a043c728ce292a4d87e5e59c9c3db13b9}} 
+bool {\bfseries button\+\_\+bool2}
+\item 
+\mbox{\Hypertarget{classmenu_a469661400ee077af1b949bac629d30c7}\label{classmenu_a469661400ee077af1b949bac629d30c7}} 
+bool {\bfseries button\+\_\+bool3}
+\item 
+\mbox{\Hypertarget{classmenu_a460e3d024e939e6469aede94fd86a64c}\label{classmenu_a460e3d024e939e6469aede94fd86a64c}} 
+std\+::string {\bfseries button\+\_\+one\+\_\+text}
+\item 
+\mbox{\Hypertarget{classmenu_a027f3482fde6a4991ff4036e9e0472bd}\label{classmenu_a027f3482fde6a4991ff4036e9e0472bd}} 
+std\+::string {\bfseries button\+\_\+two\+\_\+text}
+\item 
+\mbox{\Hypertarget{classmenu_ac785c6419d139d0181e0487805657e32}\label{classmenu_ac785c6419d139d0181e0487805657e32}} 
+std\+::string {\bfseries button\+\_\+three\+\_\+text}
+\item 
+\mbox{\Hypertarget{classmenu_a0e51e3f8ef8fd769a42ca9a1ab3ed53e}\label{classmenu_a0e51e3f8ef8fd769a42ca9a1ab3ed53e}} 
+\hyperlink{class_button}{Button} {\bfseries button1}
+\item 
+\mbox{\Hypertarget{classmenu_a3292e41431ba6f6f9a1b08b94206a076}\label{classmenu_a3292e41431ba6f6f9a1b08b94206a076}} 
+\hyperlink{class_button}{Button} {\bfseries button2}
+\item 
+\mbox{\Hypertarget{classmenu_a4f19c398a6009b9d17e197c51ad19a66}\label{classmenu_a4f19c398a6009b9d17e197c51ad19a66}} 
+\hyperlink{class_button}{Button} {\bfseries button3}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates a menu with up to 3 buttons. 
+
+This class consists of 3 \hyperlink{class_button}{Button} objects and a \#\+Background object. It creates a menu and also deals with the clickable part of it.
+
+Note\+: We would like to transfer all the math from \hyperlink{class_button}{Button} over here. However, this has low priority .
+
+\begin{DoxyDate}{Date}
+27-\/1-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmenu_a1c6f1319ba2123f9654df695725e83b4}\label{classmenu_a1c6f1319ba2123f9654df695725e83b4}} 
+\index{menu@{menu}!menu@{menu}}
+\index{menu@{menu}!menu@{menu}}
+\subsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily menu\+::menu (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{std\+::string}]{background\+\_\+picture,  }\item[{bool}]{button\+\_\+bool1,  }\item[{std\+::string}]{button\+\_\+one\+\_\+text,  }\item[{bool}]{button\+\_\+bool2 = {\ttfamily 0},  }\item[{std\+::string}]{button\+\_\+two\+\_\+text = {\ttfamily \char`\"{}Empty\char`\"{}},  }\item[{bool}]{button\+\_\+bool3 = {\ttfamily 0},  }\item[{std\+::string}]{button\+\_\+three\+\_\+text = {\ttfamily \char`\"{}Empty\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+constructor to make a menu 
+
+constructor to make a menu with 1 -\/ 2 or 3 buttons. Also requires a picture for the background. All buttons have default values, so you can specify which buttons you want on the menu.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Window} & Render\+Window \\
+\hline
+\mbox{\tt in}  & {\em bg\+Picture} & Name and type ( .png ) to load background picture form \\
+\hline
+\mbox{\tt in}  & {\em button\+Bool1} & Determines if button1 will be drawn \\
+\hline
+\mbox{\tt in}  & {\em Button\+One\+Text} & Text that will be displayed on button1 \\
+\hline
+\mbox{\tt in}  & {\em button\+Bool2} & Determines if button2 will be drawn \\
+\hline
+\mbox{\tt in}  & {\em Button\+Two\+Text} & Text that will be displayed on button2 \\
+\hline
+\mbox{\tt in}  & {\em button\+Bool3} & Determines if button3 will be drawn \\
+\hline
+\mbox{\tt in}  & {\em Button\+Three\+Text} & Text that will be displayed on button3 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmenu_a8d194b462b1b180086e5b06a2dbfbdff}\label{classmenu_a8d194b462b1b180086e5b06a2dbfbdff}} 
+\index{menu@{menu}!build\+\_\+menu@{build\+\_\+menu}}
+\index{build\+\_\+menu@{build\+\_\+menu}!menu@{menu}}
+\subsubsection{\texorpdfstring{build\+\_\+menu()}{build\_menu()}}
+{\footnotesize\ttfamily void menu\+::build\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to build and draw the menu. 
+
+This function builds the menu, with the buttons that were specified in the constructor. It also handles the drawing of the buttons. \mbox{\Hypertarget{classmenu_a06744d58a2aad693d3637d0485aa7984}\label{classmenu_a06744d58a2aad693d3637d0485aa7984}} 
+\index{menu@{menu}!select@{select}}
+\index{select@{select}!menu@{menu}}
+\subsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily int menu\+::select (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i}]{position }\end{DoxyParamCaption})}
+
+
+
+Function that handles the pushable part of the button. 
+
+This function checks if position is located inside the bounding boxes of the buttons, if yes it will return either a 0 or a 1 or a 2, depending on which button was pushed. This allows different functionality for the three buttons.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position of the mouse when the left mouse button is pushed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+menu.\+hpp\item 
+menu.\+cpp\end{DoxyCompactItemize}

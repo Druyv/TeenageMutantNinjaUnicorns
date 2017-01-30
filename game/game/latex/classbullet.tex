@@ -7,7 +7,7 @@ class calculates projectile to kill mobs
 
 
 
-{\ttfamily \#include \char`\"{}bullet.\+hpp\char`\"{}}
+{\ttfamily \#include $<$bullet.\+hpp$>$}
 
 
 
@@ -30,7 +30,7 @@ Collaboration diagram for bullet\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classbullet_a2c8b1e868ab8fe8edf43fc289f8d80b8}{bullet} (sf\+::\+Vector2f position, std\+::string filename, std\+::vector$<$ mob\+\_\+ptr $>$ \&all\+\_\+mobs, objects\+\_\+vector \&objects)
+\hyperlink{classbullet_a2c8b1e868ab8fe8edf43fc289f8d80b8}{bullet} (sf\+::\+Vector2f position, std\+::string filename, std\+::vector$<$ mob\+\_\+ptr $>$ \&all\+\_\+mobs, \hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&objects)
 \begin{DoxyCompactList}\small\item\em constructor to initialize the bullet \end{DoxyCompactList}\item 
 void \hyperlink{classbullet_ae999b952538687d45ca2ae54164a5cd8}{draw} (sf\+::\+Render\+Window \&window) override
 \begin{DoxyCompactList}\small\item\em funtion that draws image \end{DoxyCompactList}\item 
@@ -55,11 +55,11 @@ void \hyperlink{classbullet_a1f2cd5b7fa4d4beae1d27c06bc54f8c0}{projectile} ()
 std\+::vector$<$ mob\+\_\+ptr $>$ \& {\bfseries all\+\_\+mobs}
 \item 
 \mbox{\Hypertarget{classbullet_a93b79bed80ce59b86e3fd332d0c03c5c}\label{classbullet_a93b79bed80ce59b86e3fd332d0c03c5c}} 
-objects\+\_\+vector \& {\bfseries objects}
+\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \& {\bfseries objects}
 \item 
 \mbox{\Hypertarget{classbullet_aa8ad03cdacad1e53dedf55b0719b8980}\label{classbullet_aa8ad03cdacad1e53dedf55b0719b8980}} 
-bool \hyperlink{classbullet_aa8ad03cdacad1e53dedf55b0719b8980}{hit} = false
-\begin{DoxyCompactList}\small\item\em that tells if there is hit. \end{DoxyCompactList}\item 
+bool {\bfseries hit} = false
+\item 
 \mbox{\Hypertarget{classbullet_a5827b4585bf299481273f49049a0f46f}\label{classbullet_a5827b4585bf299481273f49049a0f46f}} 
 bool {\bfseries going\+\_\+left}
 \item 
@@ -87,7 +87,7 @@ This class is used to calculate a projectile that can kill mobs (if there hit by
 \index{bullet@{bullet}!bullet@{bullet}}
 \index{bullet@{bullet}!bullet@{bullet}}
 \subsubsection{\texorpdfstring{bullet()}{bullet()}}
-{\footnotesize\ttfamily bullet\+::bullet (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{std\+::vector$<$ mob\+\_\+ptr $>$ \&}]{all\+\_\+mobs,  }\item[{objects\+\_\+vector \&}]{objects }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bullet\+::bullet (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{std\+::vector$<$ mob\+\_\+ptr $>$ \&}]{all\+\_\+mobs,  }\item[{\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&}]{objects }\end{DoxyParamCaption})}
 
 
 

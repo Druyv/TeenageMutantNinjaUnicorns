@@ -15,11 +15,13 @@
 class drawable;
 class action;
 struct collision;
-
+/// A shared pointer to a drawable object that is re-usable
 typedef std::shared_ptr<drawable> object_ptr;
-
+/// A std::vector with colision objects
 typedef std::vector<collision> collisions;
+/// A std::vector with action objects
 typedef std::vector<action> actions;
+/// A std::vector with #object_ptr 
 typedef std::vector<object_ptr> objects_vector;
 
 
@@ -77,8 +79,11 @@ struct collision {
 ///
 class action {
 private:
+	/// The condition in the action
 	std::function< bool() > condition;
+	/// The function which need to run when condition is true with as parameter an #object_ptr. 
 	std::function< void(object_ptr) > work;
+	/// The function which need to run when condition is true 
         std::function< void() > work_no_ptr;
 public:
 	/// \brief constructor 2 functions

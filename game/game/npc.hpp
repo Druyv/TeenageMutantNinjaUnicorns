@@ -3,7 +3,7 @@
 #include "image.hpp"
 
 class mob;
-
+/// a shared pointer to a mob object that is re-usable
 typedef std::shared_ptr<mob> mob_ptr;
 
 ///
