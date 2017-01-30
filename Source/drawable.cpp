@@ -89,3 +89,7 @@ void drawable::set_type(std::string s){
 void drawable::set_size(sf::Vector2f new_size){
     size = new_size;
 }
+
+void drawable::set_position(sf::Vector2f new_position) {
+	position = new_position;
+}

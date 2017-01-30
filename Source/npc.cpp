@@ -8,7 +8,9 @@ mob::mob(sf::Vector2f position, std::string filename) :
 }
 
 void mob::draw(sf::RenderWindow & window) {
+	//std::cout << "Mob: " << (bool)alive << std::endl;
 	if (alive) {
+		std::cout << "Position mob when alive: " << position.x << " " << position.y << std::endl;
 		mob_animation.draw(window);
 	}
 }
@@ -22,6 +24,7 @@ sf::FloatRect mob::getGlobalBounds() {
 
 
 void mob::die() {
+	std::cout << "Mob died" << std::endl;
 	alive = false;
 }
 

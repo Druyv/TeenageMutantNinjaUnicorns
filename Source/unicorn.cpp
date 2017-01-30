@@ -33,7 +33,7 @@ void unicorn::draw(sf::RenderWindow & window) {
 
 	auto collision_u = check_for_collisions('U');
 	auto collision_d = check_for_collisions('D');
-        auto collision_r= check_for_collisions('R');
+    auto collision_r= check_for_collisions('R');
 	auto collision_l = check_for_collisions('L');
         
         if (collision_r.R || collision_l.L ||collision_u.U ||collision_d.D ){
@@ -43,6 +43,14 @@ void unicorn::draw(sf::RenderWindow & window) {
         if(collision_u.U && collision_u.the_object->get_type() == "LOWER_BORDER"){
             std::cout << "You died\n";
             position = spawn_location;
+
+			///mobs vector doorlopen en hun draw dingetje op true zetten
+			for (auto & mob : all_mobs) {
+				mob->revive();
+				//weapon.collision(mob);
+			}
+			shoot_timeout = 0;
+			//weapon.set_position(position);
             physics_object.set_gravity(3);
         }
         else{
@@ -134,8 +142,10 @@ collision unicorn::check_for_collisions(char c) {
 }
 
 void unicorn::shoot(sf::Vector2f fire_position, sf::RenderWindow & window, sf::Vector2f offset) {
-	if (shoot_timeout >= 100) {//>=100 veiliger of <= 100
+	if (shoot_timeout >= 100) {
 		weapon.shoot(window, shoot_timeout, offset, fire_position);
+		std::cout << "Shoot unicorn" <<all_mobs[0]->get_live() << std::endl;
+		//all_mobs[0]->die();
 	}
 	if (shoot_timeout) {
 		shoot_timeout--;

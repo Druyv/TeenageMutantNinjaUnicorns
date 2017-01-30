@@ -10,28 +10,32 @@
 #include "background.hpp"
 #include "soundtrack.hpp"
 #include "npc.hpp"
+#include "menu.hpp"
+#include "button.hpp"
 
 int main(int argc, const char **argv) {
 	collisions the_collisions;
 	object_ptr dummy = nullptr;
-
 	// Create the main window
 	sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "The unicorn game", sf::Style::Fullscreen);
+	int menu_item_pressed = -1;
+	menu start_menu(window, "forest.png", true, "CONTINUE", true, "NEW GAME", true, "QUIT");
+
+	actions menu_actions = { action(sf::Mouse::Button::Left, [&]() {menu_item_pressed = start_menu.select(sf::Mouse::getPosition(window)); }) };
 
 	actions unicorn_actions = {
 		action(sf::Keyboard::Left, [](object_ptr object) {object->move(sf::Vector2f(-10.0,0.0)); }),
 		action(sf::Keyboard::Right, [](object_ptr object) {object->move(sf::Vector2f(10.0,0.0)); }),
 		action(sf::Keyboard::Space, [](object_ptr object) {object->jump(); })
 	};
-
+	std::cout << "Menu made!" << std::endl;
 	std::shared_ptr<unicorn> the_unicorn;
 	objects_vector objects;
 	factory object_creation("level1");
 
 	//Making mobs (should be in factory with next level
 	std::vector<mob_ptr> all_mobs;
-	all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(2541.799316f, 1800.484375f), "minicorn_v1.png"));
-	all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(1000.0, 900.0), "minicorn_v1.png"));
+	all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(2541.799316f, 1890.0f), "mini_bunny.png"));
 
 
 	try {
@@ -50,13 +54,26 @@ int main(int argc, const char **argv) {
 
 
 	//Sound, camera, background
-	background background_1("background2.png", object_creation.get_level_size());
+	background background_1("background.png", object_creation.get_level_size());
 	camera playercam(the_unicorn);
 	soundtrack soundplayer("Soundtrack.wav");
 	soundplayer.PlayMusic();
 
+	//Drawing menu
+	start_menu.build_menu();
+	window.display();
 	// Start the game loop
 	while (window.isOpen()) {
+		while (menu_item_pressed == -1) {
+			for (auto & action : menu_actions) {
+				action();
+			}
+		}
+		window.clear();
+		if (menu_item_pressed == 0 || menu_item_pressed == 2) {
+			std::cout << "Menu works" << std::endl;
+		}
+
 		the_collisions.clear();
 		// Clear screen
 		window.clear();
