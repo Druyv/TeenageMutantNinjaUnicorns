@@ -32,13 +32,9 @@ public:
 	///
 	/// Loads the specified music file and plays it. 
         ///
-	void PlayMusic();
+	void playmusic();
         
-	/// \brief Sound player
-	///
-	/// Loads the specified sound file and plays it.
-        ///
-	void PlaySound();
+
 private:
 	sf::Music SFMLmusic;
 

@@ -57,7 +57,7 @@ int main(int argc, const char **argv) {
 	background background_1("background.png", object_creation.get_level_size());
 	camera playercam(the_unicorn);
 	soundtrack soundplayer("Soundtrack.wav");
-	soundplayer.PlayMusic();
+	soundplayer.playmusic();
 
 	//Drawing menu
 	start_menu.build_menu();
