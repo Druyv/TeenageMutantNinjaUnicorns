@@ -162,3 +162,24 @@
 /// called the mob dies and the variable alive is set to false , this means it isn't drawn anymore and has a empty global bounds
 /// . The global bounds is empty to make sure the bullet goes through the mob when it has died. #mob::revive() can be used to set the 
 /// variable alive to true 
+///
+/// \section menu The menu's 
+///
+///  The main menu consists mainly of 2 parts. First , the background image. This is an object of the 
+///  #Background class. This sets the background sprite with the specified image. Second, the buttons 
+///  that make up the menu. The main menu consists of three buttons, these are #Button objects. 
+///  Together they make up the visual aspect of the menu. The clickable part is handled in  menu::Select(), 
+///  where the collision detection ( standard SFML Rect::contains() ) triggers if the button 
+///  is clicked with the cursor ( left mouse button ). 
+///
+///  \section Button The buttons 
+///
+///  The buttons are made specifically tailored for our game. The buttons are all customizable,
+///  background is easy  to change as is the font. 
+/// 
+///  All the math in this class is done to make sure the buttons are aligned 
+///  in the middle of the screen, regardless of resolution. However, SFML does not have a native 
+///  rescale of pictures in sprites. Which means that the background of the buttons will be completely distorted 
+///  in some resolutions. Also, a lot of this math could be moved to the #menu class, 
+///  which would make the #Button class more re-useable. 
+
