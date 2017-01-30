@@ -113,7 +113,7 @@
 ///
 /// \section sound The sound in the games
 /// the soundtrack class is the class that handles the background music in this class is set the sound file by
-/// setting the music in the constructor and playing it by the playmusic function. 
+/// setting the music in the constructor and playing it by the #soundtrack::playmusic() function. 
 ///
 ///
 /// \section base_level The level boundary's

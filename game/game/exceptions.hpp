@@ -237,4 +237,38 @@ class audio_load_error : public std::exception {
 	std::string msg;
 };
 
+
+/// \class sheet_load_error
+///
+/// \brief sheet load error
+///
+/// This class is used to generate a sheet load error exception.
+/// It inherrits the std::exception class so it can be easily caught
+/// with an try catch block.
+///
+/// 
+class sheet_load_error : public std::exception {
+public:
+	/// \brief constructor
+	///
+	/// This constructor puts a message into a string and saves that as
+	/// a private variable. The image name is also added to the string.
+	///
+	/// \param[in] image_name The name of the image
+	sheet_load_error(const std::string & image_name) :
+		msg{ std::string{ "Can not load sheet with name: " } +image_name }
+	{}
+	/// \brief return message
+	///
+	/// This function returns the message so it can be printed.
+	/// It overrides the what function from the std::exception
+	/// superclass, making it easy to capture. 
+	/// 
+	/// \retval const char * {The error message as a const char *}
+	const char * what() const noexcept override {
+		return msg.c_str();
+	}
+private:
+	std::string msg;
+};
 #endif // EXCEPTIONS_HPP
