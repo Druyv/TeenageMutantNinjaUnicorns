@@ -4,7 +4,7 @@
 #define _CAMERA_HPP
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include "drawable.hpp"
+#include "typedefs.hpp"
 
 ///\class camera
 ///

@@ -1,10 +1,10 @@
-#pragma once
-#include "drawable.hpp"
+///@file
+
+#ifndef NPC_HPP
+#define NPC_HPP
+
+#include "typedefs.hpp"
 #include "image.hpp"
-
-class mob;
-
-typedef std::shared_ptr<mob> mob_ptr;
 
 ///
 /// \class mob
@@ -82,3 +82,5 @@ public:
         
         void set_position(sf::Vector2f new_position);
 };
+
+#endif //NPC_HPP

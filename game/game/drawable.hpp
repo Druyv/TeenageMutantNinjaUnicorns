@@ -11,16 +11,7 @@
 #include <functional>
 #include "physics.hpp"
 #include <memory>
-
-class drawable;
-class action;
-struct collision;
-
-typedef std::shared_ptr<drawable> object_ptr;
-
-typedef std::vector<collision> collisions;
-typedef std::vector<action> actions;
-typedef std::vector<object_ptr> objects_vector;
+#include "typedefs.hpp"
 
 
 /// \struct collision

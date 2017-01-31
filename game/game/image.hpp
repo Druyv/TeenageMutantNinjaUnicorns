@@ -112,6 +112,8 @@ public:
         /// \param[in] y The scale factor for the y of the image
         ///
         void set_scale(float x, float y);
+        
+        std::string get_image_name();
 };
 
 #endif //IMAGE_HPP

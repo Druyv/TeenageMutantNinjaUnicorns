@@ -93,3 +93,7 @@ void drawable::set_size(sf::Vector2f new_size){
 void drawable::set_position(sf::Vector2f new_position) {
 	position = new_position;
 }
+
+std::string drawable::get_image_name(){
+    return "None";
+};

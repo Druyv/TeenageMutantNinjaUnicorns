@@ -27,7 +27,7 @@ private:
 	bool correctly_scaled = false;
 	int jump_counter = 0;
 	int shoot_timeout = 0;
-	int lives = 10;
+	int lives = 3;
 	actions & actions_array;
 	animation  unicorn_animation;
 	physics physics_object;

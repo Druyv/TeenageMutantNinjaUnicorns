@@ -1,5 +1,4 @@
 #include "unicorn.hpp"
-#include "button.hpp"
 
 
 unicorn::unicorn(sf::Vector2f position, std::string filename, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects) :
@@ -12,7 +11,6 @@ unicorn::unicorn(sf::Vector2f position, std::string filename, actions & actions_
 	//objects{objects},
 	weapon(position, "Nyan-Cat.png", all_mobs, objects)
 {
-	position = unicorn_animation.get_position();
 	size = unicorn_animation.get_size();
 	unicorn_animation.setTextureRect(sf::IntRect(int(size.x), 0, -int(size.x), int(size.y)));
 	actions_array.push_back(action(sf::Keyboard::LControl, [&](object_ptr object) {if (!shoot_timeout) { shoot_timeout = 50; } }));
@@ -60,7 +58,7 @@ void unicorn::draw(sf::RenderWindow & window) {
             }
             weapon.set_position(spawn_location);
             shoot_timeout = 0;
-            lives = 10;
+            lives = 3;
             physics_object.set_gravity(3);
         }
         else{
