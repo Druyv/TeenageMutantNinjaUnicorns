@@ -43,18 +43,50 @@ int menu::select(sf::Vector2i position) {
 
 	if ((button1.getGlobalBounds()).contains(point) && button_bool1)
 	{
-		std::cerr << "CONTINUE";
-		return 0;
+		return 1;
 	}
 	if ((button2.getGlobalBounds()).contains(point) && button_bool2)
 	{
-		std::cerr << "NEW GAME";
 		return 2;
 	}
 	if ((button3.getGlobalBounds()).contains(point) && button_bool3)
 	{
-		exit(0);
+		return 3;
 	}
 	return -1;
 };
 
+
+int menu::last_button() {
+	if (button_bool1) {
+		if (!button_bool2) {
+			return 1;
+		}
+		else {
+			if (!button_bool3) {
+				return 2;
+			}
+			else {
+				return 3;
+			}
+		}
+	}
+	else {
+		return 0;
+	}
+}
+
+std::string menu::get_button_text(int button_place) {
+	if (button_place == 1) {
+		return button_one_text;
+	}
+	else if (button_place == 2) {
+		return button_two_text;
+	}
+	else if (button_place == 3) {
+		return button_three_text;
+	}
+	else {
+		return "";
+	}
+}

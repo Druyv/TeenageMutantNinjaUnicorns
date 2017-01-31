@@ -71,7 +71,9 @@ public:
 	/// \param[in] position     The position of the mouse when the left mouse button is pushed
 	int select(sf::Vector2i position);
 
+	int last_button();
 
+	std::string get_button_text(int button_place);
 
 
 

@@ -11,7 +11,7 @@ void factory::change_input_to(std::string new_filename){
     if( input.is_open() ){
         input.close();
     }
-    input.open (new_filename+".properties");
+    input.open (new_filename);
 }
 
 object_ptr factory::read_line(){

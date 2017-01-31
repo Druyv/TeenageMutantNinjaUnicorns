@@ -185,6 +185,7 @@
     <ClInclude Include="drawable.hpp" />
     <ClInclude Include="factory.hpp" />
     <ClInclude Include="image.hpp" />
+    <ClInclude Include="management.hpp" />
     <ClInclude Include="menu.hpp" />
     <ClInclude Include="npc.hpp" />
     <ClInclude Include="physics.hpp" />
@@ -203,6 +204,7 @@
     <ClCompile Include="factory.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="management.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="npc.cpp" />
     <ClCompile Include="physics.cpp" />
