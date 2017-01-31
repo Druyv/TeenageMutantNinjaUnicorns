@@ -39,10 +39,11 @@
 ///
 /// \section unicorn Unicorn
 ///
-/// The unicorn in the game can be created by creating an object of the #unicorn
-/// class. The image of the unicorn is created by the #image_from_file class.
-/// It also uses the #physics class to create a more realistic jumping and
-/// falling motion. The class dus also inherrit #drawable. Drawable comes with
+/// The unicorn and it's rainbow in the game acan be created by creating an object of the #unicorn
+/// class. Rainbow get's it's location by using the location of the unicorn in combination with 
+/// the location of the window. The image of the unicorn and of the rainbow are created by
+/// the #image_from_file class. the unicorn also uses the #physics class to create a more 
+/// realistic jumping and falling motion. The class dus also inherrit #drawable. Drawable comes with
 /// his predefined funtions that can be used by the unicorn due to the
 /// inherritance. The unicorn class also overrides the couple of abstract
 /// functions. These functions are #drawable::draw(), #drawable::move(),
