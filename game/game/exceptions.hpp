@@ -1,6 +1,8 @@
 #ifndef EXCEPTIONS_HPP
 #define EXCEPTIONS_HPP
 
+#include <string>
+
 /// \class image_load_error
 ///
 /// \brief image load error
@@ -271,4 +273,43 @@ public:
 private:
 	std::string msg;
 };
+
+/// \class font_load_error
+///
+/// \brief Can not load font
+///
+/// This class is used to generate a ufont load exception.
+/// It inherrits the std::exception class so it can be easily caught
+/// with an try catch block.
+///
+/// \date 31-1-2017
+///
+class font_load_error : public std::exception {
+    public:
+        /// \brief Constructor
+        ///
+        /// This constructor puts a message into a string and saves that as
+        /// a private variable. The font name is also added to the string.
+        ///
+        /// \param[in] font The name of the font
+        ///
+        font_load_error(const std::string font) :
+            msg{ std::string{ "Unknown font: " } + font }
+        {}
+            
+        /// \brief Return message
+        ///
+        /// This function returns the message so it can be printed.
+        /// It overrides the what function from the std::exception
+        /// superclass, making it easy to capture. 
+        /// 
+        /// \retval const char * {The error message as a const char *}
+        ///
+        const char * what() const noexcept override{
+            return msg.c_str();
+        }
+    private:
+        std::string msg;
+};
+
 #endif // EXCEPTIONS_HPP

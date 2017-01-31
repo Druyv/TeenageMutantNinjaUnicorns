@@ -12,6 +12,13 @@ unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_ra
 	//objects{objects},
 	weapon(position, "Nyan-Cat.png", all_mobs, objects)
 {
+        if (!font.loadFromFile("Pixeled.ttf")){
+            throw font_load_error("Pixeled.ttf");
+        }
+        text.setFont(font);
+        text.setCharacterSize(24);
+        text.setFillColor(sf::Color::Red);
+        
 	size = unicorn_animation.get_size();
 	unicorn_animation.setTextureRect(sf::IntRect(int(size.x), 0, -int(size.x), int(size.y)));
 	actions_array.push_back(action(sf::Keyboard::LControl, [&](object_ptr object) {if (!shoot_timeout) { shoot_timeout = 50; } }));
@@ -60,7 +67,13 @@ void unicorn::draw(sf::RenderWindow & window) {
             weapon.set_position(spawn_location);
             shoot_timeout = 0;
             lives = 3;
+            mob_touch_counter = 0;
             physics_object.set_gravity(3);
+            
+            jump_counter = 0;
+            text.setString("You died!!");
+            text.setPosition(spawn_location.x+100, spawn_location.y+100);
+            text_counter = 70;
         }
         else{
             if (collision_d.D) {
@@ -92,6 +105,12 @@ void unicorn::draw(sf::RenderWindow & window) {
 		shoot(unicorn_animation.get_position(), window, sf::Vector2f(10.0, 0.0));
             }
         }
+        
+        if(text_counter){
+            window.draw(text);
+            text_counter--;
+        }
+        
         got_hit = false;
 	rainbow.set_position((position - sf::Vector2f(window.getSize().x / 2.0 - size.x / 2.0, window.getSize().y / 2.0)));
 	rainbow.draw(window);

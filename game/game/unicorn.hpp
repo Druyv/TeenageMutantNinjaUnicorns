@@ -39,6 +39,9 @@ private:
 	bullet weapon;
         bool got_hit = false;
         int mob_touch_counter = 0;
+        sf::Font font;
+        sf::Text text;
+        int text_counter = 0;
 public:
 	/// \brief Constructor to initialize the unicorn
 	///
