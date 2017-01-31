@@ -42,7 +42,7 @@ void animation::set_position(sf::Vector2f new_position) {
 bool animation::movement(float row_a,int level_counter){
 
     if (row_a==10){
-        count=level_counter-1;
+        count=float(level_counter-1);
     }
         else if(row_a ==9){
       //  count = 0;

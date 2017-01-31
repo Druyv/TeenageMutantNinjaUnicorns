@@ -27,7 +27,7 @@ int main(int argc, const char **argv) {
 	};
 
 	//Menu and file management
-	file_management manager_file("played_game//save_files_path.txt");
+	file_management manager_file("played_games//save_files_path.txt");
 	menu_management manager_menu(window, manager_file);
 	std::string level_path = manager_menu.start_game();
 	std::cout << "Path for level" << level_path;
@@ -141,6 +141,7 @@ int main(int argc, const char **argv) {
 		while (window.pollEvent(event)) {
 			// Close window: exit
 			if (event.type == sf::Event::Closed || event.key.code == sf::Keyboard::Escape) {
+				manager_file.save_game();
 				window.close();
 			}
 		}

@@ -17,9 +17,11 @@
 class file_management {
 private:
 	std::ifstream input;
+	std::ofstream output;
 	std::string save_file_1;
 	std::string save_file_2;
 	int counter; 
+	int current_save_file = 0;
 	std::string standard_path = "levels/";
 public:
 	/// \brief constructor to initialize pathfile
@@ -103,6 +105,14 @@ public:
 	/// \return std::string that contains path to save-file
 	///
 	std::string get_save_file(int menu_index);
+
+	/// \brief function that saves game
+	///
+	/// This function saves your current level path in a save-file. Which save file is used to 
+	/// save the path in depends on the save-file clicked by the user in the beginning. If you 
+	/// click "new game" the save-file is most of the time save-file-1 only when save-file-2 is 
+	/// empty it is chosen to write in. 
+	void save_game();
 };
 
 /// \class menu_management

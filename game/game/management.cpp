@@ -5,14 +5,12 @@ file_management::file_management(std::string pathfile)
 	set_input(pathfile);
 }
 
-
 std::string file_management::get_files() {
 
 	std::string safefile;
 	input >> safefile;
 	return safefile;
 }
-
 
 void file_management::set_input(std::string new_filename) {
 	if (input.is_open()) {
@@ -24,6 +22,12 @@ void file_management::set_input(std::string new_filename) {
 std::string file_management::get_level_file(std::string safe_file) {
 	set_input(safe_file);
 	std::string file = get_files();
+	if (safe_file == save_file_1) {
+		current_save_file = 1;
+	}
+	else if (safe_file == save_file_2) {
+		current_save_file = 2;
+	}
 	for (char c : file) {
 		if (c >= '0' && c <= '9') {
 			counter = c - 48;
@@ -43,8 +47,6 @@ std::string file_management::get_save_file(int menu_index) {
 		return "";
 	}
 }
-
-
 
 menu file_management::make_save_file_menu(sf::RenderWindow & window) {
 	save_file_1 = get_files();
@@ -72,6 +74,27 @@ void file_management::set_counter(int value) {
 
 int & file_management::get_counter(){
     return counter;
+}
+
+void file_management::save_game() {
+	if (current_save_file == 1 || (current_save_file == 0 && save_file_1 == "")) {
+		output.open(save_file_1);
+		counter--;
+		output << next_level();
+		output.close();
+	}
+	else if (current_save_file == 2 || (current_save_file == 0 && save_file_2 == "")) {
+		output.open(save_file_2);
+		counter--;
+		output << next_level();
+		output.close();
+	}
+	else {
+		output.open(save_file_1);
+		counter--;
+		output << next_level();
+		output.close();
+	}
 }
 
 //===============================//
@@ -126,7 +149,7 @@ std::string menu_management::display_save_file_menu() {
 	int menu_item_pressed = -1;
 	while (menu_item_pressed == -1) {;
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-			menu_item_pressed = pause_menu.select(sf::Mouse::getPosition(window));
+			menu_item_pressed = save_file_menu.select(sf::Mouse::getPosition(window));
 		}
 		if (save_file_menu.get_button_text(menu_item_pressed) != "BACK" && save_file_menu.get_button_text(menu_item_pressed) != "") {
 			return save_file_menu.get_button_text(menu_item_pressed);

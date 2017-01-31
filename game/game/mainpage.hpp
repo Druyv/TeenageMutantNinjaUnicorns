@@ -181,6 +181,20 @@
 ///  All the math in this class is done to make sure the buttons are aligned 
 ///  in the middle of the screen, regardless of resolution. However, SFML does not have a native 
 ///  rescale of pictures in sprites. Which means that the background of the buttons will be completely distorted 
-///  in some resolutions. Also, a lot of this math could be moved to the #menu class, 
-///  which would make the #Button class more re-useable. 
-
+///  in some resolutions. Also, a lot of this math could be moved to the #menu class,
+///  which would make the #Button class more re-useable.
+/// 
+/// \section menu_management
+///
+/// This class is used to manage the different menu's in the game.
+/// #menu_management::display_start_menu(), #menu_management::display_pause_menu(), #menu_management::display_save_file_menu()
+/// are functions that can be used to display there respective menu. The function #menu_management::start_game() combines the start_menu
+/// and the save_file menu. This function returns the path to the level selected by the user
+///
+/// \section file_management
+/// 
+/// This class is used to manage the different files for the game. With the function #file_management::get_files() you can get the information
+/// from the current file used as input. With #file_management::set_input() you can change the input file. With the function
+/// #file_management::make_save_file_menu() you can make a menu-object that gives the right amount of save files in buttons for the user to click.
+/// The function #file_management::save_game() can be used to save the game in the current save_game file.
+///  
