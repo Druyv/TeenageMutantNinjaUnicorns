@@ -30,6 +30,7 @@ private:
 	int lives = 3;
 	actions & actions_array;
 	animation  unicorn_animation;
+	animation  rainbow;
 	physics physics_object;
 	collisions & the_collisions;
         sf::Vector2f spawn_location;
@@ -51,7 +52,7 @@ public:
 	/// \param[in] all_mobs All mobs in level
 	/// \parma[in] objects all walls/obstacles that unicorn and bullet can react to
 	///
-	unicorn(sf::Vector2f position, std::string filename, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects);
+	unicorn(sf::Vector2f position, std::string filename,std::string file_rainbow, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects);
 
 	/// \brief function that draws the image
 	///

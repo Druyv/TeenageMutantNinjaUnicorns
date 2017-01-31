@@ -16,29 +16,16 @@ Factory for reading in levels.
 \begin{DoxyCompactList}\small\item\em constructor input file \end{DoxyCompactList}\item 
 void \hyperlink{classfactory_a9e164a8fbb65188de99c39d55d7cc384}{change\+\_\+input\+\_\+to} (std\+::string new\+\_\+filename)
 \begin{DoxyCompactList}\small\item\em Change the input. \end{DoxyCompactList}\item 
-\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} \hyperlink{classfactory_a82385866bc910c1b3a3e82d56487dd24}{read\+\_\+line} ()
+object\+\_\+ptr \hyperlink{classfactory_a82385866bc910c1b3a3e82d56487dd24}{read\+\_\+line} ()
 \begin{DoxyCompactList}\small\item\em Read one line from the filestream. \end{DoxyCompactList}\item 
-\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \hyperlink{classfactory_afb2fad4ac9b0f39b1bfc3f3fc8d218b6}{objects\+\_\+from\+\_\+file} ()
+objects\+\_\+vector \hyperlink{classfactory_afb2fad4ac9b0f39b1bfc3f3fc8d218b6}{objects\+\_\+from\+\_\+file} ()
 \begin{DoxyCompactList}\small\item\em Read multiple objects. \end{DoxyCompactList}\item 
-void \hyperlink{classfactory_af17f2a44d75cf8ccf712384341c2fcde}{write\+\_\+information\+\_\+to\+\_\+file} (\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&objects, std\+::string new\+\_\+filename)
+void \hyperlink{classfactory_af17f2a44d75cf8ccf712384341c2fcde}{write\+\_\+information\+\_\+to\+\_\+file} (objects\+\_\+vector \&objects, std\+::string new\+\_\+filename)
 \begin{DoxyCompactList}\small\item\em Write information to file. \end{DoxyCompactList}\item 
 sf\+::\+Vector2f \hyperlink{classfactory_a3c3a039b8f76a947267dbe659166550b}{get\+\_\+spawn} ()
 \begin{DoxyCompactList}\small\item\em Get spawn location. \end{DoxyCompactList}\item 
 sf\+::\+Vector2f \hyperlink{classfactory_af9bb026273b34fc032ca5ac73d457611}{get\+\_\+level\+\_\+size} ()
 \begin{DoxyCompactList}\small\item\em Get the level size. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-int \hyperlink{classfactory_af33b0e5fcc396c359d30a00afacb819b}{file\+\_\+line\+\_\+counter} = 1
-\item 
-std\+::ifstream \hyperlink{classfactory_a9a874663e858e01c8ff372c070b8c19e}{input}
-\item 
-std\+::ofstream \hyperlink{classfactory_a0454b8bf0f45196f436ddf3febc422f3}{output}
-\item 
-sf\+::\+Vector2f \hyperlink{classfactory_a891028263226aa493299e51f767211a1}{spawn}
-\item 
-sf\+::\+Vector2f \hyperlink{classfactory_a29d1328317de4563aefb5c2f32f63424}{level\+\_\+size}
-\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -120,20 +107,20 @@ The spawn location
 \index{factory@{factory}!objects\+\_\+from\+\_\+file@{objects\+\_\+from\+\_\+file}}
 \index{objects\+\_\+from\+\_\+file@{objects\+\_\+from\+\_\+file}!factory@{factory}}
 \subsubsection{\texorpdfstring{objects\+\_\+from\+\_\+file()}{objects\_from\_file()}}
-{\footnotesize\ttfamily \hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} factory\+::objects\+\_\+from\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily objects\+\_\+vector factory\+::objects\+\_\+from\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Read multiple objects. 
 
-This function continuesly calls the \hyperlink{classfactory_a82385866bc910c1b3a3e82d56487dd24}{factory\+::read\+\_\+line()} function and fills an \hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} with \hyperlink{classdrawable}{drawable} objects. This filled vector is returned. The errors returned by the \hyperlink{classfactory_a82385866bc910c1b3a3e82d56487dd24}{read\+\_\+line()} function are also handled in this function. \begin{DoxyReturn}{Returns}
+This function continuesly calls the \hyperlink{classfactory_a82385866bc910c1b3a3e82d56487dd24}{factory\+::read\+\_\+line()} function and fills an \#objects\+\_\+vector with \hyperlink{classdrawable}{drawable} objects. This filled vector is returned. The errors returned by the \hyperlink{classfactory_a82385866bc910c1b3a3e82d56487dd24}{read\+\_\+line()} function are also handled in this function. \begin{DoxyReturn}{Returns}
 The vector with the created objects 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classfactory_a82385866bc910c1b3a3e82d56487dd24}\label{classfactory_a82385866bc910c1b3a3e82d56487dd24}} 
 \index{factory@{factory}!read\+\_\+line@{read\+\_\+line}}
 \index{read\+\_\+line@{read\+\_\+line}!factory@{factory}}
 \subsubsection{\texorpdfstring{read\+\_\+line()}{read\_line()}}
-{\footnotesize\ttfamily \hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} factory\+::read\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily object\+\_\+ptr factory\+::read\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -146,7 +133,7 @@ The shared pointer to the drawable object
 \index{factory@{factory}!write\+\_\+information\+\_\+to\+\_\+file@{write\+\_\+information\+\_\+to\+\_\+file}}
 \index{write\+\_\+information\+\_\+to\+\_\+file@{write\+\_\+information\+\_\+to\+\_\+file}!factory@{factory}}
 \subsubsection{\texorpdfstring{write\+\_\+information\+\_\+to\+\_\+file()}{write\_information\_to\_file()}}
-{\footnotesize\ttfamily void factory\+::write\+\_\+information\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&}]{objects,  }\item[{std\+::string}]{new\+\_\+filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void factory\+::write\+\_\+information\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{objects\+\_\+vector \&}]{objects,  }\item[{std\+::string}]{new\+\_\+filename }\end{DoxyParamCaption})}
 
 
 
@@ -154,47 +141,14 @@ Write information to file.
 
 This function writes all the information on the objects to an output file that is specified in the parameters. It first closes any input files and then opens the output file. After this it outputs the spawn location and level size calls the \hyperlink{classdrawable_a2ed0f8bb53f33477f7722efa7bb24583}{drawable\+::object\+\_\+information()} function on every item in the vector. You end up with an output like this\+: S\+P\+A\+WN (1030,1500) L\+E\+V\+E\+L\+\_\+\+S\+I\+ZE (4000,3350) W\+A\+LL (1020.\+000000,2000.\+000000) (100.\+000000,20.\+000000) green grass.\+png 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em objects} & The \hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} that contains all the objects we want to write to the file \\
+\mbox{\tt in}  & {\em objects} & The \#objects\+\_\+vector that contains all the objects we want to write to the file \\
 \hline
 \mbox{\tt in}  & {\em new\+\_\+filename} & The file to write the information to \\
 \hline
 \end{DoxyParams}
 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{classfactory_af33b0e5fcc396c359d30a00afacb819b}\label{classfactory_af33b0e5fcc396c359d30a00afacb819b}} 
-\index{factory@{factory}!file\+\_\+line\+\_\+counter@{file\+\_\+line\+\_\+counter}}
-\index{file\+\_\+line\+\_\+counter@{file\+\_\+line\+\_\+counter}!factory@{factory}}
-\subsubsection{\texorpdfstring{file\+\_\+line\+\_\+counter}{file\_line\_counter}}
-{\footnotesize\ttfamily int factory\+::file\+\_\+line\+\_\+counter = 1\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classfactory_a9a874663e858e01c8ff372c070b8c19e}\label{classfactory_a9a874663e858e01c8ff372c070b8c19e}} 
-\index{factory@{factory}!input@{input}}
-\index{input@{input}!factory@{factory}}
-\subsubsection{\texorpdfstring{input}{input}}
-{\footnotesize\ttfamily std\+::ifstream factory\+::input\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classfactory_a29d1328317de4563aefb5c2f32f63424}\label{classfactory_a29d1328317de4563aefb5c2f32f63424}} 
-\index{factory@{factory}!level\+\_\+size@{level\+\_\+size}}
-\index{level\+\_\+size@{level\+\_\+size}!factory@{factory}}
-\subsubsection{\texorpdfstring{level\+\_\+size}{level\_size}}
-{\footnotesize\ttfamily sf\+::\+Vector2f factory\+::level\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classfactory_a0454b8bf0f45196f436ddf3febc422f3}\label{classfactory_a0454b8bf0f45196f436ddf3febc422f3}} 
-\index{factory@{factory}!output@{output}}
-\index{output@{output}!factory@{factory}}
-\subsubsection{\texorpdfstring{output}{output}}
-{\footnotesize\ttfamily std\+::ofstream factory\+::output\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classfactory_a891028263226aa493299e51f767211a1}\label{classfactory_a891028263226aa493299e51f767211a1}} 
-\index{factory@{factory}!spawn@{spawn}}
-\index{spawn@{spawn}!factory@{factory}}
-\subsubsection{\texorpdfstring{spawn}{spawn}}
-{\footnotesize\ttfamily sf\+::\+Vector2f factory\+::spawn\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{factory_8hpp}{factory.\+hpp}\item 
-\hyperlink{factory_8cpp}{factory.\+cpp}\end{DoxyCompactItemize}
+factory.\+cpp\end{DoxyCompactItemize}

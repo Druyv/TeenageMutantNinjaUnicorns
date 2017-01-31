@@ -1,0 +1,193 @@
+\hypertarget{classfile__management}{}\section{file\+\_\+management Class Reference}
+\label{classfile__management}\index{file\+\_\+management@{file\+\_\+management}}
+
+
+file manager for the save-\/files  
+
+
+
+
+{\ttfamily \#include $<$management.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfile__management_ae3d7ca2804b44e05efc2ddc79c9d514d}{file\+\_\+management} (std\+::string pathfile)
+\begin{DoxyCompactList}\small\item\em constructor to initialize pathfile \end{DoxyCompactList}\item 
+void \hyperlink{classfile__management_a090d9aba4dd5a795428ccbfe8d4037e6}{set\+\_\+input} (std\+::string new\+\_\+filename)
+\begin{DoxyCompactList}\small\item\em function that changes input that is used for information \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classfile__management_a6c3f90ce958156adea878510097d64ef}{get\+\_\+files} ()
+\begin{DoxyCompactList}\small\item\em function that loads input from file \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classfile__management_a58233800263bf74ae074a9a46f4a7bd0}{get\+\_\+level\+\_\+file} (std\+::string save\+\_\+file)
+\begin{DoxyCompactList}\small\item\em function that returns path to level given save-\/file \end{DoxyCompactList}\item 
+\hyperlink{classmenu}{menu} \hyperlink{classfile__management_a97eda13bca5dbe703663bf81f83a77a0}{make\+\_\+save\+\_\+file\+\_\+menu} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em function that rerturns menu-\/object \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classfile__management_a75689c420580c71f0621dfbcc4c2a06f}{next\+\_\+level} ()
+\begin{DoxyCompactList}\small\item\em function that returns next level path \end{DoxyCompactList}\item 
+void \hyperlink{classfile__management_a291475384add5bdb8002127c71c568ac}{set\+\_\+counter} (int value)
+\begin{DoxyCompactList}\small\item\em function that sets counter \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classfile__management_a92ece2d05964c828dcb9bf6c59043327}{get\+\_\+save\+\_\+file} (int menu\+\_\+index)
+\begin{DoxyCompactList}\small\item\em function that returns path to save-\/file given menu item pushed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+file manager for the save-\/files 
+
+This class reads the save-\/files and gives back the path to the level in the save file. This function can also be used for loading the path to the level after the one your currently playing
+
+\begin{DoxyDate}{Date}
+30-\/1-\/17 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfile__management_ae3d7ca2804b44e05efc2ddc79c9d514d}\label{classfile__management_ae3d7ca2804b44e05efc2ddc79c9d514d}} 
+\index{file\+\_\+management@{file\+\_\+management}!file\+\_\+management@{file\+\_\+management}}
+\index{file\+\_\+management@{file\+\_\+management}!file\+\_\+management@{file\+\_\+management}}
+\subsubsection{\texorpdfstring{file\+\_\+management()}{file\_management()}}
+{\footnotesize\ttfamily file\+\_\+management\+::file\+\_\+management (\begin{DoxyParamCaption}\item[{std\+::string}]{pathfile }\end{DoxyParamCaption})}
+
+
+
+constructor to initialize pathfile 
+
+This constructor sets input equal to the pathfile given.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pathfile} & The pathfile that contains all save\+\_\+file paths \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfile__management_a6c3f90ce958156adea878510097d64ef}\label{classfile__management_a6c3f90ce958156adea878510097d64ef}} 
+\index{file\+\_\+management@{file\+\_\+management}!get\+\_\+files@{get\+\_\+files}}
+\index{get\+\_\+files@{get\+\_\+files}!file\+\_\+management@{file\+\_\+management}}
+\subsubsection{\texorpdfstring{get\+\_\+files()}{get\_files()}}
+{\footnotesize\ttfamily std\+::string file\+\_\+management\+::get\+\_\+files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that loads input from file 
+
+This function loads input from file that is used as input file. returns one line at the time.
+
+\begin{DoxyReturn}{Returns}
+std\+::string that is the content of the line of the file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfile__management_a58233800263bf74ae074a9a46f4a7bd0}\label{classfile__management_a58233800263bf74ae074a9a46f4a7bd0}} 
+\index{file\+\_\+management@{file\+\_\+management}!get\+\_\+level\+\_\+file@{get\+\_\+level\+\_\+file}}
+\index{get\+\_\+level\+\_\+file@{get\+\_\+level\+\_\+file}!file\+\_\+management@{file\+\_\+management}}
+\subsubsection{\texorpdfstring{get\+\_\+level\+\_\+file()}{get\_level\_file()}}
+{\footnotesize\ttfamily std\+::string file\+\_\+management\+::get\+\_\+level\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::string}]{save\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+function that returns path to level given save-\/file 
+
+This function gets the path of the level currently in the save-\/file, it also reads this string and determines which level the file is. Then sets the counter to that level.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em save\+\_\+file} & path to file that contains path to level\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string that contains path to level in save\+\_\+file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfile__management_a92ece2d05964c828dcb9bf6c59043327}\label{classfile__management_a92ece2d05964c828dcb9bf6c59043327}} 
+\index{file\+\_\+management@{file\+\_\+management}!get\+\_\+save\+\_\+file@{get\+\_\+save\+\_\+file}}
+\index{get\+\_\+save\+\_\+file@{get\+\_\+save\+\_\+file}!file\+\_\+management@{file\+\_\+management}}
+\subsubsection{\texorpdfstring{get\+\_\+save\+\_\+file()}{get\_save\_file()}}
+{\footnotesize\ttfamily std\+::string file\+\_\+management\+::get\+\_\+save\+\_\+file (\begin{DoxyParamCaption}\item[{int}]{menu\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+function that returns path to save-\/file given menu item pushed 
+
+This function returns the path to the save-\/file of the given menu\+\_\+index, for example\+: If the first menu item (in this game \char`\"{}\+S\+A\+V\+E 1\char`\"{}) is pressed. The menu\+\_\+index is entered (1) and the return is the path to save file 1
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em menu\+\_\+index} & index of the menu button pressed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string that contains path to save-\/file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfile__management_a97eda13bca5dbe703663bf81f83a77a0}\label{classfile__management_a97eda13bca5dbe703663bf81f83a77a0}} 
+\index{file\+\_\+management@{file\+\_\+management}!make\+\_\+save\+\_\+file\+\_\+menu@{make\+\_\+save\+\_\+file\+\_\+menu}}
+\index{make\+\_\+save\+\_\+file\+\_\+menu@{make\+\_\+save\+\_\+file\+\_\+menu}!file\+\_\+management@{file\+\_\+management}}
+\subsubsection{\texorpdfstring{make\+\_\+save\+\_\+file\+\_\+menu()}{make\_save\_file\_menu()}}
+{\footnotesize\ttfamily \hyperlink{classmenu}{menu} file\+\_\+management\+::make\+\_\+save\+\_\+file\+\_\+menu (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+function that rerturns menu-\/object 
+
+This function makes a menu containing the save-\/files. The size of the menu depends on the amount of save-\/files. This function reads all save\+\_\+files (it also saves them as a private variable) and determines how many menu items it has to make. It returns the created menu.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window} & sf\+::\+Render\+Window from S\+F\+ML that is used to display the menu on\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+menu-\/object that is used in \hyperlink{classmenu__management}{menu\+\_\+management} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfile__management_a75689c420580c71f0621dfbcc4c2a06f}\label{classfile__management_a75689c420580c71f0621dfbcc4c2a06f}} 
+\index{file\+\_\+management@{file\+\_\+management}!next\+\_\+level@{next\+\_\+level}}
+\index{next\+\_\+level@{next\+\_\+level}!file\+\_\+management@{file\+\_\+management}}
+\subsubsection{\texorpdfstring{next\+\_\+level()}{next\_level()}}
+{\footnotesize\ttfamily std\+::string file\+\_\+management\+::next\+\_\+level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that returns next level path 
+
+This function return string ( that can be fabricated by standard\+\_\+path and the counter) that is used as a path to the next level.
+
+\begin{DoxyReturn}{Returns}
+std\+::string that contains path to next level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfile__management_a291475384add5bdb8002127c71c568ac}\label{classfile__management_a291475384add5bdb8002127c71c568ac}} 
+\index{file\+\_\+management@{file\+\_\+management}!set\+\_\+counter@{set\+\_\+counter}}
+\index{set\+\_\+counter@{set\+\_\+counter}!file\+\_\+management@{file\+\_\+management}}
+\subsubsection{\texorpdfstring{set\+\_\+counter()}{set\_counter()}}
+{\footnotesize\ttfamily void file\+\_\+management\+::set\+\_\+counter (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+function that sets counter 
+
+This function sets counter to given value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value} & integer you want to set value to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfile__management_a090d9aba4dd5a795428ccbfe8d4037e6}\label{classfile__management_a090d9aba4dd5a795428ccbfe8d4037e6}} 
+\index{file\+\_\+management@{file\+\_\+management}!set\+\_\+input@{set\+\_\+input}}
+\index{set\+\_\+input@{set\+\_\+input}!file\+\_\+management@{file\+\_\+management}}
+\subsubsection{\texorpdfstring{set\+\_\+input()}{set\_input()}}
+{\footnotesize\ttfamily void file\+\_\+management\+::set\+\_\+input (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+\_\+filename }\end{DoxyParamCaption})}
+
+
+
+function that changes input that is used for information 
+
+This function is used to change the std\+::ifstream to the given file in the parameter
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+filename} & Filepath you want to use as input file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+management.\+hpp\item 
+management.\+cpp\end{DoxyCompactItemize}

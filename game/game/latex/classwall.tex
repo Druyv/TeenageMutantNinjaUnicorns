@@ -30,7 +30,7 @@ Collaboration diagram for wall\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classwall_ac9c0db974e7839223fc4eb18c51dac62}{wall} (sf\+::\+Vector2f \hyperlink{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}{position}, sf\+::\+Vector2f \hyperlink{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}{size}, sf\+::\+Color \hyperlink{classwall_ada0e26614b5f30c0f675d179d517bafb}{object\+\_\+color}, std\+::string \hyperlink{classwall_acab3382f9e7092cf8bb62a5f88586d92}{image\+\_\+name}=\char`\"{}\char`\"{})
+\hyperlink{classwall_ac9c0db974e7839223fc4eb18c51dac62}{wall} (sf\+::\+Vector2f position, sf\+::\+Vector2f size, sf\+::\+Color object\+\_\+color, std\+::string image\+\_\+name=\char`\"{}\char`\"{})
 \begin{DoxyCompactList}\small\item\em Constructor for a wall. \end{DoxyCompactList}\item 
 void \hyperlink{classwall_aa25b8377e1d9a209fabd2271294f05d0}{draw} (sf\+::\+Render\+Window \&window) override
 \begin{DoxyCompactList}\small\item\em Draw function for the wall. \end{DoxyCompactList}\item 
@@ -38,17 +38,6 @@ sf\+::\+Float\+Rect \hyperlink{classwall_a317a464c879cfdf9464bd6f1b62d9101}{get\
 \begin{DoxyCompactList}\small\item\em Function that gives de global bounds. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classwall_aab1de4f144f176b134a967ba08747932}{object\+\_\+information} () override
 \begin{DoxyCompactList}\small\item\em Funtion that returns object information. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-sf\+::\+Color \hyperlink{classwall_ada0e26614b5f30c0f675d179d517bafb}{object\+\_\+color}
-\item 
-sf\+::\+Rectangle\+Shape \hyperlink{classwall_a29b74cbef8c1cb110c526fdf4a8f48ba}{rectangle}
-\item 
-std\+::string \hyperlink{classwall_acab3382f9e7092cf8bb62a5f88586d92}{image\+\_\+name}
-\item 
-sf\+::\+Texture \hyperlink{classwall_a03e6d768bc82f6320d85f19ce0346f95}{texture}
-\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -155,34 +144,7 @@ Reimplemented from \hyperlink{classdrawable_a2ed0f8bb53f33477f7722efa7bb24583}{d
 
 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{classwall_acab3382f9e7092cf8bb62a5f88586d92}\label{classwall_acab3382f9e7092cf8bb62a5f88586d92}} 
-\index{wall@{wall}!image\+\_\+name@{image\+\_\+name}}
-\index{image\+\_\+name@{image\+\_\+name}!wall@{wall}}
-\subsubsection{\texorpdfstring{image\+\_\+name}{image\_name}}
-{\footnotesize\ttfamily std\+::string wall\+::image\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classwall_ada0e26614b5f30c0f675d179d517bafb}\label{classwall_ada0e26614b5f30c0f675d179d517bafb}} 
-\index{wall@{wall}!object\+\_\+color@{object\+\_\+color}}
-\index{object\+\_\+color@{object\+\_\+color}!wall@{wall}}
-\subsubsection{\texorpdfstring{object\+\_\+color}{object\_color}}
-{\footnotesize\ttfamily sf\+::\+Color wall\+::object\+\_\+color\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classwall_a29b74cbef8c1cb110c526fdf4a8f48ba}\label{classwall_a29b74cbef8c1cb110c526fdf4a8f48ba}} 
-\index{wall@{wall}!rectangle@{rectangle}}
-\index{rectangle@{rectangle}!wall@{wall}}
-\subsubsection{\texorpdfstring{rectangle}{rectangle}}
-{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape wall\+::rectangle\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classwall_a03e6d768bc82f6320d85f19ce0346f95}\label{classwall_a03e6d768bc82f6320d85f19ce0346f95}} 
-\index{wall@{wall}!texture@{texture}}
-\index{texture@{texture}!wall@{wall}}
-\subsubsection{\texorpdfstring{texture}{texture}}
-{\footnotesize\ttfamily sf\+::\+Texture wall\+::texture\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{wall_8hpp}{wall.\+hpp}\item 
-\hyperlink{wall_8cpp}{wall.\+cpp}\end{DoxyCompactItemize}
+wall.\+hpp\item 
+wall.\+cpp\end{DoxyCompactItemize}

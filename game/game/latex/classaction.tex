@@ -12,27 +12,18 @@ actions that a charater can do
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classaction_a481b1b2e3892600143fd7b2db4ac5729}{action} (std\+::function$<$ bool() $>$ \hyperlink{classaction_a949abf979a5255f54e88a6a4273afebe}{condition}, std\+::function$<$ void(\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$ \hyperlink{classaction_a711a393fce3b3b22930b651e24eda6c3}{work})
+\hyperlink{classaction_a481b1b2e3892600143fd7b2db4ac5729}{action} (std\+::function$<$ bool() $>$ condition, std\+::function$<$ void(object\+\_\+ptr) $>$ work)
 \begin{DoxyCompactList}\small\item\em constructor 2 functions \end{DoxyCompactList}\item 
-\hyperlink{classaction_a504531cbc56e9c4a60b4e5d40bc018a6}{action} (sf\+::\+Keyboard\+::\+Key key, std\+::function$<$ void(\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$ \hyperlink{classaction_a711a393fce3b3b22930b651e24eda6c3}{work})
+\hyperlink{classaction_a504531cbc56e9c4a60b4e5d40bc018a6}{action} (sf\+::\+Keyboard\+::\+Key key, std\+::function$<$ void(object\+\_\+ptr) $>$ work)
 \begin{DoxyCompactList}\small\item\em constructor key and function \end{DoxyCompactList}\item 
-\hyperlink{classaction_abf43e8dfaeca2df9d356fbfd4d1790ba}{action} (sf\+::\+Mouse\+::\+Button button, std\+::function$<$ void(\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$ \hyperlink{classaction_a711a393fce3b3b22930b651e24eda6c3}{work})
+\hyperlink{classaction_abf43e8dfaeca2df9d356fbfd4d1790ba}{action} (sf\+::\+Mouse\+::\+Button button, std\+::function$<$ void(object\+\_\+ptr) $>$ work)
 \begin{DoxyCompactList}\small\item\em constructor moust button and function \end{DoxyCompactList}\item 
-\hyperlink{classaction_a55a91caa9803002fa7ddd6e9e9e46dc6}{action} (sf\+::\+Mouse\+::\+Button button, std\+::function$<$ void() $>$ \hyperlink{classaction_a711a393fce3b3b22930b651e24eda6c3}{work})
+\hyperlink{classaction_a55a91caa9803002fa7ddd6e9e9e46dc6}{action} (sf\+::\+Mouse\+::\+Button button, std\+::function$<$ void() $>$ work)
 \begin{DoxyCompactList}\small\item\em constructor char \&, char and function \end{DoxyCompactList}\item 
-void \hyperlink{classaction_ab4f8d0f7552450455977d09a889c18c7}{operator()} (\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} object)
+void \hyperlink{classaction_ab4f8d0f7552450455977d09a889c18c7}{operator()} (object\+\_\+ptr object)
 \begin{DoxyCompactList}\small\item\em operator() \end{DoxyCompactList}\item 
 void \hyperlink{classaction_a92c003677656b5b3e6e58b19376e6b04}{operator()} ()
 \begin{DoxyCompactList}\small\item\em operator() \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-std\+::function$<$ bool() $>$ \hyperlink{classaction_a949abf979a5255f54e88a6a4273afebe}{condition}
-\item 
-std\+::function$<$ void(\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$ \hyperlink{classaction_a711a393fce3b3b22930b651e24eda6c3}{work}
-\item 
-std\+::function$<$ void() $>$ \hyperlink{classaction_a2b895e3240bf7d69ae7f8e3bd7e563d6}{work\+\_\+no\+\_\+ptr}
-\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -50,7 +41,7 @@ that this was created by Wouter van Ooijen.
 \index{action@{action}!action@{action}}
 \index{action@{action}!action@{action}}
 \subsubsection{\texorpdfstring{action()}{action()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily action\+::action (\begin{DoxyParamCaption}\item[{std\+::function$<$ bool() $>$}]{condition,  }\item[{std\+::function$<$ void(\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$}]{work }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily action\+::action (\begin{DoxyParamCaption}\item[{std\+::function$<$ bool() $>$}]{condition,  }\item[{std\+::function$<$ void(object\+\_\+ptr) $>$}]{work }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -69,7 +60,7 @@ This constructor receives 2 std\+::functions and saves them as condition and wor
 \index{action@{action}!action@{action}}
 \index{action@{action}!action@{action}}
 \subsubsection{\texorpdfstring{action()}{action()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily action\+::action (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key,  }\item[{std\+::function$<$ void(\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$}]{work }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily action\+::action (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key,  }\item[{std\+::function$<$ void(object\+\_\+ptr) $>$}]{work }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -91,7 +82,7 @@ This constructor receives a sfml key and creates a lambda. That lambda returns t
 \index{action@{action}!action@{action}}
 \index{action@{action}!action@{action}}
 \subsubsection{\texorpdfstring{action()}{action()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily action\+::action (\begin{DoxyParamCaption}\item[{sf\+::\+Mouse\+::\+Button}]{button,  }\item[{std\+::function$<$ void(\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$}]{work }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily action\+::action (\begin{DoxyParamCaption}\item[{sf\+::\+Mouse\+::\+Button}]{button,  }\item[{std\+::function$<$ void(object\+\_\+ptr) $>$}]{work }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -141,7 +132,7 @@ This constructor receives 3 parameters. The first is a variable that has to be c
 \index{action@{action}!operator()@{operator()}}
 \index{operator()@{operator()}!action@{action}}
 \subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void action\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void action\+::operator() (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -158,27 +149,6 @@ This operator executes the function in condition and then checks the return valu
 operator() 
 
 This operator executes the function in condition and then checks the return value. If the condition returns true the work gets executed. 
-
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{classaction_a949abf979a5255f54e88a6a4273afebe}\label{classaction_a949abf979a5255f54e88a6a4273afebe}} 
-\index{action@{action}!condition@{condition}}
-\index{condition@{condition}!action@{action}}
-\subsubsection{\texorpdfstring{condition}{condition}}
-{\footnotesize\ttfamily std\+::function$<$ bool() $>$ action\+::condition\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classaction_a711a393fce3b3b22930b651e24eda6c3}\label{classaction_a711a393fce3b3b22930b651e24eda6c3}} 
-\index{action@{action}!work@{work}}
-\index{work@{work}!action@{action}}
-\subsubsection{\texorpdfstring{work}{work}}
-{\footnotesize\ttfamily std\+::function$<$ void(\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$ action\+::work\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classaction_a2b895e3240bf7d69ae7f8e3bd7e563d6}\label{classaction_a2b895e3240bf7d69ae7f8e3bd7e563d6}} 
-\index{action@{action}!work\+\_\+no\+\_\+ptr@{work\+\_\+no\+\_\+ptr}}
-\index{work\+\_\+no\+\_\+ptr@{work\+\_\+no\+\_\+ptr}!action@{action}}
-\subsubsection{\texorpdfstring{work\+\_\+no\+\_\+ptr}{work\_no\_ptr}}
-{\footnotesize\ttfamily std\+::function$<$ void() $>$ action\+::work\+\_\+no\+\_\+ptr\hspace{0.3cm}{\ttfamily [private]}}
-
-
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

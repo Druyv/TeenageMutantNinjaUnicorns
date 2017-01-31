@@ -24,7 +24,8 @@ private:
 	sf::Sprite sheet;
 	std::string sheet_name;
 	sf::Texture texture;
-        float count=1;
+	float width; 
+        float count=0;
         float row=0;
         float  rot=0;
         bool is_jumping = false;
@@ -41,7 +42,7 @@ public:
 	/// \param[in] image_name The name of the image that has to be loaded
 	/// \sa sheet_load_error
 	/// \warning Make sure you use a Try catch block to capture the exception generated if the image cannot be loaded
-	animation(sf::Vector2f position, std::string sheet_name);
+	animation(sf::Vector2f position, std::string sheet_name,float width,float length);
 	/// \brief draw object
 	///
 	/// This function is used for calling the draw function on the sfml object

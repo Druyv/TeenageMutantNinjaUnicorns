@@ -1,10 +1,11 @@
 #include "unicorn.hpp"
 
 
-unicorn::unicorn(sf::Vector2f position, std::string filename, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects) :
+unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_rainbow, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects) :
 	drawable{ position, sf::Vector2f{ 1.0,1.0 }, std::string{ "UNICORN" } },
 	actions_array{ actions_array },
-	unicorn_animation{animation{ position, filename }  },
+	unicorn_animation{animation{ position, filename,7.0,5.0 }  },
+	rainbow{animation{position,file_rainbow,8.0,1.0}},
 	the_collisions{ the_collisions },
         spawn_location{position},
 	all_mobs{all_mobs},
@@ -92,6 +93,8 @@ void unicorn::draw(sf::RenderWindow & window) {
             }
         }
         got_hit = false;
+	rainbow.set_position((position - sf::Vector2f(window.getSize().x / 2.0 - size.x / 2.0, window.getSize().y / 2.0)));
+	rainbow.draw(window);
 	unicorn_animation.set_position(position);
 	unicorn_animation.draw(window);
 }

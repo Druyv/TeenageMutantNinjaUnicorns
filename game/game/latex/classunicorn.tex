@@ -24,13 +24,13 @@ Collaboration diagram for unicorn\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=321pt]{classunicorn__coll__graph}
+\includegraphics[width=136pt]{classunicorn__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classunicorn_a5106a69c85e9426caf0bc79f48c21ed4}{unicorn} (sf\+::\+Vector2f \hyperlink{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}{position}, std\+::string filename, \hyperlink{drawable_8hpp_a38f93e4749e0d65d51360c429766d212}{actions} \&\hyperlink{classunicorn_a1cc767e234ec6d55ca0b576747f8d7d7}{actions\+\_\+array}, \hyperlink{drawable_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions} \&\hyperlink{classunicorn_a77b6bd58d4bd308c55a530c50fdcce41}{the\+\_\+collisions}, std\+::vector$<$ \hyperlink{npc_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr} $>$ \&\hyperlink{classunicorn_aac73bd105ef4ee4c7d46727a7e832bcf}{all\+\_\+mobs}, \hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&objects)
+\hyperlink{classunicorn_a5106a69c85e9426caf0bc79f48c21ed4}{unicorn} (sf\+::\+Vector2f position, std\+::string filename, actions \&actions\+\_\+array, collisions \&the\+\_\+collisions, std\+::vector$<$ mob\+\_\+ptr $>$ \&all\+\_\+mobs, objects\+\_\+vector \&objects)
 \begin{DoxyCompactList}\small\item\em Constructor to initialize the unicorn. \end{DoxyCompactList}\item 
 void \hyperlink{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}{draw} (sf\+::\+Render\+Window \&window) override
 \begin{DoxyCompactList}\small\item\em function that draws the image \end{DoxyCompactList}\item 
@@ -40,7 +40,7 @@ void \hyperlink{classunicorn_a07d5ca4e66632c0e871221a27146805a}{jump} () overrid
 \begin{DoxyCompactList}\small\item\em let the unicorn jump \end{DoxyCompactList}\item 
 sf\+::\+Float\+Rect \hyperlink{classunicorn_a1bac09fc59b04f14f5a093bc4daa04da}{get\+Global\+Bounds} () override
 \begin{DoxyCompactList}\small\item\em function that gets the boundingbox of the image \end{DoxyCompactList}\item 
-void \hyperlink{classunicorn_aadb47a9981c46d6add8704074df117df}{run\+\_\+actions} (\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} object) override
+void \hyperlink{classunicorn_aadb47a9981c46d6add8704074df117df}{run\+\_\+actions} (object\+\_\+ptr object) override
 \begin{DoxyCompactList}\small\item\em functions that runs through all actions related to the unicorn \end{DoxyCompactList}\item 
 \hyperlink{structcollision}{collision} \hyperlink{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}{check\+\_\+for\+\_\+collisions} (char c) override
 \begin{DoxyCompactList}\small\item\em Check the collisions vector. \end{DoxyCompactList}\item 
@@ -48,38 +48,8 @@ void \hyperlink{classunicorn_af448a3fa5fc5f09254b50afa151ce42b}{shoot} (sf\+::\+
 \begin{DoxyCompactList}\small\item\em function that shoots bullet \end{DoxyCompactList}\item 
 void \hyperlink{classunicorn_af0e2581c426b4b1e32f8a7b484b4e242}{set\+\_\+spawn\+\_\+location} (sf\+::\+Vector2f new\+\_\+location)
 \begin{DoxyCompactList}\small\item\em set the spawn location \end{DoxyCompactList}\item 
-void \hyperlink{classunicorn_a8b5a22ab1b26daa540ceb09b5b5747d8}{damage} (\hyperlink{npc_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr} other)
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-bool \hyperlink{classunicorn_a4a032891da1aa855b0b46c6e0b969a35}{going\+\_\+left} = false
-\item 
-bool \hyperlink{classunicorn_ac427ce120e919fe962664585903328af}{correctly\+\_\+scaled} = false
-\item 
-int \hyperlink{classunicorn_a7f4c9e68841d896da696132113602019}{jump\+\_\+counter} = 0
-\item 
-int \hyperlink{classunicorn_a7673cbdfe14f719f710df4b324f74484}{shoot\+\_\+timeout} = 0
-\item 
-int \hyperlink{classunicorn_ab0462e46c2393f0bc0f5b2faa0b7b091}{lives} = 10
-\item 
-\hyperlink{drawable_8hpp_a38f93e4749e0d65d51360c429766d212}{actions} \& \hyperlink{classunicorn_a1cc767e234ec6d55ca0b576747f8d7d7}{actions\+\_\+array}
-\item 
-\hyperlink{classanimation}{animation} \hyperlink{classunicorn_a0d6df4ae413adcf9307c2f36e9c1d51b}{unicorn\+\_\+animation}
-\item 
-\hyperlink{classphysics}{physics} \hyperlink{classunicorn_accaf554299ce27905fa8c47f602b0e98}{physics\+\_\+object}
-\item 
-\hyperlink{drawable_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions} \& \hyperlink{classunicorn_a77b6bd58d4bd308c55a530c50fdcce41}{the\+\_\+collisions}
-\item 
-sf\+::\+Vector2f \hyperlink{classunicorn_ab16638b1ce0d1a7a0da9ecffc6370e8c}{spawn\+\_\+location}
-\item 
-std\+::vector$<$ \hyperlink{npc_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr} $>$ \& \hyperlink{classunicorn_aac73bd105ef4ee4c7d46727a7e832bcf}{all\+\_\+mobs}
-\item 
-\hyperlink{classbullet}{bullet} \hyperlink{classunicorn_a3e51a9e196533b27304f21eb26d8f4ba}{weapon}
-\item 
-bool \hyperlink{classunicorn_ab808840ba1e83cb34c691ba2472d6f9b}{got\+\_\+hit} = false
-\item 
-int \hyperlink{classunicorn_ac0762399be7cd26263456d86fd2774ff}{mob\+\_\+touch\+\_\+counter} = 0
+\mbox{\Hypertarget{classunicorn_a8b5a22ab1b26daa540ceb09b5b5747d8}\label{classunicorn_a8b5a22ab1b26daa540ceb09b5b5747d8}} 
+void {\bfseries damage} (mob\+\_\+ptr other)
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -99,7 +69,7 @@ This class is used to control the unicorn and can be used to control it aswell (
 \index{unicorn@{unicorn}!unicorn@{unicorn}}
 \index{unicorn@{unicorn}!unicorn@{unicorn}}
 \subsubsection{\texorpdfstring{unicorn()}{unicorn()}}
-{\footnotesize\ttfamily unicorn\+::unicorn (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{\hyperlink{drawable_8hpp_a38f93e4749e0d65d51360c429766d212}{actions} \&}]{actions\+\_\+array,  }\item[{\hyperlink{drawable_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions} \&}]{the\+\_\+collisions,  }\item[{std\+::vector$<$ \hyperlink{npc_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr} $>$ \&}]{all\+\_\+mobs,  }\item[{\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&}]{objects }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily unicorn\+::unicorn (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{actions \&}]{actions\+\_\+array,  }\item[{collisions \&}]{the\+\_\+collisions,  }\item[{std\+::vector$<$ mob\+\_\+ptr $>$ \&}]{all\+\_\+mobs,  }\item[{objects\+\_\+vector \&}]{objects }\end{DoxyParamCaption})}
 
 
 
@@ -143,12 +113,6 @@ This function checks the collisions vector for a collision where the c is the di
 
 
 Reimplemented from \hyperlink{classdrawable_abbc6e0089d502ba48c3fcb9c96e3966e}{drawable}.
-
-\mbox{\Hypertarget{classunicorn_a8b5a22ab1b26daa540ceb09b5b5747d8}\label{classunicorn_a8b5a22ab1b26daa540ceb09b5b5747d8}} 
-\index{unicorn@{unicorn}!damage@{damage}}
-\index{damage@{damage}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{damage()}{damage()}}
-{\footnotesize\ttfamily void unicorn\+::damage (\begin{DoxyParamCaption}\item[{\hyperlink{npc_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr}}]{other }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}\label{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}} 
 \index{unicorn@{unicorn}!draw@{draw}}
@@ -237,7 +201,7 @@ Reimplemented from \hyperlink{classdrawable_ad0d3930c045cc6776aa2c3965be32491}{d
 \index{unicorn@{unicorn}!run\+\_\+actions@{run\+\_\+actions}}
 \index{run\+\_\+actions@{run\+\_\+actions}!unicorn@{unicorn}}
 \subsubsection{\texorpdfstring{run\+\_\+actions()}{run\_actions()}}
-{\footnotesize\ttfamily void unicorn\+::run\+\_\+actions (\begin{DoxyParamCaption}\item[{\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void unicorn\+::run\+\_\+actions (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -285,94 +249,7 @@ This function is used to fire a bullet object. Given the start position , a wind
 \end{DoxyParams}
 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{classunicorn_a1cc767e234ec6d55ca0b576747f8d7d7}\label{classunicorn_a1cc767e234ec6d55ca0b576747f8d7d7}} 
-\index{unicorn@{unicorn}!actions\+\_\+array@{actions\+\_\+array}}
-\index{actions\+\_\+array@{actions\+\_\+array}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{actions\+\_\+array}{actions\_array}}
-{\footnotesize\ttfamily \hyperlink{drawable_8hpp_a38f93e4749e0d65d51360c429766d212}{actions}\& unicorn\+::actions\+\_\+array\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_aac73bd105ef4ee4c7d46727a7e832bcf}\label{classunicorn_aac73bd105ef4ee4c7d46727a7e832bcf}} 
-\index{unicorn@{unicorn}!all\+\_\+mobs@{all\+\_\+mobs}}
-\index{all\+\_\+mobs@{all\+\_\+mobs}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{all\+\_\+mobs}{all\_mobs}}
-{\footnotesize\ttfamily std\+::vector$<$\hyperlink{npc_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr}$>$\& unicorn\+::all\+\_\+mobs\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_ac427ce120e919fe962664585903328af}\label{classunicorn_ac427ce120e919fe962664585903328af}} 
-\index{unicorn@{unicorn}!correctly\+\_\+scaled@{correctly\+\_\+scaled}}
-\index{correctly\+\_\+scaled@{correctly\+\_\+scaled}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{correctly\+\_\+scaled}{correctly\_scaled}}
-{\footnotesize\ttfamily bool unicorn\+::correctly\+\_\+scaled = false\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_a4a032891da1aa855b0b46c6e0b969a35}\label{classunicorn_a4a032891da1aa855b0b46c6e0b969a35}} 
-\index{unicorn@{unicorn}!going\+\_\+left@{going\+\_\+left}}
-\index{going\+\_\+left@{going\+\_\+left}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{going\+\_\+left}{going\_left}}
-{\footnotesize\ttfamily bool unicorn\+::going\+\_\+left = false\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_ab808840ba1e83cb34c691ba2472d6f9b}\label{classunicorn_ab808840ba1e83cb34c691ba2472d6f9b}} 
-\index{unicorn@{unicorn}!got\+\_\+hit@{got\+\_\+hit}}
-\index{got\+\_\+hit@{got\+\_\+hit}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{got\+\_\+hit}{got\_hit}}
-{\footnotesize\ttfamily bool unicorn\+::got\+\_\+hit = false\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_a7f4c9e68841d896da696132113602019}\label{classunicorn_a7f4c9e68841d896da696132113602019}} 
-\index{unicorn@{unicorn}!jump\+\_\+counter@{jump\+\_\+counter}}
-\index{jump\+\_\+counter@{jump\+\_\+counter}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{jump\+\_\+counter}{jump\_counter}}
-{\footnotesize\ttfamily int unicorn\+::jump\+\_\+counter = 0\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_ab0462e46c2393f0bc0f5b2faa0b7b091}\label{classunicorn_ab0462e46c2393f0bc0f5b2faa0b7b091}} 
-\index{unicorn@{unicorn}!lives@{lives}}
-\index{lives@{lives}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{lives}{lives}}
-{\footnotesize\ttfamily int unicorn\+::lives = 10\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_ac0762399be7cd26263456d86fd2774ff}\label{classunicorn_ac0762399be7cd26263456d86fd2774ff}} 
-\index{unicorn@{unicorn}!mob\+\_\+touch\+\_\+counter@{mob\+\_\+touch\+\_\+counter}}
-\index{mob\+\_\+touch\+\_\+counter@{mob\+\_\+touch\+\_\+counter}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{mob\+\_\+touch\+\_\+counter}{mob\_touch\_counter}}
-{\footnotesize\ttfamily int unicorn\+::mob\+\_\+touch\+\_\+counter = 0\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_accaf554299ce27905fa8c47f602b0e98}\label{classunicorn_accaf554299ce27905fa8c47f602b0e98}} 
-\index{unicorn@{unicorn}!physics\+\_\+object@{physics\+\_\+object}}
-\index{physics\+\_\+object@{physics\+\_\+object}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{physics\+\_\+object}{physics\_object}}
-{\footnotesize\ttfamily \hyperlink{classphysics}{physics} unicorn\+::physics\+\_\+object\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_a7673cbdfe14f719f710df4b324f74484}\label{classunicorn_a7673cbdfe14f719f710df4b324f74484}} 
-\index{unicorn@{unicorn}!shoot\+\_\+timeout@{shoot\+\_\+timeout}}
-\index{shoot\+\_\+timeout@{shoot\+\_\+timeout}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{shoot\+\_\+timeout}{shoot\_timeout}}
-{\footnotesize\ttfamily int unicorn\+::shoot\+\_\+timeout = 0\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_ab16638b1ce0d1a7a0da9ecffc6370e8c}\label{classunicorn_ab16638b1ce0d1a7a0da9ecffc6370e8c}} 
-\index{unicorn@{unicorn}!spawn\+\_\+location@{spawn\+\_\+location}}
-\index{spawn\+\_\+location@{spawn\+\_\+location}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{spawn\+\_\+location}{spawn\_location}}
-{\footnotesize\ttfamily sf\+::\+Vector2f unicorn\+::spawn\+\_\+location\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_a77b6bd58d4bd308c55a530c50fdcce41}\label{classunicorn_a77b6bd58d4bd308c55a530c50fdcce41}} 
-\index{unicorn@{unicorn}!the\+\_\+collisions@{the\+\_\+collisions}}
-\index{the\+\_\+collisions@{the\+\_\+collisions}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{the\+\_\+collisions}{the\_collisions}}
-{\footnotesize\ttfamily \hyperlink{drawable_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions}\& unicorn\+::the\+\_\+collisions\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_a0d6df4ae413adcf9307c2f36e9c1d51b}\label{classunicorn_a0d6df4ae413adcf9307c2f36e9c1d51b}} 
-\index{unicorn@{unicorn}!unicorn\+\_\+animation@{unicorn\+\_\+animation}}
-\index{unicorn\+\_\+animation@{unicorn\+\_\+animation}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{unicorn\+\_\+animation}{unicorn\_animation}}
-{\footnotesize\ttfamily \hyperlink{classanimation}{animation} unicorn\+::unicorn\+\_\+animation\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classunicorn_a3e51a9e196533b27304f21eb26d8f4ba}\label{classunicorn_a3e51a9e196533b27304f21eb26d8f4ba}} 
-\index{unicorn@{unicorn}!weapon@{weapon}}
-\index{weapon@{weapon}!unicorn@{unicorn}}
-\subsubsection{\texorpdfstring{weapon}{weapon}}
-{\footnotesize\ttfamily \hyperlink{classbullet}{bullet} unicorn\+::weapon\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{unicorn_8hpp}{unicorn.\+hpp}\item 
-\hyperlink{unicorn_8cpp}{unicorn.\+cpp}\end{DoxyCompactItemize}
+unicorn.\+cpp\end{DoxyCompactItemize}

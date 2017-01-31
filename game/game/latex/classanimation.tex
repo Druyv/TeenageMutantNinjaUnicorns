@@ -30,7 +30,7 @@ Collaboration diagram for animation\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classanimation_ab0a44a89f36d6f04c4e21e868441d693}{animation} (sf\+::\+Vector2f \hyperlink{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}{position}, std\+::string \hyperlink{classanimation_a5406569ef9a8e47a8e50a927063613f6}{sheet\+\_\+name})
+\hyperlink{classanimation_ab0a44a89f36d6f04c4e21e868441d693}{animation} (sf\+::\+Vector2f position, std\+::string sheet\+\_\+name)
 \begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
 void \hyperlink{classanimation_a20959b66d1c25007890bb40f0e876570}{draw} (sf\+::\+Render\+Window \&window) override
 \begin{DoxyCompactList}\small\item\em draw object \end{DoxyCompactList}\item 
@@ -44,25 +44,6 @@ bool \hyperlink{classanimation_a79260eb98a4f77aa4b9f3b08cc8e5b59}{movement} (flo
 \begin{DoxyCompactList}\small\item\em This function for animations. \end{DoxyCompactList}\item 
 void \hyperlink{classanimation_a30e84ff71206b8ec4f82fd70ad776036}{set\+Texture\+Rect} (const sf\+::\+Int\+Rect \&rectangle)
 \begin{DoxyCompactList}\small\item\em set the texture rectangle \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-sf\+::\+Sprite \hyperlink{classanimation_aa72ba079cfcb62b5dd7f6d74a9438516}{sheet}
-\item 
-std\+::string \hyperlink{classanimation_a5406569ef9a8e47a8e50a927063613f6}{sheet\+\_\+name}
-\item 
-sf\+::\+Texture \hyperlink{classanimation_a9b49e5a7b856d127ea5481998c911fde}{texture}
-\item 
-float \hyperlink{classanimation_a50dde9518af0631ff1b86881a0e4c0ce}{count} =1
-\item 
-float \hyperlink{classanimation_adaa2321a124fb03b2f4b3bd7af4e2127}{row} =0
-\item 
-float \hyperlink{classanimation_a9a1d350886939f9e988d2786ca9709e7}{rot} =0
-\item 
-bool \hyperlink{classanimation_a8365683c0efa023b2bcb60b3fde9eeb2}{is\+\_\+jumping} = false
-\item 
-bool \hyperlink{classanimation_a48077a46bbac0719c0a8227456620e14}{rotate} = false
-\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -235,58 +216,7 @@ This function can be used to turn the object around while keeping the same upper
 \end{DoxySeeAlso}
 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{classanimation_a50dde9518af0631ff1b86881a0e4c0ce}\label{classanimation_a50dde9518af0631ff1b86881a0e4c0ce}} 
-\index{animation@{animation}!count@{count}}
-\index{count@{count}!animation@{animation}}
-\subsubsection{\texorpdfstring{count}{count}}
-{\footnotesize\ttfamily float animation\+::count =1\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classanimation_a8365683c0efa023b2bcb60b3fde9eeb2}\label{classanimation_a8365683c0efa023b2bcb60b3fde9eeb2}} 
-\index{animation@{animation}!is\+\_\+jumping@{is\+\_\+jumping}}
-\index{is\+\_\+jumping@{is\+\_\+jumping}!animation@{animation}}
-\subsubsection{\texorpdfstring{is\+\_\+jumping}{is\_jumping}}
-{\footnotesize\ttfamily bool animation\+::is\+\_\+jumping = false\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classanimation_a9a1d350886939f9e988d2786ca9709e7}\label{classanimation_a9a1d350886939f9e988d2786ca9709e7}} 
-\index{animation@{animation}!rot@{rot}}
-\index{rot@{rot}!animation@{animation}}
-\subsubsection{\texorpdfstring{rot}{rot}}
-{\footnotesize\ttfamily float animation\+::rot =0\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classanimation_a48077a46bbac0719c0a8227456620e14}\label{classanimation_a48077a46bbac0719c0a8227456620e14}} 
-\index{animation@{animation}!rotate@{rotate}}
-\index{rotate@{rotate}!animation@{animation}}
-\subsubsection{\texorpdfstring{rotate}{rotate}}
-{\footnotesize\ttfamily bool animation\+::rotate = false\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classanimation_adaa2321a124fb03b2f4b3bd7af4e2127}\label{classanimation_adaa2321a124fb03b2f4b3bd7af4e2127}} 
-\index{animation@{animation}!row@{row}}
-\index{row@{row}!animation@{animation}}
-\subsubsection{\texorpdfstring{row}{row}}
-{\footnotesize\ttfamily float animation\+::row =0\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classanimation_aa72ba079cfcb62b5dd7f6d74a9438516}\label{classanimation_aa72ba079cfcb62b5dd7f6d74a9438516}} 
-\index{animation@{animation}!sheet@{sheet}}
-\index{sheet@{sheet}!animation@{animation}}
-\subsubsection{\texorpdfstring{sheet}{sheet}}
-{\footnotesize\ttfamily sf\+::\+Sprite animation\+::sheet\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classanimation_a5406569ef9a8e47a8e50a927063613f6}\label{classanimation_a5406569ef9a8e47a8e50a927063613f6}} 
-\index{animation@{animation}!sheet\+\_\+name@{sheet\+\_\+name}}
-\index{sheet\+\_\+name@{sheet\+\_\+name}!animation@{animation}}
-\subsubsection{\texorpdfstring{sheet\+\_\+name}{sheet\_name}}
-{\footnotesize\ttfamily std\+::string animation\+::sheet\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classanimation_a9b49e5a7b856d127ea5481998c911fde}\label{classanimation_a9b49e5a7b856d127ea5481998c911fde}} 
-\index{animation@{animation}!texture@{texture}}
-\index{texture@{texture}!animation@{animation}}
-\subsubsection{\texorpdfstring{texture}{texture}}
-{\footnotesize\ttfamily sf\+::\+Texture animation\+::texture\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{animation_8hpp}{animation.\+hpp}\item 
-\hyperlink{animation_8cpp}{animation.\+cpp}\end{DoxyCompactItemize}
+animation.\+cpp\end{DoxyCompactItemize}

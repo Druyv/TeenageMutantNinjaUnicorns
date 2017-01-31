@@ -354,5 +354,9 @@ public:
 	/// \param[in] new_position The new position for the object
         ///
         void set_position(sf::Vector2f new_position);
+
+		virtual std::string get_image_name();
+
+		
 };
 #endif // DRAWABLE_HPP

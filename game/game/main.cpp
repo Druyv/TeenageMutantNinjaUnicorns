@@ -47,7 +47,7 @@ int main(int argc, const char **argv) {
             base_level base( object_creation->get_level_size() );
             base.push_back_borders(objects);
             
-            the_unicorn = std::make_shared<unicorn>(object_creation->get_spawn(), "spreadsheet.png", unicorn_actions, the_collisions, all_mobs, objects);
+            the_unicorn = std::make_shared<unicorn>(object_creation->get_spawn(), "spreadsheet.png","rainbowspreadsheet.png", unicorn_actions, the_collisions, all_mobs, objects);
 		
 	}
 	catch (const std::exception & e) {

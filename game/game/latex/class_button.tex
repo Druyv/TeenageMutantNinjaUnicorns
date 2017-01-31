@@ -12,7 +12,7 @@ Creates a button at a specific place on the screen.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_button_a1085aea4e01df12c1400d2f2f666dda2}{Button} (float \hyperlink{class_button_afe532ea0d5dd3fea5341ba1cb3e64e0b}{start\+HeightY}=0.\+0, float \hyperlink{class_button_a954fb7025b688b7b2a4d8d16adca74eb}{start\+HeightX}=0.\+0, int \hyperlink{class_button_a6853c434f05010c4b2582fb757f96bef}{position}=0, std\+::string \hyperlink{class_button_a960b5ee6c11f9385763838b1d788f010}{Whats\+On\+The\+Button}=\char`\"{} \char`\"{})
+\hyperlink{class_button_a1085aea4e01df12c1400d2f2f666dda2}{Button} (float start\+HeightY=0.\+0, float start\+HeightX=0.\+0, int position=0, std\+::string Whats\+On\+The\+Button=\char`\"{} \char`\"{})
 \begin{DoxyCompactList}\small\item\em constructor to make button \end{DoxyCompactList}\item 
 void \hyperlink{class_button_adf65892636ea303a84e1391106ea7cb0}{draw} (sf\+::\+Render\+Window \&window)
 \begin{DoxyCompactList}\small\item\em Function to draw the button \& the text. \end{DoxyCompactList}\item 
@@ -20,25 +20,6 @@ void \hyperlink{class_button_aaf14334dd0ac6a9c286aac71a765caa2}{setup} ()
 \begin{DoxyCompactList}\small\item\em Function that decides what gets drawn where. \end{DoxyCompactList}\item 
 sf\+::\+Float\+Rect \hyperlink{class_button_af662f717b2230477da7d4760293473d4}{get\+Global\+Bounds} ()
 \begin{DoxyCompactList}\small\item\em get objects floatrect \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-float \hyperlink{class_button_afe532ea0d5dd3fea5341ba1cb3e64e0b}{start\+HeightY}
-\item 
-float \hyperlink{class_button_a954fb7025b688b7b2a4d8d16adca74eb}{start\+HeightX}
-\item 
-int \hyperlink{class_button_a6853c434f05010c4b2582fb757f96bef}{position}
-\item 
-std\+::string \hyperlink{class_button_a960b5ee6c11f9385763838b1d788f010}{Whats\+On\+The\+Button}
-\item 
-sf\+::\+Texture \hyperlink{class_button_aa0cf48f8db00201090fbbd702ee81fb9}{texture}
-\item 
-sf\+::\+Sprite \hyperlink{class_button_ab1ca1099a4726cdb09a7abd641685a6a}{Button\+Background}
-\item 
-sf\+::\+Font \hyperlink{class_button_ab6290d275363f4b0e133eec450845ca1}{font}
-\item 
-sf\+::\+Text \hyperlink{class_button_aadf908b0777f2ae5c28d949fda3384c1}{text}
-\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -133,58 +114,7 @@ Function that decides what gets drawn where.
 
 This function decides where to draw the buttons. The purpose of all the math is to determine the place on the screen for the button, so it sits right in the middle of the screen. The draw position for the text is also adjusted for length of the given std\+::string. This is also the function that uses the position parameter to determine where the position gets drawn. 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_button_ab1ca1099a4726cdb09a7abd641685a6a}\label{class_button_ab1ca1099a4726cdb09a7abd641685a6a}} 
-\index{Button@{Button}!Button\+Background@{Button\+Background}}
-\index{Button\+Background@{Button\+Background}!Button@{Button}}
-\subsubsection{\texorpdfstring{Button\+Background}{ButtonBackground}}
-{\footnotesize\ttfamily sf\+::\+Sprite Button\+::\+Button\+Background\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_button_ab6290d275363f4b0e133eec450845ca1}\label{class_button_ab6290d275363f4b0e133eec450845ca1}} 
-\index{Button@{Button}!font@{font}}
-\index{font@{font}!Button@{Button}}
-\subsubsection{\texorpdfstring{font}{font}}
-{\footnotesize\ttfamily sf\+::\+Font Button\+::font\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_button_a6853c434f05010c4b2582fb757f96bef}\label{class_button_a6853c434f05010c4b2582fb757f96bef}} 
-\index{Button@{Button}!position@{position}}
-\index{position@{position}!Button@{Button}}
-\subsubsection{\texorpdfstring{position}{position}}
-{\footnotesize\ttfamily int Button\+::position\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_button_a954fb7025b688b7b2a4d8d16adca74eb}\label{class_button_a954fb7025b688b7b2a4d8d16adca74eb}} 
-\index{Button@{Button}!start\+HeightX@{start\+HeightX}}
-\index{start\+HeightX@{start\+HeightX}!Button@{Button}}
-\subsubsection{\texorpdfstring{start\+HeightX}{startHeightX}}
-{\footnotesize\ttfamily float Button\+::start\+HeightX\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_button_afe532ea0d5dd3fea5341ba1cb3e64e0b}\label{class_button_afe532ea0d5dd3fea5341ba1cb3e64e0b}} 
-\index{Button@{Button}!start\+HeightY@{start\+HeightY}}
-\index{start\+HeightY@{start\+HeightY}!Button@{Button}}
-\subsubsection{\texorpdfstring{start\+HeightY}{startHeightY}}
-{\footnotesize\ttfamily float Button\+::start\+HeightY\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_button_aadf908b0777f2ae5c28d949fda3384c1}\label{class_button_aadf908b0777f2ae5c28d949fda3384c1}} 
-\index{Button@{Button}!text@{text}}
-\index{text@{text}!Button@{Button}}
-\subsubsection{\texorpdfstring{text}{text}}
-{\footnotesize\ttfamily sf\+::\+Text Button\+::text\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_button_aa0cf48f8db00201090fbbd702ee81fb9}\label{class_button_aa0cf48f8db00201090fbbd702ee81fb9}} 
-\index{Button@{Button}!texture@{texture}}
-\index{texture@{texture}!Button@{Button}}
-\subsubsection{\texorpdfstring{texture}{texture}}
-{\footnotesize\ttfamily sf\+::\+Texture Button\+::texture\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_button_a960b5ee6c11f9385763838b1d788f010}\label{class_button_a960b5ee6c11f9385763838b1d788f010}} 
-\index{Button@{Button}!Whats\+On\+The\+Button@{Whats\+On\+The\+Button}}
-\index{Whats\+On\+The\+Button@{Whats\+On\+The\+Button}!Button@{Button}}
-\subsubsection{\texorpdfstring{Whats\+On\+The\+Button}{WhatsOnTheButton}}
-{\footnotesize\ttfamily std\+::string Button\+::\+Whats\+On\+The\+Button\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{button_8hpp}{button.\+hpp}\item 
-\hyperlink{button_8cpp}{button.\+cpp}\end{DoxyCompactItemize}
+button.\+hpp\item 
+button.\+cpp\end{DoxyCompactItemize}

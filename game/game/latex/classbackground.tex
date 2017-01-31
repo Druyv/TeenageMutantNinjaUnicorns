@@ -2,6 +2,11 @@
 \label{classbackground}\index{background@{background}}
 
 
+Class that draws a background.  
+
+
+
+
 {\ttfamily \#include $<$background.\+hpp$>$}
 
 
@@ -19,7 +24,7 @@ Collaboration diagram for background\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=229pt]{classbackground__coll__graph}
+\includegraphics[width=147pt]{classbackground__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -31,12 +36,17 @@ void \hyperlink{classbackground_a41736f9a00defad1e84b3a8099c887e2}{draw} (sf\+::
 \begin{DoxyCompactList}\small\item\em Draw function for background class. \end{DoxyCompactList}\item 
 sf\+::\+Float\+Rect \hyperlink{classbackground_ab5f2b627cd58e0d07678f0af01c6bd2d}{get\+Global\+Bounds} () override
 \begin{DoxyCompactList}\small\item\em Get the global bounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{classimage__from__file}{image\+\_\+from\+\_\+file} \hyperlink{classbackground_a972ef28e3ac5aea925fc9d00e809d5af}{background\+\_\+image}
-\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class that draws a background. 
+
+class with a position, size and name, that is inherited by all object that can be drawn on the screen.
+
+\begin{DoxyDate}{Date}
+23/01/17 
+\end{DoxyDate}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -91,8 +101,8 @@ Implements \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{drawable}
 
 Get the global bounds. 
 
-This function returns the global bounds of the \hyperlink{classbackground_a972ef28e3ac5aea925fc9d00e809d5af}{background\+\_\+image}. Those global bounds can be used for things like checking collisions. \begin{DoxyReturn}{Returns}
-The global bounds of the \hyperlink{classbackground_a972ef28e3ac5aea925fc9d00e809d5af}{background\+\_\+image} 
+This function returns the global bounds of the \#background\+\_\+image. Those global bounds can be used for things like checking collisions. \begin{DoxyReturn}{Returns}
+The global bounds of the \#background\+\_\+image 
 \end{DoxyReturn}
 
 
@@ -100,16 +110,7 @@ Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}
 
 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{classbackground_a972ef28e3ac5aea925fc9d00e809d5af}\label{classbackground_a972ef28e3ac5aea925fc9d00e809d5af}} 
-\index{background@{background}!background\+\_\+image@{background\+\_\+image}}
-\index{background\+\_\+image@{background\+\_\+image}!background@{background}}
-\subsubsection{\texorpdfstring{background\+\_\+image}{background\_image}}
-{\footnotesize\ttfamily \hyperlink{classimage__from__file}{image\+\_\+from\+\_\+file} background\+::background\+\_\+image\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{background_8hpp}{background.\+hpp}\item 
-\hyperlink{background_8cpp}{background.\+cpp}\end{DoxyCompactItemize}
+background.\+cpp\end{DoxyCompactItemize}

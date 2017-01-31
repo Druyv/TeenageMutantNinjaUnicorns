@@ -1,0 +1,125 @@
+\hypertarget{classmenu__management}{}\section{menu\+\_\+management Class Reference}
+\label{classmenu__management}\index{menu\+\_\+management@{menu\+\_\+management}}
+
+
+manager of all menu\textquotesingle{}s in game  
+
+
+
+
+{\ttfamily \#include $<$management.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmenu__management_a5ad91bfa81593e0678c676e158126acd}{menu\+\_\+management} (sf\+::\+Render\+Window \&window, \hyperlink{classfile__management}{file\+\_\+management} \&manager)
+\begin{DoxyCompactList}\small\item\em constructor to initialize window and file manager \end{DoxyCompactList}\item 
+int \hyperlink{classmenu__management_aad6e975e03cab2478f3ebec8da7eaf7d}{display\+\_\+start\+\_\+game} ()
+\begin{DoxyCompactList}\small\item\em function that displays start\+\_\+menu \end{DoxyCompactList}\item 
+void \hyperlink{classmenu__management_ab7aa6674e3428604073af06efe5aa791}{display\+\_\+pause\+\_\+game} ()
+\begin{DoxyCompactList}\small\item\em function that displays pause\+\_\+menu \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classmenu__management_ac64c1eace3d955be8623a1129597dc54}{display\+\_\+save\+\_\+file\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em function that displays the save\+\_\+file\+\_\+menu \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classmenu__management_a92d22f059d33ccc5c3ae485804fd5fbb}{start\+\_\+game} ()
+\begin{DoxyCompactList}\small\item\em function that is used to start the game \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+manager of all menu\textquotesingle{}s in game 
+
+Manager for the menu\textquotesingle{}s available in the game
+
+\begin{DoxyDate}{Date}
+30-\/1-\/17 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmenu__management_a5ad91bfa81593e0678c676e158126acd}\label{classmenu__management_a5ad91bfa81593e0678c676e158126acd}} 
+\index{menu\+\_\+management@{menu\+\_\+management}!menu\+\_\+management@{menu\+\_\+management}}
+\index{menu\+\_\+management@{menu\+\_\+management}!menu\+\_\+management@{menu\+\_\+management}}
+\subsubsection{\texorpdfstring{menu\+\_\+management()}{menu\_management()}}
+{\footnotesize\ttfamily menu\+\_\+management\+::menu\+\_\+management (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\hyperlink{classfile__management}{file\+\_\+management} \&}]{manager }\end{DoxyParamCaption})}
+
+
+
+constructor to initialize window and file manager 
+
+This constructor initializes the window where the menu\textquotesingle{}s are displayed on. It also initializes the manager for the files
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window} & sf\+::\+Render\+Window that is used to display menu\textquotesingle{}s \\
+\hline
+\mbox{\tt in}  & {\em manager} & filemanagement-\/object that used to give functionality to menu\textquotesingle{}s \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmenu__management_ab7aa6674e3428604073af06efe5aa791}\label{classmenu__management_ab7aa6674e3428604073af06efe5aa791}} 
+\index{menu\+\_\+management@{menu\+\_\+management}!display\+\_\+pause\+\_\+game@{display\+\_\+pause\+\_\+game}}
+\index{display\+\_\+pause\+\_\+game@{display\+\_\+pause\+\_\+game}!menu\+\_\+management@{menu\+\_\+management}}
+\subsubsection{\texorpdfstring{display\+\_\+pause\+\_\+game()}{display\_pause\_game()}}
+{\footnotesize\ttfamily void menu\+\_\+management\+::display\+\_\+pause\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that displays pause\+\_\+menu 
+
+This function displays the pause menu
+
+\begin{DoxyNote}{Note}
+This function doesn\textquotesingle{}t have a return value, because of a bug this function doesn\textquotesingle{}t have much functionality 
+\end{DoxyNote}
+\mbox{\Hypertarget{classmenu__management_ac64c1eace3d955be8623a1129597dc54}\label{classmenu__management_ac64c1eace3d955be8623a1129597dc54}} 
+\index{menu\+\_\+management@{menu\+\_\+management}!display\+\_\+save\+\_\+file\+\_\+menu@{display\+\_\+save\+\_\+file\+\_\+menu}}
+\index{display\+\_\+save\+\_\+file\+\_\+menu@{display\+\_\+save\+\_\+file\+\_\+menu}!menu\+\_\+management@{menu\+\_\+management}}
+\subsubsection{\texorpdfstring{display\+\_\+save\+\_\+file\+\_\+menu()}{display\_save\_file\_menu()}}
+{\footnotesize\ttfamily std\+::string menu\+\_\+management\+::display\+\_\+save\+\_\+file\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that displays the save\+\_\+file\+\_\+menu 
+
+F\+This function displays the save\+\_\+file\+\_\+menu. The function return a string from the button pressed. When save-\/file pressed it returns the path to the save-\/file
+
+\begin{DoxyReturn}{Returns}
+This function returns a string that is either empty, \char`\"{}\+B\+A\+C\+K\char`\"{} or the path to the save-\/file pressed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmenu__management_aad6e975e03cab2478f3ebec8da7eaf7d}\label{classmenu__management_aad6e975e03cab2478f3ebec8da7eaf7d}} 
+\index{menu\+\_\+management@{menu\+\_\+management}!display\+\_\+start\+\_\+game@{display\+\_\+start\+\_\+game}}
+\index{display\+\_\+start\+\_\+game@{display\+\_\+start\+\_\+game}!menu\+\_\+management@{menu\+\_\+management}}
+\subsubsection{\texorpdfstring{display\+\_\+start\+\_\+game()}{display\_start\_game()}}
+{\footnotesize\ttfamily int menu\+\_\+management\+::display\+\_\+start\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that displays start\+\_\+menu 
+
+This function is used to display the start\+\_\+menu
+
+\begin{DoxyReturn}{Returns}
+menu item that is pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmenu__management_a92d22f059d33ccc5c3ae485804fd5fbb}\label{classmenu__management_a92d22f059d33ccc5c3ae485804fd5fbb}} 
+\index{menu\+\_\+management@{menu\+\_\+management}!start\+\_\+game@{start\+\_\+game}}
+\index{start\+\_\+game@{start\+\_\+game}!menu\+\_\+management@{menu\+\_\+management}}
+\subsubsection{\texorpdfstring{start\+\_\+game()}{start\_game()}}
+{\footnotesize\ttfamily std\+::string menu\+\_\+management\+::start\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that is used to start the game 
+
+This function is used to start the game. By displaying the start screen and determening what level file to use when one is pressed.
+
+\begin{DoxyReturn}{Returns}
+path to level selected by player 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+management.\+hpp\item 
+management.\+cpp\end{DoxyCompactItemize}

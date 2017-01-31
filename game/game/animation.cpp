@@ -1,8 +1,9 @@
 #include "animation.hpp"
 
 #include "math.h"
-animation::animation(sf::Vector2f position, std::string sheet_name) :
+animation::animation(sf::Vector2f position, std::string sheet_name,float width,float length) :
 	drawable{ position, sf::Vector2f{ 0,0 }, "PICTURE" },
+	width{width},
 	sheet_name{ sheet_name }
 {
 	if (!texture.loadFromFile(sheet_name)) {
@@ -11,7 +12,8 @@ animation::animation(sf::Vector2f position, std::string sheet_name) :
 
 	sheet.setTexture(texture);
 	size = (sf::Vector2f)texture.getSize();
-        size = sf::Vector2f(size.x/7,size.y/5 );
+        size = sf::Vector2f(size.x/width,size.y/length );
+	setTextureRect(sf::IntRect(int(count * (size.x)) , int(row*(size.y+1)), int((size.x)),int(size.y )));
 }
 
 void animation::draw(sf::RenderWindow & window) {

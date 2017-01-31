@@ -1,6 +1,8 @@
 #ifndef TYPEDEFS_HPP
 #define TYPEDEFS_HPP
-
+#include <memory>
+#include <iostream>
+#include <vector>
 class drawable;
 class action;
 class mob;

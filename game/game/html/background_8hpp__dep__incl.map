@@ -1,6 +1,4 @@
 <map id="background.hpp" name="background.hpp">
-<area shape="rect" id="node2" href="$background_8cpp.html" title="background.cpp" alt="" coords="5,80,120,107"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="main.cpp" alt="" coords="120,155,195,181"/>
-<area shape="rect" id="node4" href="$menu_8hpp.html" title="menu.hpp" alt="" coords="195,80,274,107"/>
-<area shape="rect" id="node5" href="$menu_8cpp.html" title="menu.cpp" alt="" coords="219,155,298,181"/>
+<area shape="rect" id="node2" href="$menu_8hpp_source.html" title="menu.hpp" alt="" coords="27,80,106,107"/>
+<area shape="rect" id="node3" href="$management_8hpp_source.html" title="management.hpp" alt="" coords="5,155,128,181"/>
 </map>

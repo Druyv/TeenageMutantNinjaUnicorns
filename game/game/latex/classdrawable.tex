@@ -11,8 +11,7 @@ class that is inherited by all objects that are drawable
 
 
 
-Inheritance diagram for drawable\+:
-\nopagebreak
+Inheritance diagram for drawable\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,7 +21,7 @@ Inheritance diagram for drawable\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classdrawable_a4e7881285581530d21b5c9fd59879b30}{drawable} (const sf\+::\+Vector2f \&\hyperlink{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}{position}, const sf\+::\+Vector2f \&\hyperlink{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}{size}, std\+::string name)
+\hyperlink{classdrawable_a4e7881285581530d21b5c9fd59879b30}{drawable} (const sf\+::\+Vector2f \&position, const sf\+::\+Vector2f \&size, std\+::string name)
 \begin{DoxyCompactList}\small\item\em constructor for a drawable \end{DoxyCompactList}\item 
 virtual void \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{draw} (sf\+::\+Render\+Window \&window)=0
 \begin{DoxyCompactList}\small\item\em virtual draw function for a drawable \end{DoxyCompactList}\item 
@@ -32,13 +31,13 @@ virtual void \hyperlink{classdrawable_ac39691470b7874f5dec59efe649d3981}{jump} (
 \begin{DoxyCompactList}\small\item\em virtual draw function for a drawable \end{DoxyCompactList}\item 
 virtual sf\+::\+Float\+Rect \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{get\+Global\+Bounds} ()=0
 \begin{DoxyCompactList}\small\item\em virtual get\+Global\+Bounds function \end{DoxyCompactList}\item 
-virtual void \hyperlink{classdrawable_a715df01a318331e5611a2b0ad30109ff}{run\+\_\+actions} (\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} object)
+virtual void \hyperlink{classdrawable_a715df01a318331e5611a2b0ad30109ff}{run\+\_\+actions} (object\+\_\+ptr object)
 \begin{DoxyCompactList}\small\item\em check and execute actions \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classdrawable_a0d3278e4e888fc8289468e8893dd8329}{within} (float x, float a, float b)
 \begin{DoxyCompactList}\small\item\em check x between a and b \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classdrawable_ab5c0e1af885f214bc9ef0da47cdb5ac9}{within\+\_\+range} (float x, float y, float a, float b)
 \begin{DoxyCompactList}\small\item\em check all pixels between x and y \end{DoxyCompactList}\item 
-virtual void \hyperlink{classdrawable_af0ddd3660d258629598dc76b31d1cc49}{collapse} (\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} object, \hyperlink{drawable_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions} \&the\+\_\+collisions)
+virtual void \hyperlink{classdrawable_af0ddd3660d258629598dc76b31d1cc49}{collapse} (object\+\_\+ptr object, collisions \&the\+\_\+collisions)
 \begin{DoxyCompactList}\small\item\em check for collision with object \end{DoxyCompactList}\item 
 virtual sf\+::\+Vector2f \hyperlink{classdrawable_a6a31ea381be2964d0115b782a66d3414}{get\+\_\+position} ()
 \begin{DoxyCompactList}\small\item\em Get the position. \end{DoxyCompactList}\item 
@@ -61,11 +60,14 @@ void \hyperlink{classdrawable_a5e40f2621daaca4ac32ef26b8c01b9a6}{set\+\_\+positi
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-sf\+::\+Vector2f \hyperlink{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}{position}
+\mbox{\Hypertarget{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}\label{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}} 
+sf\+::\+Vector2f {\bfseries position}
 \item 
-sf\+::\+Vector2f \hyperlink{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}{size}
+\mbox{\Hypertarget{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}\label{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}} 
+sf\+::\+Vector2f {\bfseries size}
 \item 
-std\+::string \hyperlink{classdrawable_ad5a982912d20a94b0e69de86cc9b53cb}{type}
+\mbox{\Hypertarget{classdrawable_ad5a982912d20a94b0e69de86cc9b53cb}\label{classdrawable_ad5a982912d20a94b0e69de86cc9b53cb}} 
+std\+::string {\bfseries type}
 \end{DoxyCompactItemize}
 
 
@@ -124,7 +126,7 @@ Reimplemented in \hyperlink{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}{unic
 \index{drawable@{drawable}!collapse@{collapse}}
 \index{collapse@{collapse}!drawable@{drawable}}
 \subsubsection{\texorpdfstring{collapse()}{collapse()}}
-{\footnotesize\ttfamily void drawable\+::collapse (\begin{DoxyParamCaption}\item[{\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}}]{object,  }\item[{\hyperlink{drawable_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions} \&}]{the\+\_\+collisions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void drawable\+::collapse (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object,  }\item[{collisions \&}]{the\+\_\+collisions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -272,7 +274,7 @@ Reimplemented in \hyperlink{classwall_aab1de4f144f176b134a967ba08747932}{wall}.
 \index{drawable@{drawable}!run\+\_\+actions@{run\+\_\+actions}}
 \index{run\+\_\+actions@{run\+\_\+actions}!drawable@{drawable}}
 \subsubsection{\texorpdfstring{run\+\_\+actions()}{run\_actions()}}
-{\footnotesize\ttfamily virtual void drawable\+::run\+\_\+actions (\begin{DoxyParamCaption}\item[{\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void drawable\+::run\+\_\+actions (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -413,28 +415,7 @@ Returns if all pixels between x and y are between a and b
 \end{DoxyReturn}
 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}\label{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}} 
-\index{drawable@{drawable}!position@{position}}
-\index{position@{position}!drawable@{drawable}}
-\subsubsection{\texorpdfstring{position}{position}}
-{\footnotesize\ttfamily sf\+::\+Vector2f drawable\+::position\hspace{0.3cm}{\ttfamily [protected]}}
-
-\mbox{\Hypertarget{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}\label{classdrawable_aa3900dd7b69b439a3514e6acdb4a17b9}} 
-\index{drawable@{drawable}!size@{size}}
-\index{size@{size}!drawable@{drawable}}
-\subsubsection{\texorpdfstring{size}{size}}
-{\footnotesize\ttfamily sf\+::\+Vector2f drawable\+::size\hspace{0.3cm}{\ttfamily [protected]}}
-
-\mbox{\Hypertarget{classdrawable_ad5a982912d20a94b0e69de86cc9b53cb}\label{classdrawable_ad5a982912d20a94b0e69de86cc9b53cb}} 
-\index{drawable@{drawable}!type@{type}}
-\index{type@{type}!drawable@{drawable}}
-\subsubsection{\texorpdfstring{type}{type}}
-{\footnotesize\ttfamily std\+::string drawable\+::type\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{drawable_8hpp}{drawable.\+hpp}\item 
-\hyperlink{drawable_8cpp}{drawable.\+cpp}\end{DoxyCompactItemize}
+drawable.\+cpp\end{DoxyCompactItemize}
