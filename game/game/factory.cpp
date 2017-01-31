@@ -36,6 +36,11 @@ object_ptr factory::read_line(){
         level_size = position;
         throw (const std::string)"LEVEL_SIZE";
     }
+    else if (type == "MOB"){
+        std::string image_name;
+        input >> image_name;
+        return object_ptr( new mob(position, image_name) );
+    }
     throw unknown_type(type);
 }
 

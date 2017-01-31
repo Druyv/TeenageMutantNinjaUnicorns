@@ -14,8 +14,11 @@ soundtrack::soundtrack(std::string filename){
 
 
 
-void soundtrack::playmusic() {
+void soundtrack::PlayMusic() {
 		SFMLmusic.setLoop(1);
 		SFMLmusic.play();
 }
 
+void soundtrack::PlaySound() {
+	SFMLmusic.play();
+};

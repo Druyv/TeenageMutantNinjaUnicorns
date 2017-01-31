@@ -22,6 +22,7 @@ sf::FloatRect image_from_file::getGlobalBounds() {
 }
 
 void image_from_file::set_position(sf::Vector2f new_position) {
+        image.setPosition(new_position);
 	position = new_position;
 }
 

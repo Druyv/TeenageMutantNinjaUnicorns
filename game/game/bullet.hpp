@@ -1,4 +1,8 @@
-#pragma once
+///@file
+
+#ifndef BULLET_HPP
+#define BULLET_HPP
+
 #include "drawable.hpp"
 #include "image.hpp"
 #include "npc.hpp"
@@ -19,9 +23,8 @@ private:
 	std::vector<mob_ptr> & all_mobs;
 	objects_vector & objects;
 	bool hit = false;
-	bool going_left;
+	//bool going_left;
 	sf::Vector2f current_offset;
-	bool correctly_scaled = false;
 
 	/// 
 	/// \brief function that moves bullet with offset
@@ -94,5 +97,9 @@ public:
 	/// \param[in]	fire_position	sf::Vector2f for position for bullet to start projectile. 
 	///
 	void shoot(sf::RenderWindow & window, int & shoot_timeout, sf::Vector2f offset = sf::Vector2f(0, 0), sf::Vector2f fire_position = sf::Vector2f(0.0, 0.0));
-
+        
+        void set_position(sf::Vector2f new_position);
+        
 };
+
+#endif //BULLET_HPP

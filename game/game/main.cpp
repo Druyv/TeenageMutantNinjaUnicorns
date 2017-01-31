@@ -15,7 +15,6 @@
 
 int main(int argc, const char **argv) {
 	collisions the_collisions;
-	object_ptr dummy = nullptr;
 	// Create the main window
 	sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "The unicorn game", sf::Style::Fullscreen);
 	int menu_item_pressed = -1;
@@ -31,15 +30,17 @@ int main(int argc, const char **argv) {
 	std::cout << "Menu made!" << std::endl;
 	std::shared_ptr<unicorn> the_unicorn;
 	objects_vector objects;
+        objects_vector objects_tmp;
 	factory object_creation("level1");
 
 	//Making mobs (should be in factory with next level
 	std::vector<mob_ptr> all_mobs;
-	all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(2541.799316f, 1890.0f), "mini_bunny.png"));
+	//all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(2541.799316f, 1890.0f), "mini_bunny.png"));
+        //all_mobs.push_back(std::make_shared<mob>(sf::Vector2f(3000.0f, 2090.0f), "mini_bunny.png"));
 
 
 	try {
-            objects = object_creation.objects_from_file();
+            objects_tmp = object_creation.objects_from_file();
             
             base_level base( object_creation.get_level_size() );
             base.push_back_borders(objects);
@@ -51,19 +52,32 @@ int main(int argc, const char **argv) {
             std::cout << e.what();
             exit(0);
 	}
+        
+        
+        for(const auto & object : objects_tmp){
+            if (object->get_type() == "MOB"){
+                all_mobs.push_back( std::make_shared<mob>(object->get_position(), "mini_bunny.png") );
+            }
+            //else if(END){}
+            else{
+                objects.push_back(object);
+            }
+        }
 
-
+        //delete objects_tmp;
+        
 	//Sound, camera, background
-	background background_1("background.png", object_creation.get_level_size());
+	background background_1("background2.png", object_creation.get_level_size());
 	camera playercam(the_unicorn);
 	soundtrack soundplayer("Soundtrack.wav");
-	soundplayer.playmusic();
+	soundplayer.PlayMusic();
 
 	//Drawing menu
 	start_menu.build_menu();
 	window.display();
 	// Start the game loop
 	while (window.isOpen()) {
+            //menu_item_pressed = -1;
 		while (menu_item_pressed == -1) {
 			for (auto & action : menu_actions) {
 				action();
@@ -71,7 +85,7 @@ int main(int argc, const char **argv) {
 		}
 		window.clear();
 		if (menu_item_pressed == 0 || menu_item_pressed == 2) {
-			std::cout << "Menu works" << std::endl;
+			//std::cout << "Menu works" << std::endl;
 		}
 
 		the_collisions.clear();
@@ -83,11 +97,11 @@ int main(int argc, const char **argv) {
 			the_unicorn->collapse(object, the_collisions);
 			object->draw(window);
 		}
-		for (auto objects : all_mobs) {
+		for (auto object : all_mobs) {
 			//std::cout << "Drawing mobs" << std::endl;
-			objects->draw(window);
-			if (the_unicorn->getGlobalBounds().intersects(objects->getGlobalBounds())) {
-				the_unicorn->damage();
+			object->draw(window);
+			if (the_unicorn->getGlobalBounds().intersects(object->getGlobalBounds())) {
+				the_unicorn->damage(object);
 			}
 		}
 

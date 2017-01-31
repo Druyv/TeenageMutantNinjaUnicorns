@@ -10,7 +10,7 @@
 #include "image.hpp"
 
 
-/// \class background
+/// \class Background
 ///
 /// \brief Class that draws a background
 ///

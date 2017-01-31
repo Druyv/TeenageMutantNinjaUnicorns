@@ -5,7 +5,7 @@
 
 #include "wall.hpp"
 
-/// \class base_level
+/// \class base level
 ///
 /// \brief level border creation class
 ///

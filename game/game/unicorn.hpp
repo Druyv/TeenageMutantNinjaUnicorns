@@ -32,10 +32,12 @@ private:
 	animation  unicorn_animation;
 	physics physics_object;
 	collisions & the_collisions;
-    sf::Vector2f spawn_location;
-	std::vector<mob_ptr> all_mobs;
-	objects_vector objects;
+        sf::Vector2f spawn_location;
+	std::vector<mob_ptr> & all_mobs;
+	//objects_vector & objects;
 	bullet weapon;
+        bool got_hit = false;
+        int mob_touch_counter = 0;
 public:
 	/// \brief Constructor to initialize the unicorn
 	///
@@ -136,6 +138,6 @@ public:
 	//experimental
 	//
 	//----------------------------------------------
-	void damage();
+	void damage(mob_ptr other);
 };
 #endif //UNICORN_HPP

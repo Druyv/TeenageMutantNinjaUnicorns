@@ -12,7 +12,7 @@
 ///
 /// \brief Creates a menu with up to 3 buttons
 ///
-///  This class consists of 3 #Button objects and a #background object.
+///  This class consists of 3 #Button objects and a #Background object.
 ///  It creates a menu and also deals with the clickable part of it.
 /// 
 /// Note: We would like to transfer all the math from #Button over here.

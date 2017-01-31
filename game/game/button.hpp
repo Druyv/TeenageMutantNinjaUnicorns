@@ -79,8 +79,6 @@ public:
 
 };
 
-};
-
 
 
 #endif

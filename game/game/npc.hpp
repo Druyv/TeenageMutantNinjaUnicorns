@@ -3,7 +3,7 @@
 #include "image.hpp"
 
 class mob;
-/// a shared pointer to a mob object that is re-usable
+
 typedef std::shared_ptr<mob> mob_ptr;
 
 ///
@@ -79,4 +79,6 @@ public:
 	///
 	bool get_live();
 
+        
+        void set_position(sf::Vector2f new_position);
 };

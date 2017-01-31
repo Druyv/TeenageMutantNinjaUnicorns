@@ -10,28 +10,25 @@ bullet::bullet(sf::Vector2f position, std::string filename, std::vector<mob_ptr>
 }
 
 void bullet::draw(sf::RenderWindow & window) {
-	//std::cout << current_offset.x << std::endl;
-	if (current_offset.x == 5) {
+	/*if (current_offset.x > 0) {
 		if (!correctly_scaled) {
-
 			bullet_animation.setTextureRect(sf::IntRect(0, 0, int(size.x), int(size.y)));
 			correctly_scaled = true;
 		}
 	}
-	else if (current_offset.x == -5) {
-		//std::cout << "Otherside scale" << std::endl;
+	else if (current_offset.x < 0) {
 		if (correctly_scaled) {
 			bullet_animation.setTextureRect(sf::IntRect(int(size.x), 0, -int(size.x), int(size.y)));
 			correctly_scaled = false;
 		}
-	}
+	}*/
 	if (!hit) {
 		bullet_animation.draw(window);
 	}
 }
 
 sf::FloatRect bullet::getGlobalBounds() {
-	return bullet_animation.getGlobalBounds();
+    return bullet_animation.getGlobalBounds();
 }
 
 void bullet::projectile() {
@@ -56,18 +53,23 @@ void bullet::shoot(sf::RenderWindow & window, int & shoot_timeout, sf::Vector2f 
 	}
 	if (offset != sf::Vector2f(0, 0)) {
 		current_offset = offset;
+                if (current_offset.x > 0) {
+                        bullet_animation.setTextureRect(sf::IntRect(0, 0, int(size.x), int(size.y)));
+                }
+                else if (current_offset.x < 0) {
+                        bullet_animation.setTextureRect(sf::IntRect(int(size.x), 0, -int(size.x), int(size.y)));
+                }
 	}
 	//hit = 0;
 
 	for (auto & mob : all_mobs) {
 		//std::cout << "Hit before collision" << hit << std::endl;
-		std::cout << "Position bullet " << position.x << " " << position.y << std::endl;
 		collision(mob);
 		//std::cout << "Hit while checking mobs: " << hit << std::endl;
 		if (hit) {
-			std::cout << "Print hit while checking mobs:" << hit << std::endl;
 			mob->die();
 			hit = false;
+                        //position = sf::Vector2f{0.0f, 4000.0f};
 			shoot_timeout = 0;
 		}
 	}
@@ -77,9 +79,15 @@ void bullet::shoot(sf::RenderWindow & window, int & shoot_timeout, sf::Vector2f 
 		collision(object);
 		if (hit) {
 			hit = false;
+                        //position = sf::Vector2f{0.0f, 4000.0f};
 			shoot_timeout = 0;
 		}
 	}
 	projectile();
 	draw(window);
+}
+
+void bullet::set_position(sf::Vector2f new_position){
+    bullet_animation.set_position(new_position);
+    position = new_position;
 }
