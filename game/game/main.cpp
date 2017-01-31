@@ -27,16 +27,16 @@ int main(int argc, const char **argv) {
 	};
 
 	//Menu and file management
-	file_management manager_file("played_game/save_files_path.txt");
+	file_management manager_file("played_game//save_files_path.txt");
 	menu_management manager_menu(window, manager_file);
 	std::string level_path = manager_menu.start_game();
 	std::cout << "Path for level" << level_path;
 
 
 	std::shared_ptr<unicorn> the_unicorn;
-        std::shared_ptr<image_from_file> end_point;
+    std::shared_ptr<image_from_file> end_point;
 	objects_vector objects;
-        objects_vector objects_tmp;
+    objects_vector objects_tmp;
 	std::shared_ptr<factory> object_creation = std::make_shared<factory>(level_path);
 	std::vector<mob_ptr> all_mobs;
 
@@ -96,42 +96,36 @@ int main(int argc, const char **argv) {
 			}
 		}
                 
-                /*end_point->draw(window);
-                
-                //if endpoint reload next file
-                if(the_unicorn->getGlobalBounds().intersects(end_point->getGlobalBounds() )){
-                    try {
-                        objects.clear();
-                        objects_tmp.clear();
-                        all_mobs.clear();
-                        object_creation.change_input_to("level2");
-                        objects_tmp = object_creation.objects_from_file();
-
-                        base_level base( object_creation.get_level_size() );
-                        base.push_back_borders(objects);
-                        
-                        the_unicorn->set_spawn_location( object_creation.get_spawn() );
-                        //the_unicorn = std::make_shared<unicorn>(object_creation.get_spawn(), "spreadsheet.png", unicorn_actions, the_collisions, all_mobs, objects);
-
-                    }
-                    catch (const std::exception & e) {
-                        std::cout << e.what();
-                        exit(0);
-                    }
+        end_point->draw(window);
+        if(the_unicorn->getGlobalBounds().intersects(end_point->getGlobalBounds() )){
+			try {
+				objects.clear();
+                objects_tmp.clear();
+                all_mobs.clear();
+                object_creation->change_input_to(manager_file.next_level());
+                objects_tmp = object_creation->objects_from_file();
+				base_level base( object_creation->get_level_size() );
+                base.push_back_borders(objects);
+                the_unicorn->set_spawn_location( object_creation->get_spawn() );
+			}
+            catch (const std::exception & e) {
+                std::cout << e.what();
+                exit(0);
+            }
                     
-                    for(const auto & object : objects_tmp){
-                        if (object->get_type() == "MOB"){
-                            all_mobs.push_back( std::make_shared<mob>(object->get_position(), "mini_bunny.png") );
-                        }
-                        else if(object->get_type() == "END"){
-                            end_point = std::make_shared<image_from_file>(object->get_position(), object->get_image_name() );
-                            end_point->set_type("END");
-                        }
-                        else{
-                            objects.push_back(object);
-                        }
-                    }
-                }*/
+            for(const auto & object : objects_tmp){
+				if (object->get_type() == "MOB"){
+					all_mobs.push_back( std::make_shared<mob>(object->get_position(), "mini_bunny.png") );
+                }
+                else if(object->get_type() == "END"){
+					end_point = std::make_shared<image_from_file>(object->get_position(), object->get_image_name() );
+					end_point->set_type("END");
+                }
+			    else{
+					objects.push_back(object);
+                }
+			}
+		}
 
 		the_unicorn->run_actions(the_unicorn);
 		the_unicorn->draw(window);

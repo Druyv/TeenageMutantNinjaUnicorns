@@ -49,6 +49,7 @@ std::string file_management::get_save_file(int menu_index) {
 menu file_management::make_save_file_menu(sf::RenderWindow & window) {
 	save_file_1 = get_files();
 	save_file_2 = get_files();
+	std::cout << "Save-files: " << save_file_1 << " " << save_file_2 << std::endl;
 	if (save_file_1 == "") {
 		menu(window, "forest.png", true, "BACK");
 	}

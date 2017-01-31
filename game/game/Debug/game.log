@@ -1,21 +1,3 @@
-﻿  wall.cpp
-  unicorn.cpp
-  soundtrack.cpp
-  physics.cpp
-  npc.cpp
-  menu.cpp
-  management.cpp
-  main.cpp
-  image.cpp
-  factory.cpp
-  drawable.cpp
-  camera.cpp
-  button.cpp
-  bullet.cpp
-  base_level.cpp
-  background.cpp
-  animation.cpp
-  Generating Code...
-  LINK : C:\TeenageMutantNinjaUnicorns\game\Debug\game.exe not found or not built by the last incremental link; performing full link
-  game.vcxproj -> C:\TeenageMutantNinjaUnicorns\game\Debug\game.exe
-  game.vcxproj -> C:\TeenageMutantNinjaUnicorns\game\Debug\game.pdb (Full PDB)
+﻿  main.cpp
+  game.vcxproj -> C:\Users\Jip\Desktop\TeenageMutantNinjaUnicorns\game\Debug\game.exe
+  game.vcxproj -> C:\Users\Jip\Desktop\TeenageMutantNinjaUnicorns\game\Debug\game.pdb (Full PDB)
