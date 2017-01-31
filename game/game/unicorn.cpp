@@ -163,7 +163,9 @@ void unicorn::shoot(sf::Vector2f fire_position, sf::RenderWindow & window, sf::V
 }
 
 void unicorn::set_spawn_location(sf::Vector2f new_location){
-   spawn_location = new_location; 
+   spawn_location = new_location;
+   position = new_location;
+   unicorn_animation.set_position(new_location);
 }
 
 

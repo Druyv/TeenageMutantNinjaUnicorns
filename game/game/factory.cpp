@@ -36,6 +36,13 @@ object_ptr factory::read_line(){
         level_size = position;
         throw (const std::string)"LEVEL_SIZE";
     }
+    else if (type == "END"){
+        std::string image_name;
+        input >> image_name;
+        object_ptr end(new image_from_file(position, image_name));
+        end->set_type("END");
+        return end;
+    }
     else if (type == "MOB"){
         std::string image_name;
         input >> image_name;
