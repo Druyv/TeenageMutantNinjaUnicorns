@@ -1,19 +1,14 @@
 var searchData=
 [
-  ['select',['select',['../classmenu.html#a06744d58a2aad693d3637d0485aa7984',1,'menu']]],
-  ['set_5fgravity',['set_gravity',['../classphysics.html#a8b0dff646c304dee3cb5c095d821dc87',1,'physics']]],
-  ['set_5fposition',['set_position',['../classanimation.html#ac461adb38b8241427150c4620ee31358',1,'animation::set_position()'],['../classdrawable.html#a5e40f2621daaca4ac32ef26b8c01b9a6',1,'drawable::set_position()'],['../classimage__from__file.html#a868911f8d541af91290fb8dc56435cd2',1,'image_from_file::set_position()']]],
-  ['set_5frepeated',['set_repeated',['../classimage__from__file.html#abaf0ebde2771171fdf91b55f4f6c5aa6',1,'image_from_file']]],
-  ['set_5fscale',['set_scale',['../classimage__from__file.html#a698cd91783bb6c2211ea5a3702ca60a8',1,'image_from_file']]],
-  ['set_5fsize',['set_size',['../classanimation.html#a7c0b874294e81f3612590920fd845602',1,'animation::set_size()'],['../classdrawable.html#a34b6b50f342c41f550f09e0465f95f61',1,'drawable::set_size()'],['../classimage__from__file.html#a43b0d6b11bf46827308e4e6cb7aa8579',1,'image_from_file::set_size()']]],
-  ['set_5fsmooth',['set_smooth',['../classimage__from__file.html#a2d808924e71e3eaf18532d9b32e40f07',1,'image_from_file']]],
-  ['set_5fspawn_5flocation',['set_spawn_location',['../classunicorn.html#af0e2581c426b4b1e32f8a7b484b4e242',1,'unicorn']]],
-  ['set_5ftype',['set_type',['../classdrawable.html#aa019787b726542ca470fb817251e7b09',1,'drawable']]],
-  ['settexturerect',['setTextureRect',['../classanimation.html#a30e84ff71206b8ec4f82fd70ad776036',1,'animation::setTextureRect()'],['../classimage__from__file.html#a6561a7e8833e4ca84ba5a31e98802757',1,'image_from_file::setTextureRect()']]],
-  ['setup',['setup',['../class_button.html#aaf14334dd0ac6a9c286aac71a765caa2',1,'Button']]],
-  ['sheet_5fload_5ferror',['sheet_load_error',['../classsheet__load__error.html',1,'sheet_load_error'],['../classsheet__load__error.html#a80642b59420e3b58c1c5e980cf702c41',1,'sheet_load_error::sheet_load_error()']]],
-  ['shoot',['shoot',['../classbullet.html#a52d736cad2a486a65c8a25781cff1f70',1,'bullet::shoot()'],['../classunicorn.html#af448a3fa5fc5f09254b50afa151ce42b',1,'unicorn::shoot()']]],
-  ['soundtrack',['soundtrack',['../classsoundtrack.html',1,'soundtrack'],['../classsoundtrack.html#add31bdeb1a693d541443f1d88586d3b6',1,'soundtrack::soundtrack()']]],
-  ['soundtrack_2ehpp',['soundtrack.hpp',['../soundtrack_8hpp.html',1,'']]],
-  ['string_5ffrom_5fcolor',['string_from_color',['../classdrawable.html#add3d8569fe2616ae0ed503b19c92c08e',1,'drawable']]]
+  ['object',['object',['../classcamera.html#a2f634677bff4e01829c2b7023e302d5b',1,'camera']]],
+  ['object_5fcolor',['object_color',['../classwall.html#ada0e26614b5f30c0f675d179d517bafb',1,'wall']]],
+  ['object_5finformation',['object_information',['../classdrawable.html#a2ed0f8bb53f33477f7722efa7bb24583',1,'drawable::object_information()'],['../classwall.html#aab1de4f144f176b134a967ba08747932',1,'wall::object_information()']]],
+  ['object_5fptr',['object_ptr',['../drawable_8hpp.html#aab5add95f06d2ba25dbfed8eb07274fa',1,'drawable.hpp']]],
+  ['objects',['objects',['../classbullet.html#a93b79bed80ce59b86e3fd332d0c03c5c',1,'bullet']]],
+  ['objects_5ffrom_5ffile',['objects_from_file',['../classfactory.html#afb2fad4ac9b0f39b1bfc3f3fc8d218b6',1,'factory']]],
+  ['objects_5fvector',['objects_vector',['../drawable_8hpp.html#a6c0fdb1dfd0c34dbbdbb5dcd3c608b07',1,'drawable.hpp']]],
+  ['operator_28_29',['operator()',['../classaction.html#ab4f8d0f7552450455977d09a889c18c7',1,'action::operator()(object_ptr object)'],['../classaction.html#a92c003677656b5b3e6e58b19376e6b04',1,'action::operator()()']]],
+  ['operator_3d_3d',['operator==',['../structcollision.html#ab1721e643a7906b3e4319a86315fce1b',1,'collision']]],
+  ['operator_3e_3e',['operator&gt;&gt;',['../factory_8cpp.html#af8646b44c0d9bcf25ca4064ab22601f8',1,'operator&gt;&gt;(std::ifstream &amp;input, sf::Vector2f &amp;rhs):&#160;factory.cpp'],['../factory_8cpp.html#aedc8da7651164363a07b8c75b061b0d8',1,'operator&gt;&gt;(std::ifstream &amp;input, sf::Color &amp;rhs):&#160;factory.cpp'],['../factory_8hpp.html#af8646b44c0d9bcf25ca4064ab22601f8',1,'operator&gt;&gt;(std::ifstream &amp;input, sf::Vector2f &amp;rhs):&#160;factory.cpp'],['../factory_8hpp.html#aedc8da7651164363a07b8c75b061b0d8',1,'operator&gt;&gt;(std::ifstream &amp;input, sf::Color &amp;rhs):&#160;factory.cpp']]],
+  ['output',['output',['../classfactory.html#a0454b8bf0f45196f436ddf3febc422f3',1,'factory']]]
 ];

@@ -7,5 +7,7 @@ var searchData=
   ['shoot_5ftimeout',['shoot_timeout',['../classunicorn.html#a7673cbdfe14f719f710df4b324f74484',1,'unicorn']]],
   ['size',['size',['../classdrawable.html#aa3900dd7b69b439a3514e6acdb4a17b9',1,'drawable']]],
   ['spawn',['spawn',['../classfactory.html#a891028263226aa493299e51f767211a1',1,'factory']]],
-  ['spawn_5flocation',['spawn_location',['../classunicorn.html#ab16638b1ce0d1a7a0da9ecffc6370e8c',1,'unicorn']]]
+  ['spawn_5flocation',['spawn_location',['../classunicorn.html#ab16638b1ce0d1a7a0da9ecffc6370e8c',1,'unicorn']]],
+  ['startheightx',['startHeightX',['../class_button.html#a954fb7025b688b7b2a4d8d16adca74eb',1,'Button']]],
+  ['startheighty',['startHeightY',['../class_button.html#afe532ea0d5dd3fea5341ba1cb3e64e0b',1,'Button']]]
 ];

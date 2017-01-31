@@ -2,48 +2,28 @@
 \label{classbase__level}\index{base\+\_\+level@{base\+\_\+level}}
 
 
-level border creation class  
-
-
-
-
 {\ttfamily \#include $<$base\+\_\+level.\+hpp$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classbase__level_addf165fdc5f4e953be3b6a2dcd00459b}{base\+\_\+level} (sf\+::\+Vector2f screen\+\_\+size)
+\hyperlink{classbase__level_addf165fdc5f4e953be3b6a2dcd00459b}{base\+\_\+level} (sf\+::\+Vector2f \hyperlink{classbase__level_a69702ca202fa2a3a4c83faaa807971c2}{screen\+\_\+size})
 \begin{DoxyCompactList}\small\item\em constructor screen size \end{DoxyCompactList}\item 
 void \hyperlink{classbase__level_a3b2da28cf45cad434103e81ee6c4538d}{push\+\_\+back\+\_\+borders} (\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&objects)
 \begin{DoxyCompactList}\small\item\em Put walls in the walls vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classbase__level_a69702ca202fa2a3a4c83faaa807971c2}\label{classbase__level_a69702ca202fa2a3a4c83faaa807971c2}} 
-sf\+::\+Vector2f {\bfseries screen\+\_\+size}
+sf\+::\+Vector2f \hyperlink{classbase__level_a69702ca202fa2a3a4c83faaa807971c2}{screen\+\_\+size}
 \item 
-\mbox{\Hypertarget{classbase__level_a196474637fdc953f4f2ed088ace891f7}\label{classbase__level_a196474637fdc953f4f2ed088ace891f7}} 
-\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} {\bfseries lower\+\_\+wall}
+\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} \hyperlink{classbase__level_a196474637fdc953f4f2ed088ace891f7}{lower\+\_\+wall}
 \item 
-\mbox{\Hypertarget{classbase__level_a4a1f6a57a83aec4bd0b82072ab21df43}\label{classbase__level_a4a1f6a57a83aec4bd0b82072ab21df43}} 
-\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} {\bfseries right\+\_\+wall}
+\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} \hyperlink{classbase__level_a4a1f6a57a83aec4bd0b82072ab21df43}{right\+\_\+wall}
 \item 
-\mbox{\Hypertarget{classbase__level_a5e4ab9bce71cb388025305d0f20cb7bf}\label{classbase__level_a5e4ab9bce71cb388025305d0f20cb7bf}} 
-\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} {\bfseries upper\+\_\+wall}
+\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} \hyperlink{classbase__level_a5e4ab9bce71cb388025305d0f20cb7bf}{upper\+\_\+wall}
 \item 
-\mbox{\Hypertarget{classbase__level_a29e885695d2a043bdab849dcb73c5c8e}\label{classbase__level_a29e885695d2a043bdab849dcb73c5c8e}} 
-\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} {\bfseries left\+\_\+wall}
+\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} \hyperlink{classbase__level_a29e885695d2a043bdab849dcb73c5c8e}{left\+\_\+wall}
 \end{DoxyCompactItemize}
-
-
-\subsection{Detailed Description}
-level border creation class 
-
-This class creates the level borders with the right sizes and positions depending on the screen size given to the constructor.
-
-\begin{DoxyDate}{Date}
-26/01/17 
-\end{DoxyDate}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -82,7 +62,40 @@ This function puts the level borders in the vector with all the wall objects. Th
 \end{DoxyParams}
 
 
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbase__level_a29e885695d2a043bdab849dcb73c5c8e}\label{classbase__level_a29e885695d2a043bdab849dcb73c5c8e}} 
+\index{base\+\_\+level@{base\+\_\+level}!left\+\_\+wall@{left\+\_\+wall}}
+\index{left\+\_\+wall@{left\+\_\+wall}!base\+\_\+level@{base\+\_\+level}}
+\subsubsection{\texorpdfstring{left\+\_\+wall}{left\_wall}}
+{\footnotesize\ttfamily \hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} base\+\_\+level\+::left\+\_\+wall\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__level_a196474637fdc953f4f2ed088ace891f7}\label{classbase__level_a196474637fdc953f4f2ed088ace891f7}} 
+\index{base\+\_\+level@{base\+\_\+level}!lower\+\_\+wall@{lower\+\_\+wall}}
+\index{lower\+\_\+wall@{lower\+\_\+wall}!base\+\_\+level@{base\+\_\+level}}
+\subsubsection{\texorpdfstring{lower\+\_\+wall}{lower\_wall}}
+{\footnotesize\ttfamily \hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} base\+\_\+level\+::lower\+\_\+wall\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__level_a4a1f6a57a83aec4bd0b82072ab21df43}\label{classbase__level_a4a1f6a57a83aec4bd0b82072ab21df43}} 
+\index{base\+\_\+level@{base\+\_\+level}!right\+\_\+wall@{right\+\_\+wall}}
+\index{right\+\_\+wall@{right\+\_\+wall}!base\+\_\+level@{base\+\_\+level}}
+\subsubsection{\texorpdfstring{right\+\_\+wall}{right\_wall}}
+{\footnotesize\ttfamily \hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} base\+\_\+level\+::right\+\_\+wall\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__level_a69702ca202fa2a3a4c83faaa807971c2}\label{classbase__level_a69702ca202fa2a3a4c83faaa807971c2}} 
+\index{base\+\_\+level@{base\+\_\+level}!screen\+\_\+size@{screen\+\_\+size}}
+\index{screen\+\_\+size@{screen\+\_\+size}!base\+\_\+level@{base\+\_\+level}}
+\subsubsection{\texorpdfstring{screen\+\_\+size}{screen\_size}}
+{\footnotesize\ttfamily sf\+::\+Vector2f base\+\_\+level\+::screen\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__level_a5e4ab9bce71cb388025305d0f20cb7bf}\label{classbase__level_a5e4ab9bce71cb388025305d0f20cb7bf}} 
+\index{base\+\_\+level@{base\+\_\+level}!upper\+\_\+wall@{upper\+\_\+wall}}
+\index{upper\+\_\+wall@{upper\+\_\+wall}!base\+\_\+level@{base\+\_\+level}}
+\subsubsection{\texorpdfstring{upper\+\_\+wall}{upper\_wall}}
+{\footnotesize\ttfamily \hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} base\+\_\+level\+::upper\+\_\+wall\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{base__level_8hpp}{base\+\_\+level.\+hpp}\item 
-base\+\_\+level.\+cpp\end{DoxyCompactItemize}
+\hyperlink{base__level_8cpp}{base\+\_\+level.\+cpp}\end{DoxyCompactItemize}

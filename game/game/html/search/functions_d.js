@@ -2,7 +2,7 @@ var searchData=
 [
   ['select',['select',['../classmenu.html#a06744d58a2aad693d3637d0485aa7984',1,'menu']]],
   ['set_5fgravity',['set_gravity',['../classphysics.html#a8b0dff646c304dee3cb5c095d821dc87',1,'physics']]],
-  ['set_5fposition',['set_position',['../classanimation.html#ac461adb38b8241427150c4620ee31358',1,'animation::set_position()'],['../classdrawable.html#a5e40f2621daaca4ac32ef26b8c01b9a6',1,'drawable::set_position()'],['../classimage__from__file.html#a868911f8d541af91290fb8dc56435cd2',1,'image_from_file::set_position()']]],
+  ['set_5fposition',['set_position',['../classanimation.html#ac461adb38b8241427150c4620ee31358',1,'animation::set_position()'],['../classbullet.html#af338da31bfb1dd4b2d942ca67316350a',1,'bullet::set_position()'],['../classdrawable.html#a5e40f2621daaca4ac32ef26b8c01b9a6',1,'drawable::set_position()'],['../classimage__from__file.html#a868911f8d541af91290fb8dc56435cd2',1,'image_from_file::set_position()'],['../classmob.html#a6556e84e416fd496450d18dd1d0eb1f2',1,'mob::set_position()']]],
   ['set_5frepeated',['set_repeated',['../classimage__from__file.html#abaf0ebde2771171fdf91b55f4f6c5aa6',1,'image_from_file']]],
   ['set_5fscale',['set_scale',['../classimage__from__file.html#a698cd91783bb6c2211ea5a3702ca60a8',1,'image_from_file']]],
   ['set_5fsize',['set_size',['../classanimation.html#a7c0b874294e81f3612590920fd845602',1,'animation::set_size()'],['../classdrawable.html#a34b6b50f342c41f550f09e0465f95f61',1,'drawable::set_size()'],['../classimage__from__file.html#a43b0d6b11bf46827308e4e6cb7aa8579',1,'image_from_file::set_size()']]],

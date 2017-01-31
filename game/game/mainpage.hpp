@@ -32,8 +32,8 @@
 ///
 /// All the images just in the game are shown as object of the image class.
 /// the image class has multiple function that can be used. the image class is a inherintance of the drawable class.
-/// image uses also a override of the #drawable::draw(). Furthermore the class contains an #image::set_size() and an #image::set_position()
-/// these functions are for setting a new size or position.Finally it contains a function for getting the global bounds called #image::getGlobalBounds() and an #image::setTextureRect()
+/// image uses also a override of the #drawable::draw(). Furthermore the class contains an #image::set_size() and an #image_from_file::set_position()
+/// these functions are for setting a new size or position.Finally it contains a function for getting the global bounds called #image_from_file::getGlobalBounds() and an #image_from_file::setTextureRect()
 /// for setting a texture in the image also this function is beeing used for mirroring a image without position change. 
 /// 
 ///
@@ -138,7 +138,7 @@
 /// or a spawn point without them. The rest can be customized to what level you want. In
 /// The factory there are 6 functions. The first one is called #factory::change_input_to()
 /// and is used to change the input file. If a file is already open it closes that file first.
-/// The second and third are used to read lines from the input file. They are called #facory::
+/// The second and third are used to read lines from the input file. They are called #factory::
 /// read_line() and #factory::objects_from_file(). The read line function reads a single line and
 /// returnes an #object_ptr to the newly created object or an error of different types if something
 /// went wrong. The objects from file function handles all the errors and puts the objects in an 

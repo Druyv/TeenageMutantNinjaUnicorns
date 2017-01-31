@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TEENAGE MUTANT NINJA TURTLE: factory Class Reference</title>
+<title>TEENAGE MUTANT NINJA UNICORN: factory Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="unicorn supreme2_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">TEENAGE MUTANT NINJA TURTLE
+   <div id="projectname">TEENAGE MUTANT NINJA UNICORN
    </div>
   </td>
  </tr>
@@ -99,20 +99,15 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:af33b0e5fcc396c359d30a00afacb819b"><td class="memItemLeft" align="right" valign="top"><a id="af33b0e5fcc396c359d30a00afacb819b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>file_line_counter</b> = 1</td></tr>
+<tr class="memitem:af33b0e5fcc396c359d30a00afacb819b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfactory.html#af33b0e5fcc396c359d30a00afacb819b">file_line_counter</a> = 1</td></tr>
 <tr class="separator:af33b0e5fcc396c359d30a00afacb819b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a874663e858e01c8ff372c070b8c19e"><td class="memItemLeft" align="right" valign="top"><a id="a9a874663e858e01c8ff372c070b8c19e"></a>
-std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><b>input</b></td></tr>
+<tr class="memitem:a9a874663e858e01c8ff372c070b8c19e"><td class="memItemLeft" align="right" valign="top">std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfactory.html#a9a874663e858e01c8ff372c070b8c19e">input</a></td></tr>
 <tr class="separator:a9a874663e858e01c8ff372c070b8c19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0454b8bf0f45196f436ddf3febc422f3"><td class="memItemLeft" align="right" valign="top"><a id="a0454b8bf0f45196f436ddf3febc422f3"></a>
-std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><b>output</b></td></tr>
+<tr class="memitem:a0454b8bf0f45196f436ddf3febc422f3"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfactory.html#a0454b8bf0f45196f436ddf3febc422f3">output</a></td></tr>
 <tr class="separator:a0454b8bf0f45196f436ddf3febc422f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a891028263226aa493299e51f767211a1"><td class="memItemLeft" align="right" valign="top"><a id="a891028263226aa493299e51f767211a1"></a>
-sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>spawn</b></td></tr>
+<tr class="memitem:a891028263226aa493299e51f767211a1"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfactory.html#a891028263226aa493299e51f767211a1">spawn</a></td></tr>
 <tr class="separator:a891028263226aa493299e51f767211a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29d1328317de4563aefb5c2f32f63424"><td class="memItemLeft" align="right" valign="top"><a id="a29d1328317de4563aefb5c2f32f63424"></a>
-sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>level_size</b></td></tr>
+<tr class="memitem:a29d1328317de4563aefb5c2f32f63424"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfactory.html#a29d1328317de4563aefb5c2f32f63424">level_size</a></td></tr>
 <tr class="separator:a29d1328317de4563aefb5c2f32f63424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -231,7 +226,7 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>level_size</b
 </div><div class="memdoc">
 
 <p>Read multiple objects. </p>
-<p>This function continuesly calls the <a class="el" href="classfactory.html#a82385866bc910c1b3a3e82d56487dd24" title="Read one line from the filestream. ">factory::read_line()</a> function and fills an <a class="el" href="drawable_8hpp.html#a6c0fdb1dfd0c34dbbdbb5dcd3c608b07" title="A std::vector with object_ptr. ">objects_vector</a> with <a class="el" href="classdrawable.html" title="class that is inherited by all objects that are drawable ">drawable</a> objects. This filled vector is returned. The errors returned by the <a class="el" href="classfactory.html#a82385866bc910c1b3a3e82d56487dd24" title="Read one line from the filestream. ">read_line()</a> function are also handled in this function. </p><dl class="section return"><dt>Returns</dt><dd>The vector with the created objects </dd></dl>
+<p>This function continuesly calls the <a class="el" href="classfactory.html#a82385866bc910c1b3a3e82d56487dd24" title="Read one line from the filestream. ">factory::read_line()</a> function and fills an <a class="el" href="drawable_8hpp.html#a6c0fdb1dfd0c34dbbdbb5dcd3c608b07">objects_vector</a> with <a class="el" href="classdrawable.html" title="class that is inherited by all objects that are drawable ">drawable</a> objects. This filled vector is returned. The errors returned by the <a class="el" href="classfactory.html#a82385866bc910c1b3a3e82d56487dd24" title="Read one line from the filestream. ">read_line()</a> function are also handled in this function. </p><dl class="section return"><dt>Returns</dt><dd>The vector with the created objects </dd></dl>
 
 </div>
 </div>
@@ -284,7 +279,7 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>level_size</b
 <p>Write information to file. </p>
 <p>This function writes all the information on the objects to an output file that is specified in the parameters. It first closes any input files and then opens the output file. After this it outputs the spawn location and level size calls the <a class="el" href="classdrawable.html#a2ed0f8bb53f33477f7722efa7bb24583" title="object information as string ">drawable::object_information()</a> function on every item in the vector. You end up with an output like this: SPAWN (1030,1500) LEVEL_SIZE (4000,3350) WALL (1020.000000,2000.000000) (100.000000,20.000000) green grass.png </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">objects</td><td>The <a class="el" href="drawable_8hpp.html#a6c0fdb1dfd0c34dbbdbb5dcd3c608b07" title="A std::vector with object_ptr. ">objects_vector</a> that contains all the objects we want to write to the file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">objects</td><td>The <a class="el" href="drawable_8hpp.html#a6c0fdb1dfd0c34dbbdbb5dcd3c608b07">objects_vector</a> that contains all the objects we want to write to the file </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">new_filename</td><td>The file to write the information to </td></tr>
   </table>
   </dd>
@@ -292,9 +287,120 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>level_size</b
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af33b0e5fcc396c359d30a00afacb819b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33b0e5fcc396c359d30a00afacb819b">&#9670;&nbsp;</a></span>file_line_counter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int factory::file_line_counter = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a874663e858e01c8ff372c070b8c19e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a874663e858e01c8ff372c070b8c19e">&#9670;&nbsp;</a></span>input</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ifstream factory::input</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29d1328317de4563aefb5c2f32f63424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d1328317de4563aefb5c2f32f63424">&#9670;&nbsp;</a></span>level_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f factory::level_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0454b8bf0f45196f436ddf3febc422f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0454b8bf0f45196f436ddf3febc422f3">&#9670;&nbsp;</a></span>output</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ofstream factory::output</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a891028263226aa493299e51f767211a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a891028263226aa493299e51f767211a1">&#9670;&nbsp;</a></span>spawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f factory::spawn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="factory_8hpp_source.html">factory.hpp</a></li>
-<li>factory.cpp</li>
+<li><a class="el" href="factory_8cpp.html">factory.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

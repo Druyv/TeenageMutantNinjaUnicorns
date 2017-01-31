@@ -30,7 +30,7 @@ Collaboration diagram for mob\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classmob_ac524dd40986df00721239b66c552437e}{mob} (sf\+::\+Vector2f position, std\+::string filename)
+\hyperlink{classmob_ac524dd40986df00721239b66c552437e}{mob} (sf\+::\+Vector2f \hyperlink{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}{position}, std\+::string filename)
 \begin{DoxyCompactList}\small\item\em constructor to initialize mob \end{DoxyCompactList}\item 
 void \hyperlink{classmob_a52f5e29b2ac2d87c8c1be7e0ff5ec96b}{draw} (sf\+::\+Render\+Window \&window) override
 \begin{DoxyCompactList}\small\item\em draw function for mob \end{DoxyCompactList}\item 
@@ -41,15 +41,15 @@ void \hyperlink{classmob_ae892b3ce84f4aa16411b385abb5410c8}{die} ()
 void \hyperlink{classmob_a3bce6c06653881f8be86fbc60a2b67cb}{revive} ()
 \begin{DoxyCompactList}\small\item\em function that sets boolean \end{DoxyCompactList}\item 
 bool \hyperlink{classmob_ab327a1798c02be3f9db7c1d01b17ba02}{get\+\_\+live} ()
-\begin{DoxyCompactList}\small\item\em function that returns alive variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function that returns alive variable \end{DoxyCompactList}\item 
+void \hyperlink{classmob_a6556e84e416fd496450d18dd1d0eb1f2}{set\+\_\+position} (sf\+::\+Vector2f new\+\_\+position)
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classmob_a28d29e0a52a7094c995df09dcdcf0d3e}\label{classmob_a28d29e0a52a7094c995df09dcdcf0d3e}} 
-\hyperlink{classimage__from__file}{image\+\_\+from\+\_\+file} {\bfseries mob\+\_\+animation}
+\hyperlink{classimage__from__file}{image\+\_\+from\+\_\+file} \hyperlink{classmob_a28d29e0a52a7094c995df09dcdcf0d3e}{mob\+\_\+animation}
 \item 
-\mbox{\Hypertarget{classmob_aae8e9788785c59d1f4c81c8e0d0e5227}\label{classmob_aae8e9788785c59d1f4c81c8e0d0e5227}} 
-bool {\bfseries alive} = true
+bool \hyperlink{classmob_aae8e9788785c59d1f4c81c8e0d0e5227}{alive} = true
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -162,9 +162,30 @@ Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}
 
 function that sets boolean 
 
-This function sets variable alive to true 
+This function sets variable alive to true \mbox{\Hypertarget{classmob_a6556e84e416fd496450d18dd1d0eb1f2}\label{classmob_a6556e84e416fd496450d18dd1d0eb1f2}} 
+\index{mob@{mob}!set\+\_\+position@{set\+\_\+position}}
+\index{set\+\_\+position@{set\+\_\+position}!mob@{mob}}
+\subsubsection{\texorpdfstring{set\+\_\+position()}{set\_position()}}
+{\footnotesize\ttfamily void mob\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classmob_aae8e9788785c59d1f4c81c8e0d0e5227}\label{classmob_aae8e9788785c59d1f4c81c8e0d0e5227}} 
+\index{mob@{mob}!alive@{alive}}
+\index{alive@{alive}!mob@{mob}}
+\subsubsection{\texorpdfstring{alive}{alive}}
+{\footnotesize\ttfamily bool mob\+::alive = true\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmob_a28d29e0a52a7094c995df09dcdcf0d3e}\label{classmob_a28d29e0a52a7094c995df09dcdcf0d3e}} 
+\index{mob@{mob}!mob\+\_\+animation@{mob\+\_\+animation}}
+\index{mob\+\_\+animation@{mob\+\_\+animation}!mob@{mob}}
+\subsubsection{\texorpdfstring{mob\+\_\+animation}{mob\_animation}}
+{\footnotesize\ttfamily \hyperlink{classimage__from__file}{image\+\_\+from\+\_\+file} mob\+::mob\+\_\+animation\hspace{0.3cm}{\ttfamily [private]}}
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-npc.\+hpp\item 
-npc.\+cpp\end{DoxyCompactItemize}
+\hyperlink{npc_8hpp}{npc.\+hpp}\item 
+\hyperlink{npc_8cpp}{npc.\+cpp}\end{DoxyCompactItemize}

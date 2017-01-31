@@ -30,7 +30,7 @@ Collaboration diagram for bullet\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classbullet_a2c8b1e868ab8fe8edf43fc289f8d80b8}{bullet} (sf\+::\+Vector2f position, std\+::string filename, std\+::vector$<$ mob\+\_\+ptr $>$ \&all\+\_\+mobs, \hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&objects)
+\hyperlink{classbullet_a2c8b1e868ab8fe8edf43fc289f8d80b8}{bullet} (sf\+::\+Vector2f \hyperlink{classdrawable_a34679fa5ae82eee65dfd6b1b9f3c7cb6}{position}, std\+::string filename, std\+::vector$<$ \hyperlink{npc_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr} $>$ \&\hyperlink{classbullet_a8730572b757fc9d664fb3ce640a797ce}{all\+\_\+mobs}, \hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&\hyperlink{classbullet_a93b79bed80ce59b86e3fd332d0c03c5c}{objects})
 \begin{DoxyCompactList}\small\item\em constructor to initialize the bullet \end{DoxyCompactList}\item 
 void \hyperlink{classbullet_ae999b952538687d45ca2ae54164a5cd8}{draw} (sf\+::\+Render\+Window \&window) override
 \begin{DoxyCompactList}\small\item\em funtion that draws image \end{DoxyCompactList}\item 
@@ -39,7 +39,9 @@ sf\+::\+Float\+Rect \hyperlink{classbullet_a87bda5887249e8e37c5579180449bd93}{ge
 {\footnotesize template$<$typename P $>$ }\\void \hyperlink{classbullet_ab7e5c677bbd642df24a2251bb58249b7}{collision} (P unique\+\_\+object)
 \begin{DoxyCompactList}\small\item\em function that checks collision with pointer \end{DoxyCompactList}\item 
 void \hyperlink{classbullet_a52d736cad2a486a65c8a25781cff1f70}{shoot} (sf\+::\+Render\+Window \&window, int \&shoot\+\_\+timeout, sf\+::\+Vector2f offset=sf\+::\+Vector2f(0, 0), sf\+::\+Vector2f fire\+\_\+position=sf\+::\+Vector2f(0.\+0, 0.\+0))
-\begin{DoxyCompactList}\small\item\em function that manages moving the bullet and checking for collision \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function that manages moving the bullet and checking for collision \end{DoxyCompactList}\item 
+void \hyperlink{classbullet_af338da31bfb1dd4b2d942ca67316350a}{set\+\_\+position} (sf\+::\+Vector2f new\+\_\+position)
+\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -48,26 +50,15 @@ void \hyperlink{classbullet_a1f2cd5b7fa4d4beae1d27c06bc54f8c0}{projectile} ()
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classbullet_a112af2b0e62f62dbe4d31fdd726c760b}\label{classbullet_a112af2b0e62f62dbe4d31fdd726c760b}} 
-\hyperlink{classimage__from__file}{image\+\_\+from\+\_\+file} {\bfseries bullet\+\_\+animation}
+\hyperlink{classimage__from__file}{image\+\_\+from\+\_\+file} \hyperlink{classbullet_a112af2b0e62f62dbe4d31fdd726c760b}{bullet\+\_\+animation}
 \item 
-\mbox{\Hypertarget{classbullet_a8730572b757fc9d664fb3ce640a797ce}\label{classbullet_a8730572b757fc9d664fb3ce640a797ce}} 
-std\+::vector$<$ mob\+\_\+ptr $>$ \& {\bfseries all\+\_\+mobs}
+std\+::vector$<$ \hyperlink{npc_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr} $>$ \& \hyperlink{classbullet_a8730572b757fc9d664fb3ce640a797ce}{all\+\_\+mobs}
 \item 
-\mbox{\Hypertarget{classbullet_a93b79bed80ce59b86e3fd332d0c03c5c}\label{classbullet_a93b79bed80ce59b86e3fd332d0c03c5c}} 
-\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \& {\bfseries objects}
+\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \& \hyperlink{classbullet_a93b79bed80ce59b86e3fd332d0c03c5c}{objects}
 \item 
-\mbox{\Hypertarget{classbullet_aa8ad03cdacad1e53dedf55b0719b8980}\label{classbullet_aa8ad03cdacad1e53dedf55b0719b8980}} 
-bool {\bfseries hit} = false
+bool \hyperlink{classbullet_aa8ad03cdacad1e53dedf55b0719b8980}{hit} = false
 \item 
-\mbox{\Hypertarget{classbullet_a5827b4585bf299481273f49049a0f46f}\label{classbullet_a5827b4585bf299481273f49049a0f46f}} 
-bool {\bfseries going\+\_\+left}
-\item 
-\mbox{\Hypertarget{classbullet_af59d163e270aa74ebc5fafe6146400bc}\label{classbullet_af59d163e270aa74ebc5fafe6146400bc}} 
-sf\+::\+Vector2f {\bfseries current\+\_\+offset}
-\item 
-\mbox{\Hypertarget{classbullet_a0ee7ce5c4876f81b0df0a9979c54e68b}\label{classbullet_a0ee7ce5c4876f81b0df0a9979c54e68b}} 
-bool {\bfseries correctly\+\_\+scaled} = false
+sf\+::\+Vector2f \hyperlink{classbullet_af59d163e270aa74ebc5fafe6146400bc}{current\+\_\+offset}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -87,7 +78,7 @@ This class is used to calculate a projectile that can kill mobs (if there hit by
 \index{bullet@{bullet}!bullet@{bullet}}
 \index{bullet@{bullet}!bullet@{bullet}}
 \subsubsection{\texorpdfstring{bullet()}{bullet()}}
-{\footnotesize\ttfamily bullet\+::bullet (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{std\+::vector$<$ mob\+\_\+ptr $>$ \&}]{all\+\_\+mobs,  }\item[{\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&}]{objects }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bullet\+::bullet (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{std\+::vector$<$ \hyperlink{npc_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr} $>$ \&}]{all\+\_\+mobs,  }\item[{\hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&}]{objects }\end{DoxyParamCaption})}
 
 
 
@@ -177,7 +168,13 @@ Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}
 
 function that moves bullet with offset 
 
-This function moves bullet\+\_\+animation with given offset (a.\+k.\+a. current\+\_\+offset) \mbox{\Hypertarget{classbullet_a52d736cad2a486a65c8a25781cff1f70}\label{classbullet_a52d736cad2a486a65c8a25781cff1f70}} 
+This function moves bullet\+\_\+animation with given offset (a.\+k.\+a. current\+\_\+offset) \mbox{\Hypertarget{classbullet_af338da31bfb1dd4b2d942ca67316350a}\label{classbullet_af338da31bfb1dd4b2d942ca67316350a}} 
+\index{bullet@{bullet}!set\+\_\+position@{set\+\_\+position}}
+\index{set\+\_\+position@{set\+\_\+position}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{set\+\_\+position()}{set\_position()}}
+{\footnotesize\ttfamily void bullet\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+\_\+position }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbullet_a52d736cad2a486a65c8a25781cff1f70}\label{classbullet_a52d736cad2a486a65c8a25781cff1f70}} 
 \index{bullet@{bullet}!shoot@{shoot}}
 \index{shoot@{shoot}!bullet@{bullet}}
 \subsubsection{\texorpdfstring{shoot()}{shoot()}}
@@ -202,7 +199,40 @@ This function moves bullet with \hyperlink{classbullet_a1f2cd5b7fa4d4beae1d27c06
 \end{DoxyParams}
 
 
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbullet_a8730572b757fc9d664fb3ce640a797ce}\label{classbullet_a8730572b757fc9d664fb3ce640a797ce}} 
+\index{bullet@{bullet}!all\+\_\+mobs@{all\+\_\+mobs}}
+\index{all\+\_\+mobs@{all\+\_\+mobs}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{all\+\_\+mobs}{all\_mobs}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{npc_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr}$>$\& bullet\+::all\+\_\+mobs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbullet_a112af2b0e62f62dbe4d31fdd726c760b}\label{classbullet_a112af2b0e62f62dbe4d31fdd726c760b}} 
+\index{bullet@{bullet}!bullet\+\_\+animation@{bullet\+\_\+animation}}
+\index{bullet\+\_\+animation@{bullet\+\_\+animation}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{bullet\+\_\+animation}{bullet\_animation}}
+{\footnotesize\ttfamily \hyperlink{classimage__from__file}{image\+\_\+from\+\_\+file} bullet\+::bullet\+\_\+animation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbullet_af59d163e270aa74ebc5fafe6146400bc}\label{classbullet_af59d163e270aa74ebc5fafe6146400bc}} 
+\index{bullet@{bullet}!current\+\_\+offset@{current\+\_\+offset}}
+\index{current\+\_\+offset@{current\+\_\+offset}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{current\+\_\+offset}{current\_offset}}
+{\footnotesize\ttfamily sf\+::\+Vector2f bullet\+::current\+\_\+offset\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbullet_aa8ad03cdacad1e53dedf55b0719b8980}\label{classbullet_aa8ad03cdacad1e53dedf55b0719b8980}} 
+\index{bullet@{bullet}!hit@{hit}}
+\index{hit@{hit}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{hit}{hit}}
+{\footnotesize\ttfamily bool bullet\+::hit = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbullet_a93b79bed80ce59b86e3fd332d0c03c5c}\label{classbullet_a93b79bed80ce59b86e3fd332d0c03c5c}} 
+\index{bullet@{bullet}!objects@{objects}}
+\index{objects@{objects}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{objects}{objects}}
+{\footnotesize\ttfamily \hyperlink{drawable_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector}\& bullet\+::objects\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-bullet.\+hpp\item 
-bullet.\+cpp\end{DoxyCompactItemize}
+\hyperlink{bullet_8hpp}{bullet.\+hpp}\item 
+\hyperlink{bullet_8cpp}{bullet.\+cpp}\end{DoxyCompactItemize}

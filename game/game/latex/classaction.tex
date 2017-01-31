@@ -27,15 +27,12 @@ void \hyperlink{classaction_a92c003677656b5b3e6e58b19376e6b04}{operator()} ()
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classaction_a949abf979a5255f54e88a6a4273afebe}\label{classaction_a949abf979a5255f54e88a6a4273afebe}} 
 std\+::function$<$ bool() $>$ \hyperlink{classaction_a949abf979a5255f54e88a6a4273afebe}{condition}
-\begin{DoxyCompactList}\small\item\em The condition in the action. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classaction_a711a393fce3b3b22930b651e24eda6c3}\label{classaction_a711a393fce3b3b22930b651e24eda6c3}} 
+\item 
 std\+::function$<$ void(\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$ \hyperlink{classaction_a711a393fce3b3b22930b651e24eda6c3}{work}
-\begin{DoxyCompactList}\small\item\em The function which need to run when condition is true with as parameter an \hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classaction_a2b895e3240bf7d69ae7f8e3bd7e563d6}\label{classaction_a2b895e3240bf7d69ae7f8e3bd7e563d6}} 
+\item 
 std\+::function$<$ void() $>$ \hyperlink{classaction_a2b895e3240bf7d69ae7f8e3bd7e563d6}{work\+\_\+no\+\_\+ptr}
-\begin{DoxyCompactList}\small\item\em The function which need to run when condition is true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -161,6 +158,27 @@ This operator executes the function in condition and then checks the return valu
 operator() 
 
 This operator executes the function in condition and then checks the return value. If the condition returns true the work gets executed. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classaction_a949abf979a5255f54e88a6a4273afebe}\label{classaction_a949abf979a5255f54e88a6a4273afebe}} 
+\index{action@{action}!condition@{condition}}
+\index{condition@{condition}!action@{action}}
+\subsubsection{\texorpdfstring{condition}{condition}}
+{\footnotesize\ttfamily std\+::function$<$ bool() $>$ action\+::condition\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classaction_a711a393fce3b3b22930b651e24eda6c3}\label{classaction_a711a393fce3b3b22930b651e24eda6c3}} 
+\index{action@{action}!work@{work}}
+\index{work@{work}!action@{action}}
+\subsubsection{\texorpdfstring{work}{work}}
+{\footnotesize\ttfamily std\+::function$<$ void(\hyperlink{drawable_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$ action\+::work\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classaction_a2b895e3240bf7d69ae7f8e3bd7e563d6}\label{classaction_a2b895e3240bf7d69ae7f8e3bd7e563d6}} 
+\index{action@{action}!work\+\_\+no\+\_\+ptr@{work\+\_\+no\+\_\+ptr}}
+\index{work\+\_\+no\+\_\+ptr@{work\+\_\+no\+\_\+ptr}!action@{action}}
+\subsubsection{\texorpdfstring{work\+\_\+no\+\_\+ptr}{work\_no\_ptr}}
+{\footnotesize\ttfamily std\+::function$<$ void() $>$ action\+::work\+\_\+no\+\_\+ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
