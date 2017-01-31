@@ -89,6 +89,8 @@ public:
 	/// \param[in] value integer you want to set value to 
 	///
 	void set_counter(int value);
+        
+        int & get_counter();
 
 	/// \brief function that returns path to save-file given menu item pushed 
 	///

@@ -21,8 +21,8 @@ int main(int argc, const char **argv) {
 	sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "The unicorn game", sf::Style::Fullscreen);
 
 	actions unicorn_actions = {
-		action(sf::Keyboard::Left, [](object_ptr object) {object->move(sf::Vector2f(-10.0,0.0)); }),
-		action(sf::Keyboard::Right, [](object_ptr object) {object->move(sf::Vector2f(10.0,0.0)); }),
+		action(sf::Keyboard::A, [](object_ptr object) {object->move(sf::Vector2f(-10.0,0.0)); }),
+		action(sf::Keyboard::D, [](object_ptr object) {object->move(sf::Vector2f(10.0,0.0)); }),
 		action(sf::Keyboard::Space, [](object_ptr object) {object->jump(); })
 	};
 
@@ -47,7 +47,7 @@ int main(int argc, const char **argv) {
             base_level base( object_creation->get_level_size() );
             base.push_back_borders(objects);
             
-            the_unicorn = std::make_shared<unicorn>(object_creation->get_spawn(), "spreadsheet.png","rainbowspreadsheet.png", unicorn_actions, the_collisions, all_mobs, objects);
+            the_unicorn = std::make_shared<unicorn>(object_creation->get_spawn(), "spreadsheet.png","rainbowspreadsheet.png", unicorn_actions, the_collisions, all_mobs, objects,manager_file.get_counter());
 		
 	}
 	catch (const std::exception & e) {

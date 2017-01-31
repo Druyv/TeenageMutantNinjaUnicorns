@@ -1,7 +1,7 @@
 #include "unicorn.hpp"
 
 
-unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_rainbow, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects) :
+unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_rainbow, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects,int & level_counter) :
 	drawable{ position, sf::Vector2f{ 1.0,1.0 }, std::string{ "UNICORN" } },
 	actions_array{ actions_array },
 	unicorn_animation{animation{ position, filename,7.0,5.0 }  },
@@ -9,8 +9,8 @@ unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_ra
 	the_collisions{ the_collisions },
         spawn_location{position},
 	all_mobs{all_mobs},
-	//objects{objects},
-	weapon(position, "Nyan-Cat.png", all_mobs, objects)
+	weapon(position, "Nyan-Cat.png", all_mobs, objects),
+        level_counter{level_counter}
 {
         if (!font.loadFromFile("Pixeled.ttf")){
             throw font_load_error("Pixeled.ttf");
@@ -21,7 +21,8 @@ unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_ra
         
 	size = unicorn_animation.get_size();
 	unicorn_animation.setTextureRect(sf::IntRect(int(size.x), 0, -int(size.x), int(size.y)));
-	actions_array.push_back(action(sf::Keyboard::LControl, [&](object_ptr object) {if (!shoot_timeout) { shoot_timeout = 50; } }));
+	actions_array.push_back(action(sf::Keyboard::LShift, [&](object_ptr object) {if (!shoot_timeout) { shoot_timeout = 50; } }));
+        rainbow.movement(10.0,level_counter);
 }
 
 void unicorn::draw(sf::RenderWindow & window) {
@@ -110,6 +111,11 @@ void unicorn::draw(sf::RenderWindow & window) {
             window.draw(text);
             text_counter--;
         }
+        else{
+            text.setString( std::string("Lives: " + std::to_string(lives)) );
+            text.setPosition((position - sf::Vector2f(window.getSize().x / 2.0 - size.x / 2.0 , (window.getSize().y / 2.0) - (rainbow.get_size().y*1.5))));
+            window.draw(text);
+        }
         
         got_hit = false;
 	rainbow.set_position((position - sf::Vector2f(window.getSize().x / 2.0 - size.x / 2.0, window.getSize().y / 2.0)));
@@ -188,6 +194,7 @@ void unicorn::set_spawn_location(sf::Vector2f new_location){
    spawn_location = new_location;
    position = new_location;
    unicorn_animation.set_position(new_location);
+   rainbow.movement(10.0,level_counter);
 }
 
 

@@ -3,8 +3,8 @@
 #include "math.h"
 animation::animation(sf::Vector2f position, std::string sheet_name,float width,float length) :
 	drawable{ position, sf::Vector2f{ 0,0 }, "PICTURE" },
-	width{width},
-	sheet_name{ sheet_name }
+	
+	sheet_name{ sheet_name },width{width}
 {
 	if (!texture.loadFromFile(sheet_name)) {
 		throw sheet_load_error{ sheet_name };
@@ -39,10 +39,12 @@ void animation::set_position(sf::Vector2f new_position) {
         	sheet.setPosition(position);
 }
 
-bool animation::movement(float row_a){
+bool animation::movement(float row_a,int level_counter){
 
-
-        if(row_a ==9){
+    if (row_a==10){
+        count=level_counter-1;
+    }
+        else if(row_a ==9){
       //  count = 0;
         rot =0;
         sheet.setRotation(0);

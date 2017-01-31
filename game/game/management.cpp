@@ -70,6 +70,9 @@ void file_management::set_counter(int value) {
 	counter = value;
 }
 
+int & file_management::get_counter(){
+    return counter;
+}
 
 //===============================//
 //Menu management class functions//

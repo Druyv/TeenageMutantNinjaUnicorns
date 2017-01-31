@@ -24,7 +24,7 @@ private:
 	sf::Sprite sheet;
 	std::string sheet_name;
 	sf::Texture texture;
-	float width; 
+	float width=0; 
         float count=0;
         float row=0;
         float  rot=0;
@@ -90,7 +90,7 @@ public:
 	/// \param[in] row_a  int indicator for which  animation is needed
 	/// 
 
-        bool movement(float row_a);
+        bool movement(float row_a,int level_counter=0);
     
         
 
