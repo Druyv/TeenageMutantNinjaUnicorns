@@ -45,6 +45,8 @@ void image_from_file::set_repeated(bool repeated){
 
 void image_from_file::set_scale(float x, float y){
     image.setScale(x, y);
+    size.x *= x;//toegevoegd
+    size.y *= y;//toegevoegd
 }
 
 std::string image_from_file::get_image_name(){

@@ -112,13 +112,12 @@ int main(int argc, const char **argv) {
                     std::cout << "You won!!\n";
                     auto won = image_from_file( sf::Vector2f{0,0}, "end.png" );
                     
-                    won.set_scale(sf::VideoMode::getDesktopMode().width / 1920, 
-                            sf::VideoMode::getDesktopMode().height / 1080);
-                    std::cout << "Width: " << (float)(sf::VideoMode::getDesktopMode().width / 1920) << '\n';
-                    std::cout << "Heigth: " << (float)(sf::VideoMode::getDesktopMode().height / 1080) << '\n';
+                    won.set_scale((float)sf::VideoMode::getDesktopMode().width / 1920, 
+                            (float)sf::VideoMode::getDesktopMode().height / 1080);
                     
                     sf::Vector2f new_position {the_unicorn->get_position().x - (won.get_size().x/2),
                                                 the_unicorn->get_position().y - (won.get_size().y/2)};
+                    std::cout << "won size: " << won.get_size().x << '\n';
                     won.set_position(new_position);
                     
                     won.draw(window);
