@@ -97,7 +97,11 @@ public:
 	/// \param[in]	fire_position	sf::Vector2f for position for bullet to start projectile. 
 	///
 	void shoot(sf::RenderWindow & window, int & shoot_timeout, sf::Vector2f offset = sf::Vector2f(0, 0), sf::Vector2f fire_position = sf::Vector2f(0.0, 0.0));
-        
+        /// \brief setter  for the position.
+		///
+	/// This function is the setter for the position of the bullet .
+	/// 
+	/// \param[in] new position this is een sf::Vector2f.
         void set_position(sf::Vector2f new_position);
         
 };

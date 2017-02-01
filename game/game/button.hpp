@@ -1,3 +1,4 @@
+///@file
 #ifndef _button_HPP
 #define _button_HPP
 

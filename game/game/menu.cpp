@@ -1,3 +1,4 @@
+
 #include "menu.hpp"
 
 menu::menu(sf::RenderWindow & window, std::string backgroud_picture, bool button_bool1, std::string button_one_text,

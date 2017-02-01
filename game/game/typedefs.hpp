@@ -1,3 +1,4 @@
+///@file
 #ifndef TYPEDEFS_HPP
 #define TYPEDEFS_HPP
 #include <memory>

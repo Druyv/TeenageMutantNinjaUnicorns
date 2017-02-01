@@ -1,3 +1,5 @@
+
+///@file
 #ifndef _WALL_HPP
 #define _WALL_HPP
 

@@ -138,11 +138,14 @@ public:
     ///
 	void set_spawn_location(sf::Vector2f new_location);
 
-	//----------------------------------------------
-	//
-	//experimental
-	//
-	//----------------------------------------------
+	/// \brief Do damage to the unicorn
+	///
+	/// This function does damage to the unicorn. It also sets a counter to get the
+	/// unicorn to move back the way he came if he hits another mob. This is why it needs
+	/// to get the position of that mob from a #mob_ptr given to the function as a parameter.
+	///
+	/// \param[in] other The #mob_ptr that is doing damage to the unicorn
+    ///
 	void damage(mob_ptr other);
 };
 #endif //UNICORN_HPP

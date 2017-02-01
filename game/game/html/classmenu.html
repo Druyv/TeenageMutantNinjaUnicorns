@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TEENAGE MUTENT NINJA UNICORNS: menu Class Reference</title>
+<title>TEENAGE MUTANT NINJA UNICORNS: menu Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,9 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="minicorn_v1.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="unicorn supreme2_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">TEENAGE MUTENT NINJA UNICORNS
+   <div id="projectname">TEENAGE MUTANT NINJA UNICORNS
    </div>
   </td>
  </tr>
@@ -61,6 +61,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classmenu-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">menu Class Reference</div>  </div>
@@ -71,6 +72,16 @@ $(function() {
  <a href="classmenu.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="menu_8hpp_source.html">menu.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for menu:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmenu__coll__graph.png" border="0" usemap="#menu_coll__map" alt="Collaboration graph"/></div>
+<map name="menu_coll__map" id="menu_coll__map">
+<area shape="rect" id="node2" href="classimage__from__file.html" title="create sprite on screen " alt="" coords="5,81,120,108"/>
+<area shape="rect" id="node3" href="classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="25,5,100,32"/>
+<area shape="rect" id="node4" href="class_button.html" title="Creates a button at a specific place on the screen. " alt="" coords="145,81,205,108"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -83,12 +94,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a06744d58a2aad693d3637d0485aa7984"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmenu.html#a06744d58a2aad693d3637d0485aa7984">select</a> (sf::Vector2i position)</td></tr>
 <tr class="memdesc:a06744d58a2aad693d3637d0485aa7984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that handles the pushable part of the button.  <a href="#a06744d58a2aad693d3637d0485aa7984">More...</a><br /></td></tr>
 <tr class="separator:a06744d58a2aad693d3637d0485aa7984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab572ef3baf462b15322e37278d81494c"><td class="memItemLeft" align="right" valign="top"><a id="ab572ef3baf462b15322e37278d81494c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>last_button</b> ()</td></tr>
+<tr class="memitem:ab572ef3baf462b15322e37278d81494c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmenu.html#ab572ef3baf462b15322e37278d81494c">last_button</a> ()</td></tr>
 <tr class="separator:ab572ef3baf462b15322e37278d81494c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4b8f6e9c87b8fa413a830af33429c85"><td class="memItemLeft" align="right" valign="top"><a id="aa4b8f6e9c87b8fa413a830af33429c85"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_button_text</b> (int button_place)</td></tr>
+<tr class="memitem:aa4b8f6e9c87b8fa413a830af33429c85"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmenu.html#aa4b8f6e9c87b8fa413a830af33429c85">get_button_text</a> (int button_place)</td></tr>
+<tr class="memdesc:aa4b8f6e9c87b8fa413a830af33429c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the name of the button equal to the button number  <a href="#aa4b8f6e9c87b8fa413a830af33429c85">More...</a><br /></td></tr>
 <tr class="separator:aa4b8f6e9c87b8fa413a830af33429c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a27f2df7cf63febffe1c3c5a5e13ffb8d"><td class="memItemLeft" align="right" valign="top"><a id="a27f2df7cf63febffe1c3c5a5e13ffb8d"></a>
+sf::RenderWindow &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>window</b></td></tr>
+<tr class="separator:a27f2df7cf63febffe1c3c5a5e13ffb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044c86b2b6cd959a53f4e92caf34f7a0"><td class="memItemLeft" align="right" valign="top"><a id="a044c86b2b6cd959a53f4e92caf34f7a0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>button_bool1</b></td></tr>
+<tr class="separator:a044c86b2b6cd959a53f4e92caf34f7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043c728ce292a4d87e5e59c9c3db13b9"><td class="memItemLeft" align="right" valign="top"><a id="a043c728ce292a4d87e5e59c9c3db13b9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>button_bool2</b></td></tr>
+<tr class="separator:a043c728ce292a4d87e5e59c9c3db13b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469661400ee077af1b949bac629d30c7"><td class="memItemLeft" align="right" valign="top"><a id="a469661400ee077af1b949bac629d30c7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>button_bool3</b></td></tr>
+<tr class="separator:a469661400ee077af1b949bac629d30c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460e3d024e939e6469aede94fd86a64c"><td class="memItemLeft" align="right" valign="top"><a id="a460e3d024e939e6469aede94fd86a64c"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>button_one_text</b></td></tr>
+<tr class="separator:a460e3d024e939e6469aede94fd86a64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027f3482fde6a4991ff4036e9e0472bd"><td class="memItemLeft" align="right" valign="top"><a id="a027f3482fde6a4991ff4036e9e0472bd"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>button_two_text</b></td></tr>
+<tr class="separator:a027f3482fde6a4991ff4036e9e0472bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac785c6419d139d0181e0487805657e32"><td class="memItemLeft" align="right" valign="top"><a id="ac785c6419d139d0181e0487805657e32"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>button_three_text</b></td></tr>
+<tr class="separator:ac785c6419d139d0181e0487805657e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e51e3f8ef8fd769a42ca9a1ab3ed53e"><td class="memItemLeft" align="right" valign="top"><a id="a0e51e3f8ef8fd769a42ca9a1ab3ed53e"></a>
+<a class="el" href="class_button.html">Button</a>&#160;</td><td class="memItemRight" valign="bottom"><b>button1</b></td></tr>
+<tr class="separator:a0e51e3f8ef8fd769a42ca9a1ab3ed53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3292e41431ba6f6f9a1b08b94206a076"><td class="memItemLeft" align="right" valign="top"><a id="a3292e41431ba6f6f9a1b08b94206a076"></a>
+<a class="el" href="class_button.html">Button</a>&#160;</td><td class="memItemRight" valign="bottom"><b>button2</b></td></tr>
+<tr class="separator:a3292e41431ba6f6f9a1b08b94206a076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f19c398a6009b9d17e197c51ad19a66"><td class="memItemLeft" align="right" valign="top"><a id="a4f19c398a6009b9d17e197c51ad19a66"></a>
+<a class="el" href="class_button.html">Button</a>&#160;</td><td class="memItemRight" valign="bottom"><b>button3</b></td></tr>
+<tr class="separator:a4f19c398a6009b9d17e197c51ad19a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8519ef8a628dc7be9b3c6dddea4dbffd"><td class="memItemLeft" align="right" valign="top"><a id="a8519ef8a628dc7be9b3c6dddea4dbffd"></a>
+<a class="el" href="classimage__from__file.html">image_from_file</a>&#160;</td><td class="memItemRight" valign="bottom"><b>background</b></td></tr>
+<tr class="separator:a8519ef8a628dc7be9b3c6dddea4dbffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates a menu with up to 3 buttons. </p>
@@ -194,6 +240,46 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_button_tex
 
 <p>Function to build and draw the menu. </p>
 <p>This function builds the menu, with the buttons that were specified in the constructor. It also handles the drawing of the buttons. </p>
+
+</div>
+</div>
+<a id="aa4b8f6e9c87b8fa413a830af33429c85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b8f6e9c87b8fa413a830af33429c85">&#9670;&nbsp;</a></span>get_button_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string menu::get_button_text </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>button_place</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getter for the name of the button equal to the button number </p>
+<p>param[in] button_place number of the button. </p>
+
+</div>
+</div>
+<a id="ab572ef3baf462b15322e37278d81494c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab572ef3baf462b15322e37278d81494c">&#9670;&nbsp;</a></span>last_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int menu::last_button </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function that determines what the last button is</p>
+<p>This function is used to determine what the last button is in the menu returns number of last button in menu </p>
 
 </div>
 </div>

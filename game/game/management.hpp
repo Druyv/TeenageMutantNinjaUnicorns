@@ -1,3 +1,4 @@
+///@file
 #include <iostream>
 #include <fstream>
 #include "menu.hpp"
@@ -92,7 +93,9 @@ public:
 	/// \param[in] value integer you want to set value to 
 	///
 	void set_counter(int value);
-        
+        /// \brief getter for the counter of the level
+		/// 
+	/// returns the counter in reference so it makes the counter lookable every moment
         int & get_counter();
 
 	/// \brief function that returns path to save-file given menu item pushed 
@@ -142,7 +145,6 @@ public:
 	/// \param[in] manager filemanagement-object that used to give functionality to menu's 
 	///
 	menu_management(sf::RenderWindow & window, file_management & manager);
-
 	/// \brief function that displays start_menu
 	///
 	/// This function is used to display the start_menu
@@ -150,7 +152,6 @@ public:
 	/// \return menu item that is pressed
 	///
 	int display_start_game();
-
 	/// \brief function that displays pause_menu
 	///
 	/// This function displays the pause menu
@@ -158,7 +159,6 @@ public:
 	/// \note This function doesn't have a return value, because of a bug this function doesn't have much functionality
 	///
 	void display_pause_game();
-
 	/// \brief function that displays the save_file_menu 
 	///
 	/// FThis function displays the save_file_menu. The function return a 
@@ -168,7 +168,6 @@ public:
 	/// \return This function returns a string that is either empty, "BACK" or the path to the save-file pressed.
 	///
 	std::string display_save_file_menu();
-
 	/// \brief function that is used to start the game
 	///
 	/// This function is used to start the game. By displaying the start screen and determening 
@@ -180,9 +179,4 @@ public:
 
 };
 
-/*
-Making tomorrow:
-- Way to save level.
-- Intergrate the end point going to the next level
 
-*/

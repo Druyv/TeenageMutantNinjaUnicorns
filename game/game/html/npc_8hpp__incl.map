@@ -1,7 +1,7 @@
 <map id="npc.hpp" name="npc.hpp">
-<area shape="rect" id="node2" href="$typedefs_8hpp_source.html" title="typedefs.hpp" alt="" coords="671,229,768,256"/>
+<area shape="rect" id="node2" href="$typedefs_8hpp.html" title="typedefs.hpp" alt="" coords="671,229,768,256"/>
 <area shape="rect" id="node6" href="$image_8hpp.html" title="image.hpp" alt="" coords="378,80,461,107"/>
 <area shape="rect" id="node7" href="$drawable_8hpp.html" title="drawable.hpp" alt="" coords="370,155,469,181"/>
-<area shape="rect" id="node13" href="$exceptions_8hpp_source.html" title="exceptions.hpp" alt="" coords="107,155,217,181"/>
+<area shape="rect" id="node13" href="$exceptions_8hpp.html" title="exceptions.hpp" alt="" coords="107,155,217,181"/>
 <area shape="rect" id="node12" href="$physics_8hpp.html" title="physics.hpp" alt="" coords="289,229,381,256"/>
 </map>

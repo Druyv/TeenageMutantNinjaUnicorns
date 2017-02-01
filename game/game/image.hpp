@@ -112,6 +112,11 @@ public:
         /// \param[in] y The scale factor for the y of the image
         ///
         void set_scale(float x, float y);
+	/// \brief get image name
+	/// 
+	/// getter for the  name of the image used .
+	///
+	/// 
         
         std::string get_image_name();
 };

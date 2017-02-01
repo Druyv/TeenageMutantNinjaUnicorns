@@ -78,7 +78,9 @@ public:
 	/// \return boolean that gives information on if a mob is alive.
 	///
 	bool get_live();
-
+	///  \brief set position of the mob
+	///
+	/// \param[in]  new_position sf::Vector2f
         
         void set_position(sf::Vector2f new_position);
 };

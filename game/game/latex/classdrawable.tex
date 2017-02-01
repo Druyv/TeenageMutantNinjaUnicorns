@@ -31,13 +31,13 @@ virtual void \hyperlink{classdrawable_ac39691470b7874f5dec59efe649d3981}{jump} (
 \begin{DoxyCompactList}\small\item\em virtual draw function for a drawable \end{DoxyCompactList}\item 
 virtual sf\+::\+Float\+Rect \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{get\+Global\+Bounds} ()=0
 \begin{DoxyCompactList}\small\item\em virtual get\+Global\+Bounds function \end{DoxyCompactList}\item 
-virtual void \hyperlink{classdrawable_a715df01a318331e5611a2b0ad30109ff}{run\+\_\+actions} (object\+\_\+ptr object)
+virtual void \hyperlink{classdrawable_a715df01a318331e5611a2b0ad30109ff}{run\+\_\+actions} (\hyperlink{typedefs_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} object)
 \begin{DoxyCompactList}\small\item\em check and execute actions \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classdrawable_a0d3278e4e888fc8289468e8893dd8329}{within} (float x, float a, float b)
 \begin{DoxyCompactList}\small\item\em check x between a and b \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classdrawable_ab5c0e1af885f214bc9ef0da47cdb5ac9}{within\+\_\+range} (float x, float y, float a, float b)
 \begin{DoxyCompactList}\small\item\em check all pixels between x and y \end{DoxyCompactList}\item 
-virtual void \hyperlink{classdrawable_af0ddd3660d258629598dc76b31d1cc49}{collapse} (object\+\_\+ptr object, collisions \&the\+\_\+collisions)
+virtual void \hyperlink{classdrawable_af0ddd3660d258629598dc76b31d1cc49}{collapse} (\hyperlink{typedefs_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} object, \hyperlink{typedefs_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions} \&the\+\_\+collisions)
 \begin{DoxyCompactList}\small\item\em check for collision with object \end{DoxyCompactList}\item 
 virtual sf\+::\+Vector2f \hyperlink{classdrawable_a6a31ea381be2964d0115b782a66d3414}{get\+\_\+position} ()
 \begin{DoxyCompactList}\small\item\em Get the position. \end{DoxyCompactList}\item 
@@ -57,9 +57,8 @@ void \hyperlink{classdrawable_a34b6b50f342c41f550f09e0465f95f61}{set\+\_\+size} 
 \begin{DoxyCompactList}\small\item\em Set the size. \end{DoxyCompactList}\item 
 void \hyperlink{classdrawable_a5e40f2621daaca4ac32ef26b8c01b9a6}{set\+\_\+position} (sf\+::\+Vector2f new\+\_\+position)
 \begin{DoxyCompactList}\small\item\em Set the position. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classdrawable_a59285b12c068ce5e02def707f0b0ee3b}\label{classdrawable_a59285b12c068ce5e02def707f0b0ee3b}} 
-virtual std\+::string {\bfseries get\+\_\+image\+\_\+name} ()
-\end{DoxyCompactItemize}
+virtual std\+::string \hyperlink{classdrawable_a59285b12c068ce5e02def707f0b0ee3b}{get\+\_\+image\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em get image name \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -129,7 +128,7 @@ Reimplemented in \hyperlink{classunicorn_a40fe782f273abf46f6121db9aa4bf77a}{unic
 \index{drawable@{drawable}!collapse@{collapse}}
 \index{collapse@{collapse}!drawable@{drawable}}
 \subsubsection{\texorpdfstring{collapse()}{collapse()}}
-{\footnotesize\ttfamily void drawable\+::collapse (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object,  }\item[{collisions \&}]{the\+\_\+collisions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void drawable\+::collapse (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}}]{object,  }\item[{\hyperlink{typedefs_8hpp_a7e1a7f34f6d09dabb4cdafd6e4118603}{collisions} \&}]{the\+\_\+collisions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -164,6 +163,20 @@ virtual function that is defined in the subclasses of drawable
 
 
 Implemented in \hyperlink{classunicorn_a570c34d5669a8d2a61bdc1481e6f9dee}{unicorn}, \hyperlink{classbullet_ae999b952538687d45ca2ae54164a5cd8}{bullet}, \hyperlink{classanimation_a20959b66d1c25007890bb40f0e876570}{animation}, \hyperlink{classimage__from__file_a26eae6c872ca9033cacc3f6eb2762983}{image\+\_\+from\+\_\+file}, \hyperlink{classmob_a52f5e29b2ac2d87c8c1be7e0ff5ec96b}{mob}, \hyperlink{classbackground_a41736f9a00defad1e84b3a8099c887e2}{background}, and \hyperlink{classwall_aa25b8377e1d9a209fabd2271294f05d0}{wall}.
+
+\mbox{\Hypertarget{classdrawable_a59285b12c068ce5e02def707f0b0ee3b}\label{classdrawable_a59285b12c068ce5e02def707f0b0ee3b}} 
+\index{drawable@{drawable}!get\+\_\+image\+\_\+name@{get\+\_\+image\+\_\+name}}
+\index{get\+\_\+image\+\_\+name@{get\+\_\+image\+\_\+name}!drawable@{drawable}}
+\subsubsection{\texorpdfstring{get\+\_\+image\+\_\+name()}{get\_image\_name()}}
+{\footnotesize\ttfamily std\+::string drawable\+::get\+\_\+image\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get image name 
+
+getter for the name of the image used . 
+
+Reimplemented in \hyperlink{classimage__from__file_adb7af19d3d997ab5c0d5b7c8dfe32ded}{image\+\_\+from\+\_\+file}.
 
 \mbox{\Hypertarget{classdrawable_a6a31ea381be2964d0115b782a66d3414}\label{classdrawable_a6a31ea381be2964d0115b782a66d3414}} 
 \index{drawable@{drawable}!get\+\_\+position@{get\+\_\+position}}
@@ -277,7 +290,7 @@ Reimplemented in \hyperlink{classwall_aab1de4f144f176b134a967ba08747932}{wall}.
 \index{drawable@{drawable}!run\+\_\+actions@{run\+\_\+actions}}
 \index{run\+\_\+actions@{run\+\_\+actions}!drawable@{drawable}}
 \subsubsection{\texorpdfstring{run\+\_\+actions()}{run\_actions()}}
-{\footnotesize\ttfamily virtual void drawable\+::run\+\_\+actions (\begin{DoxyParamCaption}\item[{object\+\_\+ptr}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void drawable\+::run\+\_\+actions (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 

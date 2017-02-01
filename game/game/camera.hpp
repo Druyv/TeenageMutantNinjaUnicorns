@@ -33,6 +33,6 @@ public:
 
 private:
 	object_ptr object;
-	sf::View playerCam;
+	sf::View player_cam;
 };
 #endif

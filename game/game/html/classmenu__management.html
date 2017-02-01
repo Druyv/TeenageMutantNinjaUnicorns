@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TEENAGE MUTENT NINJA UNICORNS: menu_management Class Reference</title>
+<title>TEENAGE MUTANT NINJA UNICORNS: menu_management Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,9 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="minicorn_v1.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="unicorn supreme2_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">TEENAGE MUTENT NINJA UNICORNS
+   <div id="projectname">TEENAGE MUTANT NINJA UNICORNS
    </div>
   </td>
  </tr>
@@ -61,6 +61,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classmenu__management-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">menu_management Class Reference</div>  </div>
@@ -71,6 +72,18 @@ $(function() {
  <a href="classmenu__management.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="management_8hpp_source.html">management.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for menu_management:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmenu__management__coll__graph.png" border="0" usemap="#menu__management_coll__map" alt="Collaboration graph"/></div>
+<map name="menu__management_coll__map" id="menu__management_coll__map">
+<area shape="rect" id="node2" href="classfile__management.html" title="file manager for the save&#45;files " alt="" coords="5,200,127,227"/>
+<area shape="rect" id="node3" href="classmenu.html" title="Creates a menu with up to 3 buttons. " alt="" coords="151,200,205,227"/>
+<area shape="rect" id="node4" href="classimage__from__file.html" title="create sprite on screen " alt="" coords="62,81,177,108"/>
+<area shape="rect" id="node5" href="classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="82,5,157,32"/>
+<area shape="rect" id="node6" href="class_button.html" title="Creates a button at a specific place on the screen. " alt="" coords="201,81,261,108"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -89,6 +102,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a92d22f059d33ccc5c3ae485804fd5fbb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmenu__management.html#a92d22f059d33ccc5c3ae485804fd5fbb">start_game</a> ()</td></tr>
 <tr class="memdesc:a92d22f059d33ccc5c3ae485804fd5fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">function that is used to start the game  <a href="#a92d22f059d33ccc5c3ae485804fd5fbb">More...</a><br /></td></tr>
 <tr class="separator:a92d22f059d33ccc5c3ae485804fd5fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab79fa0c3480a52f3cd603c77e8f7008f"><td class="memItemLeft" align="right" valign="top"><a id="ab79fa0c3480a52f3cd603c77e8f7008f"></a>
+sf::RenderWindow &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>window</b></td></tr>
+<tr class="separator:ab79fa0c3480a52f3cd603c77e8f7008f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c9bf334940ea0d4576e371e1eaa5c9f"><td class="memItemLeft" align="right" valign="top"><a id="a0c9bf334940ea0d4576e371e1eaa5c9f"></a>
+<a class="el" href="classfile__management.html">file_management</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>manager</b></td></tr>
+<tr class="separator:a0c9bf334940ea0d4576e371e1eaa5c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea347d4a93f4e7819dae28b5ba320857"><td class="memItemLeft" align="right" valign="top"><a id="aea347d4a93f4e7819dae28b5ba320857"></a>
+<a class="el" href="classmenu.html">menu</a>&#160;</td><td class="memItemRight" valign="bottom"><b>start_menu</b> = <a class="el" href="classmenu.html">menu</a>(window,std::string{&quot;forest.png&quot;} , true, &quot;NEW_GAME&quot;, true, &quot;LOAD GAME&quot;, true, &quot;QUIT&quot; )</td></tr>
+<tr class="separator:aea347d4a93f4e7819dae28b5ba320857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125b772090ca2c54c2689b408700eb02"><td class="memItemLeft" align="right" valign="top"><a id="a125b772090ca2c54c2689b408700eb02"></a>
+<a class="el" href="classmenu.html">menu</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pause_menu</b> = <a class="el" href="classmenu.html">menu</a>(window, std::string{&quot;forest.png&quot;},true, &quot;CONTINUE&quot;,true ,&quot;QUIT&quot;)</td></tr>
+<tr class="separator:a125b772090ca2c54c2689b408700eb02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca190cfc1fcd91354ce00ad5cc1dea6"><td class="memItemLeft" align="right" valign="top"><a id="a1ca190cfc1fcd91354ce00ad5cc1dea6"></a>
+<a class="el" href="classmenu.html">menu</a>&#160;</td><td class="memItemRight" valign="bottom"><b>save_file_menu</b> = manager.make_save_file_menu(window)</td></tr>
+<tr class="separator:a1ca190cfc1fcd91354ce00ad5cc1dea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>manager of all menu's in game </p>

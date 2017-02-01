@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['damage',['damage',['../classunicorn.html#a8b5a22ab1b26daa540ceb09b5b5747d8',1,'unicorn']]],
   ['die',['die',['../classmob.html#ae892b3ce84f4aa16411b385abb5410c8',1,'mob']]],
   ['display_5fpause_5fgame',['display_pause_game',['../classmenu__management.html#ab7aa6674e3428604073af06efe5aa791',1,'menu_management']]],
   ['display_5fsave_5ffile_5fmenu',['display_save_file_menu',['../classmenu__management.html#ac64c1eace3d955be8623a1129597dc54',1,'menu_management']]],

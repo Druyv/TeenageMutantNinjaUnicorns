@@ -26,13 +26,36 @@ std\+::string \hyperlink{classfile__management_a75689c420580c71f0621dfbcc4c2a06f
 \begin{DoxyCompactList}\small\item\em function that returns next level path \end{DoxyCompactList}\item 
 void \hyperlink{classfile__management_a291475384add5bdb8002127c71c568ac}{set\+\_\+counter} (int value)
 \begin{DoxyCompactList}\small\item\em function that sets counter \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classfile__management_ae6291547fab57a5b861c52e970175854}\label{classfile__management_ae6291547fab57a5b861c52e970175854}} 
-int \& {\bfseries get\+\_\+counter} ()
-\item 
+int \& \hyperlink{classfile__management_ae6291547fab57a5b861c52e970175854}{get\+\_\+counter} ()
+\begin{DoxyCompactList}\small\item\em getter for the counter of the level \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classfile__management_a92ece2d05964c828dcb9bf6c59043327}{get\+\_\+save\+\_\+file} (int menu\+\_\+index)
 \begin{DoxyCompactList}\small\item\em function that returns path to save-\/file given menu item pushed \end{DoxyCompactList}\item 
 void \hyperlink{classfile__management_a79e6ae7cec63aa959d7d0730d6ffa5a3}{save\+\_\+game} ()
 \begin{DoxyCompactList}\small\item\em function that saves game \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfile__management_aa5b855928609e6725e9912d4d5113455}\label{classfile__management_aa5b855928609e6725e9912d4d5113455}} 
+std\+::ifstream {\bfseries input}
+\item 
+\mbox{\Hypertarget{classfile__management_af8152191fda966b0f308a33f530278da}\label{classfile__management_af8152191fda966b0f308a33f530278da}} 
+std\+::ofstream {\bfseries output}
+\item 
+\mbox{\Hypertarget{classfile__management_a503b8f617941c7bcce5fd6d1898fceae}\label{classfile__management_a503b8f617941c7bcce5fd6d1898fceae}} 
+std\+::string {\bfseries save\+\_\+file\+\_\+1}
+\item 
+\mbox{\Hypertarget{classfile__management_aa5040a08dff914b113025893ef56ad45}\label{classfile__management_aa5040a08dff914b113025893ef56ad45}} 
+std\+::string {\bfseries save\+\_\+file\+\_\+2}
+\item 
+\mbox{\Hypertarget{classfile__management_a93097112df7cf7b9783004c8c8ce19eb}\label{classfile__management_a93097112df7cf7b9783004c8c8ce19eb}} 
+int {\bfseries counter}
+\item 
+\mbox{\Hypertarget{classfile__management_a3089e02713d9608fa342ea5673a88845}\label{classfile__management_a3089e02713d9608fa342ea5673a88845}} 
+int {\bfseries current\+\_\+save\+\_\+file} = 0
+\item 
+\mbox{\Hypertarget{classfile__management_ab08321ef015c6e8843b4632b3ae9c463}\label{classfile__management_ab08321ef015c6e8843b4632b3ae9c463}} 
+std\+::string {\bfseries standard\+\_\+path} = \char`\"{}levels/\char`\"{}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -66,7 +89,17 @@ This constructor sets input equal to the pathfile given.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classfile__management_a6c3f90ce958156adea878510097d64ef}\label{classfile__management_a6c3f90ce958156adea878510097d64ef}} 
+\mbox{\Hypertarget{classfile__management_ae6291547fab57a5b861c52e970175854}\label{classfile__management_ae6291547fab57a5b861c52e970175854}} 
+\index{file\+\_\+management@{file\+\_\+management}!get\+\_\+counter@{get\+\_\+counter}}
+\index{get\+\_\+counter@{get\+\_\+counter}!file\+\_\+management@{file\+\_\+management}}
+\subsubsection{\texorpdfstring{get\+\_\+counter()}{get\_counter()}}
+{\footnotesize\ttfamily int \& file\+\_\+management\+::get\+\_\+counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for the counter of the level 
+
+returns the counter in reference so it makes the counter lookable every moment \mbox{\Hypertarget{classfile__management_a6c3f90ce958156adea878510097d64ef}\label{classfile__management_a6c3f90ce958156adea878510097d64ef}} 
 \index{file\+\_\+management@{file\+\_\+management}!get\+\_\+files@{get\+\_\+files}}
 \index{get\+\_\+files@{get\+\_\+files}!file\+\_\+management@{file\+\_\+management}}
 \subsubsection{\texorpdfstring{get\+\_\+files()}{get\_files()}}
@@ -204,5 +237,5 @@ This function is used to change the std\+::ifstream to the given file in the par
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-management.\+hpp\item 
+\hyperlink{management_8hpp}{management.\+hpp}\item 
 management.\+cpp\end{DoxyCompactItemize}

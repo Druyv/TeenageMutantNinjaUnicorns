@@ -10,7 +10,7 @@
 /// pointers to the same object can exist without any chance of not destructings
 /// the actual item propperly. This shared pointer is of type drawable so we can
 /// use it with the objects we want on screen. The second typedef is a std::vector
-/// with those object_ptrs as type. It is called #objects_vector::B. This is the vector
+/// with those object_ptrs as type. It is called #objects_vector. This is the vector
 /// type we put all the objects in so we can loop through them and do what we need to do.
 /// We also have a typedef with #collisions. In this typedef we put #collision structs
 /// with all the collisions any objects has. The last one is for saving a number of
@@ -32,7 +32,7 @@
 ///
 /// All the images just in the game are shown as object of the image class.
 /// the image class has multiple function that can be used. the image class is a inherintance of the drawable class.
-/// image uses also a override of the #drawable::draw(). Furthermore the class contains an #image::set_size() and an #image_from_file::set_position()
+/// image uses also a override of the #drawable::draw(). Furthermore the class contains an #image_from_file::set_size() and an #image_from_file::set_position()
 /// these functions are for setting a new size or position.Finally it contains a function for getting the global bounds called #image_from_file::getGlobalBounds() and an #image_from_file::setTextureRect()
 /// for setting a texture in the image also this function is beeing used for mirroring a image without position change. 
 /// 
@@ -139,8 +139,7 @@
 /// or a spawn point without them. The rest can be customized to what level you want. In
 /// The factory there are 6 functions. The first one is called #factory::change_input_to()
 /// and is used to change the input file. If a file is already open it closes that file first.
-/// The second and third are used to read lines from the input file. They are called #factory::
-/// read_line() and #factory::objects_from_file(). The read line function reads a single line and
+/// The second and third are used to read lines from the input file. They are called #factory::read_line() and #factory::objects_from_file(). The read line function reads a single line and
 /// returnes an #object_ptr to the newly created object or an error of different types if something
 /// went wrong. The objects from file function handles all the errors and puts the objects in an 
 /// #objects_vector. This vector is returned. The next function is called
@@ -169,7 +168,7 @@
 ///  The main menu consists mainly of 2 parts. First , the background image. This is an object of the 
 ///  #Background class. This sets the background sprite with the specified image. Second, the buttons 
 ///  that make up the menu. The main menu consists of three buttons, these are #Button objects. 
-///  Together they make up the visual aspect of the menu. The clickable part is handled in  menu::Select(), 
+///  Together they make up the visual aspect of the menu. The clickable part is handled in  menu::select(), 
 ///  where the collision detection  <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Rect.php#aa8a5364c84de6dd5299f833b54e31ef1 ">standard SFML Rect::contains()</a>   triggers if the button 
 ///  is clicked with the cursor ( left mouse button ). 
 ///
@@ -187,7 +186,7 @@
 /// \section menu_management
 ///
 /// This class is used to manage the different menu's in the game.
-/// #menu_management::display_start_menu(), #menu_management::display_pause_menu(), #menu_management::display_save_file_menu()
+/// #menu_management::display_start_game() , #menu_management::display_pause_game() , #menu_management::display_save_file_menu()
 /// are functions that can be used to display there respective menu. The function #menu_management::start_game() combines the start_menu
 /// and the save_file menu. This function returns the path to the level selected by the user
 ///

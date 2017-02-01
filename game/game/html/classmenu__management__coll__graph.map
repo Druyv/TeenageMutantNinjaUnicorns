@@ -1,0 +1,7 @@
+<map id="menu_management" name="menu_management">
+<area shape="rect" id="node2" href="$classfile__management.html" title="file manager for the save&#45;files " alt="" coords="5,200,127,227"/>
+<area shape="rect" id="node3" href="$classmenu.html" title="Creates a menu with up to 3 buttons. " alt="" coords="151,200,205,227"/>
+<area shape="rect" id="node4" href="$classimage__from__file.html" title="create sprite on screen " alt="" coords="62,81,177,108"/>
+<area shape="rect" id="node5" href="$classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="82,5,157,32"/>
+<area shape="rect" id="node6" href="$class_button.html" title="Creates a button at a specific place on the screen. " alt="" coords="201,81,261,108"/>
+</map>

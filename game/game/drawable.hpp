@@ -354,7 +354,11 @@ public:
 	/// \param[in] new_position The new position for the object
         ///
         void set_position(sf::Vector2f new_position);
-
+	/// \brief get image name
+	/// 
+	/// getter for the  name of the image used .
+	///
+	/// 
 		virtual std::string get_image_name();
 
 		

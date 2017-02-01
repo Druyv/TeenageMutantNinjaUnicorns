@@ -1,3 +1,4 @@
+///@file
 #ifndef _MENU1_HPP
 #define _MENU1_HPP
 
@@ -72,8 +73,16 @@ public:
 	///
 	/// \param[in] position     The position of the mouse when the left mouse button is pushed
 	int select(sf::Vector2i position);
-
+	/// \rief Function that determines what the last button is 
+	///
+	/// This function is used to determine what the last button is in the menu
+	/// returns number of last button in menu
 	int last_button();
+	/// \brief
+	/// 
+	/// getter for the name of the button equal to the button number
+	///
+	/// param[in]  button_place number of the button.
 
 	std::string get_button_text(int button_place);
 

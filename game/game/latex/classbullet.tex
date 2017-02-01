@@ -24,13 +24,13 @@ Collaboration diagram for bullet\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=136pt]{classbullet__coll__graph}
+\includegraphics[width=204pt]{classbullet__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classbullet_a2c8b1e868ab8fe8edf43fc289f8d80b8}{bullet} (sf\+::\+Vector2f position, std\+::string filename, std\+::vector$<$ mob\+\_\+ptr $>$ \&all\+\_\+mobs, objects\+\_\+vector \&objects)
+\hyperlink{classbullet_a2c8b1e868ab8fe8edf43fc289f8d80b8}{bullet} (sf\+::\+Vector2f position, std\+::string filename, std\+::vector$<$ \hyperlink{typedefs_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr} $>$ \&all\+\_\+mobs, \hyperlink{typedefs_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&objects)
 \begin{DoxyCompactList}\small\item\em constructor to initialize the bullet \end{DoxyCompactList}\item 
 void \hyperlink{classbullet_ae999b952538687d45ca2ae54164a5cd8}{draw} (sf\+::\+Render\+Window \&window) override
 \begin{DoxyCompactList}\small\item\em funtion that draws image \end{DoxyCompactList}\item 
@@ -40,8 +40,30 @@ sf\+::\+Float\+Rect \hyperlink{classbullet_a87bda5887249e8e37c5579180449bd93}{ge
 \begin{DoxyCompactList}\small\item\em function that checks collision with pointer \end{DoxyCompactList}\item 
 void \hyperlink{classbullet_a52d736cad2a486a65c8a25781cff1f70}{shoot} (sf\+::\+Render\+Window \&window, int \&shoot\+\_\+timeout, sf\+::\+Vector2f offset=sf\+::\+Vector2f(0, 0), sf\+::\+Vector2f fire\+\_\+position=sf\+::\+Vector2f(0.\+0, 0.\+0))
 \begin{DoxyCompactList}\small\item\em function that manages moving the bullet and checking for collision \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classbullet_af338da31bfb1dd4b2d942ca67316350a}\label{classbullet_af338da31bfb1dd4b2d942ca67316350a}} 
-void {\bfseries set\+\_\+position} (sf\+::\+Vector2f new\+\_\+position)
+void \hyperlink{classbullet_af338da31bfb1dd4b2d942ca67316350a}{set\+\_\+position} (sf\+::\+Vector2f new\+\_\+position)
+\begin{DoxyCompactList}\small\item\em setter for the position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbullet_a1f2cd5b7fa4d4beae1d27c06bc54f8c0}{projectile} ()
+\begin{DoxyCompactList}\small\item\em function that moves bullet with offset \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbullet_a112af2b0e62f62dbe4d31fdd726c760b}\label{classbullet_a112af2b0e62f62dbe4d31fdd726c760b}} 
+\hyperlink{classimage__from__file}{image\+\_\+from\+\_\+file} {\bfseries bullet\+\_\+animation}
+\item 
+\mbox{\Hypertarget{classbullet_a8730572b757fc9d664fb3ce640a797ce}\label{classbullet_a8730572b757fc9d664fb3ce640a797ce}} 
+std\+::vector$<$ \hyperlink{typedefs_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr} $>$ \& {\bfseries all\+\_\+mobs}
+\item 
+\mbox{\Hypertarget{classbullet_a93b79bed80ce59b86e3fd332d0c03c5c}\label{classbullet_a93b79bed80ce59b86e3fd332d0c03c5c}} 
+\hyperlink{typedefs_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \& {\bfseries objects}
+\item 
+\mbox{\Hypertarget{classbullet_aa8ad03cdacad1e53dedf55b0719b8980}\label{classbullet_aa8ad03cdacad1e53dedf55b0719b8980}} 
+bool {\bfseries hit} = false
+\item 
+\mbox{\Hypertarget{classbullet_af59d163e270aa74ebc5fafe6146400bc}\label{classbullet_af59d163e270aa74ebc5fafe6146400bc}} 
+sf\+::\+Vector2f {\bfseries current\+\_\+offset}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -61,7 +83,7 @@ This class is used to calculate a projectile that can kill mobs (if there hit by
 \index{bullet@{bullet}!bullet@{bullet}}
 \index{bullet@{bullet}!bullet@{bullet}}
 \subsubsection{\texorpdfstring{bullet()}{bullet()}}
-{\footnotesize\ttfamily bullet\+::bullet (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{std\+::vector$<$ mob\+\_\+ptr $>$ \&}]{all\+\_\+mobs,  }\item[{objects\+\_\+vector \&}]{objects }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bullet\+::bullet (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{filename,  }\item[{std\+::vector$<$ \hyperlink{typedefs_8hpp_a09ee7f853fc9bc830a9445a06fd53d4b}{mob\+\_\+ptr} $>$ \&}]{all\+\_\+mobs,  }\item[{\hyperlink{typedefs_8hpp_a6c0fdb1dfd0c34dbbdbb5dcd3c608b07}{objects\+\_\+vector} \&}]{objects }\end{DoxyParamCaption})}
 
 
 
@@ -141,6 +163,33 @@ sf\+::\+Float\+Rect around the image
 
 Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}.
 
+\mbox{\Hypertarget{classbullet_a1f2cd5b7fa4d4beae1d27c06bc54f8c0}\label{classbullet_a1f2cd5b7fa4d4beae1d27c06bc54f8c0}} 
+\index{bullet@{bullet}!projectile@{projectile}}
+\index{projectile@{projectile}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{projectile()}{projectile()}}
+{\footnotesize\ttfamily void bullet\+::projectile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+function that moves bullet with offset 
+
+This function moves bullet\+\_\+animation with given offset (a.\+k.\+a. current\+\_\+offset) \mbox{\Hypertarget{classbullet_af338da31bfb1dd4b2d942ca67316350a}\label{classbullet_af338da31bfb1dd4b2d942ca67316350a}} 
+\index{bullet@{bullet}!set\+\_\+position@{set\+\_\+position}}
+\index{set\+\_\+position@{set\+\_\+position}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{set\+\_\+position()}{set\_position()}}
+{\footnotesize\ttfamily void bullet\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+setter for the position. 
+
+This function is the setter for the position of the bullet .
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new} & position this is een sf\+::\+Vector2f. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classbullet_a52d736cad2a486a65c8a25781cff1f70}\label{classbullet_a52d736cad2a486a65c8a25781cff1f70}} 
 \index{bullet@{bullet}!shoot@{shoot}}
 \index{shoot@{shoot}!bullet@{bullet}}
@@ -151,7 +200,7 @@ Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}
 
 function that manages moving the bullet and checking for collision 
 
-This function moves bullet with \#bullet\+::projectile() function and then checks for collisions with mobs and walls. If fire\+\_\+position is not entered the bullet moves from its last position. When offset is not entered it usually means the bullet is fired and still on the move in that case the current offset is used to make sure the bullet doesn\textquotesingle{}t follow the unicorn
+This function moves bullet with \hyperlink{classbullet_a1f2cd5b7fa4d4beae1d27c06bc54f8c0}{bullet\+::projectile()} function and then checks for collisions with mobs and walls. If fire\+\_\+position is not entered the bullet moves from its last position. When offset is not entered it usually means the bullet is fired and still on the move in that case the current offset is used to make sure the bullet doesn\textquotesingle{}t follow the unicorn
 
 
 \begin{DoxyParams}[1]{Parameters}

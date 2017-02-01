@@ -1,6 +1,7 @@
 <map id="button.hpp" name="button.hpp">
-<area shape="rect" id="node4" href="$drawable_8hpp.html" title="drawable.hpp" alt="" coords="337,155,436,181"/>
-<area shape="rect" id="node11" href="$image_8hpp.html" title="image.hpp" alt="" coords="345,80,428,107"/>
-<area shape="rect" id="node9" href="$physics_8hpp.html" title="physics.hpp" alt="" coords="633,229,725,256"/>
-<area shape="rect" id="node12" href="$exceptions_8hpp.html" title="exceptions.hpp" alt="" coords="461,155,571,181"/>
+<area shape="rect" id="node4" href="$drawable_8hpp.html" title="drawable.hpp" alt="" coords="472,155,571,181"/>
+<area shape="rect" id="node12" href="$image_8hpp.html" title="image.hpp" alt="" coords="559,80,641,107"/>
+<area shape="rect" id="node9" href="$physics_8hpp.html" title="physics.hpp" alt="" coords="598,229,690,256"/>
+<area shape="rect" id="node11" href="$typedefs_8hpp.html" title="typedefs.hpp" alt="" coords="219,229,317,256"/>
+<area shape="rect" id="node13" href="$exceptions_8hpp.html" title="exceptions.hpp" alt="" coords="634,155,745,181"/>
 </map>
