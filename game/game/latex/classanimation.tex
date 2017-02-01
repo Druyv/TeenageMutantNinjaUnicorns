@@ -30,7 +30,7 @@ Collaboration diagram for animation\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classanimation_ab0a44a89f36d6f04c4e21e868441d693}{animation} (sf\+::\+Vector2f position, std\+::string sheet\+\_\+name)
+\hyperlink{classanimation_ab6798454a7dba29097eb398014c584bc}{animation} (sf\+::\+Vector2f position, std\+::string sheet\+\_\+name, float width, float length)
 \begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
 void \hyperlink{classanimation_a20959b66d1c25007890bb40f0e876570}{draw} (sf\+::\+Render\+Window \&window) override
 \begin{DoxyCompactList}\small\item\em draw object \end{DoxyCompactList}\item 
@@ -40,7 +40,7 @@ void \hyperlink{classanimation_ac461adb38b8241427150c4620ee31358}{set\+\_\+posit
 \begin{DoxyCompactList}\small\item\em set position \end{DoxyCompactList}\item 
 void \hyperlink{classanimation_a7c0b874294e81f3612590920fd845602}{set\+\_\+size} (sf\+::\+Vector2f new\+\_\+size)
 \begin{DoxyCompactList}\small\item\em set size \end{DoxyCompactList}\item 
-bool \hyperlink{classanimation_a79260eb98a4f77aa4b9f3b08cc8e5b59}{movement} (float row\+\_\+a)
+bool \hyperlink{classanimation_af213ade7eb27bba8337ec6223c73f945}{movement} (float row\+\_\+a, int level\+\_\+counter=0)
 \begin{DoxyCompactList}\small\item\em This function for animations. \end{DoxyCompactList}\item 
 void \hyperlink{classanimation_a30e84ff71206b8ec4f82fd70ad776036}{set\+Texture\+Rect} (const sf\+::\+Int\+Rect \&rectangle)
 \begin{DoxyCompactList}\small\item\em set the texture rectangle \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -62,11 +62,11 @@ This class creates an sprite with an image as texture. The image contains all ne
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classanimation_ab0a44a89f36d6f04c4e21e868441d693}\label{classanimation_ab0a44a89f36d6f04c4e21e868441d693}} 
+\mbox{\Hypertarget{classanimation_ab6798454a7dba29097eb398014c584bc}\label{classanimation_ab6798454a7dba29097eb398014c584bc}} 
 \index{animation@{animation}!animation@{animation}}
 \index{animation@{animation}!animation@{animation}}
 \subsubsection{\texorpdfstring{animation()}{animation()}}
-{\footnotesize\ttfamily animation\+::animation (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{sheet\+\_\+name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily animation\+::animation (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{sheet\+\_\+name,  }\item[{float}]{width,  }\item[{float}]{length }\end{DoxyParamCaption})}
 
 
 
@@ -139,11 +139,11 @@ This function uses the get\+Global\+Bounds function from te object to get the bo
 
 Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}.
 
-\mbox{\Hypertarget{classanimation_a79260eb98a4f77aa4b9f3b08cc8e5b59}\label{classanimation_a79260eb98a4f77aa4b9f3b08cc8e5b59}} 
+\mbox{\Hypertarget{classanimation_af213ade7eb27bba8337ec6223c73f945}\label{classanimation_af213ade7eb27bba8337ec6223c73f945}} 
 \index{animation@{animation}!movement@{movement}}
 \index{movement@{movement}!animation@{animation}}
 \subsubsection{\texorpdfstring{movement()}{movement()}}
-{\footnotesize\ttfamily bool animation\+::movement (\begin{DoxyParamCaption}\item[{float}]{row\+\_\+a }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool animation\+::movement (\begin{DoxyParamCaption}\item[{float}]{row\+\_\+a,  }\item[{int}]{level\+\_\+counter = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 

@@ -95,9 +95,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a291475384add5bdb8002127c71c568ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfile__management.html#a291475384add5bdb8002127c71c568ac">set_counter</a> (int value)</td></tr>
 <tr class="memdesc:a291475384add5bdb8002127c71c568ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">function that sets counter  <a href="#a291475384add5bdb8002127c71c568ac">More...</a><br /></td></tr>
 <tr class="separator:a291475384add5bdb8002127c71c568ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6291547fab57a5b861c52e970175854"><td class="memItemLeft" align="right" valign="top"><a id="ae6291547fab57a5b861c52e970175854"></a>
+int &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_counter</b> ()</td></tr>
+<tr class="separator:ae6291547fab57a5b861c52e970175854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92ece2d05964c828dcb9bf6c59043327"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfile__management.html#a92ece2d05964c828dcb9bf6c59043327">get_save_file</a> (int menu_index)</td></tr>
 <tr class="memdesc:a92ece2d05964c828dcb9bf6c59043327"><td class="mdescLeft">&#160;</td><td class="mdescRight">function that returns path to save-file given menu item pushed  <a href="#a92ece2d05964c828dcb9bf6c59043327">More...</a><br /></td></tr>
 <tr class="separator:a92ece2d05964c828dcb9bf6c59043327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e6ae7cec63aa959d7d0730d6ffa5a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfile__management.html#a79e6ae7cec63aa959d7d0730d6ffa5a3">save_game</a> ()</td></tr>
+<tr class="memdesc:a79e6ae7cec63aa959d7d0730d6ffa5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">function that saves game  <a href="#a79e6ae7cec63aa959d7d0730d6ffa5a3">More...</a><br /></td></tr>
+<tr class="separator:a79e6ae7cec63aa959d7d0730d6ffa5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>file manager for the save-files </p>
@@ -255,6 +261,26 @@ Public Member Functions</h2></td></tr>
 <p>function that returns next level path </p>
 <p>This function return string ( that can be fabricated by standard_path and the counter) that is used as a path to the next level.</p>
 <dl class="section return"><dt>Returns</dt><dd>std::string that contains path to next level </dd></dl>
+
+</div>
+</div>
+<a id="a79e6ae7cec63aa959d7d0730d6ffa5a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e6ae7cec63aa959d7d0730d6ffa5a3">&#9670;&nbsp;</a></span>save_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void file_management::save_game </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>function that saves game </p>
+<p>This function saves your current level path in a save-file. Which save file is used to save the path in depends on the save-file clicked by the user in the beginning. If you click "new game" the save-file is most of the time save-file-1 only when save-file-2 is empty it is chosen to write in. </p>
 
 </div>
 </div>

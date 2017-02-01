@@ -1,9 +1,10 @@
 <map id="unicorn.hpp" name="unicorn.hpp">
-<area shape="rect" id="node2" href="$drawable_8hpp.html" title="drawable.hpp" alt="" coords="368,304,467,331"/>
-<area shape="rect" id="node11" href="$animation_8hpp.html" title="animation.hpp" alt="" coords="158,229,261,256"/>
-<area shape="rect" id="node13" href="$bullet_8hpp.html" title="bullet.hpp" alt="" coords="366,80,445,107"/>
-<area shape="rect" id="node9" href="$physics_8hpp.html" title="physics.hpp" alt="" coords="262,379,354,405"/>
-<area shape="rect" id="node12" href="$exceptions_8hpp_source.html" title="exceptions.hpp" alt="" coords="219,304,330,331"/>
-<area shape="rect" id="node14" href="$image_8hpp.html" title="image.hpp" alt="" coords="336,229,419,256"/>
-<area shape="rect" id="node15" href="$npc_8hpp_source.html" title="npc.hpp" alt="" coords="401,155,469,181"/>
+<area shape="rect" id="node2" href="$drawable_8hpp.html" title="drawable.hpp" alt="" coords="396,304,494,331"/>
+<area shape="rect" id="node12" href="$animation_8hpp.html" title="animation.hpp" alt="" coords="304,229,407,256"/>
+<area shape="rect" id="node14" href="$bullet_8hpp.html" title="bullet.hpp" alt="" coords="495,80,574,107"/>
+<area shape="rect" id="node9" href="$physics_8hpp.html" title="physics.hpp" alt="" coords="547,379,639,405"/>
+<area shape="rect" id="node11" href="$typedefs_8hpp_source.html" title="typedefs.hpp" alt="" coords="742,379,839,405"/>
+<area shape="rect" id="node13" href="$exceptions_8hpp_source.html" title="exceptions.hpp" alt="" coords="519,304,630,331"/>
+<area shape="rect" id="node15" href="$image_8hpp.html" title="image.hpp" alt="" coords="533,229,616,256"/>
+<area shape="rect" id="node16" href="$npc_8hpp.html" title="npc.hpp" alt="" coords="584,155,652,181"/>
 </map>

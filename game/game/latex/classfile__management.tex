@@ -26,8 +26,13 @@ std\+::string \hyperlink{classfile__management_a75689c420580c71f0621dfbcc4c2a06f
 \begin{DoxyCompactList}\small\item\em function that returns next level path \end{DoxyCompactList}\item 
 void \hyperlink{classfile__management_a291475384add5bdb8002127c71c568ac}{set\+\_\+counter} (int value)
 \begin{DoxyCompactList}\small\item\em function that sets counter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfile__management_ae6291547fab57a5b861c52e970175854}\label{classfile__management_ae6291547fab57a5b861c52e970175854}} 
+int \& {\bfseries get\+\_\+counter} ()
+\item 
 std\+::string \hyperlink{classfile__management_a92ece2d05964c828dcb9bf6c59043327}{get\+\_\+save\+\_\+file} (int menu\+\_\+index)
-\begin{DoxyCompactList}\small\item\em function that returns path to save-\/file given menu item pushed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function that returns path to save-\/file given menu item pushed \end{DoxyCompactList}\item 
+void \hyperlink{classfile__management_a79e6ae7cec63aa959d7d0730d6ffa5a3}{save\+\_\+game} ()
+\begin{DoxyCompactList}\small\item\em function that saves game \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -151,7 +156,17 @@ This function return string ( that can be fabricated by standard\+\_\+path and t
 \begin{DoxyReturn}{Returns}
 std\+::string that contains path to next level 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classfile__management_a291475384add5bdb8002127c71c568ac}\label{classfile__management_a291475384add5bdb8002127c71c568ac}} 
+\mbox{\Hypertarget{classfile__management_a79e6ae7cec63aa959d7d0730d6ffa5a3}\label{classfile__management_a79e6ae7cec63aa959d7d0730d6ffa5a3}} 
+\index{file\+\_\+management@{file\+\_\+management}!save\+\_\+game@{save\+\_\+game}}
+\index{save\+\_\+game@{save\+\_\+game}!file\+\_\+management@{file\+\_\+management}}
+\subsubsection{\texorpdfstring{save\+\_\+game()}{save\_game()}}
+{\footnotesize\ttfamily void file\+\_\+management\+::save\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that saves game 
+
+This function saves your current level path in a save-\/file. Which save file is used to save the path in depends on the save-\/file clicked by the user in the beginning. If you click \char`\"{}new game\char`\"{} the save-\/file is most of the time save-\/file-\/1 only when save-\/file-\/2 is empty it is chosen to write in. \mbox{\Hypertarget{classfile__management_a291475384add5bdb8002127c71c568ac}\label{classfile__management_a291475384add5bdb8002127c71c568ac}} 
 \index{file\+\_\+management@{file\+\_\+management}!set\+\_\+counter@{set\+\_\+counter}}
 \index{set\+\_\+counter@{set\+\_\+counter}!file\+\_\+management@{file\+\_\+management}}
 \subsubsection{\texorpdfstring{set\+\_\+counter()}{set\_counter()}}

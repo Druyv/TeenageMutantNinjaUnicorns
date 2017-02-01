@@ -90,9 +90,9 @@ Collaboration diagram for animation:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab0a44a89f36d6f04c4e21e868441d693"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation.html#ab0a44a89f36d6f04c4e21e868441d693">animation</a> (sf::Vector2f position, std::string sheet_name)</td></tr>
-<tr class="memdesc:ab0a44a89f36d6f04c4e21e868441d693"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="#ab0a44a89f36d6f04c4e21e868441d693">More...</a><br /></td></tr>
-<tr class="separator:ab0a44a89f36d6f04c4e21e868441d693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6798454a7dba29097eb398014c584bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation.html#ab6798454a7dba29097eb398014c584bc">animation</a> (sf::Vector2f position, std::string sheet_name, float width, float length)</td></tr>
+<tr class="memdesc:ab6798454a7dba29097eb398014c584bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="#ab6798454a7dba29097eb398014c584bc">More...</a><br /></td></tr>
+<tr class="separator:ab6798454a7dba29097eb398014c584bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20959b66d1c25007890bb40f0e876570"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation.html#a20959b66d1c25007890bb40f0e876570">draw</a> (sf::RenderWindow &amp;window) override</td></tr>
 <tr class="memdesc:a20959b66d1c25007890bb40f0e876570"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw object  <a href="#a20959b66d1c25007890bb40f0e876570">More...</a><br /></td></tr>
 <tr class="separator:a20959b66d1c25007890bb40f0e876570"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,9 +105,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c0b874294e81f3612590920fd845602"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation.html#a7c0b874294e81f3612590920fd845602">set_size</a> (sf::Vector2f new_size)</td></tr>
 <tr class="memdesc:a7c0b874294e81f3612590920fd845602"><td class="mdescLeft">&#160;</td><td class="mdescRight">set size  <a href="#a7c0b874294e81f3612590920fd845602">More...</a><br /></td></tr>
 <tr class="separator:a7c0b874294e81f3612590920fd845602"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79260eb98a4f77aa4b9f3b08cc8e5b59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation.html#a79260eb98a4f77aa4b9f3b08cc8e5b59">movement</a> (float row_a)</td></tr>
-<tr class="memdesc:a79260eb98a4f77aa4b9f3b08cc8e5b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function for animations.  <a href="#a79260eb98a4f77aa4b9f3b08cc8e5b59">More...</a><br /></td></tr>
-<tr class="separator:a79260eb98a4f77aa4b9f3b08cc8e5b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af213ade7eb27bba8337ec6223c73f945"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation.html#af213ade7eb27bba8337ec6223c73f945">movement</a> (float row_a, int level_counter=0)</td></tr>
+<tr class="memdesc:af213ade7eb27bba8337ec6223c73f945"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function for animations.  <a href="#af213ade7eb27bba8337ec6223c73f945">More...</a><br /></td></tr>
+<tr class="separator:af213ade7eb27bba8337ec6223c73f945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30e84ff71206b8ec4f82fd70ad776036"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation.html#a30e84ff71206b8ec4f82fd70ad776036">setTextureRect</a> (const sf::IntRect &amp;rectangle)</td></tr>
 <tr class="memdesc:a30e84ff71206b8ec4f82fd70ad776036"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the texture rectangle  <a href="#a30e84ff71206b8ec4f82fd70ad776036">More...</a><br /></td></tr>
 <tr class="separator:a30e84ff71206b8ec4f82fd70ad776036"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,6 +160,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e40f2621daaca4ac32ef26b8c01b9a6 inherit pub_methods_classdrawable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrawable.html#a5e40f2621daaca4ac32ef26b8c01b9a6">set_position</a> (sf::Vector2f new_position)</td></tr>
 <tr class="memdesc:a5e40f2621daaca4ac32ef26b8c01b9a6 inherit pub_methods_classdrawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position.  <a href="classdrawable.html#a5e40f2621daaca4ac32ef26b8c01b9a6">More...</a><br /></td></tr>
 <tr class="separator:a5e40f2621daaca4ac32ef26b8c01b9a6 inherit pub_methods_classdrawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59285b12c068ce5e02def707f0b0ee3b inherit pub_methods_classdrawable"><td class="memItemLeft" align="right" valign="top"><a id="a59285b12c068ce5e02def707f0b0ee3b"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_image_name</b> ()</td></tr>
+<tr class="separator:a59285b12c068ce5e02def707f0b0ee3b inherit pub_methods_classdrawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -183,8 +186,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td><
 <dd>
 <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Texture.php">sf::Texture</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab0a44a89f36d6f04c4e21e868441d693"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0a44a89f36d6f04c4e21e868441d693">&#9670;&nbsp;</a></span>animation()</h2>
+<a id="ab6798454a7dba29097eb398014c584bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6798454a7dba29097eb398014c584bc">&#9670;&nbsp;</a></span>animation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,7 +202,19 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td><
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>sheet_name</em>&#160;</td>
+          <td class="paramname"><em>sheet_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -304,8 +319,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td><
 
 </div>
 </div>
-<a id="a79260eb98a4f77aa4b9f3b08cc8e5b59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79260eb98a4f77aa4b9f3b08cc8e5b59">&#9670;&nbsp;</a></span>movement()</h2>
+<a id="af213ade7eb27bba8337ec6223c73f945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af213ade7eb27bba8337ec6223c73f945">&#9670;&nbsp;</a></span>movement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,8 +329,18 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td><
           <td class="memname">bool animation::movement </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>row_a</em></td><td>)</td>
+          <td class="paramname"><em>row_a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level_counter</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

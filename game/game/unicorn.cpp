@@ -5,7 +5,7 @@ unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_ra
 	drawable{ position, sf::Vector2f{ 1.0,1.0 }, std::string{ "UNICORN" } },
 	actions_array{ actions_array },
 	unicorn_animation{animation{ position, filename,7.0,5.0 }  },
-	rainbow{animation{position,file_rainbow,8.0,1.0}},
+	rainbow{animation{position,file_rainbow,7.0,1.0}},
 	the_collisions{ the_collisions },
         spawn_location{position},
 	all_mobs{all_mobs},
