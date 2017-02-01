@@ -13,33 +13,30 @@ Button::Button(float startHeightY, float startHeightX,int position, std::string 
 
 
 void Button::setup() {
-	float positionx;
-	float positiony;
-	if (position == 1) { (positionx = 0.20f) && (positiony = 0.27f); };
-	if (position == 2) { (positionx = 0.40f) && (positiony = 0.47f); };
-	if (position == 3) { (positionx = 0.60f) && (positiony = 0.67f); };
-
 	texture.loadFromFile("button.png");
-	ButtonBackground.setTexture(texture);
-	texture.setSmooth(true);
-	texture.setRepeated(0);
-
-	ButtonBackground.setTextureRect(sf::IntRect(0, 0, (int(startHeightX*0.50)), int(startHeightY*0.20)));
-	ButtonBackground.setPosition((startHeightX*0.33), (startHeightY*positionx));
-
+	ButtonBackground.setTexture(&texture);
+        ButtonBackground.setSize((sf::Vector2f)texture.getSize());
+        
+        float interval = -150;
+        if (position == 2) { interval+=ButtonBackground.getSize().y; }
+        else if (position == 3) { interval+=2*ButtonBackground.getSize().y; }
+        
+        
+	ButtonBackground.setPosition( ((startHeightX-ButtonBackground.getSize().x)/2),
+                ((startHeightY-ButtonBackground.getSize().y)/2)+interval );
 
 	font.loadFromFile("Pixeled.ttf");
 	text.setFont(font);
 	text.setString(WhatsOnTheButton);
-	text.setCharacterSize(60);
+	text.setCharacterSize(60*texture.getSize().y/200);
 	text.setFillColor(sf::Color::Black);
-
-
-	float positiontext = 0.50 - ((WhatsOnTheButton.size())*0.014);
-	if ((WhatsOnTheButton.size()) > 7) {
-		positiontext = 0.50 - ((WhatsOnTheButton.size())*0.0154);
-	};
-	text.setPosition((startHeightX*positiontext), (startHeightY*positiony));
+        
+        sf::Vector2f button_pos = (sf::Vector2f)ButtonBackground.getPosition();
+        sf::Vector2f button_size = (sf::Vector2f)texture.getSize();
+        
+        sf::Vector2f text_position { button_pos.x + (button_size.x-text.getLocalBounds().width) /2,  button_pos.y + (button_size.y-text.getLocalBounds().height) /2};
+        
+	text.setPosition(text_position);
 }
 
 sf::FloatRect Button::getGlobalBounds() {
@@ -48,7 +45,6 @@ sf::FloatRect Button::getGlobalBounds() {
 
 
 void Button::draw(sf::RenderWindow & window) {
-
 	window.draw(ButtonBackground);
 	window.draw(text);
 };

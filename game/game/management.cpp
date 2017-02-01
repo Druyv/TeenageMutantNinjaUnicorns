@@ -77,13 +77,18 @@ int & file_management::get_counter(){
 }
 
 void file_management::save_game() {
-	if (current_save_file == 1 || (current_save_file == 0 && save_file_1 == "")) {
+    std::string level_files_1, level_files_2;
+    set_input(save_file_1);
+    level_files_1 = get_files();
+    set_input(save_file_2);
+    level_files_2 = get_files();
+	if (current_save_file == 1 || (current_save_file == 0 && level_files_1 == "")) {
 		output.open(save_file_1);
 		counter--;
 		output << next_level();
 		output.close();
 	}
-	else if (current_save_file == 2 || (current_save_file == 0 && save_file_2 == "")) {
+	else if (current_save_file == 2 || (current_save_file == 0 && level_files_2 == "")) {
 		output.open(save_file_2);
 		counter--;
 		output << next_level();
@@ -125,6 +130,12 @@ int menu_management::display_start_game() {
 
 void menu_management::display_pause_game() {
 	window.clear();
+        
+        //VIEW AANPASSEN
+        sf::View playerCam(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+	playerCam.setCenter(sf::Vector2f{(float)window.getSize().x/2, (float)window.getSize().y/2});
+        
+	window.setView(playerCam);
 	pause_menu.build_menu();
 	window.display();
 	int menu_item_pressed = -1;
@@ -134,7 +145,8 @@ void menu_management::display_pause_game() {
 		}
 
 		if (menu_item_pressed == 2) {
-			exit(0);
+                    manager.save_game();
+                    exit(0);
 		}
 	}
 	window.clear();

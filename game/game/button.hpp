@@ -27,7 +27,8 @@ private:
 
 	std::string WhatsOnTheButton;
 	sf::Texture texture;
-	sf::Sprite ButtonBackground;
+	//sf::Sprite ButtonBackground;
+        sf::RectangleShape ButtonBackground;
 
 	sf::Font font;
 	sf::Text text;

@@ -4,7 +4,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "drawable.hpp"
-#include "background.hpp"
+//#include "background.hpp"
+#include "image.hpp"
 #include "button.hpp"
 
 
@@ -35,7 +36,8 @@ private:
 	Button button2;
 	Button button3;
 
-	background bg;
+	//background bg;
+        image_from_file background;
 public:
 	/// \brief constructor to make a menu
 	///

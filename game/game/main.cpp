@@ -23,11 +23,13 @@ int main(int argc, const char **argv) {
 	actions unicorn_actions = {
 		action(sf::Keyboard::A, [](object_ptr object) {object->move(sf::Vector2f(-10.0,0.0)); }),
 		action(sf::Keyboard::D, [](object_ptr object) {object->move(sf::Vector2f(10.0,0.0)); }),
-		action(sf::Keyboard::Space, [](object_ptr object) {object->jump(); })
+		action(sf::Keyboard::Space, [](object_ptr object) {object->jump(); }),
+                action(sf::Keyboard::Left, [](object_ptr object) {object->move(sf::Vector2f(-10.0,0.0)); }),
+		action(sf::Keyboard::Right, [](object_ptr object) {object->move(sf::Vector2f(10.0,0.0)); }),
 	};
 
 	//Menu and file management
-	file_management manager_file("played_games//save_files_path.txt");
+	file_management manager_file("played_games/save_files_path.txt");
 	menu_management manager_menu(window, manager_file);
 	std::string level_path = manager_menu.start_game();
 	std::cout << "Path for level" << level_path;
@@ -76,7 +78,7 @@ int main(int argc, const char **argv) {
 	camera playercam(the_unicorn);
 	soundtrack soundplayer("Soundtrack.wav");
 	soundplayer.PlayMusic();
-
+        
 	// Start the game loop
 	while (window.isOpen()) {
 		the_collisions.clear();
@@ -96,52 +98,73 @@ int main(int argc, const char **argv) {
 			}
 		}
                 
-        end_point->draw(window);
-        if(the_unicorn->getGlobalBounds().intersects(end_point->getGlobalBounds() )){
-			try {
-				objects.clear();
-                objects_tmp.clear();
-                all_mobs.clear();
-                object_creation->change_input_to(manager_file.next_level());
-                objects_tmp = object_creation->objects_from_file();
-				base_level base( object_creation->get_level_size() );
-                base.push_back_borders(objects);
-                the_unicorn->set_spawn_location( object_creation->get_spawn() );
-			}
-            catch (const std::exception & e) {
-                std::cout << e.what();
-                exit(0);
-            }
+            end_point->draw(window);
+            the_unicorn->run_actions(the_unicorn);
+            the_unicorn->draw(window);
+
+            playercam.follow(window);
+
+            // Update the window
+            window.display();
+            
+            if(the_unicorn->getGlobalBounds().intersects(end_point->getGlobalBounds() )){
+                if (manager_file.get_counter() == 6){
+                    std::cout << "You won!!\n";
+                    auto won = image_from_file( sf::Vector2f{0,0}, "end.png" );
                     
-            for(const auto & object : objects_tmp){
-				if (object->get_type() == "MOB"){
-					all_mobs.push_back( std::make_shared<mob>(object->get_position(), "mini_bunny.png") );
+                    won.set_scale(sf::VideoMode::getDesktopMode().width / 1920, 
+                            sf::VideoMode::getDesktopMode().height / 1080);
+                    std::cout << "Width: " << (float)(sf::VideoMode::getDesktopMode().width / 1920) << '\n';
+                    std::cout << "Heigth: " << (float)(sf::VideoMode::getDesktopMode().height / 1080) << '\n';
+                    
+                    sf::Vector2f new_position {the_unicorn->get_position().x - (won.get_size().x/2),
+                                                the_unicorn->get_position().y - (won.get_size().y/2)};
+                    won.set_position(new_position);
+                    
+                    won.draw(window);
+                    window.display();
+                    sf::sleep(sf::milliseconds(3000));
+                    exit(0);
                 }
-                else if(object->get_type() == "END"){
-					end_point = std::make_shared<image_from_file>(object->get_position(), object->get_image_name() );
-					end_point->set_type("END");
+                try {
+                    objects.clear();
+                    objects_tmp.clear();
+                    all_mobs.clear();
+                    object_creation->change_input_to(manager_file.next_level());
+                    objects_tmp = object_creation->objects_from_file();
+                    base_level base( object_creation->get_level_size() );
+                    base.push_back_borders(objects);
+                    the_unicorn->set_spawn_location( object_creation->get_spawn() );
                 }
-			    else{
-					objects.push_back(object);
+                catch (const std::exception & e) {
+                    std::cout << e.what();
+                    exit(0);
                 }
-			}
-		}
 
-		the_unicorn->run_actions(the_unicorn);
-		the_unicorn->draw(window);
-
-		playercam.follow(window);
-
-		// Update the window
-		window.display();
-
+                for(const auto & object : objects_tmp){
+                    if (object->get_type() == "MOB"){
+                        all_mobs.push_back( std::make_shared<mob>(object->get_position(), "mini_bunny.png") );
+                    }
+                    else if(object->get_type() == "END"){
+                        end_point = std::make_shared<image_from_file>(object->get_position(), object->get_image_name() );
+                        end_point->set_type("END");
+                    }
+                    else{
+                        objects.push_back(object);
+                    }
+                }
+            }
+            
+            //pauze menu ding
+            if( sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) ){
+                manager_menu.display_pause_game();
+            }
 
 		// Process events
 		sf::Event event;
 		while (window.pollEvent(event)) {
 			// Close window: exit
-			if (event.type == sf::Event::Closed || event.key.code == sf::Keyboard::Escape) {
-				manager_file.save_game();
+			if (event.type == sf::Event::Closed) {// || event.key.code == sf::Keyboard::Escape
 				window.close();
 			}
 		}

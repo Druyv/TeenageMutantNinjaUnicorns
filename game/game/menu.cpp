@@ -1,5 +1,4 @@
-#include "menu.hpp"	
-#include "button.hpp"
+#include "menu.hpp"
 
 menu::menu(sf::RenderWindow & window, std::string backgroud_picture, bool button_bool1, std::string button_one_text,
 	bool button_bool2, std::string button_two_text, bool button_bool3, std::string button_three_text) :
@@ -7,24 +6,27 @@ menu::menu(sf::RenderWindow & window, std::string backgroud_picture, bool button
 	window(window),
 
 	button_bool1(button_bool1),
-	button_one_text(button_one_text),
 	button_bool2(button_bool2),
-	button_two_text(button_two_text),
 	button_bool3(button_bool3),
+        button_one_text(button_one_text),
+        button_two_text(button_two_text),
 	button_three_text(button_three_text),
 	button1(float(window.getSize().y), float(window.getSize().x), 1, button_one_text),
 	button2(float(window.getSize().y), float(window.getSize().x), 2, button_two_text),
 	button3(float(window.getSize().y), float(window.getSize().x), 3, button_three_text),
 
-	bg(background("forest.png" , sf::Vector2f( 3840, 2160)))
+	background(sf::Vector2f{ 0, 0}, "forest.png")
 	{
-
-}
+            sf::Vector2f screen_size{(float)sf::VideoMode::getDesktopMode().width,
+                    (float)sf::VideoMode::getDesktopMode().height};
+                    
+            background.set_scale(screen_size.x/1920, screen_size.y/1080);
+        }
 
 
 
 void menu::build_menu() {
-	bg.draw(window);
+	background.draw(window);
 
 	if (button_bool1) {
 		button1.draw(window);
