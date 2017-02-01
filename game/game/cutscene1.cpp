@@ -6,7 +6,7 @@
 cutscene1::cutscene1(sf::RenderWindow & window,soundtrack & sound) :
 	window(window),
 	sound{sound},
-        textbox1("What a magical day in the enchanted for-", "headshotArno.png", window),
+    textbox1("What a magical day in the enchanted for-", "headshotArno.png", window),
 	textbox2("*Sigh* This is why I drink...", "headshotArno.png", window),
 	textbox3("DAD! DAD! ", "juniorhead.png", window),
 	textbox4("JUNIOR! Where are your colors?! ", "headshotArno.png", window),
@@ -15,10 +15,18 @@ cutscene1::cutscene1(sf::RenderWindow & window,soundtrack & sound) :
 	textbox7("Junior, tell your mom to wait with dinner! ", "headshotArno.png", window),
 	textbox8("Mom is at the new neighbour, the tall, rich and single unicorn with the big horn! ", "juniorhead.png", window),
 	textbox9("DINKKLEEEBERRGGGGG!! ", "headshotArno.png", window),
-        background_angryarno(sf::Vector2f((0), (0)), "angryarno.png"),
+    textbox_cyan1("Hey Steff, I've got a very important mission for you! ", "headshotArno.png", window),
+	textbox_cyan2("It's Steve. ", "headshotSteve.png", window),
+	textbox_cyan3("Yes, Kevin. About that mission.  ", "headshotArno.png", window),
+	textbox_cyan4("It's Steve. ", "headshotSteve.png", window),
+	textbox_cyan5("Yes, Victor. You are going to Cyan Island. ", "headshotArno.png", window),
+	textbox_cyan6("It's Steve. Why aren't you going? ", "headshotSteve.png", window),
+	textbox_cyan7("Because, Gerald, it's a silly place. Good luck & have fun! ", "headshotArno.png", window),
+    background_cyan(sf::Vector2f((0), (0)), "background_cyan.png" ),
+    background_angryarno(sf::Vector2f((0), (0)), "angryarno.png"),
 	background_zoomedin(sf::Vector2f((0), (0)), "zoomedin.png"),
-        background_construction(sf::Vector2f((0), (0)), "construction.png"),
-        background_forest(sf::Vector2f((0), (0)),"background2.png"),
+    background_construction(sf::Vector2f((0), (0)), "construction.png"),
+    background_forest(sf::Vector2f((0), (0)),"background2.png"),
 	Arno(sf::Vector2f((window.getSize().x*0.30), (window.getSize().y*0.56)),"Arno.png"),
 	Junior(sf::Vector2f((window.getSize().x*0.50), (window.getSize().y*0.61)), "Junior3.png")
 {
@@ -147,3 +155,34 @@ void cutscene1::scene10() {
 	textbox9.draw(window);
 }
 
+void cutscene1::cyan_island() {
+	background_cyan.draw(window);
+    textbox_cyan1.draw(window);
+    window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+    textbox_cyan2.draw(window);
+    window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+    textbox_cyan3.draw(window);
+    window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+    textbox_cyan4.draw(window);
+    window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+    textbox_cyan4.draw(window);
+    window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+    textbox_cyan6.draw(window);
+    window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+    textbox_cyan7.draw(window);
+    window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+}
