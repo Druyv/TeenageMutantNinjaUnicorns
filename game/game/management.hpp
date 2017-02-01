@@ -16,6 +16,7 @@
 ///
 class file_management {
 private:
+	
 	std::ifstream input;
 	std::ofstream output;
 	std::string save_file_1;
@@ -125,10 +126,11 @@ public:
 ///
 class menu_management {
 private:
+
 	sf::RenderWindow & window;
 	file_management & manager;
-	menu start_menu = menu(window,"forest.png" , true, "NEW_GAME", true, "LOAD GAME", true, "QUIT" );
-	menu pause_menu = menu(window, "forest.png",true, "CONTINUE",true ,"QUIT");
+	menu start_menu = menu(window,std::string{"forest.png"} , true, "NEW_GAME", true, "LOAD GAME", true, "QUIT" );
+	menu pause_menu = menu(window, std::string{"forest.png"},true, "CONTINUE",true ,"QUIT");
 	menu save_file_menu = manager.make_save_file_menu(window);
 public:
 	/// \brief constructor to initialize window and file manager

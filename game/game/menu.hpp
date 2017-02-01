@@ -22,7 +22,7 @@
 class menu {
 private:
 	sf::RenderWindow & window;
-	std::string background_picture;
+
 	bool button_bool1;
 	bool button_bool2;
 	bool button_bool3;
@@ -35,7 +35,7 @@ private:
 	Button button2;
 	Button button3;
 
-	//background bg;
+	background bg;
 public:
 	/// \brief constructor to make a menu
 	///
@@ -52,7 +52,7 @@ public:
 	/// \param[in] ButtonTwoText    Text that will be displayed on button2
 	/// \param[in] buttonBool3      Determines if button3 will be drawn
 	/// \param[in] ButtonThreeText  Text that will be displayed on button3
-	menu(sf::RenderWindow & window, std::string background_picture, bool button_bool1, std::string button_one_text,
+	menu(sf::RenderWindow & window, std::string  background_picture, bool button_bool1, std::string button_one_text,
 	bool button_bool2 = 0, std::string button_two_text = "Empty", bool button_bool3 = 0, std::string button_three_text = "Empty");
 
 	/// \brief Function to build and draw the menu

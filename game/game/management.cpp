@@ -53,15 +53,15 @@ menu file_management::make_save_file_menu(sf::RenderWindow & window) {
 	save_file_2 = get_files();
 	std::cout << "Save-files: " << save_file_1 << " " << save_file_2 << std::endl;
 	if (save_file_1 == "") {
-		menu(window, "forest.png", true, "BACK");
+		menu(window, std::string{"forest.png"}, true, "BACK");
 	}
 	else if (save_file_2 == "") {
-		return menu(window, "forest.png", true, "SAVE 1", true ,"BACK");
+		return menu(window, std::string{"forest.png"}, true, "SAVE 1", true ,"BACK");
 	}
 	else {
-		return menu(window, "forest.png", true, "SAVE 1", true, "SAVE 2", true, "BACK");
+		return menu(window, std::string{"forest.png"}, true, "SAVE 1", true, "SAVE 2", true, "BACK");
 	}
-	return menu(window, "forest.png", true, "BACK");
+	return menu(window, std::string{"forest.png"}, true, "BACK");
 }
 
 std::string file_management::next_level() {
