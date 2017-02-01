@@ -57,6 +57,7 @@ void unicorn::draw(sf::RenderWindow & window) {
         
         if (collision_r.R || collision_l.L ||collision_u.U ||collision_d.D ){
                    unicorn_animation.movement(9);
+                   mob_touch_counter = 0;
         }
         
         if((collision_u.U && collision_u.the_object->get_type() == "LOWER_BORDER") || lives <= 0){
@@ -202,6 +203,8 @@ void unicorn::set_spawn_location(sf::Vector2f new_location){
    position = new_location;
    unicorn_animation.set_position(new_location);
    rainbow.movement(10.0,level_counter);
+   lives = 3;
+   jump_counter = 0;
 }
 
 

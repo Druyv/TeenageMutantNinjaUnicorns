@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include "menu.hpp"
+#include "cutscene1.hpp"
 
 
 

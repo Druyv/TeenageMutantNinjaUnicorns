@@ -200,6 +200,42 @@ std::string menu_management::start_game() {
 		}
 		else if (display_start_game() == 1) {
 			manager.set_counter(0);
+                        
+                        //Story introduction
+                        window.clear();
+                        image_from_file story(sf::Vector2f(0,0),"story.png");
+                        story.set_scale((float)sf::VideoMode::getDesktopMode().width / 1920, 
+                                        (float)sf::VideoMode::getDesktopMode().height / 1080);
+                        story.draw(window);
+                        window.display();
+                        while(1){
+                            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+                                    break;
+                            }
+                        }
+                        sf::sleep(sf::milliseconds(10));
+                        window.clear();
+                        
+                        //cut scene
+                        cutscene1 scene1(window);
+                        scene1.play_scene();
+                        
+                        
+                        //background met controls
+                        window.clear();
+                        image_from_file controls(sf::Vector2f(0,0),"controls.png");
+                        controls.set_scale((float)sf::VideoMode::getDesktopMode().width / 1920, 
+                                           (float)sf::VideoMode::getDesktopMode().height / 1080);
+                        controls.draw(window);
+                        window.display();
+                        while(1){
+                            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+                                    break;
+                            }
+                        }
+                        sf::sleep(sf::milliseconds(10));
+                        window.clear();
+                        
 			return manager.next_level();
 		}
 	}

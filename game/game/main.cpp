@@ -24,6 +24,8 @@ int main(int argc, const char **argv) {
 		action(sf::Keyboard::A, [](object_ptr object) {object->move(sf::Vector2f(-10.0,0.0)); }),
 		action(sf::Keyboard::D, [](object_ptr object) {object->move(sf::Vector2f(10.0,0.0)); }),
 		action(sf::Keyboard::Space, [](object_ptr object) {object->jump(); }),
+                action(sf::Keyboard::Up, [](object_ptr object) {object->jump(); }),
+                action(sf::Keyboard::W, [](object_ptr object) {object->jump(); }),
                 action(sf::Keyboard::Left, [](object_ptr object) {object->move(sf::Vector2f(-10.0,0.0)); }),
 		action(sf::Keyboard::Right, [](object_ptr object) {object->move(sf::Vector2f(10.0,0.0)); }),
 	};
@@ -122,7 +124,11 @@ int main(int argc, const char **argv) {
                     
                     won.draw(window);
                     window.display();
-                    sf::sleep(sf::milliseconds(3000));
+                    while(1){
+                        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+                            break;
+                        }
+                    }
                     exit(0);
                 }
                 try {
