@@ -1,4 +1,3 @@
 <map id="mob" name="mob">
 <area shape="rect" id="node2" href="$classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="5,5,80,32"/>
-<area shape="rect" id="node3" href="$classimage__from__file.html" title="create sprite on screen " alt="" coords="48,81,163,108"/>
 </map>

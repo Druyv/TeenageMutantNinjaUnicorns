@@ -77,7 +77,7 @@ int main(int argc, const char **argv) {
 	background background_1("background2.png", object_creation->get_level_size());
 	camera playercam(the_unicorn);
 	soundtrack soundplayer("Soundtrack.wav");
-	soundplayer.PlayMusic();
+	soundplayer.playmusic();
         
 	// Start the game loop
 	while (window.isOpen()) {
