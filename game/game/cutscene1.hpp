@@ -23,6 +23,7 @@
 class cutscene1 {
 private:
 	sf::RenderWindow & window;
+	soundtrack & sound;
 	textbox textbox1;
 	textbox textbox2;
 	textbox textbox3;
@@ -41,7 +42,7 @@ private:
 
 
 public:
-	cutscene1(sf::RenderWindow & window);
+	cutscene1(sf::RenderWindow & window,soundtrack & sound);
 
 	void play_scene();
 	void scene1();

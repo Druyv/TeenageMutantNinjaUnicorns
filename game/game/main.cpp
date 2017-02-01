@@ -19,7 +19,7 @@ int main(int argc, const char **argv) {
 	collisions the_collisions;
 	// Create the main window
 	sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "The unicorn game", sf::Style::Fullscreen);
-
+	soundtrack soundplayer("Soundtrack.wav");
 	actions unicorn_actions = {
 		action(sf::Keyboard::A, [](object_ptr object) {object->move(sf::Vector2f(-10.0,0.0)); }),
 		action(sf::Keyboard::D, [](object_ptr object) {object->move(sf::Vector2f(10.0,0.0)); }),
@@ -32,7 +32,7 @@ int main(int argc, const char **argv) {
 
 	//Menu and file management
 	file_management manager_file("played_games/save_files_path.txt");
-	menu_management manager_menu(window, manager_file);
+	menu_management manager_menu(window, manager_file,soundplayer);
 	std::string level_path = manager_menu.start_game();
 	std::cout << "Path for level" << level_path;
 
@@ -51,7 +51,7 @@ int main(int argc, const char **argv) {
             base_level base( object_creation->get_level_size() );
             base.push_back_borders(objects);
             
-            the_unicorn = std::make_shared<unicorn>(object_creation->get_spawn(), "spreadsheet.png","rainbowspreadsheet.png", unicorn_actions, the_collisions, all_mobs, objects,manager_file.get_counter());
+            the_unicorn = std::make_shared<unicorn>(object_creation->get_spawn(), "spreadsheet.png","rainbowspreadsheet.png", unicorn_actions, the_collisions, all_mobs, objects,manager_file.get_counter(),soundplayer);
 		
 	}
 	catch (const std::exception & e) {
@@ -78,11 +78,12 @@ int main(int argc, const char **argv) {
 	//Sound, camera, background
 	background background_1("background2.png", object_creation->get_level_size());
 	camera playercam(the_unicorn);
-	soundtrack soundplayer("Soundtrack.wav");
+	
 	soundplayer.playmusic();
         
 	// Start the game loop
 	while (window.isOpen()) {
+		
 		the_collisions.clear();
 		// Clear screen
 		window.clear();

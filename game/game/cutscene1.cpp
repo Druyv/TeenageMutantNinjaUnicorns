@@ -3,8 +3,9 @@
 #include "image.hpp"
 
 
-cutscene1::cutscene1(sf::RenderWindow & window) :
+cutscene1::cutscene1(sf::RenderWindow & window,soundtrack & sound) :
 	window(window),
+	sound{sound},
         textbox1("What a magical day in the enchanted for-", "headshotArno.png", window),
 	textbox2("*Sigh* This is why I drink...", "headshotArno.png", window),
 	textbox3("DAD! DAD! ", "juniorhead.png", window),
@@ -31,16 +32,19 @@ cutscene1::cutscene1(sf::RenderWindow & window) :
 void cutscene1::play_scene() {
 	scene1();
 	window.display();
-	sf::sleep(sf::seconds(3));
+	sound.playsound_cutscene("scene1.wav");
+	sf::sleep(sf::seconds(6));
 	window.clear();
 
 	scene2();
 	window.display();
-	sf::sleep(sf::seconds(2));
+	sound.playsound_cutscene("scene2.wav");
+	sf::sleep(sf::seconds(6));
 	window.clear();
 
 	scene3();
 	window.display();
+	sound.playsound_cutscene("scene3.wav");
 	sf::sleep(sf::seconds(3));
 	window.clear();
 
@@ -77,6 +81,7 @@ void cutscene1::play_scene() {
 	scene10();
 	window.display();
 	sf::sleep(sf::seconds(4));
+	sound.stop();
 	window.clear();
 
 

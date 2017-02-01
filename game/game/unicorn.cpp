@@ -1,7 +1,7 @@
 #include "unicorn.hpp"
 
 
-unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_rainbow, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects,int & level_counter) :
+unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_rainbow, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects,int & level_counter,soundtrack & soundbuffer) :
 	drawable{ position, sf::Vector2f{ 1.0,1.0 }, std::string{ "UNICORN" } },
 	actions_array{ actions_array },
 	unicorn_animation{animation{ position, filename,7.0,5.0 }  },
@@ -10,7 +10,8 @@ unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_ra
         spawn_location{position},
 	all_mobs{all_mobs},
 	weapon(position, "Nyan-Cat.png", all_mobs, objects),
-        level_counter{level_counter}
+        level_counter{level_counter},
+	soundbuffer{soundbuffer}
 {
         if (!font.loadFromFile("Pixeled.ttf")){
             throw font_load_error("Pixeled.ttf");
@@ -23,6 +24,9 @@ unicorn::unicorn(sf::Vector2f position, std::string filename,std::string file_ra
 	unicorn_animation.setTextureRect(sf::IntRect(int(size.x), 0, -int(size.x), int(size.y)));
 	actions_array.push_back(action(sf::Keyboard::LShift, [&](object_ptr object) {if (!shoot_timeout) { shoot_timeout = 50; } }));
         rainbow.movement(10.0,level_counter);
+
+
+
 }
 
 void unicorn::draw(sf::RenderWindow & window) {
@@ -57,7 +61,6 @@ void unicorn::draw(sf::RenderWindow & window) {
         
         if (collision_r.R || collision_l.L ||collision_u.U ||collision_d.D ){
                    unicorn_animation.movement(9);
-                   mob_touch_counter = 0;
         }
         
         if((collision_u.U && collision_u.the_object->get_type() == "LOWER_BORDER") || lives <= 0){
@@ -189,6 +192,7 @@ collision unicorn::check_for_collisions(char c) {
 void unicorn::shoot(sf::Vector2f fire_position, sf::RenderWindow & window, sf::Vector2f offset) {
 	if (shoot_timeout >= 50) {
 		weapon.shoot(window, shoot_timeout, offset, fire_position);
+		soundbuffer.playsound(std::string("shot.wav"));
 		std::cout << "Shoot unicorn" <<all_mobs[0]->get_live() << std::endl;
 		//all_mobs[0]->die();
 	}
@@ -203,8 +207,6 @@ void unicorn::set_spawn_location(sf::Vector2f new_location){
    position = new_location;
    unicorn_animation.set_position(new_location);
    rainbow.movement(10.0,level_counter);
-   lives = 3;
-   jump_counter = 0;
 }
 
 

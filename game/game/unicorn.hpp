@@ -7,7 +7,7 @@
 #include "animation.hpp"
 #include <iostream>
 #include "bullet.hpp"
-
+#include "soundtrack.hpp" 
 
 ///
 /// \class unicorn
@@ -43,6 +43,8 @@ private:
         sf::Text text;
         int text_counter = 0;
         int & level_counter;
+	soundtrack & soundbuffer;
+	sf::SoundBuffer shootbuffer;
 public:
 	/// \brief Constructor to initialize the unicorn
 	///
@@ -56,7 +58,7 @@ public:
 	/// \param[in] all_mobs All mobs in level
 	/// \parma[in] objects all walls/obstacles that unicorn and bullet can react to
 	///
-	unicorn(sf::Vector2f position, std::string filename,std::string file_rainbow, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects,int & Level_counter);
+	unicorn(sf::Vector2f position, std::string filename,std::string file_rainbow, actions & actions_array, collisions & the_collisions, std::vector<mob_ptr> & all_mobs, objects_vector & objects,int & Level_counter,soundtrack & soundbuffer);
 
 	/// \brief function that draws the image
 	///

@@ -106,9 +106,10 @@ void file_management::save_game() {
 //Menu management class functions//
 //===============================//
 
-menu_management::menu_management(sf::RenderWindow & window, file_management & manager) :
+menu_management::menu_management(sf::RenderWindow & window, file_management & manager,soundtrack & sound) :
 	window{window},
-	manager{manager}
+	manager{manager},
+	sound{sound}
 {}
 
 int menu_management::display_start_game() {
@@ -217,7 +218,7 @@ std::string menu_management::start_game() {
                         window.clear();
                         
                         //cut scene
-                        cutscene1 scene1(window);
+                        cutscene1 scene1(window,sound);
                         scene1.play_scene();
                         
                         

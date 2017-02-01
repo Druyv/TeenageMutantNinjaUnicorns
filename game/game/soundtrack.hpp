@@ -38,9 +38,14 @@ public:
 	///
 	/// Loads the specified sound file and plays it.
         ///
-	void playsound();
+	void playsound(std::string name);
+
+void stop();
+void playsound_cutscene(std::string name);
 private:
 	sf::Music sfmlmusic;
+	sf::Music sound;
+	
 
 };
 #endif

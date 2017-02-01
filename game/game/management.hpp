@@ -3,7 +3,7 @@
 #include <fstream>
 #include "menu.hpp"
 #include "cutscene1.hpp"
-
+#include "soundtrack.hpp" 
 
 
 /// \class file_management
@@ -136,6 +136,7 @@ private:
 	menu start_menu = menu(window,std::string{"forest.png"} , true, "NEW_GAME", true, "LOAD GAME", true, "QUIT" );
 	menu pause_menu = menu(window, std::string{"forest.png"},true, "CONTINUE",true ,"QUIT");
 	menu save_file_menu = manager.make_save_file_menu(window);
+	soundtrack & sound;
 public:
 	/// \brief constructor to initialize window and file manager
 	///
@@ -145,7 +146,7 @@ public:
 	/// \param[in] window  sf::RenderWindow that is used to display menu's 
 	/// \param[in] manager filemanagement-object that used to give functionality to menu's 
 	///
-	menu_management(sf::RenderWindow & window, file_management & manager);
+	menu_management(sf::RenderWindow & window, file_management & manager,soundtrack & sound);
 	/// \brief function that displays start_menu
 	///
 	/// This function is used to display the start_menu
