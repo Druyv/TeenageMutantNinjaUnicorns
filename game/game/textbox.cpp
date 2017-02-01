@@ -18,7 +18,7 @@ textbox::textbox(std::string string, std::string filename, sf::RenderWindow & wi
 void textbox::build_box() {
 
 	BoxBackground.setPosition(position);
-	BoxBackground.setSize(sf::Vector2f(window.getSize().x, window.getSize().y*0.2 ));
+	BoxBackground.setSize(sf::Vector2f(float(window.getSize().x), float(window.getSize().y*0.2) ));
 
 	float posx = position.x *1.05;
 	float posy = position.y *1.05;

@@ -66,6 +66,12 @@
     <ClInclude Include="management.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="cutscene1.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="textbox.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -117,6 +123,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="management.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cutscene1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="textbox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

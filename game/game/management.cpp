@@ -132,7 +132,7 @@ void menu_management::display_pause_game() {
 	window.clear();
         
         //VIEW AANPASSEN
-        sf::View playerCam(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+        sf::View playerCam(sf::FloatRect(0, 0, float(window.getSize().x), float(window.getSize().y)));
 	playerCam.setCenter(sf::Vector2f{(float)window.getSize().x/2, (float)window.getSize().y/2});
         
 	window.setView(playerCam);
