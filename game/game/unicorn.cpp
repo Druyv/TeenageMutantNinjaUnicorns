@@ -113,12 +113,19 @@ void unicorn::draw(sf::RenderWindow & window) {
         }
         else{
             text.setString( std::string("Lives: " + std::to_string(lives)) );
-            text.setPosition((position - sf::Vector2f(window.getSize().x / 2.0 - size.x / 2.0 , (window.getSize().y / 2.0) - (rainbow.get_size().y*1.5))));
+			//text.setPosition(position);
+			text.setPosition(sf::Vector2f(position.x-650,position.y-300));
+		//	text.setPosition(sf::Vector2f(position.x-(window.getSize().x / 4.0) - (size.x / 4.0),position.y-(window.getSize().y / 4.0) - (rainbow.get_size().y*1.5)));
+          //  text.setPosition((position - sf::Vector2f(window.getSize().x / 2.0 - size.x / 2.0 , (window.getSize().y / 2.0) - (rainbow.get_size().y*1.5))));
             window.draw(text);
         }
         
         got_hit = false;
-	rainbow.set_position((position - sf::Vector2f(window.getSize().x / 2.0 - size.x / 2.0, window.getSize().y / 2.0)));
+//	rainbow.set_position((position - sf::Vector2f(window.getSize().x / 2.0 +( rainbow.get_size().x / 2.0), window.getSize().y / 2.0)));
+		//	rainbow.set_position(sf::Vector2f((position.x-(window.getSize().x / 2.0) )+1000+ (size.x / 2.0),position.y-(window.getSize().y / 2.0)  ));
+
+	std::cout<<rainbow.get_position().x <<"         "<<rainbow.get_position().y<<"\n " ;
+	rainbow.set_position(sf::Vector2f(position.x-650,position.y-400));
 	rainbow.draw(window);
 	unicorn_animation.set_position(position);
 	unicorn_animation.draw(window);
