@@ -30,7 +30,7 @@ var searchData=
   ['set_5fspawn_5flocation',['set_spawn_location',['../classunicorn.html#af0e2581c426b4b1e32f8a7b484b4e242',1,'unicorn']]],
   ['set_5ftype',['set_type',['../classdrawable.html#aa019787b726542ca470fb817251e7b09',1,'drawable']]],
   ['settexturerect',['setTextureRect',['../classanimation.html#a30e84ff71206b8ec4f82fd70ad776036',1,'animation::setTextureRect()'],['../classimage__from__file.html#a6561a7e8833e4ca84ba5a31e98802757',1,'image_from_file::setTextureRect()']]],
-  ['setup',['setup',['../class_button.html#aaf14334dd0ac6a9c286aac71a765caa2',1,'Button']]],
+  ['setup',['setup',['../classbutton.html#aaa445c71f07d867926dfcd57016064e6',1,'button']]],
   ['sheet_5fload_5ferror',['sheet_load_error',['../classsheet__load__error.html#a80642b59420e3b58c1c5e980cf702c41',1,'sheet_load_error']]],
   ['shoot',['shoot',['../classbullet.html#a52d736cad2a486a65c8a25781cff1f70',1,'bullet::shoot()'],['../classunicorn.html#af448a3fa5fc5f09254b50afa151ce42b',1,'unicorn::shoot()']]],
   ['soundtrack',['soundtrack',['../classsoundtrack.html#add31bdeb1a693d541443f1d88586d3b6',1,'soundtrack']]],

@@ -8,6 +8,6 @@ var searchData=
   ['build_5fmenu',['build_menu',['../classmenu.html#a8d194b462b1b180086e5b06a2dbfbdff',1,'menu']]],
   ['bullet',['bullet',['../classbullet.html',1,'bullet'],['../classbullet.html#a2c8b1e868ab8fe8edf43fc289f8d80b8',1,'bullet::bullet()']]],
   ['bullet_2ehpp',['bullet.hpp',['../bullet_8hpp.html',1,'']]],
-  ['button',['Button',['../class_button.html',1,'Button'],['../class_button.html#a1085aea4e01df12c1400d2f2f666dda2',1,'Button::Button()']]],
+  ['button',['button',['../classbutton.html',1,'button'],['../classbutton.html#a414300b6e7efb981b90b0fef111f133c',1,'button::button()']]],
   ['button_2ehpp',['button.hpp',['../button_8hpp.html',1,'']]]
 ];

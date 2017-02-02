@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TEENAGE MUTENT NINJA UNICORNS: unicorn Class Reference</title>
+<title>TEENAGE MUTANT NINJA UNICORN: unicorn Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,9 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="minicorn_v1.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="unicorn supreme2_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">TEENAGE MUTENT NINJA UNICORNS
+   <div id="projectname">TEENAGE MUTANT NINJA UNICORN
    </div>
   </td>
  </tr>
@@ -61,6 +61,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classunicorn-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">unicorn Class Reference</div>  </div>
@@ -84,7 +85,12 @@ Collaboration diagram for unicorn:</div>
 <div class="dyncontent">
 <div class="center"><img src="classunicorn__coll__graph.png" border="0" usemap="#unicorn_coll__map" alt="Collaboration graph"/></div>
 <map name="unicorn_coll__map" id="unicorn_coll__map">
-<area shape="rect" id="node2" href="classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node2" href="classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="18,5,93,32"/>
+<area shape="rect" id="node3" href="classbullet.html" title="class calculates projectile to kill mobs " alt="" coords="25,184,78,211"/>
+<area shape="rect" id="node4" href="classimage__from__file.html" title="create sprite on screen " alt="" coords="61,81,176,108"/>
+<area shape="rect" id="node7" href="classanimation.html" title="create sprite on screen with animations " alt="" coords="174,132,252,159"/>
+<area shape="rect" id="node5" href="classphysics.html" title="Class with physics function. " alt="" coords="256,184,322,211"/>
+<area shape="rect" id="node6" href="classsoundtrack.html" title="Class that plays either music or sound effects. " alt="" coords="358,184,444,211"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -160,6 +166,69 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a59285b12c068ce5e02def707f0b0ee3b inherit pub_methods_classdrawable"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrawable.html#a59285b12c068ce5e02def707f0b0ee3b">get_image_name</a> ()</td></tr>
 <tr class="memdesc:a59285b12c068ce5e02def707f0b0ee3b inherit pub_methods_classdrawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">get image name  <a href="classdrawable.html#a59285b12c068ce5e02def707f0b0ee3b">More...</a><br /></td></tr>
 <tr class="separator:a59285b12c068ce5e02def707f0b0ee3b inherit pub_methods_classdrawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4a032891da1aa855b0b46c6e0b969a35"><td class="memItemLeft" align="right" valign="top"><a id="a4a032891da1aa855b0b46c6e0b969a35"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>going_left</b> = false</td></tr>
+<tr class="separator:a4a032891da1aa855b0b46c6e0b969a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f4c9e68841d896da696132113602019"><td class="memItemLeft" align="right" valign="top"><a id="a7f4c9e68841d896da696132113602019"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>jump_counter</b> = 0</td></tr>
+<tr class="separator:a7f4c9e68841d896da696132113602019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7673cbdfe14f719f710df4b324f74484"><td class="memItemLeft" align="right" valign="top"><a id="a7673cbdfe14f719f710df4b324f74484"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>shoot_timeout</b> = 0</td></tr>
+<tr class="separator:a7673cbdfe14f719f710df4b324f74484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0462e46c2393f0bc0f5b2faa0b7b091"><td class="memItemLeft" align="right" valign="top"><a id="ab0462e46c2393f0bc0f5b2faa0b7b091"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>lives</b> = 3</td></tr>
+<tr class="separator:ab0462e46c2393f0bc0f5b2faa0b7b091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc767e234ec6d55ca0b576747f8d7d7"><td class="memItemLeft" align="right" valign="top"><a id="a1cc767e234ec6d55ca0b576747f8d7d7"></a>
+<a class="el" href="typedefs_8hpp.html#a38f93e4749e0d65d51360c429766d212">actions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>actions_array</b></td></tr>
+<tr class="separator:a1cc767e234ec6d55ca0b576747f8d7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d6df4ae413adcf9307c2f36e9c1d51b"><td class="memItemLeft" align="right" valign="top"><a id="a0d6df4ae413adcf9307c2f36e9c1d51b"></a>
+<a class="el" href="classanimation.html">animation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>unicorn_animation</b></td></tr>
+<tr class="separator:a0d6df4ae413adcf9307c2f36e9c1d51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a178463b08cbb4109fee0d37b4cb98d4f"><td class="memItemLeft" align="right" valign="top"><a id="a178463b08cbb4109fee0d37b4cb98d4f"></a>
+<a class="el" href="classanimation.html">animation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rainbow</b></td></tr>
+<tr class="separator:a178463b08cbb4109fee0d37b4cb98d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accaf554299ce27905fa8c47f602b0e98"><td class="memItemLeft" align="right" valign="top"><a id="accaf554299ce27905fa8c47f602b0e98"></a>
+<a class="el" href="classphysics.html">physics</a>&#160;</td><td class="memItemRight" valign="bottom"><b>physics_object</b></td></tr>
+<tr class="separator:accaf554299ce27905fa8c47f602b0e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b6bd58d4bd308c55a530c50fdcce41"><td class="memItemLeft" align="right" valign="top"><a id="a77b6bd58d4bd308c55a530c50fdcce41"></a>
+<a class="el" href="typedefs_8hpp.html#a7e1a7f34f6d09dabb4cdafd6e4118603">collisions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>the_collisions</b></td></tr>
+<tr class="separator:a77b6bd58d4bd308c55a530c50fdcce41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab16638b1ce0d1a7a0da9ecffc6370e8c"><td class="memItemLeft" align="right" valign="top"><a id="ab16638b1ce0d1a7a0da9ecffc6370e8c"></a>
+sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>spawn_location</b></td></tr>
+<tr class="separator:ab16638b1ce0d1a7a0da9ecffc6370e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac73bd105ef4ee4c7d46727a7e832bcf"><td class="memItemLeft" align="right" valign="top"><a id="aac73bd105ef4ee4c7d46727a7e832bcf"></a>
+std::vector&lt; <a class="el" href="typedefs_8hpp.html#a09ee7f853fc9bc830a9445a06fd53d4b">mob_ptr</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>all_mobs</b></td></tr>
+<tr class="separator:aac73bd105ef4ee4c7d46727a7e832bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e51a9e196533b27304f21eb26d8f4ba"><td class="memItemLeft" align="right" valign="top"><a id="a3e51a9e196533b27304f21eb26d8f4ba"></a>
+<a class="el" href="classbullet.html">bullet</a>&#160;</td><td class="memItemRight" valign="bottom"><b>weapon</b></td></tr>
+<tr class="separator:a3e51a9e196533b27304f21eb26d8f4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab808840ba1e83cb34c691ba2472d6f9b"><td class="memItemLeft" align="right" valign="top"><a id="ab808840ba1e83cb34c691ba2472d6f9b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>got_hit</b> = false</td></tr>
+<tr class="separator:ab808840ba1e83cb34c691ba2472d6f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0762399be7cd26263456d86fd2774ff"><td class="memItemLeft" align="right" valign="top"><a id="ac0762399be7cd26263456d86fd2774ff"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mob_touch_counter</b> = 0</td></tr>
+<tr class="separator:ac0762399be7cd26263456d86fd2774ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e77e1b0fa4f0812cce288f5d90897b"><td class="memItemLeft" align="right" valign="top"><a id="ac4e77e1b0fa4f0812cce288f5d90897b"></a>
+sf::Font&#160;</td><td class="memItemRight" valign="bottom"><b>font</b></td></tr>
+<tr class="separator:ac4e77e1b0fa4f0812cce288f5d90897b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141d43a06ed4ba77c0aa891e0cf01b73"><td class="memItemLeft" align="right" valign="top"><a id="a141d43a06ed4ba77c0aa891e0cf01b73"></a>
+sf::Text&#160;</td><td class="memItemRight" valign="bottom"><b>text</b></td></tr>
+<tr class="separator:a141d43a06ed4ba77c0aa891e0cf01b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e53b65e44f4909ecedda128161673b6"><td class="memItemLeft" align="right" valign="top"><a id="a7e53b65e44f4909ecedda128161673b6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>text_counter</b> = 0</td></tr>
+<tr class="separator:a7e53b65e44f4909ecedda128161673b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b92a71eb730de05a72d7963bfe13254"><td class="memItemLeft" align="right" valign="top"><a id="a4b92a71eb730de05a72d7963bfe13254"></a>
+int &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>level_counter</b></td></tr>
+<tr class="separator:a4b92a71eb730de05a72d7963bfe13254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa49dd70ca2165a228c02d63e6d3217"><td class="memItemLeft" align="right" valign="top"><a id="a1aa49dd70ca2165a228c02d63e6d3217"></a>
+<a class="el" href="classsoundtrack.html">soundtrack</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>soundbuffer</b></td></tr>
+<tr class="separator:a1aa49dd70ca2165a228c02d63e6d3217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1f8f06df0010b0d469c3e56bb67c301"><td class="memItemLeft" align="right" valign="top"><a id="ae1f8f06df0010b0d469c3e56bb67c301"></a>
+sf::SoundBuffer&#160;</td><td class="memItemRight" valign="bottom"><b>shootbuffer</b></td></tr>
+<tr class="separator:ae1f8f06df0010b0d469c3e56bb67c301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

@@ -9,6 +9,16 @@ manager of all menu\textquotesingle{}s in game
 
 {\ttfamily \#include $<$management.\+hpp$>$}
 
+
+
+Collaboration diagram for menu\+\_\+management\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmenu__management__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,6 +32,27 @@ std\+::string \hyperlink{classmenu__management_ac64c1eace3d955be8623a1129597dc54
 \begin{DoxyCompactList}\small\item\em function that displays the save\+\_\+file\+\_\+menu \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classmenu__management_a92d22f059d33ccc5c3ae485804fd5fbb}{start\+\_\+game} ()
 \begin{DoxyCompactList}\small\item\em function that is used to start the game \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmenu__management_ab79fa0c3480a52f3cd603c77e8f7008f}\label{classmenu__management_ab79fa0c3480a52f3cd603c77e8f7008f}} 
+sf\+::\+Render\+Window \& {\bfseries window}
+\item 
+\mbox{\Hypertarget{classmenu__management_a0c9bf334940ea0d4576e371e1eaa5c9f}\label{classmenu__management_a0c9bf334940ea0d4576e371e1eaa5c9f}} 
+\hyperlink{classfile__management}{file\+\_\+management} \& {\bfseries manager}
+\item 
+\mbox{\Hypertarget{classmenu__management_aea347d4a93f4e7819dae28b5ba320857}\label{classmenu__management_aea347d4a93f4e7819dae28b5ba320857}} 
+\hyperlink{classmenu}{menu} {\bfseries start\+\_\+menu} = \hyperlink{classmenu}{menu}(window,std\+::string\{\char`\"{}forest.\+png\char`\"{}\} , true, \char`\"{}N\+E\+W\+\_\+\+G\+A\+ME\char`\"{}, true, \char`\"{}L\+O\+AD G\+A\+ME\char`\"{}, true, \char`\"{}Q\+U\+IT\char`\"{} )
+\item 
+\mbox{\Hypertarget{classmenu__management_a125b772090ca2c54c2689b408700eb02}\label{classmenu__management_a125b772090ca2c54c2689b408700eb02}} 
+\hyperlink{classmenu}{menu} {\bfseries pause\+\_\+menu} = \hyperlink{classmenu}{menu}(window, std\+::string\{\char`\"{}forest.\+png\char`\"{}\},true, \char`\"{}C\+O\+N\+T\+I\+N\+UE\char`\"{},true ,\char`\"{}Q\+U\+IT\char`\"{})
+\item 
+\mbox{\Hypertarget{classmenu__management_a1ca190cfc1fcd91354ce00ad5cc1dea6}\label{classmenu__management_a1ca190cfc1fcd91354ce00ad5cc1dea6}} 
+\hyperlink{classmenu}{menu} {\bfseries save\+\_\+file\+\_\+menu} = manager.\+make\+\_\+save\+\_\+file\+\_\+menu(window)
+\item 
+\mbox{\Hypertarget{classmenu__management_a7c05d72347e629a180ff9114295f00d5}\label{classmenu__management_a7c05d72347e629a180ff9114295f00d5}} 
+\hyperlink{classsoundtrack}{soundtrack} \& {\bfseries sound}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

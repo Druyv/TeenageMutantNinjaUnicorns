@@ -1,0 +1,6 @@
+<map id="cutscene1" name="cutscene1">
+<area shape="rect" id="node2" href="$classtextbox.html" title="Creates a box with text and a headshot. " alt="" coords="5,81,71,108"/>
+<area shape="rect" id="node3" href="$classsoundtrack.html" title="Class that plays either music or sound effects. " alt="" coords="115,81,201,108"/>
+<area shape="rect" id="node4" href="$classimage__from__file.html" title="create sprite on screen " alt="" coords="226,81,341,108"/>
+<area shape="rect" id="node5" href="$classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="246,5,321,32"/>
+</map>

@@ -20,11 +20,19 @@ void \hyperlink{classsoundtrack_a7569a4c0cde86548197756b8e05cf464}{playmusic} ()
 \begin{DoxyCompactList}\small\item\em Music player. \end{DoxyCompactList}\item 
 void \hyperlink{classsoundtrack_aa18de6469aca15922cfa8a8e8412f76d}{playsound} (std\+::string name)
 \begin{DoxyCompactList}\small\item\em Sound player. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classsoundtrack_a9047bea4f37493cbe81a990bc9d0c4e7}\label{classsoundtrack_a9047bea4f37493cbe81a990bc9d0c4e7}} 
 void \hyperlink{classsoundtrack_a9047bea4f37493cbe81a990bc9d0c4e7}{stop} ()
-\begin{DoxyCompactList}\small\item\em stop the sound that is playing \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em stop sound \end{DoxyCompactList}\item 
 void \hyperlink{classsoundtrack_a83744518feb748a979a67a56fae997fe}{playsound\+\_\+cutscene} (std\+::string name)
 \begin{DoxyCompactList}\small\item\em play a sound for in the cutscene \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsoundtrack_a275bf853875a2855f8bbe30f5e94d7a8}\label{classsoundtrack_a275bf853875a2855f8bbe30f5e94d7a8}} 
+sf\+::\+Music {\bfseries sfmlmusic}
+\item 
+\mbox{\Hypertarget{classsoundtrack_a2390f2ad4bd2220e418412cd4ca7e44a}\label{classsoundtrack_a2390f2ad4bd2220e418412cd4ca7e44a}} 
+sf\+::\+Music {\bfseries sound}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -76,9 +84,7 @@ Loads the specified music file and plays it. \mbox{\Hypertarget{classsoundtrack_
 
 Sound player. 
 
-Loads the specified sound file and plays it.
-
-
+Loads the specified sound file and plays it. 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\tt in}  & {\em name} & name of file \\
 \hline
@@ -93,14 +99,24 @@ Loads the specified sound file and plays it.
 
 play a sound for in the cutscene 
 
-this is a playfunction without collision with the background music.
+This is a playfunction without collision with the background music.
 
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\tt in}  & {\em name} & name of file that wants to play \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classsoundtrack_a9f25fee4c6d5dbc820e2a18b13b43e68}\label{classsoundtrack_a9f25fee4c6d5dbc820e2a18b13b43e68}} 
+\mbox{\Hypertarget{classsoundtrack_a9047bea4f37493cbe81a990bc9d0c4e7}\label{classsoundtrack_a9047bea4f37493cbe81a990bc9d0c4e7}} 
+\index{soundtrack@{soundtrack}!stop@{stop}}
+\index{stop@{stop}!soundtrack@{soundtrack}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void soundtrack\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stop sound 
+
+This function stops a playing sound. \mbox{\Hypertarget{classsoundtrack_a9f25fee4c6d5dbc820e2a18b13b43e68}\label{classsoundtrack_a9f25fee4c6d5dbc820e2a18b13b43e68}} 
 \index{soundtrack@{soundtrack}!stop\+\_\+music@{stop\+\_\+music}}
 \index{stop\+\_\+music@{stop\+\_\+music}!soundtrack@{soundtrack}}
 \subsubsection{\texorpdfstring{stop\+\_\+music()}{stop\_music()}}

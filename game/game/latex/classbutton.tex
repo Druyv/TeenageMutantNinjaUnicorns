@@ -1,0 +1,147 @@
+\hypertarget{classbutton}{}\section{button Class Reference}
+\label{classbutton}\index{button@{button}}
+
+
+Creates a button at a specific place on the screen.  
+
+
+
+
+{\ttfamily \#include $<$button.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbutton_a414300b6e7efb981b90b0fef111f133c}{button} (float start\+\_\+height\+\_\+y=0.\+0, float start\+\_\+height\+\_\+x=0.\+0, int position=0, std\+::string whats\+\_\+on\+\_\+the\+\_\+button=\char`\"{} \char`\"{})
+\begin{DoxyCompactList}\small\item\em constructor to make button \end{DoxyCompactList}\item 
+void \hyperlink{classbutton_adae3f830089f26d5c43a7f5681591364}{draw} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Function to draw the button \& the text. \end{DoxyCompactList}\item 
+void \hyperlink{classbutton_aaa445c71f07d867926dfcd57016064e6}{setup} ()
+\begin{DoxyCompactList}\small\item\em Function that decides what gets drawn where. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{classbutton_a4066a4598a5f190a536b5f3a60e3d208}{get\+Global\+Bounds} ()
+\begin{DoxyCompactList}\small\item\em get objects floatrect \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbutton_ae89ddc2b4c67d8e06ee986ebf8f64678}\label{classbutton_ae89ddc2b4c67d8e06ee986ebf8f64678}} 
+float {\bfseries start\+\_\+height\+\_\+y}
+\item 
+\mbox{\Hypertarget{classbutton_a235a0266ef30864d5feae7de4a5b62ad}\label{classbutton_a235a0266ef30864d5feae7de4a5b62ad}} 
+float {\bfseries start\+\_\+height\+\_\+x}
+\item 
+\mbox{\Hypertarget{classbutton_a4019a4524e3a3dbfbf600d7d9503fe59}\label{classbutton_a4019a4524e3a3dbfbf600d7d9503fe59}} 
+int {\bfseries position}
+\item 
+\mbox{\Hypertarget{classbutton_acf5ba8924cc0662391801fd3baba578a}\label{classbutton_acf5ba8924cc0662391801fd3baba578a}} 
+std\+::string {\bfseries whats\+\_\+on\+\_\+the\+\_\+button}
+\item 
+\mbox{\Hypertarget{classbutton_a390556bd571d9956e5a39e36c52869df}\label{classbutton_a390556bd571d9956e5a39e36c52869df}} 
+sf\+::\+Texture {\bfseries texture}
+\item 
+\mbox{\Hypertarget{classbutton_a609a129ede8897cb39ab48fb43e306c7}\label{classbutton_a609a129ede8897cb39ab48fb43e306c7}} 
+sf\+::\+Rectangle\+Shape {\bfseries button\+\_\+background}
+\item 
+\mbox{\Hypertarget{classbutton_a0dd8b8c80e46bcbb18c8e12cf6fd6920}\label{classbutton_a0dd8b8c80e46bcbb18c8e12cf6fd6920}} 
+sf\+::\+Font {\bfseries font}
+\item 
+\mbox{\Hypertarget{classbutton_aec5f183b411fb2f2759e86bceee44229}\label{classbutton_aec5f183b411fb2f2759e86bceee44229}} 
+sf\+::\+Text {\bfseries text}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates a button at a specific place on the screen. 
+
+This class is used to make a button that is placed at a certain position. Right now a lot of math is done in this class to make sure the button is in the exact middle of the screen, together with the ( adjustable ) text on the button.
+
+Note\+: We would like to transfer all the math done in here to \hyperlink{classmenu}{menu}. However, this has low priority .
+
+\begin{DoxyDate}{Date}
+27-\/1-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbutton_a414300b6e7efb981b90b0fef111f133c}\label{classbutton_a414300b6e7efb981b90b0fef111f133c}} 
+\index{button@{button}!button@{button}}
+\index{button@{button}!button@{button}}
+\subsubsection{\texorpdfstring{button()}{button()}}
+{\footnotesize\ttfamily button\+::button (\begin{DoxyParamCaption}\item[{float}]{start\+\_\+height\+\_\+y = {\ttfamily 0.0},  }\item[{float}]{start\+\_\+height\+\_\+x = {\ttfamily 0.0},  }\item[{int}]{position = {\ttfamily 0},  }\item[{std\+::string}]{whats\+\_\+on\+\_\+the\+\_\+button = {\ttfamily \char`\"{}~\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+constructor to make button 
+
+This constructor receives 2 floats to determine the start position of the button. The position determines at which of the three positions it will render according to screen size. The string is the text that will be displayed on the button.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em start\+HeightY} & Starting height Y coordinate \\
+\hline
+\mbox{\tt in}  & {\em start\+HeightX} & Starting height X coordinate \\
+\hline
+\mbox{\tt in}  & {\em position} & The postion for the button ( 1 -\/ 2 -\/ 3) \\
+\hline
+\mbox{\tt in}  & {\em Whats\+On\+The\+Button} & std\+::string, the text on the button \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbutton_adae3f830089f26d5c43a7f5681591364}\label{classbutton_adae3f830089f26d5c43a7f5681591364}} 
+\index{button@{button}!draw@{draw}}
+\index{draw@{draw}!button@{button}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void button\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Function to draw the button \& the text. 
+
+Function to draw both the button and the text on the given window.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window} & The display window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbutton_a4066a4598a5f190a536b5f3a60e3d208}\label{classbutton_a4066a4598a5f190a536b5f3a60e3d208}} 
+\index{button@{button}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!button@{button}}
+\subsubsection{\texorpdfstring{get\+Global\+Bounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect button\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get objects floatrect 
+
+This function uses the get\+Global\+Bounds function from te object to get the bounding box of the object. It returns this as a floatrect. This return value can be used to check if the object touches another object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The objects initial position \\
+\hline
+\mbox{\tt in}  & {\em image\+\_\+name} & The name of the image that has to be loaded \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em sf\+::\+Float\+Rect} & \{The bounding box of the sprite object created in this class\} \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classbutton_aaa445c71f07d867926dfcd57016064e6}\label{classbutton_aaa445c71f07d867926dfcd57016064e6}} 
+\index{button@{button}!setup@{setup}}
+\index{setup@{setup}!button@{button}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void button\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that decides what gets drawn where. 
+
+This function decides where to draw the buttons. The purpose of all the math is to determine the place on the screen for the button, so it sits right in the middle of the screen. The draw position for the text is also adjusted for length of the given std\+::string. This is also the function that uses the position parameter to determine where the position gets drawn. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{button_8hpp}{button.\+hpp}\item 
+button.\+cpp\end{DoxyCompactItemize}
