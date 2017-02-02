@@ -36,5 +36,7 @@ var searchData=
   ['soundtrack',['soundtrack',['../classsoundtrack.html',1,'soundtrack'],['../classsoundtrack.html#add31bdeb1a693d541443f1d88586d3b6',1,'soundtrack::soundtrack()']]],
   ['soundtrack_2ehpp',['soundtrack.hpp',['../soundtrack_8hpp.html',1,'']]],
   ['start_5fgame',['start_game',['../classmenu__management.html#a92d22f059d33ccc5c3ae485804fd5fbb',1,'menu_management']]],
+  ['stop',['stop',['../classsoundtrack.html#a9047bea4f37493cbe81a990bc9d0c4e7',1,'soundtrack']]],
+  ['stop_5fmusic',['stop_music',['../classsoundtrack.html#a9f25fee4c6d5dbc820e2a18b13b43e68',1,'soundtrack']]],
   ['string_5ffrom_5fcolor',['string_from_color',['../classdrawable.html#add3d8569fe2616ae0ed503b19c92c08e',1,'drawable']]]
 ];

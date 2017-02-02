@@ -14,19 +14,17 @@ Class that plays either music or sound effects.
 \item 
 \hyperlink{classsoundtrack_add31bdeb1a693d541443f1d88586d3b6}{soundtrack} (std\+::string filename)
 \begin{DoxyCompactList}\small\item\em constructor for soundtrack class \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classsoundtrack_a9f25fee4c6d5dbc820e2a18b13b43e68}\label{classsoundtrack_a9f25fee4c6d5dbc820e2a18b13b43e68}} 
-void {\bfseries stop\+\_\+music} ()
+void \hyperlink{classsoundtrack_a9f25fee4c6d5dbc820e2a18b13b43e68}{stop\+\_\+music} ()
 \item 
 void \hyperlink{classsoundtrack_a7569a4c0cde86548197756b8e05cf464}{playmusic} ()
 \begin{DoxyCompactList}\small\item\em Music player. \end{DoxyCompactList}\item 
 void \hyperlink{classsoundtrack_aa18de6469aca15922cfa8a8e8412f76d}{playsound} (std\+::string name)
 \begin{DoxyCompactList}\small\item\em Sound player. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classsoundtrack_a9047bea4f37493cbe81a990bc9d0c4e7}\label{classsoundtrack_a9047bea4f37493cbe81a990bc9d0c4e7}} 
-void {\bfseries stop} ()
-\item 
-\mbox{\Hypertarget{classsoundtrack_a83744518feb748a979a67a56fae997fe}\label{classsoundtrack_a83744518feb748a979a67a56fae997fe}} 
-void {\bfseries playsound\+\_\+cutscene} (std\+::string name)
-\end{DoxyCompactItemize}
+void \hyperlink{classsoundtrack_a9047bea4f37493cbe81a990bc9d0c4e7}{stop} ()
+\begin{DoxyCompactList}\small\item\em stop the sound that is playing \end{DoxyCompactList}\item 
+void \hyperlink{classsoundtrack_a83744518feb748a979a67a56fae997fe}{playsound\+\_\+cutscene} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em play a sound for in the cutscene \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -78,7 +76,37 @@ Loads the specified music file and plays it. \mbox{\Hypertarget{classsoundtrack_
 
 Sound player. 
 
-Loads the specified sound file and plays it. 
+Loads the specified sound file and plays it.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & name of file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsoundtrack_a83744518feb748a979a67a56fae997fe}\label{classsoundtrack_a83744518feb748a979a67a56fae997fe}} 
+\index{soundtrack@{soundtrack}!playsound\+\_\+cutscene@{playsound\+\_\+cutscene}}
+\index{playsound\+\_\+cutscene@{playsound\+\_\+cutscene}!soundtrack@{soundtrack}}
+\subsubsection{\texorpdfstring{playsound\+\_\+cutscene()}{playsound\_cutscene()}}
+{\footnotesize\ttfamily void soundtrack\+::playsound\+\_\+cutscene (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+play a sound for in the cutscene 
+
+this is a playfunction without collision with the background music.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & name of file that wants to play \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsoundtrack_a9f25fee4c6d5dbc820e2a18b13b43e68}\label{classsoundtrack_a9f25fee4c6d5dbc820e2a18b13b43e68}} 
+\index{soundtrack@{soundtrack}!stop\+\_\+music@{stop\+\_\+music}}
+\index{stop\+\_\+music@{stop\+\_\+music}!soundtrack@{soundtrack}}
+\subsubsection{\texorpdfstring{stop\+\_\+music()}{stop\_music()}}
+{\footnotesize\ttfamily void soundtrack\+::stop\+\_\+music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\textbackslash{} brief stop the background music 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
