@@ -34,8 +34,8 @@ void textbox::build_box() {
 	text.setCharacterSize(24);
 
 	sf::Vector2f positionbox = sf::Vector2f(BoxBackground.getPosition());
-	float ding = ((positionbox.x)+300);
-	text.setPosition((ding),(positionbox.y*1.1));
+	float textoffset = ((positionbox.x)+300);
+	text.setPosition((textoffset),(positionbox.y*1.1));
 }
 
 
