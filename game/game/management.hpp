@@ -1,6 +1,11 @@
 ///@file
+
+#ifndef MANAGEMENT_HPP
+#define MANAGEMENT_HPP
+
 #include <iostream>
 #include <fstream>
+
 #include "menu.hpp"
 #include "cutscene1.hpp"
 #include "soundtrack.hpp" 
@@ -17,7 +22,7 @@
 /// \date 30-1-17
 ///
 class file_management {
-private:
+    private:
 	sf::RenderWindow & window;
 	soundtrack & sound;
 	std::ifstream input;
@@ -27,7 +32,7 @@ private:
 	int counter; 
 	int current_save_file = 0;
 	std::string standard_path = "levels/";
-public:
+    public:
 	/// \brief constructor to initialize pathfile
 	///
 	/// This constructor sets input equal to the pathfile given.
@@ -95,8 +100,9 @@ public:
 	/// \param[in] value integer you want to set value to 
 	///
 	void set_counter(int value);
+        
         /// \brief getter for the counter of the level
-		/// 
+        /// 
 	/// returns the counter in reference so it makes the counter lookable every moment
         int & get_counter();
 
@@ -130,15 +136,14 @@ public:
 /// \date 30-1-17
 ///
 class menu_management {
-private:
-
+    private:
 	sf::RenderWindow & window;
 	file_management & manager;
 	menu start_menu = menu(window,std::string{"forest.png"} , true, "NEW_GAME", true, "LOAD GAME", true, "QUIT" );
 	menu pause_menu = menu(window, std::string{"forest.png"},true, "CONTINUE",true ,"QUIT");
 	menu save_file_menu = manager.make_save_file_menu(window);
 	soundtrack & sound;
-public:
+    public:
 	/// \brief constructor to initialize window and file manager
 	///
 	/// This constructor initializes the window where the menu's are displayed on.
@@ -147,7 +152,8 @@ public:
 	/// \param[in] window  sf::RenderWindow that is used to display menu's 
 	/// \param[in] manager filemanagement-object that used to give functionality to menu's 
 	///
-	menu_management(sf::RenderWindow & window, file_management & manager,soundtrack & sound);
+	menu_management(sf::RenderWindow & window, file_management & manager, soundtrack & sound);
+        
 	/// \brief function that displays start_menu
 	///
 	/// This function is used to display the start_menu
@@ -155,6 +161,7 @@ public:
 	/// \return menu item that is pressed
 	///
 	int display_start_game();
+        
 	/// \brief function that displays pause_menu
 	///
 	/// This function displays the pause menu
@@ -162,6 +169,7 @@ public:
 	/// \note This function doesn't have a return value, because of a bug this function doesn't have much functionality
 	///
 	void display_pause_game();
+        
 	/// \brief function that displays the save_file_menu 
 	///
 	/// FThis function displays the save_file_menu. The function return a 
@@ -169,8 +177,9 @@ public:
 	/// path to the save-file
 	///
 	/// \return This function returns a string that is either empty, "BACK" or the path to the save-file pressed.
-	///
+	/// 
 	std::string display_save_file_menu();
+        
 	/// \brief function that is used to start the game
 	///
 	/// This function is used to start the game. By displaying the start screen and determening 
@@ -179,7 +188,5 @@ public:
 	/// \return path to level selected by player
 	///
 	std::string start_game();
-
 };
-
-
+#endif //MANAGEMENT_HPP

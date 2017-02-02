@@ -102,44 +102,45 @@ sf::Vector2f factory::get_level_size(){
 }
 
 std::ifstream & operator >> (std::ifstream & input, sf::Vector2f & rhs) { //space toevoegen achter ,?
-	char c;
-	if ( !(input >> c) ) { throw end_of_file(); }
-	if ( c != '(' ) { throw invalid_position(c); }
+    char c;
+    if ( !(input >> c) ) { throw end_of_file(); }
+    if ( c != '(' ) { throw invalid_position(c); }
 
-	if ( !(input >> rhs.x) ) { throw invalid_position(); }
+    if ( !(input >> rhs.x) ) { throw invalid_position(); }
         
-        input >> c;
-	if ( c != ',' ) { throw invalid_position(c); }
-	if ( !(input >> rhs.y) ) { throw invalid_position(); }
+    input >> c;
+    if ( c != ',' ) { throw invalid_position(c); }
+    if ( !(input >> rhs.y) ) { throw invalid_position(); }
         
-        input >> c;
-	if ( c != ')' ) { throw invalid_position(c); }
+    input >> c;
+    if ( c != ')' ) { throw invalid_position(c); }
 
-	return input;
+    return input;
 }
 
 std::ifstream & operator >> (std::ifstream & input, sf::Color & rhs) {
-	std::string name;
-	input >> name;
-	const struct { const char * name; sf::Color color; } colors[]{
-		{ "yellow", sf::Color::Yellow },
-		{ "red", sf::Color::Red },
-		{ "blue", sf::Color::Blue },
-		{ "black", sf::Color::Black },
-		{ "cyan", sf::Color::Cyan },
-		{ "green", sf::Color::Green },
-		{ "magenta", sf::Color::Magenta },
-		{ "transparent", sf::Color::Transparent },
-                { "white", sf::Color::White },
-                { "brown", sf::Color{165, 42, 42}}
-	};
-	for (auto const & color : colors) {
-		if (color.name == name) {
-			rhs = color.color;
-			return input;
-		}
-	}
-	if (name == "") { throw end_of_file(); }
-	throw unknown_color( name );
-	return input;
+    std::string name;
+    input >> name;
+    const struct { const char * name; sf::Color color; } colors[]{
+        { "yellow", sf::Color::Yellow },
+        { "red", sf::Color::Red },
+        { "blue", sf::Color::Blue },
+        { "black", sf::Color::Black },
+        { "cyan", sf::Color::Cyan },
+        { "green", sf::Color::Green },
+        { "magenta", sf::Color::Magenta },
+        { "transparent", sf::Color::Transparent },
+        { "white", sf::Color::White },
+        { "brown", sf::Color{165, 42, 42}}
+    };
+    for (auto const & color : colors) {
+        if (color.name == name) {
+            rhs = color.color;
+            return input;
+        }
+    }
+    
+    if (name == "") { throw end_of_file(); }
+    throw unknown_color( name );
+    return input;
 }

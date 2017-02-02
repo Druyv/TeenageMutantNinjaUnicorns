@@ -26,4 +26,4 @@ typedef std::vector<action> actions;
 ///std::shared_ptr with #mob objects
 typedef std::shared_ptr<mob> mob_ptr;
 
-#endif // TYPEDEFS_HPP
+#endif //TYPEDEFS_HPP

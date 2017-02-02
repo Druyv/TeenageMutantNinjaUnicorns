@@ -1,4 +1,5 @@
 ///@file
+
 #ifndef EXCEPTIONS_HPP
 #define EXCEPTIONS_HPP
 
@@ -313,4 +314,4 @@ class font_load_error : public std::exception {
         std::string msg;
 };
 
-#endif // EXCEPTIONS_HPP
+#endif //EXCEPTIONS_HPP

@@ -96,5 +96,4 @@ class animation : public drawable {
 	/// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Sprite.php#a3fefec419a4e6a90c0fd54c793d82ec2 ">sf::Sprite::setTextureRect sf::IntRect</a>
 	void setTextureRect(const sf::IntRect & rectangle);
 };
-
-#endif 
+#endif //ANIMATION_HPP

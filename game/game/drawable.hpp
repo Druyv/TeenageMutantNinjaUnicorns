@@ -341,4 +341,4 @@ public:
 	/// 
 	virtual std::string get_image_name();
 };
-#endif // DRAWABLE_HPP
+#endif //DRAWABLE_HPP

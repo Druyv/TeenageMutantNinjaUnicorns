@@ -1,8 +1,8 @@
 #include "animation.hpp"
 
 animation::animation(sf::Vector2f position, std::string sheet_name, float width, float length) :
-	drawable{position, sf::Vector2f{ 0,0 }, "PICTURE"},
-	sheet_name{sheet_name}
+    drawable{position, sf::Vector2f{ 0,0 }, "PICTURE"},
+    sheet_name{sheet_name}
 {
     if (!texture.loadFromFile(sheet_name)) {
         throw sheet_load_error{sheet_name};

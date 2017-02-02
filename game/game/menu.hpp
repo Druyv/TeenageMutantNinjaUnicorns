@@ -1,11 +1,12 @@
 ///@file
-#ifndef _MENU1_HPP
-#define _MENU1_HPP
+
+#ifndef MENU_HPP
+#define MENU_HPP
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+
 #include "drawable.hpp"
-//#include "background.hpp"
 #include "image.hpp"
 #include "button.hpp"
 
@@ -22,7 +23,7 @@
 ///
 /// \date 27-1-2017
 class menu {
-private:
+    private:
 	sf::RenderWindow & window;
 
 	bool button_bool1;
@@ -33,13 +34,12 @@ private:
 	std::string button_two_text;
 	std::string button_three_text;
 
-	Button button1;
-	Button button2;
-	Button button3;
+	button button1;
+	button button2;
+	button button3;
 
-	//background bg;
         image_from_file background;
-public:
+    public:
 	/// \brief constructor to make a menu
 	///
 	/// constructor to make a menu with 1 - 2  or  3 buttons. Also requires a 
@@ -55,8 +55,16 @@ public:
 	/// \param[in] ButtonTwoText    Text that will be displayed on button2
 	/// \param[in] buttonBool3      Determines if button3 will be drawn
 	/// \param[in] ButtonThreeText  Text that will be displayed on button3
-	menu(sf::RenderWindow & window, std::string  background_picture, bool button_bool1, std::string button_one_text,
-	bool button_bool2 = 0, std::string button_two_text = "Empty", bool button_bool3 = 0, std::string button_three_text = "Empty");
+	menu(
+            sf::RenderWindow & window,
+            std::string  background_picture,
+            bool button_bool1, 
+            std::string button_one_text,
+            bool button_bool2 = 0,
+            std::string button_two_text = "Empty",
+            bool button_bool3 = 0,
+            std::string button_three_text = "Empty"
+        );
 
 	/// \brief Function to build and draw the menu
 	///
@@ -71,25 +79,19 @@ public:
 	/// of the buttons, if yes it will return either a 0 or a 1 or a 2, depending
 	/// on which button was pushed. This allows different functionality for the three buttons. 
 	///
-	/// \param[in] position     The position of the mouse when the left mouse button is pushed
+	/// \param[in] position The position of the mouse when the left mouse button is pushed
 	int select(sf::Vector2i position);
 	/// \rief Function that determines what the last button is 
 	///
 	/// This function is used to determine what the last button is in the menu
 	/// returns number of last button in menu
 	int last_button();
+        
 	/// \brief
 	/// 
 	/// getter for the name of the button equal to the button number
 	///
-	/// param[in]  button_place number of the button.
-
+	/// param[in] button_place number of the button.
 	std::string get_button_text(int button_place);
-
-
-
 };
-
-
-
-#endif
+#endif //MENU_HPP

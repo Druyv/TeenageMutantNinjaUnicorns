@@ -10,16 +10,17 @@ unicorn::unicorn(sf::Vector2f position,
         int & level_counter,
         soundtrack & soundbuffer
     ) :
-	drawable{position, sf::Vector2f{ 1.0,1.0 }, std::string{ "UNICORN"}},
-	actions_array{actions_array},
-	unicorn_animation{position, filename, 7.0, 5.0},
-	rainbow{position, file_rainbow, 7.0, 1.0},
-	the_collisions{the_collisions},
-        spawn_location{position},
-	all_mobs{all_mobs},
-	weapon{position, "Nyan-Cat.png", all_mobs, objects},
-        level_counter{level_counter},
-	soundbuffer{soundbuffer}
+
+    drawable{position, sf::Vector2f{1.0, 1.0}, std::string{ "UNICORN"}},
+    actions_array{actions_array},
+    unicorn_animation{position, filename, 7.0, 5.0},
+    rainbow{position, file_rainbow, 7.0, 1.0},
+    the_collisions{the_collisions},
+    spawn_location{position},
+    all_mobs{all_mobs},
+    weapon{position, "Nyan-Cat.png", all_mobs, objects},
+    level_counter{level_counter},
+    soundbuffer{soundbuffer}
 
 {
     if (!font.loadFromFile("Pixeled.ttf")){

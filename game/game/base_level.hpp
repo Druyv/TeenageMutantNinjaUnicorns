@@ -44,4 +44,4 @@ class base_level {
         void push_back_borders(objects_vector & objects);
 };
 
-#endif // BASE_LEVEL_HPP
+#endif //BASE_LEVEL_HPP

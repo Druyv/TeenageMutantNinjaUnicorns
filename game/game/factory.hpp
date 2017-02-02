@@ -3,9 +3,10 @@
 #ifndef FACTORY_HPP
 #define FACTORY_HPP
 
+#include <fstream>
+
 #include "wall.hpp"
 #include "unicorn.hpp"
-#include <fstream>
 #include "exceptions.hpp"
 
 std::ifstream & operator >> (std::ifstream & input, sf::Vector2f & rhs);
@@ -107,5 +108,4 @@ class factory {
         ///
         sf::Vector2f get_level_size();
 };
-
 #endif //FACTORY_HPP

@@ -1,9 +1,11 @@
 ///@file
 
-#ifndef _CAMERA_HPP
-#define _CAMERA_HPP
+#ifndef CAMERA_HPP
+#define CAMERA_HPP
+
 #include <SFML/Graphics.hpp>
 #include <iostream>
+
 #include "drawable.hpp"
 
 ///\class camera
@@ -14,7 +16,7 @@
 /// If the object moves the camera moves with it.
 ///
 class camera{
-public:
+    public:
 	/// \brief constructor object
 	///
 	/// Constructor to make a camera that follows the player. 
@@ -30,9 +32,8 @@ public:
 	/// \param[in] window SFML window that is used to display the camera.
 	///
 	void follow(sf::RenderWindow &window);
-
-private:
+    private:
 	object_ptr object;
 	sf::View player_cam;
 };
-#endif
+#endif //CAMERA_HPP
