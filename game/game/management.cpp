@@ -1,6 +1,7 @@
 #include "management.hpp"
 
-file_management::file_management(std::string pathfile)
+file_management::file_management(std::string pathfile,sf::RenderWindow & window,soundtrack & sound):
+	window{window},sound{sound}
 {
 	set_input(pathfile);
 }
@@ -32,6 +33,11 @@ std::string file_management::get_level_file(std::string safe_file) {
 		if (c >= '0' && c <= '9') {
 			counter = c - 48;
 		}
+	}	
+	if (counter==4){
+		  cutscene1 scene1(window,sound);
+		window.clear();
+                        scene1.cyan_island();
 	}
 	return file;
 }
@@ -65,6 +71,9 @@ menu file_management::make_save_file_menu(sf::RenderWindow & window) {
 }
 
 std::string file_management::next_level() {
+
+
+	
 	return std::string(standard_path + "level" + std::to_string(++counter) + ".properties");
 }
 

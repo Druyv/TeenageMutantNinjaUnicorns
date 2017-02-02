@@ -32,7 +32,7 @@ int main(int argc, const char **argv) {
 	};
 
 	//Menu and file management
-	file_management manager_file("played_games/save_files_path.txt");
+	file_management manager_file("played_games/save_files_path.txt",window,soundplayer);
 	menu_management manager_menu(window, manager_file,soundplayer);
 	std::string level_path = manager_menu.start_game();
 	std::cout << "Path for level" << level_path;
@@ -133,12 +133,18 @@ int main(int argc, const char **argv) {
                     }
                     exit(0);
                 }
-		if (manager_file.get_counter() == 3){
-			window.clear();
-			cutscene1 cut(window,soundplayer);
-			cut.cyan_island();
-			  window.clear();
-		}
+				else  if (manager_file.get_counter() == 3){
+		        sf::View playerCam(sf::FloatRect(0, 0, float(window.getSize().x), float(window.getSize().y)));
+	playerCam.setCenter(sf::Vector2f{(float)window.getSize().x/2, (float)window.getSize().y/2});
+        
+	window.setView(playerCam);
+					
+							
+		  cutscene1 scene1(window,soundplayer);
+
+                        scene1.cyan_island();
+				}
+	
                 try {
                     objects.clear();
                     objects_tmp.clear();

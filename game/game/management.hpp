@@ -18,7 +18,8 @@
 ///
 class file_management {
 private:
-	
+	sf::RenderWindow & window;
+	soundtrack & sound;
 	std::ifstream input;
 	std::ofstream output;
 	std::string save_file_1;
@@ -33,7 +34,7 @@ public:
 	///
 	/// \param[in] pathfile The pathfile that contains all save_file paths 
 	///
-	file_management(std::string pathfile);
+	file_management(std::string pathfile,sf::RenderWindow & window,soundtrack & sound);
 
 	/// \brief function that changes input that is used for information
 	///

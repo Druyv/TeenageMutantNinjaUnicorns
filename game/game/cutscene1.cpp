@@ -4,7 +4,7 @@
 
 
 cutscene1::cutscene1(sf::RenderWindow & window,soundtrack & sound) :
-	window(window),
+	window{window},
 	sound{sound},
     textbox1("What a magical day in the enchanted for-", "headshotArno.png", window),
 	textbox2("*Sigh* This is why I drink...", "headshotArno.png", window),
@@ -98,7 +98,7 @@ void cutscene1::play_scene() {
 void cutscene1::scene1() {
 	background_forest.draw(window);
 	Arno.draw(window);
-	textbox1.draw(window);
+	textbox_cyan1.draw(window);
 };
 
 void cutscene1::scene2() {
