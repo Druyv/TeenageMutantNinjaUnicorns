@@ -1,9 +1,11 @@
 ///@file
+
 #ifndef TYPEDEFS_HPP
 #define TYPEDEFS_HPP
+
 #include <memory>
-#include <iostream>
 #include <vector>
+
 class drawable;
 class action;
 class mob;
@@ -23,6 +25,5 @@ typedef std::vector<action> actions;
 
 ///std::shared_ptr with #mob objects
 typedef std::shared_ptr<mob> mob_ptr;
-
 
 #endif // TYPEDEFS_HPP
