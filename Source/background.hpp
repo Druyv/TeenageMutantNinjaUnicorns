@@ -1,16 +1,15 @@
 ///@file
 
-#ifndef _BACKGROUND_HPP
-#define _BACKGROUND_HPP
-
+#ifndef BACKGROUND_HPP
+#define BACKGROUND_HPP
 
 #include <SFML/Graphics.hpp>
 #include <string>
+
 #include "drawable.hpp"
 #include "image.hpp"
 
-
-/// \class Background
+/// \class background
 ///
 /// \brief Class that draws a background
 ///
@@ -20,7 +19,7 @@
 /// \date 23/01/17
 ///
 class background : public drawable {
-public:
+    public:
 	/// \brief constructor for background class
 	///
 	/// constructor that initializes the file that the background class will use. Default is "x", if default a default picture will be loaded.
@@ -45,7 +44,7 @@ public:
 	/// \return The global bounds of the #background_image
 	///
         sf::FloatRect getGlobalBounds() override;
-private:
+    private:
 	image_from_file background_image; 
 };
-#endif	
+#endif	//BACKGROUND_HPP

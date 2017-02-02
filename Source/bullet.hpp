@@ -1,4 +1,8 @@
-#pragma once
+///@file
+
+#ifndef BULLET_HPP
+#define BULLET_HPP
+
 #include "drawable.hpp"
 #include "image.hpp"
 #include "npc.hpp"
@@ -14,14 +18,12 @@
 /// \date 26-01-2017
 ///
 class bullet : public drawable {
-private:
+    private:
 	image_from_file bullet_animation;
 	std::vector<mob_ptr> & all_mobs;
 	objects_vector & objects;
 	bool hit = false;
-	bool going_left;
 	sf::Vector2f current_offset;
-	bool correctly_scaled = false;
 
 	/// 
 	/// \brief function that moves bullet with offset
@@ -30,7 +32,7 @@ private:
 	/// offset (a.k.a. current_offset)
 	///
 	void projectile();
-public:
+    public:
 	///
 	/// \brief constructor to initialize the bullet
 	///
@@ -93,6 +95,18 @@ public:
 	/// \param[in]	offset			sf::Vector2f for movement, has negative x-coordinate when fired to left side
 	/// \param[in]	fire_position	sf::Vector2f for position for bullet to start projectile. 
 	///
-	void shoot(sf::RenderWindow & window, int & shoot_timeout, sf::Vector2f offset = sf::Vector2f(0, 0), sf::Vector2f fire_position = sf::Vector2f(0.0, 0.0));
-
+	void shoot(
+            sf::RenderWindow & window,
+            int & shoot_timeout,
+            sf::Vector2f offset = sf::Vector2f(0, 0),
+            sf::Vector2f fire_position = sf::Vector2f(0.0, 0.0)
+        );
+        
+        /// \brief setter  for the position.
+        ///
+	/// This function is the setter for the position of the bullet .
+	/// 
+	/// \param[in] new position this is een sf::Vector2f.
+        void set_position(sf::Vector2f new_position);  
 };
+#endif //BULLET_HPP

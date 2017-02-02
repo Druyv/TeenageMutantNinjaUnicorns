@@ -3,7 +3,6 @@
 #ifndef PHYSICS_HPP
 #define PHYSICS_HPP
 
-
 /// \class physics
 ///
 /// \brief Class with physics function 
@@ -13,7 +12,7 @@
 /// \date 23/01/17
 ///
 class physics {
-public:
+    public:
         /// \brief Set function for the gravity counter. 
 	///
 	/// Setter for the gravity counter
@@ -41,9 +40,7 @@ public:
 	/// \param[in] counter The counter for the jump
         ///
         float jumping(int counter);
-private:
+    private:
         int gravity_counter = 3;
 };
-
-#endif // PHYSICS_HPP
-
+#endif //PHYSICS_HPP

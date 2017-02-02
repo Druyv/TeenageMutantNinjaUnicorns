@@ -5,7 +5,7 @@
 
 #include "wall.hpp"
 
-/// \class base level
+/// \class base_level
 ///
 /// \brief level border creation class
 ///
@@ -44,4 +44,4 @@ class base_level {
         void push_back_borders(objects_vector & objects);
 };
 
-#endif // BASE_LEVEL_HPP
+#endif //BASE_LEVEL_HPP

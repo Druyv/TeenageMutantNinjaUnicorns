@@ -9,18 +9,10 @@
 #include <iostream>
 #include <vector>
 #include <functional>
-#include "physics.hpp"
 #include <memory>
 
-class drawable;
-class action;
-struct collision;
-
-typedef std::shared_ptr<drawable> object_ptr;
-
-typedef std::vector<collision> collisions;
-typedef std::vector<action> actions;
-typedef std::vector<object_ptr> objects_vector;
+#include "physics.hpp"
+#include "typedefs.hpp"
 
 
 /// \struct collision
@@ -31,35 +23,34 @@ typedef std::vector<object_ptr> objects_vector;
 /// a collision happened.
 ///
 struct collision {
-	object_ptr the_object = nullptr;
-	bool D = false;
-	bool U = false;
-	bool L = false;
-	bool R = false;
-
-	/// \brief constructor object ptr
-	///
-	/// \param[in] the_object The object we have a collision with
-        ///
-	collision(object_ptr the_object):
-		the_object(the_object)
-	{}
-
-	/// \brief operator==
-	/// 
-	/// This operator is for checking if every element of a collision
-	/// is the same as another collision.
-	///
-	/// \param rhs collision& The other object for the check
-	/// \return bool Returns if the objects variables are the same
-        ///
-	bool operator==(const collision & rhs) {
-		if (the_object == rhs.the_object && D == rhs.D && U == rhs.U && L == rhs.L && R == rhs.R) {
-			return true;
-		}
-		return false;
-	}
-
+    object_ptr the_object = nullptr;
+    bool D = false;
+    bool U = false;
+    bool L = false;
+    bool R = false;
+    
+    /// \brief constructor object ptr
+    ///
+    /// \param[in] the_object The object we have a collision with
+    ///
+    collision(object_ptr the_object):
+        the_object(the_object)
+    {}
+    
+    /// \brief operator==
+    /// 
+    /// This operator is for checking if every element of a collision
+    /// is the same as another collision.
+    ///
+    /// \param rhs collision& The other object for the check
+    /// \return bool Returns if the objects variables are the same
+    ///
+    bool operator==(const collision & rhs) {
+        if (the_object == rhs.the_object && D == rhs.D && U == rhs.U && L == rhs.L && R == rhs.R) {
+            return true;
+        }
+        return false;
+    }
 };
 
 /// \class action
@@ -76,11 +67,11 @@ struct collision {
 /// \note that this was created by Wouter van Ooijen.
 ///
 class action {
-private:
-	std::function< bool() > condition;
+    private:
+        std::function< bool() > condition;
 	std::function< void(object_ptr) > work;
         std::function< void() > work_no_ptr;
-public:
+    public:
 	/// \brief constructor 2 functions
 	///
 	/// This constructor receives 2 std::functions and saves them as condition and work.
@@ -121,28 +112,7 @@ public:
 	action(sf::Mouse::Button button, std::function< void(object_ptr) > work) :
 		condition([button]()->bool { return sf::Mouse::isButtonPressed(button); }),
 		work(work)
-	{}
-
-	/// \brief constructor char &, char and function
-	///
-	/// This constructor receives 3 parameters. The first
-	/// is a variable that has to be checked. This variable
-	/// is received by reference because it is updated in the
-	/// main. The second one is another character that has
-	/// to be checked agains the first parameter. The third
-	/// is a function as work. The constructor creates a lambda
-	/// of the first and second parameter, capturing them by
-	/// reference. That lambda returns a boolean if the character
-	/// in check is equal to the character in c. 
-	///
-	/// \param[in] check The first char that has to be compared with the second
-	/// \param[in] c The second char that has to be compared with the first. 
-	/// \param[in] work The work to be done
-	///action(char & check, char & c, std::function< void(object_ptr) > work)  :
-	///condition([&]()->bool{ return (check == c); }),
-	///work(work)
-	///{}
-        
+	{}   
                 
         /// \brief constructor button and function
 	///
@@ -172,7 +142,7 @@ public:
 		}
 	}
         
-    /// \brief operator()
+        /// \brief operator()
 	///
 	/// This operator executes the function in condition and then
 	/// checks the return value. If the condition returns true the
@@ -363,5 +333,12 @@ public:
 	/// \param[in] new_position The new position for the object
         ///
         void set_position(sf::Vector2f new_position);
+        
+	/// \brief get image name
+	/// 
+	/// getter for the  name of the image used .
+	///
+	/// 
+	virtual std::string get_image_name();
 };
-#endif // DRAWABLE_HPP
+#endif //DRAWABLE_HPP

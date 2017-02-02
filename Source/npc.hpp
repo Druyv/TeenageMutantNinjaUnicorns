@@ -1,12 +1,11 @@
-#pragma once
-#include "drawable.hpp"
+///@file
+
+#ifndef NPC_HPP
+#define NPC_HPP
+
+#include "typedefs.hpp"
 #include "image.hpp"
 
-class mob;
-
-typedef std::shared_ptr<mob> mob_ptr;
-
-///
 /// \class mob
 ///
 /// \brief class that makes an enemy to play agianst 
@@ -18,12 +17,10 @@ typedef std::shared_ptr<mob> mob_ptr;
 /// \date 26-01-2017
 ///
 class mob : public drawable {
-private:
+    private:
 	image_from_file mob_animation;
-	bool alive = true;
-public:
-
-	///
+	bool is_alive = true;
+    public:
 	/// \brief constructor to initialize mob
 	///
 	/// This constructor is used to give a position and a name of the file used a image
@@ -31,10 +28,8 @@ public:
 	/// \param[in] position	sf::Vector2f position where image is placed
 	/// \param[in] filename	std::string that is the filename of the image used
 	///
-	///
 	mob(sf::Vector2f position, std::string filename);
 
-	///
 	/// \brief draw function for mob
 	///
 	/// This function draws the mob_animation. It only draws the mob when 
@@ -42,10 +37,8 @@ public:
 	///
 	/// \param[in]	window	sf::RenderWindow that is used to draw picture on
 	///
-	///
 	void draw(sf::RenderWindow & window) override;
 
-	///
 	/// \brief get function for global bounds
 	///
 	/// This function gets the global bounds of the image in mob. When the 
@@ -56,27 +49,30 @@ public:
 	///
 	sf::FloatRect getGlobalBounds() override;
 
-	///
 	/// \brief function that sets boolean
 	/// 
 	/// This function sets variable alive to false
 	///
 	void die();
 
-	///
 	/// \brief function that sets boolean
 	///
 	/// This function sets variable alive to true
 	///
 	void revive();
 
-	///
-	/// \brief function that returns alive variable
+	/// \brief function that returns is_alive variable
 	///
 	/// This function is used to return the current state of the boolean alive
 	///
 	/// \return boolean that gives information on if a mob is alive.
 	///
 	bool get_live();
-
+	
+        ///  \brief set position of the mob
+	///
+	/// \param[in]  new_position sf::Vector2f
+        void set_position(sf::Vector2f new_position);
 };
+
+#endif //NPC_HPP

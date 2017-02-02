@@ -1,5 +1,7 @@
-#ifndef _WALL_HPP
-#define _WALL_HPP
+///@file
+
+#ifndef WALL_HPP
+#define WALL_HPP
 
 #include "drawable.hpp"
 #include "exceptions.hpp"
@@ -57,8 +59,7 @@ class wall : public drawable {
         sf::Color object_color;
         sf::RectangleShape rectangle;
         std::string image_name;
-        sf::Texture texture;
-        
+        sf::Texture texture;       
 };
 
-#endif //_WALL_HPP
+#endif //WALL_HPP

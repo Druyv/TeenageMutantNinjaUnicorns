@@ -1,12 +1,15 @@
-#ifndef _button_HPP
-#define _button_HPP
+///@file
+
+#ifndef BUTTON_HPP
+#define BUTTON_HPP
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+
 #include "drawable.hpp"
 #include "image.hpp"
 
-/// \class Button
+/// \class button
 ///
 /// \brief Creates a button at a specific place on the screen
 ///
@@ -19,21 +22,19 @@
 /// However, this has low priority . 
 ///
 /// \date 27-1-2017
-class Button {
-private:
-	float startHeightY;
-	float startHeightX;
+class button {
+    private:
+	float start_height_y;
+	float start_height_x;
 	int position;
 
-	std::string WhatsOnTheButton;
+	std::string whats_on_the_button;
 	sf::Texture texture;
-	sf::Sprite ButtonBackground;
+        sf::RectangleShape button_background;
 
 	sf::Font font;
 	sf::Text text;
-
-	
-public:
+    public:
 	/// \brief constructor to make button
 	///
 	/// This constructor receives 2 floats to determine the start position of the button.
@@ -46,7 +47,7 @@ public:
 	/// \param[in] startHeightX Starting height X coordinate
 	/// \param[in] position     The postion for the button ( 1 - 2 - 3)
 	/// \param[in] WhatsOnTheButton std::string, the text on the button 
-	Button(float startHeightY = 0.0, float startHeightX = 0.0, int position = 0, std::string WhatsOnTheButton = " ");
+	button(float start_height_y = 0.0, float start_height_x = 0.0, int position = 0, std::string whats_on_the_button = " ");
 
 	/// \brief Function to draw the button & the text
 	///
@@ -76,11 +77,5 @@ public:
 	/// \param[in] image_name The name of the image that has to be loaded
 	/// \retval sf::FloatRect {The bounding box of the sprite object created in this class}
 	sf::FloatRect getGlobalBounds();
-
 };
-
-};
-
-
-
-#endif
+#endif //BUTTON_HPP

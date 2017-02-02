@@ -18,11 +18,11 @@
 /// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Texture.php">sf::Texture</a>
 ///
 class image_from_file : public drawable {
-private:
+    private:
 	sf::Sprite image;
 	std::string image_name;
 	sf::Texture texture;
-public:
+    public:
 	/// \brief constructor
 	///
 	/// The constructor tries to load an image with the image name specified.
@@ -112,6 +112,12 @@ public:
         /// \param[in] y The scale factor for the y of the image
         ///
         void set_scale(float x, float y);
+        
+	/// \brief get image name
+	/// 
+	/// getter for the  name of the image used .
+	///
+	/// 
+        std::string get_image_name() override;
 };
-
 #endif //IMAGE_HPP
