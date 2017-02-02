@@ -1,8 +1,8 @@
 #include "background.hpp"
 
 background::background(std::string filename, sf::Vector2f level_size ):
-drawable{ sf::Vector2f{0, 0}, level_size, "BACKGROUND" },
-background_image{ sf::Vector2f(0,0), filename }
+    drawable{sf::Vector2f{0, 0}, level_size, "BACKGROUND"},
+    background_image{sf::Vector2f{0,0}, filename}
 {
     background_image.set_smooth(true);
     background_image.set_repeated(true);
@@ -11,7 +11,7 @@ background_image{ sf::Vector2f(0,0), filename }
 }
 
 void background::draw( sf::RenderWindow &window ) {
-	background_image.draw(window);
+   background_image.draw(window);
 }
 
 sf::FloatRect background::getGlobalBounds(){
