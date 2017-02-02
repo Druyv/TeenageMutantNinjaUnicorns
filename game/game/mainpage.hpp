@@ -166,7 +166,7 @@
 /// \section menu The menu's 
 ///
 ///  The main menu consists mainly of 2 parts. First , the background image. This is an object of the 
-///  #Background class. This sets the background sprite with the specified image. Second, the buttons 
+///  #background class. This sets the background sprite with the specified image. Second, the buttons 
 ///  that make up the menu. The main menu consists of three buttons, these are #Button objects. 
 ///  Together they make up the visual aspect of the menu. The clickable part is handled in  menu::select(), 
 ///  where the collision detection  <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Rect.php#aa8a5364c84de6dd5299f833b54e31ef1 ">standard SFML Rect::contains()</a>   triggers if the button 

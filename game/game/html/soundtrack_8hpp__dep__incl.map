@@ -1,4 +1,6 @@
 <map id="soundtrack.hpp" name="soundtrack.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="main.cpp" alt="" coords="5,80,80,107"/>
-<area shape="rect" id="node3" href="$soundtrack_8cpp.html" title="soundtrack.cpp" alt="" coords="105,80,215,107"/>
+<area shape="rect" id="node2" href="$cutscene1_8hpp.html" title="cutscene1.hpp" alt="" coords="5,80,112,107"/>
+<area shape="rect" id="node3" href="$management_8hpp.html" title="management.hpp" alt="" coords="19,155,141,181"/>
+<area shape="rect" id="node4" href="$unicorn_8hpp.html" title="unicorn.hpp" alt="" coords="187,80,277,107"/>
+<area shape="rect" id="node5" href="$factory_8hpp.html" title="factory.hpp" alt="" coords="189,155,275,181"/>
 </map>

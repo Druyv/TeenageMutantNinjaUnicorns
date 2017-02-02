@@ -90,9 +90,9 @@ Collaboration diagram for unicorn:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa5713f2859dc51b56611d73c2c7edf48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunicorn.html#aa5713f2859dc51b56611d73c2c7edf48">unicorn</a> (sf::Vector2f position, std::string filename, std::string file_rainbow, <a class="el" href="typedefs_8hpp.html#a38f93e4749e0d65d51360c429766d212">actions</a> &amp;actions_array, <a class="el" href="typedefs_8hpp.html#a7e1a7f34f6d09dabb4cdafd6e4118603">collisions</a> &amp;the_collisions, std::vector&lt; <a class="el" href="typedefs_8hpp.html#a09ee7f853fc9bc830a9445a06fd53d4b">mob_ptr</a> &gt; &amp;all_mobs, <a class="el" href="typedefs_8hpp.html#a6c0fdb1dfd0c34dbbdbb5dcd3c608b07">objects_vector</a> &amp;objects, int &amp;Level_counter)</td></tr>
-<tr class="memdesc:aa5713f2859dc51b56611d73c2c7edf48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to initialize the unicorn.  <a href="#aa5713f2859dc51b56611d73c2c7edf48">More...</a><br /></td></tr>
-<tr class="separator:aa5713f2859dc51b56611d73c2c7edf48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d3654cfd56c282b5061082e6864245"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunicorn.html#a89d3654cfd56c282b5061082e6864245">unicorn</a> (sf::Vector2f position, std::string filename, std::string file_rainbow, <a class="el" href="typedefs_8hpp.html#a38f93e4749e0d65d51360c429766d212">actions</a> &amp;actions_array, <a class="el" href="typedefs_8hpp.html#a7e1a7f34f6d09dabb4cdafd6e4118603">collisions</a> &amp;the_collisions, std::vector&lt; <a class="el" href="typedefs_8hpp.html#a09ee7f853fc9bc830a9445a06fd53d4b">mob_ptr</a> &gt; &amp;all_mobs, <a class="el" href="typedefs_8hpp.html#a6c0fdb1dfd0c34dbbdbb5dcd3c608b07">objects_vector</a> &amp;objects, int &amp;Level_counter, <a class="el" href="classsoundtrack.html">soundtrack</a> &amp;soundbuffer)</td></tr>
+<tr class="memdesc:a89d3654cfd56c282b5061082e6864245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to initialize the unicorn.  <a href="#a89d3654cfd56c282b5061082e6864245">More...</a><br /></td></tr>
+<tr class="separator:a89d3654cfd56c282b5061082e6864245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a570c34d5669a8d2a61bdc1481e6f9dee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunicorn.html#a570c34d5669a8d2a61bdc1481e6f9dee">draw</a> (sf::RenderWindow &amp;window) override</td></tr>
 <tr class="memdesc:a570c34d5669a8d2a61bdc1481e6f9dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">function that draws the image  <a href="#a570c34d5669a8d2a61bdc1481e6f9dee">More...</a><br /></td></tr>
 <tr class="separator:a570c34d5669a8d2a61bdc1481e6f9dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,8 +179,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td><
 <p>This class is used to control the unicorn and can be used to control it aswell (moving around and jumping. This class inherents the drawable class and has an object of the <a class="el" href="classimage__from__file.html" title="create sprite on screen ">image_from_file</a> class.</p>
 <dl class="section date"><dt>Date</dt><dd>19-01-2017 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa5713f2859dc51b56611d73c2c7edf48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5713f2859dc51b56611d73c2c7edf48">&#9670;&nbsp;</a></span>unicorn()</h2>
+<a id="a89d3654cfd56c282b5061082e6864245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d3654cfd56c282b5061082e6864245">&#9670;&nbsp;</a></span>unicorn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,7 +231,13 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td><
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>Level_counter</em>&#160;</td>
+          <td class="paramname"><em>Level_counter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsoundtrack.html">soundtrack</a> &amp;&#160;</td>
+          <td class="paramname"><em>soundbuffer</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

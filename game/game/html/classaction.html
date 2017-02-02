@@ -84,7 +84,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abf43e8dfaeca2df9d356fbfd4d1790ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor moust button and function  <a href="#abf43e8dfaeca2df9d356fbfd4d1790ba">More...</a><br /></td></tr>
 <tr class="separator:abf43e8dfaeca2df9d356fbfd4d1790ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55a91caa9803002fa7ddd6e9e9e46dc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaction.html#a55a91caa9803002fa7ddd6e9e9e46dc6">action</a> (sf::Mouse::Button button, std::function&lt; void() &gt; work)</td></tr>
-<tr class="memdesc:a55a91caa9803002fa7ddd6e9e9e46dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor char &amp;, char and function  <a href="#a55a91caa9803002fa7ddd6e9e9e46dc6">More...</a><br /></td></tr>
+<tr class="memdesc:a55a91caa9803002fa7ddd6e9e9e46dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor button and function  <a href="#a55a91caa9803002fa7ddd6e9e9e46dc6">More...</a><br /></td></tr>
 <tr class="separator:a55a91caa9803002fa7ddd6e9e9e46dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4f8d0f7552450455977d09a889c18c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaction.html#ab4f8d0f7552450455977d09a889c18c7">operator()</a> (<a class="el" href="typedefs_8hpp.html#aab5add95f06d2ba25dbfed8eb07274fa">object_ptr</a> object)</td></tr>
 <tr class="memdesc:ab4f8d0f7552450455977d09a889c18c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">operator()  <a href="#ab4f8d0f7552450455977d09a889c18c7">More...</a><br /></td></tr>
@@ -272,13 +272,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>constructor char &amp;, char and function </p>
-<p>This constructor receives 3 parameters. The first is a variable that has to be checked. This variable is received by reference because it is updated in the main. The second one is another character that has to be checked agains the first parameter. The third is a function as work. The constructor creates a lambda of the first and second parameter, capturing them by reference. That lambda returns a boolean if the character in check is equal to the character in c.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>constructor button and function </p>
+<p>This constructor receives 2 parameters. The first is a variable that has to be checked. The second is a function as work. The constructor creates a lambda of the first parameter, capturing it by reference. That lambda returns a boolean if the button is pressed </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">check</td><td>The first char that has to be compared with the second </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>The second char that has to be compared with the first. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">work</td><td>The work to be done <a class="el" href="classaction.html" title="actions that a charater can do ">action(char &amp; check, char &amp; c, std::function&lt; void(object_ptr) &gt; work)</a> : condition([&amp;]()-&gt;bool{ return (check == c); }), work(work) {} constructor button and function This constructor receives 2 parameters. The first is a variable that has to be checked. The second is a function as work. The constructor creates a lambda of the first parameter, capturing it by reference. That lambda returns a boolean if the button is pressed </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">condition</td><td>The condition under wich to do the work </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">work</td><td>The work to be done </td></tr>
   </table>

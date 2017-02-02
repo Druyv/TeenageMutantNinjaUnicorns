@@ -77,12 +77,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:add31bdeb1a693d541443f1d88586d3b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoundtrack.html#add31bdeb1a693d541443f1d88586d3b6">soundtrack</a> (std::string filename)</td></tr>
 <tr class="memdesc:add31bdeb1a693d541443f1d88586d3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for soundtrack class  <a href="#add31bdeb1a693d541443f1d88586d3b6">More...</a><br /></td></tr>
 <tr class="separator:add31bdeb1a693d541443f1d88586d3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f25fee4c6d5dbc820e2a18b13b43e68"><td class="memItemLeft" align="right" valign="top"><a id="a9f25fee4c6d5dbc820e2a18b13b43e68"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stop_music</b> ()</td></tr>
+<tr class="separator:a9f25fee4c6d5dbc820e2a18b13b43e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7569a4c0cde86548197756b8e05cf464"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoundtrack.html#a7569a4c0cde86548197756b8e05cf464">playmusic</a> ()</td></tr>
 <tr class="memdesc:a7569a4c0cde86548197756b8e05cf464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Music player.  <a href="#a7569a4c0cde86548197756b8e05cf464">More...</a><br /></td></tr>
 <tr class="separator:a7569a4c0cde86548197756b8e05cf464"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fbceb68f3fc032d79b4150deff560ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoundtrack.html#a9fbceb68f3fc032d79b4150deff560ea">playsound</a> ()</td></tr>
-<tr class="memdesc:a9fbceb68f3fc032d79b4150deff560ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sound player.  <a href="#a9fbceb68f3fc032d79b4150deff560ea">More...</a><br /></td></tr>
-<tr class="separator:a9fbceb68f3fc032d79b4150deff560ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18de6469aca15922cfa8a8e8412f76d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoundtrack.html#aa18de6469aca15922cfa8a8e8412f76d">playsound</a> (std::string name)</td></tr>
+<tr class="memdesc:aa18de6469aca15922cfa8a8e8412f76d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sound player.  <a href="#aa18de6469aca15922cfa8a8e8412f76d">More...</a><br /></td></tr>
+<tr class="separator:aa18de6469aca15922cfa8a8e8412f76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9047bea4f37493cbe81a990bc9d0c4e7"><td class="memItemLeft" align="right" valign="top"><a id="a9047bea4f37493cbe81a990bc9d0c4e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
+<tr class="separator:a9047bea4f37493cbe81a990bc9d0c4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83744518feb748a979a67a56fae997fe"><td class="memItemLeft" align="right" valign="top"><a id="a83744518feb748a979a67a56fae997fe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>playsound_cutscene</b> (std::string name)</td></tr>
+<tr class="separator:a83744518feb748a979a67a56fae997fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that plays either music or sound effects. </p>
@@ -137,8 +146,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9fbceb68f3fc032d79b4150deff560ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fbceb68f3fc032d79b4150deff560ea">&#9670;&nbsp;</a></span>playsound()</h2>
+<a id="aa18de6469aca15922cfa8a8e8412f76d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa18de6469aca15922cfa8a8e8412f76d">&#9670;&nbsp;</a></span>playsound()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +155,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void soundtrack::playsound </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

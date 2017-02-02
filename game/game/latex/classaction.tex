@@ -19,7 +19,7 @@ actions that a charater can do
 \hyperlink{classaction_abf43e8dfaeca2df9d356fbfd4d1790ba}{action} (sf\+::\+Mouse\+::\+Button button, std\+::function$<$ void(\hyperlink{typedefs_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr}) $>$ work)
 \begin{DoxyCompactList}\small\item\em constructor moust button and function \end{DoxyCompactList}\item 
 \hyperlink{classaction_a55a91caa9803002fa7ddd6e9e9e46dc6}{action} (sf\+::\+Mouse\+::\+Button button, std\+::function$<$ void() $>$ work)
-\begin{DoxyCompactList}\small\item\em constructor char \&, char and function \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em constructor button and function \end{DoxyCompactList}\item 
 void \hyperlink{classaction_ab4f8d0f7552450455977d09a889c18c7}{operator()} (\hyperlink{typedefs_8hpp_aab5add95f06d2ba25dbfed8eb07274fa}{object\+\_\+ptr} object)
 \begin{DoxyCompactList}\small\item\em operator() \end{DoxyCompactList}\item 
 void \hyperlink{classaction_a92c003677656b5b3e6e58b19376e6b04}{operator()} ()
@@ -108,18 +108,10 @@ This constructor receives a sfml mouse button and creates a lambda. That lambda 
 
 
 
-constructor char \&, char and function 
+constructor button and function 
 
-This constructor receives 3 parameters. The first is a variable that has to be checked. This variable is received by reference because it is updated in the main. The second one is another character that has to be checked agains the first parameter. The third is a function as work. The constructor creates a lambda of the first and second parameter, capturing them by reference. That lambda returns a boolean if the character in check is equal to the character in c.
-
-
+This constructor receives 2 parameters. The first is a variable that has to be checked. The second is a function as work. The constructor creates a lambda of the first parameter, capturing it by reference. That lambda returns a boolean if the button is pressed 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em check} & The first char that has to be compared with the second \\
-\hline
-\mbox{\tt in}  & {\em c} & The second char that has to be compared with the first. \\
-\hline
-\mbox{\tt in}  & {\em work} & The work to be done \hyperlink{classaction}{action(char \& check, char \& c, std\+::function$<$ void(object\+\_\+ptr) $>$ work)} \+: condition(\mbox{[}\&\mbox{]}()-\/$>$bool\{ return (check == c); \}), work(work) \{\} constructor button and function This constructor receives 2 parameters. The first is a variable that has to be checked. The second is a function as work. The constructor creates a lambda of the first parameter, capturing it by reference. That lambda returns a boolean if the button is pressed \\
-\hline
 \mbox{\tt in}  & {\em condition} & The condition under wich to do the work \\
 \hline
 \mbox{\tt in}  & {\em work} & The work to be done \\

@@ -1,14 +1,6 @@
 ///@file
 
 
-/*!
-* \file textbox.hpp
-*
-* \author Luke Roovers
-* \date	29-1-2017
-*
-* Textbox class
-*/
 
 #ifndef _textbox_HPP
 #define _textbox_HPP
@@ -16,7 +8,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-/// \class textbox.hpp
+/// \class textbox
 ///
 /// \brief Creates a box with text and a headshot
 ///
