@@ -5,9 +5,9 @@
 * \file textbox.hpp
 *
 * \author Luke Roovers
-* \date	27-1-2017
+* \date	29-1-2017
 *
-* Textbox class
+* cutscene class
 */
 
 #ifndef _cutscene1_HPP
@@ -19,7 +19,16 @@
 #include "soundtrack.hpp"
 #include "textbox.hpp"
 #include "image.hpp"
-
+/// \class cutscene1
+///
+/// \brief Creates a cutscene ( the opening scenes/steve scene )
+///
+/// This class is used to make a cutscene that is showed
+/// on the screen. It consists of the opening scenes and 
+/// the Steve scene. 
+///  
+///
+/// \date 2-2-2017
 class cutscene1 {
 private:
 	sf::RenderWindow & window;
@@ -50,26 +59,129 @@ private:
 
 
 public:
+    /// \brief constructor to initialize a cutscene
+	///  
+	///  The constructor uses the window to draw the  
+	///  backgrounds and characters on the screen. 
+	///  The soundplayer is used to play sound during the
+	///  scene.
+	///
+	/// \param[in] window   sf::renderwindow object
+	/// \param[in] sound    soundplayer object 
 	cutscene1(sf::RenderWindow & window,soundtrack & sound);
-
+    /// \brief Draws the opening scene  
+	///
+	/// Runs all the functions needed for the opening scene
+    ///   
+	///
 	void play_scene();
+	/// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene1();
+    /// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene2();
+    /// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene3();
+    /// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene4();
+    /// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene5();
+    /// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene6();
+    /// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene7();
+    /// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene8();
+    /// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene9();
+    /// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene10();
+    /// \brief Draws the scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene11();
+    /// \brief Draws the cyan scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene12();
+    /// \brief Draws the cyan scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene13();
+    /// \brief Draws the cyan scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene14();
+    /// \brief Draws the cyan scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene15();
+    /// \brief Draws the cyan scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene16();
+    /// \brief Draws the cyan scene  
+	///
+	/// Draws all the things needed for the first scene
+    /// (textbox, characters, background)   
+	///
 	void scene17();
+    /// \brief Draws the Steve scene  
+	///
+	/// Runs all the functions needed for the steve scene
+    ///   
+	///
     void cyan_island();
     
 };
