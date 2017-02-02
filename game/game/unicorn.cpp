@@ -82,7 +82,7 @@ void unicorn::draw(sf::RenderWindow & window) {
             jump_counter--;
             physics_object.set_gravity(3);
         }
-        else if (collision_u.U && !got_hit) {// && !(collision_u.L || collision_u.R || collision_u.D)
+        else if (collision_u.U && !got_hit) {
             float pos_y = (collision_u.the_object->get_position().y) - size.y;
             if (position.y != pos_y) {
                 position.y = pos_y;
