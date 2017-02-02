@@ -98,7 +98,7 @@ void cutscene1::play_scene() {
 void cutscene1::scene1() {
 	background_forest.draw(window);
 	Arno.draw(window);
-	textbox_cyan1.draw(window);
+	textbox1.draw(window);
 };
 
 void cutscene1::scene2() {
