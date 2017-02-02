@@ -13,6 +13,7 @@
 #include "menu.hpp"
 #include "button.hpp"
 #include "management.hpp"
+#include "cutscene1.hpp"
 
 
 int main(int argc, const char **argv) {
@@ -132,6 +133,12 @@ int main(int argc, const char **argv) {
                     }
                     exit(0);
                 }
+		if (manager_file.get_counter() == 3){
+			window.clear();
+			cutscene1 cut(window,soundplayer);
+			cut.cyan_island();
+			  window.clear();
+		}
                 try {
                     objects.clear();
                     objects_tmp.clear();

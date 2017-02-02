@@ -22,7 +22,7 @@ cutscene1::cutscene1(sf::RenderWindow & window,soundtrack & sound) :
 	textbox_cyan5("Yes, Victor. You are going to Cyan Island. ", "headshotArno.png", window),
 	textbox_cyan6("It's Steve. Why aren't you going? ", "headshotSteve.png", window),
 	textbox_cyan7("Because, Gerald, it's a silly place. Good luck & have fun! ", "headshotArno.png", window),
-    background_cyan(sf::Vector2f((0), (0)), "background_cyan.png" ),
+    background_cyan(sf::Vector2f((0), (0)), "bcyan.png" ),
     background_angryarno(sf::Vector2f((0), (0)), "angryarno.png"),
 	background_zoomedin(sf::Vector2f((0), (0)), "zoomedin.png"),
     background_construction(sf::Vector2f((0), (0)), "construction.png"),
@@ -155,34 +155,78 @@ void cutscene1::scene10() {
 	textbox9.draw(window);
 }
 
-void cutscene1::cyan_island() {
+//-------------------------------------------------------------------------------------------
+
+void cutscene1::scene11() {
 	background_cyan.draw(window);
     textbox_cyan1.draw(window);
-    window.display();
-	sf::sleep(sf::seconds(3));
-	window.clear();
+}
+
+void cutscene1::scene12() {
+	background_cyan.draw(window);
     textbox_cyan2.draw(window);
-    window.display();
-	sf::sleep(sf::seconds(3));
-	window.clear();
-    textbox_cyan3.draw(window);
-    window.display();
-	sf::sleep(sf::seconds(3));
-	window.clear();
+}
+
+void cutscene1::scene13() {
+    background_cyan.draw(window);
+	textbox_cyan3.draw(window);
+}
+
+void cutscene1::scene14() {
+	background_cyan.draw(window);
     textbox_cyan4.draw(window);
-    window.display();
-	sf::sleep(sf::seconds(3));
-	window.clear();
-    textbox_cyan4.draw(window);
-    window.display();
-	sf::sleep(sf::seconds(3));
-	window.clear();
+}
+
+void cutscene1::scene15() {
+	background_cyan.draw(window);
+    textbox_cyan5.draw(window);
+}
+
+void cutscene1::scene16() {
+	background_cyan.draw(window);
     textbox_cyan6.draw(window);
-    window.display();
-	sf::sleep(sf::seconds(3));
-	window.clear();
+}
+
+void cutscene1::scene17() {
+	background_cyan.draw(window);
     textbox_cyan7.draw(window);
-    window.display();
+}
+
+void cutscene1::cyan_island() {
+	scene11();
+	window.display();
 	sf::sleep(sf::seconds(3));
 	window.clear();
+
+	scene12();
+	window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+
+	scene13();
+	window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+
+	scene14();
+	window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+
+	scene15();
+	window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+
+	scene16();
+	window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+
+	scene17();
+	window.display();
+	sf::sleep(sf::seconds(3));
+	window.clear();
+
+
 }

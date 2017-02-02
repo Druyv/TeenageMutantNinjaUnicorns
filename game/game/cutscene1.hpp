@@ -63,6 +63,13 @@ public:
 	void scene8();
 	void scene9();
 	void scene10();
+	void scene11();
+	void scene12();
+	void scene13();
+	void scene14();
+	void scene15();
+	void scene16();
+	void scene17();
     void cyan_island();
     
 };
