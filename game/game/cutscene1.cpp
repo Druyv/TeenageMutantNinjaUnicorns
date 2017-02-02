@@ -193,6 +193,8 @@ void cutscene1::scene17() {
 }
 
 void cutscene1::cyan_island() {
+	sound.stop_music();
+	sound.playsound_cutscene("cyan.wav");
 	scene11();
 	window.display();
 	sf::sleep(sf::seconds(3));
@@ -227,6 +229,6 @@ void cutscene1::cyan_island() {
 	window.display();
 	sf::sleep(sf::seconds(3));
 	window.clear();
-
-
+sound.stop();
+sound.playmusic();
 }

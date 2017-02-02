@@ -160,8 +160,11 @@ void unicorn::run_actions(object_ptr object) {
 }
 
 void unicorn::jump() {
+			
+
 	auto checker = check_for_collisions('U');
 	if (!jump_counter && checker.U) {
+		soundbuffer.playsound(std::string("jump.wav"));
 		jump_counter = 25;
 	}
 }

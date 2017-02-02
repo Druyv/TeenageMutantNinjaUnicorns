@@ -9,13 +9,16 @@ soundtrack::soundtrack(std::string filename){
 	if (!sfmlmusic.openFromFile(filename)) {
 		throw audio_load_error{ filename };
 	}
-sfmlmusic.setLoop(1);
+
+}
+
+void soundtrack::stop_music(){
+sfmlmusic.stop()	;
 }
 
 
-
 void soundtrack::playmusic() {
-		
+		sfmlmusic.setLoop(1);
 		sfmlmusic.play();
 }
 

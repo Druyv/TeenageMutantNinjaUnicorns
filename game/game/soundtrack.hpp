@@ -28,6 +28,8 @@ public:
         ///
 	soundtrack(std::string filename);
 	
+	void stop_music();
+	
 	///\brief Music player
 	///
 	/// Loads the specified music file and plays it. 
