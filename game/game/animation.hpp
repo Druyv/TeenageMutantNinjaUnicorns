@@ -3,12 +3,11 @@
 #ifndef ANIMATION_HPP
 #define ANIMATION_HPP
 
-#include "SFML/Graphics.hpp"
 #include <memory>
+
+#include "SFML/Graphics.hpp"
 #include "drawable.hpp"
 #include "exceptions.hpp" 
-
-
 
 /// \class animation
 ///
@@ -20,18 +19,17 @@
 /// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Sprite.php ">sf::Sprite</a>
 /// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Texture.php">sf::Texture</a>
 class animation : public drawable {
-private:
+    private:
 	sf::Sprite sheet;
 	std::string sheet_name;
 	sf::Texture texture;
-	float width=0; 
         float count=0;
         float row=0;
         float  rot=0;
         bool is_jumping = false;
-		bool rotate = false;
+        bool rotate = false;
 
-public:
+    public:
 	/// \brief constructor
 	///
 	/// The constructor tries to load an sheet with the sheet name specified.
@@ -42,7 +40,8 @@ public:
 	/// \param[in] image_name The name of the image that has to be loaded
 	/// \sa sheet_load_error
 	/// \warning Make sure you use a Try catch block to capture the exception generated if the image cannot be loaded
-	animation(sf::Vector2f position, std::string sheet_name,float width,float length);
+	animation(sf::Vector2f position, std::string sheet_name, float width,float length);
+        
 	/// \brief draw object
 	///
 	/// This function is used for calling the draw function on the sfml object
@@ -50,8 +49,8 @@ public:
 	/// the object. This way if the position changes, it also changes on screen.
 	///
 	/// \param[in,out] window The render window to draw the object on
-
 	void draw(sf::RenderWindow & window) override;
+        
 	/// \brief get objects floatrect
 	///
 	/// This function uses the getGlobalBounds function from te object to get the
@@ -61,7 +60,6 @@ public:
 	/// \param[in] position The objects initial position
 	/// \param[in] image_name The name of the image that has to be loaded
 	/// \retval sf::FloatRect {The bounding box of the sprite object created in this class}
-
 	sf::FloatRect getGlobalBounds() override;
 
 	/// \brief set position
@@ -70,18 +68,15 @@ public:
 	///
 	/// \param[in] new_position sf::Vector2f The position we want to move the object to
 	/// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Vector2.php ">sf::Vector2f</a>
-
 	void set_position(sf::Vector2f new_position);
+        
 	/// \brief set size
 	///
 	/// This function sets the size of the object.
 	///
 	/// \param[in] new_size sf::Vector2f The size we want to set the object to
 	/// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Vector2.php ">sf::Vector2f</a>
-
 	void set_size(sf::Vector2f new_size);
-        
-       // sf::Vector2f get_size();
         
 	/// \brief 
 	///
@@ -89,10 +84,7 @@ public:
 	///
 	/// \param[in] row_a  int indicator for which  animation is needed
 	/// 
-
-        bool movement(float row_a,int level_counter=0);
-    
-        
+        bool movement(float row_a, int level_counter = 0);
 
 	/// \brief set the texture rectangle
 	///
@@ -103,7 +95,6 @@ public:
 	/// \param[in] rectangle const sf::IntRect& The rectangle box to turn around
 	/// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Sprite.php#a3fefec419a4e6a90c0fd54c793d82ec2 ">sf::Sprite::setTextureRect sf::IntRect</a>
 	void setTextureRect(const sf::IntRect & rectangle);
-
 };
 
 #endif 
