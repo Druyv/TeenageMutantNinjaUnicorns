@@ -1,0 +1,4 @@
+<map id="background" name="background">
+<area shape="rect" id="node2" href="$classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="23,5,98,32"/>
+<area shape="rect" id="node3" href="$classimage__from__file.html" title="create sprite on screen " alt="" coords="66,81,181,108"/>
+</map>

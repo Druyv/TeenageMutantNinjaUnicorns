@@ -209,7 +209,7 @@
 ///  in the middle of the screen, regardless of resolution. However, SFML does not have a native 
 ///  rescale of pictures in sprites. Which means that the background of the buttons will be completely distorted 
 ///  in some resolutions. Also, a lot of this math could be moved to the #menu class,
-///  which would make the #Button class more re-useable.
+///  which would make the #button class more re-useable.
 /// 
 /// \section menu_management
 ///
@@ -228,9 +228,9 @@
 /// The function #file_management::save_game() can be used to save the game in the current save_game file. in the file manager their  where some choises to made 
 ///  We are using a management class for the files because it leaves the main a little bit cleaner. Otherwise the files had to be opend and closed in the main. It also gives easy calls in the main to go tho a next level or save a game. 
 ///
-/// \section cutscene1 & textbox 
+/// \section cutscene1 cutscene1 and textbox 
 ///
-///  The cut scenes are built from multiple #textbox objects and #image_from_file objects. They are  slightly hardcoded. There are multiple reasons for this. The most important one was time. These ///  scenes had a very low priority in the project and only get used once in the game. They don’t  
+///  The cut scenes are built from multiple #textbox objects and #image_from_file objects. They are  slightly hardcoded. There are multiple reasons for this. The most important one was time. These scenes had a very low priority in the project and only get used once in the game. They don’t  
 ///  really need to be changed, the only thing you might want to change is the text which is very easy   to do.
 ///  The cut scenes are build from multiple smaller functions to keep some overview of the class. The   cutscene1::play_scene() function contains all these functions, the proper sfml::sleep() periods    and the window::clear() and window::display() functions. The cyan island cut scene is made in the   exact same way.
 ///  The textboxes are made in proportion to the window size. The given string is displayed and the   images are shown. Some minor math is done to ensure that the text is positioned at the right     place. Not everything can completely scale on all resolutions, this was not fixable in the given    timeframe. 

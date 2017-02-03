@@ -1,0 +1,165 @@
+\hypertarget{classwall}{}\section{wall Class Reference}
+\label{classwall}\index{wall@{wall}}
+
+
+Class for walls and platforms.  
+
+
+
+
+{\ttfamily \#include $<$wall.\+hpp$>$}
+
+
+
+Inheritance diagram for wall\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classwall__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wall\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classwall__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwall_ac9c0db974e7839223fc4eb18c51dac62}{wall} (sf\+::\+Vector2f position, sf\+::\+Vector2f size, sf\+::\+Color object\+\_\+color, std\+::string image\+\_\+name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor for a wall. \end{DoxyCompactList}\item 
+void \hyperlink{classwall_aa25b8377e1d9a209fabd2271294f05d0}{draw} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em Draw function for the wall. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{classwall_a317a464c879cfdf9464bd6f1b62d9101}{get\+Global\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em Function that gives de global bounds. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classwall_aab1de4f144f176b134a967ba08747932}{object\+\_\+information} () override
+\begin{DoxyCompactList}\small\item\em Funtion that returns object information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwall_ada0e26614b5f30c0f675d179d517bafb}\label{classwall_ada0e26614b5f30c0f675d179d517bafb}} 
+sf\+::\+Color {\bfseries object\+\_\+color}
+\item 
+\mbox{\Hypertarget{classwall_a29b74cbef8c1cb110c526fdf4a8f48ba}\label{classwall_a29b74cbef8c1cb110c526fdf4a8f48ba}} 
+sf\+::\+Rectangle\+Shape {\bfseries rectangle}
+\item 
+\mbox{\Hypertarget{classwall_acab3382f9e7092cf8bb62a5f88586d92}\label{classwall_acab3382f9e7092cf8bb62a5f88586d92}} 
+std\+::string {\bfseries image\+\_\+name}
+\item 
+\mbox{\Hypertarget{classwall_a03e6d768bc82f6320d85f19ce0346f95}\label{classwall_a03e6d768bc82f6320d85f19ce0346f95}} 
+sf\+::\+Texture {\bfseries texture}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for walls and platforms. 
+
+This class can be used for making rectangle shapes used as wall or platform for walking on or as boundry.
+
+\begin{DoxyDate}{Date}
+23/01/17 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwall_ac9c0db974e7839223fc4eb18c51dac62}\label{classwall_ac9c0db974e7839223fc4eb18c51dac62}} 
+\index{wall@{wall}!wall@{wall}}
+\index{wall@{wall}!wall@{wall}}
+\subsubsection{\texorpdfstring{wall()}{wall()}}
+{\footnotesize\ttfamily wall\+::wall (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{sf\+::\+Vector2f}]{size,  }\item[{sf\+::\+Color}]{object\+\_\+color,  }\item[{std\+::string}]{image\+\_\+name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructor for a wall. 
+
+Constructor that initializes position, size and color of drawable
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & Position of drawable, this is a sf\+::\+Vector2f and const \\
+\hline
+\mbox{\tt in}  & {\em size} & Size of drawable, this is a sf\+::\+Vector2f and const \\
+\hline
+\mbox{\tt in}  & {\em object\+\_\+color} & Color of the wall, this is a sf\+::\+Color \\
+\hline
+\mbox{\tt in}  & {\em image\+\_\+name} & An image to put inside the wall. (not specifically needed) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The image will become the color specified. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwall_aa25b8377e1d9a209fabd2271294f05d0}\label{classwall_aa25b8377e1d9a209fabd2271294f05d0}} 
+\index{wall@{wall}!draw@{draw}}
+\index{draw@{draw}!wall@{wall}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void wall\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draw function for the wall. 
+
+This function draw the wall to the render of the window.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window} & The window to render the image on \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classdrawable_a4e49e2c1121704c83ce24c5f48dd910f}{drawable}.
+
+\mbox{\Hypertarget{classwall_a317a464c879cfdf9464bd6f1b62d9101}\label{classwall_a317a464c879cfdf9464bd6f1b62d9101}} 
+\index{wall@{wall}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!wall@{wall}}
+\subsubsection{\texorpdfstring{get\+Global\+Bounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect wall\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Function that gives de global bounds. 
+
+This function returns the globalbounds. The return value can be used in collision checking.
+
+\begin{DoxyReturn}{Returns}
+The sf\+::floatrect of the wall object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classdrawable_ae013ac0be47538be9ce885d6642daf73}{drawable}.
+
+\mbox{\Hypertarget{classwall_aab1de4f144f176b134a967ba08747932}\label{classwall_aab1de4f144f176b134a967ba08747932}} 
+\index{wall@{wall}!object\+\_\+information@{object\+\_\+information}}
+\index{object\+\_\+information@{object\+\_\+information}!wall@{wall}}
+\subsubsection{\texorpdfstring{object\+\_\+information()}{object\_information()}}
+{\footnotesize\ttfamily std\+::string wall\+::object\+\_\+information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Funtion that returns object information. 
+
+This function returns object information. It does so in the following way\+: \hyperlink{classdrawable_a2ed0f8bb53f33477f7722efa7bb24583}{drawable\+::object\+\_\+information()} + size + color + image\+\_\+name
+
+Example\+: W\+A\+LL (2627.\+720947,2226.\+875000) (10.\+000000,10.\+000000) green grass.\+png
+
+\begin{DoxyReturn}{Returns}
+The string with all the information in the way of the example 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classdrawable_a2ed0f8bb53f33477f7722efa7bb24583}{drawable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{wall_8hpp}{wall.\+hpp}\item 
+wall.\+cpp\end{DoxyCompactItemize}

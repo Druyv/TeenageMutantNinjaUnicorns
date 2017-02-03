@@ -1,0 +1,97 @@
+\hypertarget{classunknown__color}{}\section{unknown\+\_\+color Class Reference}
+\label{classunknown__color}\index{unknown\+\_\+color@{unknown\+\_\+color}}
+
+
+Unknown color error.  
+
+
+
+
+{\ttfamily \#include $<$exceptions.\+hpp$>$}
+
+
+
+Inheritance diagram for unknown\+\_\+color\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classunknown__color__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for unknown\+\_\+color\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classunknown__color__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classunknown__color_aef7c5513b511dd59ba1a3a58798966d3}{unknown\+\_\+color} (const std\+::string color)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classunknown__color_a3340e3af5b5f734727b73ddf25df3265}{what} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Return message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classunknown__color_a17bf517ff68841e8aac49dd58035c6a7}\label{classunknown__color_a17bf517ff68841e8aac49dd58035c6a7}} 
+std\+::string {\bfseries msg}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Unknown color error. 
+
+This class is used to generate a unknown color exception. It inherrits the std\+::exception class so it can be easily caught with an try catch block.
+
+\begin{DoxyDate}{Date}
+26-\/1-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classunknown__color_aef7c5513b511dd59ba1a3a58798966d3}\label{classunknown__color_aef7c5513b511dd59ba1a3a58798966d3}} 
+\index{unknown\+\_\+color@{unknown\+\_\+color}!unknown\+\_\+color@{unknown\+\_\+color}}
+\index{unknown\+\_\+color@{unknown\+\_\+color}!unknown\+\_\+color@{unknown\+\_\+color}}
+\subsubsection{\texorpdfstring{unknown\+\_\+color()}{unknown\_color()}}
+{\footnotesize\ttfamily unknown\+\_\+color\+::unknown\+\_\+color (\begin{DoxyParamCaption}\item[{const std\+::string}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+This constructor puts a message into a string and saves that as a private variable. The color is also added to the string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em color} & The name of the color \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classunknown__color_a3340e3af5b5f734727b73ddf25df3265}\label{classunknown__color_a3340e3af5b5f734727b73ddf25df3265}} 
+\index{unknown\+\_\+color@{unknown\+\_\+color}!what@{what}}
+\index{what@{what}!unknown\+\_\+color@{unknown\+\_\+color}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ unknown\+\_\+color\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Return message. 
+
+This function returns the message so it can be printed. It overrides the what function from the std\+::exception superclass, making it easy to capture.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em const} & char $\ast$ \{The error message as a const char $\ast$\} \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{exceptions_8hpp}{exceptions.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$classaudio__load__error.html" title="audio_load_error " alt="" coords="134,5,251,32"/>
+<area shape="rect" id="node3" href="$classend__of__file.html" title="End of file error. " alt="" coords="150,56,235,83"/>
+<area shape="rect" id="node4" href="$classfont__load__error.html" title="Can not load font. " alt="" coords="139,107,247,133"/>
+<area shape="rect" id="node5" href="$classimage__load__error.html" title="image load error " alt="" coords="132,157,253,184"/>
+<area shape="rect" id="node6" href="$classinvalid__position.html" title="Invalid position exception. " alt="" coords="137,208,248,235"/>
+<area shape="rect" id="node7" href="$classsheet__load__error.html" title="sheet load error " alt="" coords="133,259,252,285"/>
+<area shape="rect" id="node8" href="$classunknown__color.html" title="Unknown color error. " alt="" coords="138,309,247,336"/>
+<area shape="rect" id="node9" href="$classunknown__type.html" title="Unknown type error. " alt="" coords="139,360,246,387"/>
+</map>

@@ -1,0 +1,97 @@
+\hypertarget{classunknown__type}{}\section{unknown\+\_\+type Class Reference}
+\label{classunknown__type}\index{unknown\+\_\+type@{unknown\+\_\+type}}
+
+
+Unknown type error.  
+
+
+
+
+{\ttfamily \#include $<$exceptions.\+hpp$>$}
+
+
+
+Inheritance diagram for unknown\+\_\+type\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classunknown__type__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for unknown\+\_\+type\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classunknown__type__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classunknown__type_ad0900df174fd2897ea46896d46d4ce47}{unknown\+\_\+type} (const std\+::string type)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classunknown__type_a95f8c551c7bf001353d4a68b6874650d}{what} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Return message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classunknown__type_a3a4241b982eb18fdfea370f5565b1c3f}\label{classunknown__type_a3a4241b982eb18fdfea370f5565b1c3f}} 
+std\+::string {\bfseries msg}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Unknown type error. 
+
+This class is used to generate a unknown type error exception. It inherrits the std\+::exception class so it can be easily caught with an try catch block.
+
+\begin{DoxyDate}{Date}
+24-\/1-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classunknown__type_ad0900df174fd2897ea46896d46d4ce47}\label{classunknown__type_ad0900df174fd2897ea46896d46d4ce47}} 
+\index{unknown\+\_\+type@{unknown\+\_\+type}!unknown\+\_\+type@{unknown\+\_\+type}}
+\index{unknown\+\_\+type@{unknown\+\_\+type}!unknown\+\_\+type@{unknown\+\_\+type}}
+\subsubsection{\texorpdfstring{unknown\+\_\+type()}{unknown\_type()}}
+{\footnotesize\ttfamily unknown\+\_\+type\+::unknown\+\_\+type (\begin{DoxyParamCaption}\item[{const std\+::string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor 
+
+This constructor puts a message into a string and saves that as a private variable. The type is also added to the string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & The incorrect type that was received \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classunknown__type_a95f8c551c7bf001353d4a68b6874650d}\label{classunknown__type_a95f8c551c7bf001353d4a68b6874650d}} 
+\index{unknown\+\_\+type@{unknown\+\_\+type}!what@{what}}
+\index{what@{what}!unknown\+\_\+type@{unknown\+\_\+type}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ unknown\+\_\+type\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Return message. 
+
+This function returns the message so it can be printed. It overrides the what function from the std\+::exception superclass, making it easy to capture.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em const} & char $\ast$ \{The error message as a const char $\ast$\} \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{exceptions_8hpp}{exceptions.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,3 @@
+<map id="wall" name="wall">
+<area shape="rect" id="node2" href="$classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="5,5,80,32"/>
+</map>

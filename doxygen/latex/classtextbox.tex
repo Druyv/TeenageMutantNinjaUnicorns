@@ -1,0 +1,116 @@
+\hypertarget{classtextbox}{}\section{textbox Class Reference}
+\label{classtextbox}\index{textbox@{textbox}}
+
+
+Creates a box with text and a headshot.  
+
+
+
+
+{\ttfamily \#include $<$textbox.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtextbox_afdd34f992de52674f7c9625ec6f765bf}{textbox} (std\+::string string, std\+::string filename, sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em constructor to initialize a textbox \end{DoxyCompactList}\item 
+void \hyperlink{classtextbox_a1ef9daaf81a560bd571bc82ec09cbfda}{build\+\_\+box} ()
+\begin{DoxyCompactList}\small\item\em Draws the textbox. \end{DoxyCompactList}\item 
+void \hyperlink{classtextbox_a7fa168e1b9aedae0d7c9a74adea2137a}{draw} (sf\+::\+Render\+Window \&window1)
+\begin{DoxyCompactList}\small\item\em Draws the textbox. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtextbox_a223ec9ec2629fa5a471515e0439e8224}\label{classtextbox_a223ec9ec2629fa5a471515e0439e8224}} 
+sf\+::\+Text {\bfseries text}
+\item 
+\mbox{\Hypertarget{classtextbox_ae45b818e1fc1a764bdcf963c08b74e5a}\label{classtextbox_ae45b818e1fc1a764bdcf963c08b74e5a}} 
+std\+::string {\bfseries string}
+\item 
+\mbox{\Hypertarget{classtextbox_aceb46a9aaa13eefc19d456a278eb0aa1}\label{classtextbox_aceb46a9aaa13eefc19d456a278eb0aa1}} 
+std\+::string {\bfseries filename}
+\item 
+\mbox{\Hypertarget{classtextbox_a100c3576d01d8aa99cf734abd1ee8490}\label{classtextbox_a100c3576d01d8aa99cf734abd1ee8490}} 
+sf\+::\+Vector2f {\bfseries position}
+\item 
+\mbox{\Hypertarget{classtextbox_aa5a08ab3fe20572c18d50d7f1b889302}\label{classtextbox_aa5a08ab3fe20572c18d50d7f1b889302}} 
+sf\+::\+Rectangle\+Shape {\bfseries box\+\_\+background}
+\item 
+\mbox{\Hypertarget{classtextbox_a06589b1fa2a0cdbcd63da5cc5b2af7ff}\label{classtextbox_a06589b1fa2a0cdbcd63da5cc5b2af7ff}} 
+sf\+::\+Rectangle\+Shape {\bfseries head\+\_\+box}
+\item 
+\mbox{\Hypertarget{classtextbox_a5082584f3307c453b9a353705e404b8c}\label{classtextbox_a5082584f3307c453b9a353705e404b8c}} 
+sf\+::\+Texture {\bfseries texture}
+\item 
+\mbox{\Hypertarget{classtextbox_aeb54488fab2eaa005b3bc0ebc59988f0}\label{classtextbox_aeb54488fab2eaa005b3bc0ebc59988f0}} 
+sf\+::\+Texture {\bfseries texture2}
+\item 
+\mbox{\Hypertarget{classtextbox_aee68466790250f271a7632d58506aee9}\label{classtextbox_aee68466790250f271a7632d58506aee9}} 
+sf\+::\+Render\+Window \& {\bfseries window}
+\item 
+\mbox{\Hypertarget{classtextbox_a706ddbd8e600421b7303f4c0ab89c77d}\label{classtextbox_a706ddbd8e600421b7303f4c0ab89c77d}} 
+sf\+::\+Font {\bfseries font}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates a box with text and a headshot. 
+
+This class is used to make a textbox on the screen. It consists of text, the box and a severed unicorn head.
+
+\begin{DoxyDate}{Date}
+2-\/2-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtextbox_afdd34f992de52674f7c9625ec6f765bf}\label{classtextbox_afdd34f992de52674f7c9625ec6f765bf}} 
+\index{textbox@{textbox}!textbox@{textbox}}
+\index{textbox@{textbox}!textbox@{textbox}}
+\subsubsection{\texorpdfstring{textbox()}{textbox()}}
+{\footnotesize\ttfamily textbox\+::textbox (\begin{DoxyParamCaption}\item[{std\+::string}]{string,  }\item[{std\+::string}]{filename,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+constructor to initialize a textbox 
+
+The constructor uses the window size to draw a textbox on the screen
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & Text that is displayed \\
+\hline
+\mbox{\tt in}  & {\em filename} & filename of the severed unicorn head \\
+\hline
+\mbox{\tt in}  & {\em window} & sf\+::renderwindow object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtextbox_a1ef9daaf81a560bd571bc82ec09cbfda}\label{classtextbox_a1ef9daaf81a560bd571bc82ec09cbfda}} 
+\index{textbox@{textbox}!build\+\_\+box@{build\+\_\+box}}
+\index{build\+\_\+box@{build\+\_\+box}!textbox@{textbox}}
+\subsubsection{\texorpdfstring{build\+\_\+box()}{build\_box()}}
+{\footnotesize\ttfamily void textbox\+::build\+\_\+box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the textbox. 
+
+everything needed to draw the textbox is in here. Some math is done to make sure its in the right position. \mbox{\Hypertarget{classtextbox_a7fa168e1b9aedae0d7c9a74adea2137a}\label{classtextbox_a7fa168e1b9aedae0d7c9a74adea2137a}} 
+\index{textbox@{textbox}!draw@{draw}}
+\index{draw@{draw}!textbox@{textbox}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void textbox\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window1 }\end{DoxyParamCaption})}
+
+
+
+Draws the textbox. 
+
+Draw function 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{textbox_8hpp}{textbox.\+hpp}\item 
+textbox.\+cpp\end{DoxyCompactItemize}

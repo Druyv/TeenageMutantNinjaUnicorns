@@ -1,0 +1,9 @@
+<map id="drawable" name="drawable">
+<area shape="rect" id="node2" href="$classanimation.html" title="create sprite on screen with animations " alt="" coords="5,80,84,107"/>
+<area shape="rect" id="node3" href="$classbackground.html" title="Class that draws a background. " alt="" coords="108,80,197,107"/>
+<area shape="rect" id="node4" href="$classbullet.html" title="class calculates projectile to kill mobs " alt="" coords="222,80,275,107"/>
+<area shape="rect" id="node5" href="$classimage__from__file.html" title="create sprite on screen " alt="" coords="299,80,414,107"/>
+<area shape="rect" id="node6" href="$classmob.html" title="class that makes an enemy to play agianst " alt="" coords="439,80,485,107"/>
+<area shape="rect" id="node7" href="$classunicorn.html" title="class that is used to display and control the unicorn " alt="" coords="510,80,574,107"/>
+<area shape="rect" id="node8" href="$classwall.html" title="Class for walls and platforms. " alt="" coords="598,80,643,107"/>
+</map>

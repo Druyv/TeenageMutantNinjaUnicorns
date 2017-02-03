@@ -1,0 +1,5 @@
+<map id="menu" name="menu">
+<area shape="rect" id="node2" href="$classbutton.html" title="Creates a button at a specific place on the screen. " alt="" coords="5,81,64,108"/>
+<area shape="rect" id="node3" href="$classimage__from__file.html" title="create sprite on screen " alt="" coords="88,81,203,108"/>
+<area shape="rect" id="node4" href="$classdrawable.html" title="class that is inherited by all objects that are drawable " alt="" coords="108,5,183,32"/>
+</map>

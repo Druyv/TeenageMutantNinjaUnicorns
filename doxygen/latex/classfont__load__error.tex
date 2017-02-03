@@ -1,0 +1,97 @@
+\hypertarget{classfont__load__error}{}\section{font\+\_\+load\+\_\+error Class Reference}
+\label{classfont__load__error}\index{font\+\_\+load\+\_\+error@{font\+\_\+load\+\_\+error}}
+
+
+Can not load font.  
+
+
+
+
+{\ttfamily \#include $<$exceptions.\+hpp$>$}
+
+
+
+Inheritance diagram for font\+\_\+load\+\_\+error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{classfont__load__error__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for font\+\_\+load\+\_\+error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{classfont__load__error__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfont__load__error_ae7d125fc4bd751d97556cb343a6c6fc4}{font\+\_\+load\+\_\+error} (const std\+::string font)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classfont__load__error_a17c3014c5953ab5863585e4cbf8865c3}{what} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Return message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfont__load__error_a7e5ccc82a1685b59ac6ecaadbc956397}\label{classfont__load__error_a7e5ccc82a1685b59ac6ecaadbc956397}} 
+std\+::string {\bfseries msg}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Can not load font. 
+
+This class is used to generate a ufont load exception. It inherrits the std\+::exception class so it can be easily caught with an try catch block.
+
+\begin{DoxyDate}{Date}
+31-\/1-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfont__load__error_ae7d125fc4bd751d97556cb343a6c6fc4}\label{classfont__load__error_ae7d125fc4bd751d97556cb343a6c6fc4}} 
+\index{font\+\_\+load\+\_\+error@{font\+\_\+load\+\_\+error}!font\+\_\+load\+\_\+error@{font\+\_\+load\+\_\+error}}
+\index{font\+\_\+load\+\_\+error@{font\+\_\+load\+\_\+error}!font\+\_\+load\+\_\+error@{font\+\_\+load\+\_\+error}}
+\subsubsection{\texorpdfstring{font\+\_\+load\+\_\+error()}{font\_load\_error()}}
+{\footnotesize\ttfamily font\+\_\+load\+\_\+error\+::font\+\_\+load\+\_\+error (\begin{DoxyParamCaption}\item[{const std\+::string}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+This constructor puts a message into a string and saves that as a private variable. The font name is also added to the string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em font} & The name of the font \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfont__load__error_a17c3014c5953ab5863585e4cbf8865c3}\label{classfont__load__error_a17c3014c5953ab5863585e4cbf8865c3}} 
+\index{font\+\_\+load\+\_\+error@{font\+\_\+load\+\_\+error}!what@{what}}
+\index{what@{what}!font\+\_\+load\+\_\+error@{font\+\_\+load\+\_\+error}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ font\+\_\+load\+\_\+error\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Return message. 
+
+This function returns the message so it can be printed. It overrides the what function from the std\+::exception superclass, making it easy to capture.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em const} & char $\ast$ \{The error message as a const char $\ast$\} \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{exceptions_8hpp}{exceptions.\+hpp}\end{DoxyCompactItemize}

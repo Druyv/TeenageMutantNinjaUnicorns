@@ -1,0 +1,9 @@
+<map id="cutscene1.hpp" name="cutscene1.hpp">
+<area shape="rect" id="node4" href="$soundtrack_8hpp.html" title="soundtrack.hpp" alt="" coords="243,80,353,107"/>
+<area shape="rect" id="node8" href="$textbox_8hpp.html" title="textbox.hpp" alt="" coords="21,155,111,181"/>
+<area shape="rect" id="node9" href="$image_8hpp.html" title="image.hpp" alt="" coords="497,80,579,107"/>
+<area shape="rect" id="node7" href="$exceptions_8hpp.html" title="exceptions.hpp" alt="" coords="483,155,593,181"/>
+<area shape="rect" id="node10" href="$drawable_8hpp.html" title="drawable.hpp" alt="" coords="618,155,717,181"/>
+<area shape="rect" id="node15" href="$physics_8hpp.html" title="physics.hpp" alt="" coords="651,229,743,256"/>
+<area shape="rect" id="node16" href="$typedefs_8hpp.html" title="typedefs.hpp" alt="" coords="869,229,967,256"/>
+</map>
