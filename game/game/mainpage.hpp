@@ -3,7 +3,7 @@
 /// \section typedefs The self new types
 /// 
 /// We have 4 typedefs. Two of them are for the objectes and the other 2 are for
-/// sactions and collisions. These typedefs make sure we dont have to repeat the
+/// actions and collisions. These typedefs make sure we dont have to repeat the
 /// same complicated types over and over again. Also the chance of making a mistake
 /// is far less with the more easy names we gave our typedefs. The first typedef
 /// is called #object_ptr. This is a std::shared_ptr type to make sure multiple
@@ -35,7 +35,7 @@
 ///
 /// All the images just in the game are shown as object of the image class.
 /// the image class has multiple function that can be used. the image class is a inherintance of the drawable class.
-/// image uses also a override of the #drawable::draw(). Furthermore the class contains an #image_from_file::set_size() and an #image_from_file::set_position()
+/// Image uses also a override of the #drawable::draw(). Furthermore the class contains an #image_from_file::set_size() and an #image_from_file::set_position()
 /// these functions are for setting a new size or position.Finally it contains a function for getting the global bounds called #image_from_file::getGlobalBounds() and an #image_from_file::setTextureRect()
 /// for setting a texture in the image also this function is beeing used for mirroring a image without position change. 
 /// in the image class their were some choices to make. The function set_repeat is used to make sure you can only see background. When set_repeat is called and the size of the level is bigger then the background this function places multiple backgrounds next to eachother to fill the level size. 
@@ -44,7 +44,7 @@
 ///
 /// \section unicorn Unicorn
 ///
-/// The unicorn and it's rainbow in the game acan be created by creating an object of the #unicorn
+/// The unicorn and it's rainbow in the game can be created by creating an object of the #unicorn
 /// class. Rainbow get's it's location by using the location of the unicorn in combination with 
 /// the location of the window. The image of the unicorn and of the rainbow are created by
 /// the #image_from_file class. the unicorn also uses the #physics class to create a more 

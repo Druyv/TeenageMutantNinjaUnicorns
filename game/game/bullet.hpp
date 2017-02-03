@@ -12,8 +12,9 @@
 ///
 /// \brief class calculates projectile to kill mobs 
 ///
-/// This class is used to calculate a projectile that 
-/// can kill mobs (if there hit by the object) 
+/// This class is used to display a bullet that moves 
+/// with a standard amount of pixels per iteration and 
+/// can kill mobs when it hits one
 ///
 /// \date 26-01-2017
 ///
@@ -36,9 +37,9 @@ class bullet : public drawable {
 	///
 	/// \brief constructor to initialize the bullet
 	///
-	/// This constructor intializes the position and picture used for the 
-	/// bullet. It also receives two std::vectors, one vector for all mobs in
-	/// the level, the other for all walls in the level
+	/// This constructor intializes the class. It receives the position of the 
+    /// bullet, a filename to use for loading the image, a list of all mobs in 
+    /// a level and a list of all walls in a level.
 	///
 	/// \param[in]	position	sf::Vector2f position where the bullet is placed
 	/// \param[in]	filename	std::string that is the filename of the image used

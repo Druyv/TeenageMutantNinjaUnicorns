@@ -13,7 +13,7 @@
 ///
 /// \brief create sprite on screen with animations
 ///
-///This class creates an sprite with an image as texture. The image contains all needed images  for the animations of that object.
+///This class creates a sprite with an image as texture. The image contains all needed images for the animations of that object.
 ///
 /// \sa drawable
 /// \sa <a href="https://www.sfml-dev.org/documentation/2.0/classsf_1_1Sprite.php ">sf::Sprite</a>
@@ -33,19 +33,19 @@ class animation : public drawable {
 	/// \brief constructor
 	///
 	/// The constructor tries to load an sheet with the sheet name specified.
-	/// If it can not load the image it generates an exception that can be caught
+	/// If it cannot load the image it generates an exception that can be caught
 	/// with an try, catch block. 
 	///
 	/// \param[in] position The objects initial position
 	/// \param[in] image_name The name of the image that has to be loaded
 	/// \sa sheet_load_error
-	/// \warning Make sure you use a Try catch block to capture the exception generated if the image cannot be loaded
+	/// \warning Make sure you use a Try catch block to capture the exception generated, if the image cannot be loaded
 	animation(sf::Vector2f position, std::string sheet_name, float width,float length);
         
 	/// \brief draw object
 	///
 	/// This function is used for calling the draw function on the sfml object
-	/// created within this class. It also sets the position for before it draws
+	/// created within this class. It also sets the position for the object before it draws
 	/// the object. This way if the position changes, it also changes on screen.
 	///
 	/// \param[in,out] window The render window to draw the object on
@@ -53,7 +53,7 @@ class animation : public drawable {
         
 	/// \brief get objects floatrect
 	///
-	/// This function uses the getGlobalBounds function from te object to get the
+	/// This function uses the getGlobalBounds function from the object to get the
 	/// bounding box of the object. It returns this as a floatrect. This return value
 	/// can be used to check if the object touches another object.
 	///

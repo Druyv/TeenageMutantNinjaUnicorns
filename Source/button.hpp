@@ -43,10 +43,10 @@ class button {
 	/// on the button. 
 	///
 	///
-	/// \param[in] startHeightY Starting height Y coordinate
-	/// \param[in] startHeightX Starting height X coordinate
+	/// \param[in] start_height_y Starting height Y coordinate
+	/// \param[in] start_height_x Starting height X coordinate
 	/// \param[in] position     The postion for the button ( 1 - 2 - 3)
-	/// \param[in] WhatsOnTheButton std::string, the text on the button 
+	/// \param[in] whats_on_the_button std::string, the text on the button 
 	button(float start_height_y = 0.0, float start_height_x = 0.0, int position = 0, std::string whats_on_the_button = " ");
 
 	/// \brief Function to draw the button & the text

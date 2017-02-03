@@ -22,10 +22,10 @@ class background : public drawable {
     public:
 	/// \brief constructor for background class
 	///
-	/// constructor that initializes the file that the background class will use. Default is "x", if default a default picture will be loaded.
+	/// constructor that initializes the class with a filename and vector 
 	///
 	/// \param[in] std::string name of the .png file that will be loaded as a background
-        ///
+    ///
 	background(std::string filename, sf::Vector2f level_size);
         
 	/// \brief Draw function for background class
@@ -39,7 +39,7 @@ class background : public drawable {
 	/// \brief Get the global bounds
 	///
 	/// This function returns the global bounds of the #background_image.
-        /// Those global bounds can be used for things like checking collisions.
+    /// Those global bounds can be used for things like checking collisions.
 	///
 	/// \return The global bounds of the #background_image
 	///
