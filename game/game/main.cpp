@@ -1,3 +1,5 @@
+#define _ITERATOR_DEBUG_LEVEL 0  
+
 #include <SFML/Graphics.hpp>
 #include <memory>
 #include <vector>

@@ -1,1 +1,1 @@
-levels/level2.properties
+levels/level1.properties
