@@ -1,0 +1,23 @@
+# extensions
+#*.cmake
+*.vcproj
+*.vcxproj
+*.vcxproj.*
+*.exe
+*.swp
+*.dir
+*.sln
+
+# files
+CMakeCache.txt
+Makefile
+CTestTestfile.cmake
+cmake_install.cmake
+
+# folders
+CMakeFiles/*
+.vs/*
+Win32/*
+test/gtest
+test/CMakeFiles
+Testing/
