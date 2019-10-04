@@ -202,6 +202,8 @@ int main(int argc, const char **argv) {
 			if (event.type == sf::Event::Closed) {
 				window.close();
 			}
+            else{ break; }
+            
 		}
 
 		// Game loop delay

@@ -190,5 +190,7 @@ class cutscene1 {
         ///   
 	///
         void cyan_island();
+
+        void skip_or_quit();
 };
 #endif //CUTSCENE1_HPP

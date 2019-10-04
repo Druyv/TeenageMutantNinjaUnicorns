@@ -38,54 +38,54 @@ void cutscene1::play_scene() {
     scene1();
     window.display();
     sound.playsound_cutscene("scene1.wav");
-    sf::sleep(sf::seconds(6));
+    skip_or_quit();
     window.clear();
     
     scene2();
     window.display();
     sound.playsound_cutscene("scene2.wav");
-    sf::sleep(sf::seconds(6));
+    skip_or_quit();
     window.clear();
     
     scene3();
     window.display();
     sound.playsound_cutscene("scene3.wav");
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
     
     scene4();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene5();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene6();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene7();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene8();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene9();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene10();
     window.display();
-    sf::sleep(sf::seconds(4));
+    skip_or_quit();
     sound.stop();
     window.clear();
 }
@@ -190,38 +190,51 @@ void cutscene1::cyan_island() {
     sound.playsound_cutscene("cyan.wav");
     scene11();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene12();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene13();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene14();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene15();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene16();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
 
     scene17();
     window.display();
-    sf::sleep(sf::seconds(3));
+    skip_or_quit();
     window.clear();
     sound.stop();
     sound.playmusic();
+}
+
+void cutscene1::skip_or_quit() {
+    for (;;) {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+            window.clear();
+            sf::sleep(sf::seconds(0.5));
+            return;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+            window.close();
+        }
+    }
 }
